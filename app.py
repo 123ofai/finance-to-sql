@@ -145,15 +145,15 @@ else:  # Run Query
                 ssh_username = ssh_conf["ssh_username"],
                 ssh_pkey     = ssh_conf["ssh_pkey"].encode(),
                 remote_bind_address = (pg_conf["host"], pg_conf["port"])
-        ) as tunnel:
-            local_port = tunnel.local_bind_port
-            conn_str   = (
-                f"postgresql://{pg_conf['user']}:{pg_conf['password']}"
-                f"@127.0.0.1:{local_port}/{pg_conf['dbname']}"
-            )
-            engine  = sqlalchemy.create_engine(conn_str)
-            results = pd.read_sql(sql, engine)
-            st.dataframe(results)
+            ) as tunnel:
+                local_port = tunnel.local_bind_port
+                conn_str   = (
+                    f"postgresql://{pg_conf['user']}:{pg_conf['password']}"
+                    f"@127.0.0.1:{local_port}/{pg_conf['dbname']}"
+                )
+                engine  = sqlalchemy.create_engine(conn_str)
+                results = pd.read_sql(sql, engine)
+                st.dataframe(results)
 
         except Exception as e:
             st.error(f"SSH/DB error: {e}")
