@@ -12,6 +12,15 @@ METRIC_CSV1  = "nl2glossary.csv"             # NL→Glossary CSV
 METRIC_CSV2  = "glossary2label_results.csv"  # Glossary→Grouping CSV
 EMBED_MODEL  = "sentence-transformers/all-mpnet-base-v2"
 
+# Schema + table
+SCHEMA      = "epm1-replica.finalyzer.info_100032"
+TABLE       = "fbi_entity_analysis_report"
+
+# Default report parameters
+DEFAULT_ENTITY_ID = 6450
+DEFAULT_TAXONOMY  = 71
+DEFAULT_CURRENCY  = "INR"
+
 # Load secrets
 # In Streamlit Cloud secrets, define [ssh] and [postgres] sections
 ssh = st.secrets["ssh"]
@@ -23,10 +32,13 @@ def load_resources():
     gloss_df    = pd.read_csv(GLOSSARY_CSV)
     group_df    = pd.read_csv(GROUPING_CSV)
     model       = SentenceTransformer(EMBED_MODEL)
+    
     gloss_terms = gloss_df["Glossary"].tolist()
     gloss_embs  = model.encode(gloss_terms, convert_to_tensor=True)
+    
     group_lbls  = group_df["grouping_label"].tolist()
     group_embs  = model.encode(group_lbls, convert_to_tensor=True)
+    
     return gloss_df, group_df, model, gloss_terms, gloss_embs, group_lbls, group_embs
 
 gloss_df, group_df, model, gloss_terms, gloss_embs, group_lbls, group_embs = load_resources()
@@ -55,7 +67,7 @@ def infer_nature(nl: str) -> str:
 
 SQL_TMPL = """
 SELECT value
-FROM fbi_entity_analysis_report
+FROM "{SCHEMA}"."{TABLE}"
 WHERE entity_id          = {entity_id}
   AND grouping_id        = {grouping_id}
   AND period_id          = '{period_id}'
@@ -94,18 +106,19 @@ else:  # Run Query
 
         # 4) Build SQL
         params = {
-            "entity_id":    6450,
+            "entity_id":    DEFAULT_ENTITY_ID,
             "grouping_id":  gid,
             "period_id":    period,
             "nature":       nature,
             "scenario":     scenario,
-            "taxonomy":     71,
-            "currency":     "INR"
+            "taxonomy":     DEFAULT_TAXONOMY,
+            "currency":     DEFAULT_CURRENCY
         }
         sql = make_sql(params)
 
         # 5) Display mapping
         st.subheader("🔍 Mapping Steps")
+        st.write("**Natural Query:**", nl_query)
         st.write("**Glossary Term:**", gloss)
         st.write("**Grouping Label:**", label)
         st.write("**Grouping ID:**", gid)
