@@ -8,18 +8,34 @@ nl2glossary.py:
 
 glossary2grouping.py
 - i/p, 1: nl2glossary.csv (glossary, GT grouping lables & id)
-- You can use glossary2label.csv as this file contains the glossary, ground_label, grouing_id for better testing.
+- You can use **glossary2label.csv** as this file contains the glossary, GT grouping_label, GT grouping_id for better testing.
   - As the Glossary in this one has the correct grouping_label.
   - Check the columns' names, as they might be different.
-  - For example: Glossary -> glossary, GT grouping_label -> ground_label.
-Fr 
+  - For example: Glossary -> glossary, GT grouping_label -> ground_label. 
 - i/p, 2: fbi_groping_master.csv (grouping labels, id)
 - o/p: glossary2label_results
 
 metric.py
 - I/p: Results file from respective step
 - O/P: Generate Metrics for given step
+<br/>
 
+glossary2label.csv
+- Contains the Glossary, ground truth grouping_bael, GT grouping_id.
+- Columns: glossary, ground_label, grouping_id
+<br>
+
+nl2glossary.csv
+- Contains Natural Query, GT Glossary, the predicted Glossary, and the similarity score.
+- Columns: NL_Query,	GT_Glossary,	Predicted_Glossary,	Similarity_Score
+<br>
+
+glossary2label_results.csv
+- Contains the Glossary, it GT grouping_label, GT grouping_id, Predicted grouping_label, Predicted grouping_id.
+- Columns: glossary,	ground_label,	grouping_id,	Predicted_Label,	Predicted_Grouping_ID
+
+
+<br/>
 
 
 
