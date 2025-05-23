@@ -21,14 +21,14 @@ metric.py
 <br/>
 
 glossary2label.csv
-- Contains the Glossary, ground truth grouping_bael, GT grouping_id.
+- Contains the Glossary, ground truth grouping_label, GT grouping_id.
 - Columns: glossary, ground_label, grouping_id
-<br>
+<br/>
 
 nl2glossary.csv
 - Contains Natural Query, GT Glossary, the predicted Glossary, and the similarity score.
 - Columns: NL_Query,	GT_Glossary,	Predicted_Glossary,	Similarity_Score
-<br>
+<br/>
 
 glossary2label_results.csv
 - Contains the Glossary, it GT grouping_label, GT grouping_id, Predicted grouping_label, Predicted grouping_id.
@@ -42,3 +42,9 @@ glossary2label_results.csv
 ## Quantitative results
 - nl2glossary.csv -> Contains Natural Query, Ground Truth Glossary, and the Predicted Glossary.
 - glossary2label_results.csv -> Contains Glossary, Ground Truth grouping_label, Ground Truth grouping_id, Predicted grouping_label, Predicted grouping_id
+<br/
+
+## Run locally
+- Use the app_v2.py file for running the model locally.
+- Use the PEM file you have to connect it to the database.
+
