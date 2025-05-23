@@ -1,0 +1,30 @@
+glossary,ground_label,grouping_id
+Assets,        Total Assets,5300004
+Liabilities,(Current liabilities) + (Non-current liablilities),"(5300177),(5300146)"
+Equity,            Equity,5300007
+Current Assets,            Current assets,5300033
+Non-Current Assets,            Non-current assets,5300031
+Current Liabilities,            Current liabilities,5300177
+Non-Current Liabilities,            Non-current liabilities,5300146
+Working Capital,Current Assets - Current Liabilities.,"(5300033),(5300177)"
+Net Worth,total assets - total liabilities,"(5300004),(5300177),(5300146)"
+Revenue,                    Revenue from operations,5300260
+Operating Expenses,                Total expenses,5300002
+Operating Profit (EBIT),Profit before tax,5300258
+EBITDA,(Profit before tax) + (Depreciation and amortization expense) + (Finance costs),"(5300258),(5300317),(5300321)"
+Net Profit (PAT),        Profit/(loss) for the period,5300015
+Operating Cash Flow,            Cash flow (used in) operating activities,5300354
+Investing Cash Flow,            Cash flow (used in) investing activities,5300357
+Financing Cash Flow,            Cash flow (used in)/from financing activities,5300358
+Depreciation,                        Depreciation of tangible assets,5300318
+Amortization,                        Amortisation of intangible assets,5300320
+"Property, Plant and Equipment (PPE)","                Property, plant and equipment",5300034
+Intangible Assets,                Intangible assets,5300037
+Financial Assets,(Financial assets - Current assets)+ (Financial assets - Non-Current assets),"(5300089),(5300074)"
+Inventories,                Inventory,5301327
+Borrowings, (Borrowings - Current) +   (Borrowings - Non Current),"(5300179),(5300148)"
+Trade Payables,                    Trade payables,5300189
+Deferred Tax Liabilities,                Deferred tax liabilities (net),5300176
+Other Financial Liabilities,                        Others - Other financial liabilities,5300172
+Share Capital,                Unit capital / Equity share capital,5300126
+Other Equity / Reserves & Surplus,                Other Equity,5300008
