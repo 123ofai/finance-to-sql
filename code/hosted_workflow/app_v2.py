@@ -9,9 +9,9 @@ import sqlalchemy
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
 # Data files
-GLOSSARY_CSV = "glossary_v1.csv"
-GROUPING_CSV = "fbi_grouping_master.csv"
-PEM_FILE     = "bsq-devops-3rdparty-vendor.pem"
+GLOSSARY_CSV = "../../data/2_glossary_to_label_gt.csv"
+GROUPING_CSV = "../../data/fbi_grouping_master.csv"
+PEM_FILE     = "../../bsq-devops-3rdparty-vendor.pem"
 
 # Embedding model
 EMBED_MODEL  = "sentence-transformers/all-mpnet-base-v2"
@@ -42,7 +42,7 @@ glossary_df = pd.read_csv(GLOSSARY_CSV)
 grouping_df = pd.read_csv(GROUPING_CSV)
 
 model        = SentenceTransformer(EMBED_MODEL)
-gloss_terms  = glossary_df["Glossary"].tolist()
+gloss_terms  = glossary_df["glossary"].tolist()
 gloss_embs   = model.encode(gloss_terms, convert_to_tensor=True)
 group_labels = grouping_df["grouping_label"].tolist()
 group_embs   = model.encode(group_labels, convert_to_tensor=True)

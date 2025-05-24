@@ -6,10 +6,10 @@ from sshtunnel import SSHTunnelForwarder
 import sqlalchemy
 
 # ─── CONFIG ────────────────────────────────────────────────────────────
-GLOSSARY_CSV = "glossary_v1.csv"
-GROUPING_CSV = "fbi_grouping_master.csv"
-METRIC_CSV1  = "nl2glossary.csv"              # NL→Glossary metrics CSV
-METRIC_CSV2  = "glossary2label_results.csv"   # Glossary→Grouping metrics CSV
+GLOSSARY_CSV = "../../data/2_glossary_to_label_gt.csv"
+GROUPING_CSV = "../../data/fbi_grouping_master.csv"
+METRIC_CSV1  = "../../results/24May_refactor/stage1_nl2glossary.csv"              # NL→Glossary metrics CSV
+METRIC_CSV2  = "../../results/24May_refactor/stage2_glossary_to_label.csv"   # Glossary→Grouping metrics CSV
 EMBED_MODEL  = "sentence-transformers/all-mpnet-base-v2"
 
 # Schema + table
