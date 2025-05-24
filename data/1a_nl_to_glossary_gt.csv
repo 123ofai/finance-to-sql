@@ -1,0 +1,101 @@
+NL_Query,GT_Glossary
+How much money did we bring in from sales this quarter?,Revenue
+What did it cost us to make the stuff we sold last month?,Cost of Goods Sold (COGS)
+"After paying for production, how much did we keep last year?",Gross Profit
+What are we spending to keep the business running this year?,Operating Expenses
+How much did our main operations earn us in the last quarter?,Operating Profit (EBIT)
+"What’s our profit before taxes, interest, and equipment costs this month?",EBITDA
+"After all expenses, how much did we end up with last year?",Net Profit (PAT)
+How much profit did each share make last quarter?,Earnings Per Share (EPS)
+How much cash came in from our operations in April?,Operating Cash Flow
+What did we spend on new equipment or investments last year?,Investing Cash Flow
+Did we get any cash from loans or investors in the first quarter?,Financing Cash Flow
+"After buying what we needed, how much cash is left this year?",Free Cash Flow
+How much are we writing off for old equipment this month?,Depreciation
+What’s the cost we’re spreading out for things like patents?,Amortization
+What bills have we noted but not paid yet as of last month?,Accruals
+Are we saving enough for future costs like repairs?,Provisions
+Could we owe money later depending on things like lawsuits?,Contingent Liabilities
+What chunk of our sales is profit after making our products this quarter?,Gross Profit Margin
+How much of each sale stays with us after regular costs in 2024?,Operating Profit Margin
+What’s our real profit percentage from all sales last year?,Net Profit Margin
+Are we making good money from the things we own this year?,Return on Assets (ROA)
+How much are shareholders earning from their investment last quarter?,Return on Equity (ROE)
+Are we using our money wisely to make profits this year?,Return on Capital Employed (ROCE)
+What part of our sales is profit before taxes and wear-and-tear costs this month?,EBITDA Margin
+Can we pay off our short-term bills easily right now?,Current Ratio
+"Without counting our stock, can we cover what we owe soon?",Quick Ratio (Acid Test)
+How much cash do we have to handle bills due this month?,Cash Ratio
+Are we selling our products fast enough compared to what’s in stock?,Inventory Turnover
+Are customers paying us faster than they did last year?,Receivables Turnover
+How often are we paying our suppliers this quarter?,Payables Turnover
+Are we using what we own to boost sales well?,Asset Turnover
+Are our short-term resources helping us sell more?,Working Capital Turnover
+Do we owe more than what we’ve put into the company?,Debt-to-Equity Ratio
+How much of what we own comes from borrowed money?,Debt Ratio
+Can we handle the interest on our loans comfortably?,Interest Coverage Ratio
+How much of the company really belongs to the owners?,Equity Ratio
+What’s the split between borrowed money and our own funds?,Capital Gearing Ratio
+How much is each share earning us this year?,Earnings Per Share (EPS)
+Are people paying a lot for our stock compared to profits?,Price-to-Earnings (P/E) Ratio
+Is our stock worth more than what we actually own per share?,Price-to-Book (P/B) Ratio
+What’s the payout to investors from dividends right now?,Dividend Yield
+How much of our earnings are we giving out to shareholders?,Dividend Payout Ratio
+"What’s the total worth of our company, debts included?",Enterprise Value (EV)
+How does our value stack up against profits before taxes and depreciation?,EV/EBITDA
+What’s the value of our buildings and machines right now?,"Property, Plant and Equipment (PPE)"
+How much are things like our patents worth?,Intangible Assets
+What’s the value of properties we’re holding to rent or sell?,Investment Property
+How much do we have tied up in stocks or bonds?,Financial Assets
+What’s the worth of all the products we’ve got ready to sell?,Inventories
+Can we save on taxes later because of past losses?,Deferred Tax Assets
+How much have we borrowed altogether?,Borrowings
+What do we owe suppliers for stuff we’ve bought?,Trade Payables
+Are we setting aside money for future employee costs?,Provisions
+How much tax will we owe down the road?,Deferred Tax Liabilities
+What other debts do we have hanging out there?,Other Financial Liabilities
+How much cash did shareholders put into the company?,Share Capital
+What’s the total of profits we’ve kept over time?,Other Equity / Reserves & Surplus
+How does our sales money this quarter compare to last year?,Revenue
+Did it cost more to make things this month than last month?,Cost of Goods Sold (COGS)
+How has our profit after production been trending lately?,Gross Profit
+Are we spending more than planned this year?,Operating Expenses
+What did we earn from operations before interest last year?,Operating Profit (EBIT)
+What’s our profit before equipment costs this quarter?,EBITDA
+How much did we keep after everything last month?,Net Profit (PAT)
+How much is each share earning so far this year?,Earnings Per Share (EPS)
+How much cash did we make in the first half of 2025?,Operating Cash Flow
+What did we spend on investments last quarter?,Investing Cash Flow
+Have we borrowed or sold shares for cash recently?,Financing Cash Flow
+How much cash do we have left after equipment buys this month?,Free Cash Flow
+What’s the write-off for our gear this quarter?,Depreciation
+Are we spreading out costs for non-physical stuff?,Amortization
+What expenses are on the books but not paid today?,Accruals
+Have we saved up for any big costs coming up?,Provisions
+Might we owe money depending on future events?,Contingent Liabilities
+How does our profit after making goods compare to others?,Gross Profit Margin
+Is our profit after regular expenses getting better?,Operating Profit Margin
+How does our final profit percentage compare to competitors?,Net Profit Margin
+Are we earning well from what we own?,Return on Assets (ROA)
+What’s the payback for shareholders this year?,Return on Equity (ROE)
+Are we making smart use of our funds for profit?,Return on Capital Employed (ROCE)
+What’s our profit percentage before taxes over the last year?,EBITDA Margin
+Can we handle our short-term debts with what we’ve got?,Current Ratio
+"Without our inventory, can we pay what’s due soon?",Quick Ratio (Acid Test)
+How much cash do we have for immediate bills?,Cash Ratio
+Are we moving our stock fast enough?,Inventory Turnover
+How quick are we getting paid by customers?,Receivables Turnover
+Are we keeping up with supplier payments?,Payables Turnover
+Are we using our stuff to make sales efficiently?,Asset Turnover
+Are we getting good sales from our short-term cash?,Working Capital Turnover
+Do we owe too much compared to what we own?,Debt-to-Equity Ratio
+How much of what we have is paid for with loans?,Debt Ratio
+Can we cover loan interest without stress?,Interest Coverage Ratio
+How much of the company do the owners control?,Equity Ratio
+What’s the mix of loans versus our own money?,Capital Gearing Ratio
+How much did each share earn last quarter?,Earnings Per Share (EPS)
+Is our stock price too high for our earnings?,Price-to-Earnings (P/E) Ratio
+Does our stock price match what we’re really worth?,Price-to-Book (P/B) Ratio
+Are we giving investors a good return via dividends?,Dividend Yield
+How much profit are we sharing with shareholders?,Dividend Payout Ratio
+"What’s our company worth, including all debts, today?",Enterprise Value (EV)
