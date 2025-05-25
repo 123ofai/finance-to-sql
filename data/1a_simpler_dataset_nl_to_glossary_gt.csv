@@ -1,0 +1,133 @@
+NL_Query,GT_Glossary
+Can you tell me what was the Assets last year?,Assets
+Give me the Assets figure for the last quarter.,Assets
+Can you tell me what was the Liabilities last year?,Liabilities
+Can you provide the Liabilities amount for the last quarter?,Liabilities
+Can you tell me what was the Equity last year?,Equity
+Could you share the Equity for the last quarter?,Equity
+Can you tell me what was the Current Assets last year?,Current Assets
+Tell me the value of Current Assets in the last quarter.,Current Assets
+Can you tell me what was the Non-Current Assets last year?,Non-Current Assets
+What was the Non-Current Assets in the last quarter?,Non-Current Assets
+Can you tell me what was the Current Liabilities last year?,Current Liabilities
+I'd like to know the Current Liabilities from the last quarter.,Current Liabilities
+Can you tell me what was the Non-Current Liabilities last year?,Non-Current Liabilities
+What was the Non-Current Liabilities in the last quarter?,Non-Current Liabilities
+Can you tell me what was the Working Capital last year?,Working Capital
+Could you share the Working Capital for the last quarter?,Working Capital
+Can you tell me what was the Net Worth last year?,Net Worth
+What was the Net Worth in the last quarter?,Net Worth
+Can you tell me what was the Revenue last year?,Revenue
+Give me the Revenue figure for the last quarter.,Revenue
+Can you tell me what was the Cost of Goods Sold (COGS) last year?,Cost of Goods Sold (COGS)
+Tell me the value of COGS in the last quarter.,Cost of Goods Sold (COGS)
+Can you tell me what was the Gross Profit last year?,Gross Profit
+Could you share the Gross Profit for the last quarter?,Gross Profit
+Can you tell me what was the Operating Expenses last year?,Operating Expenses
+I'd like to know the Operating Expenses from the last quarter.,Operating Expenses
+Can you tell me what was the Operating Profit last year?,Operating Profit (EBIT)
+I'd like to know the EBIT from the last quarter.,Operating Profit (EBIT)
+Can you tell me what was the EBITDA last year?,EBITDA
+"Could you share the Earnings before Interest, Tax, Depreciation, and Amortisation for the last quarter?",EBITDA
+Can you tell me what was the Net Profit (PAT) last year?,Net Profit (PAT)
+Can you provide the Net Profit (PAT) amount for the last quarter?,Net Profit (PAT)
+Can you tell me what was the Earnings Per Share (EPS) last year?,Earnings Per Share (EPS)
+How much was the EPS during the last quarter?,Earnings Per Share (EPS)
+Can you tell me what was the Operating Cash Flow last year?,Operating Cash Flow
+Can you provide the Operating Cash Flow amount for the last quarter?,Operating Cash Flow
+Can you tell me what was the Investing Cash Flow last year?,Investing Cash Flow
+Can you provide the Investing Cash Flow amount for the last quarter?,Investing Cash Flow
+Can you tell me what was the Financing Cash Flow last year?,Financing Cash Flow
+Can you provide the Financing Cash Flow amount for the last quarter?,Financing Cash Flow
+Can you tell me what was the Free Cash Flow last year?,Free Cash Flow
+Tell me the value of Free Cash Flow in the last quarter.,Free Cash Flow
+Can you tell me what was the Depreciation last year?,Depreciation
+Can you provide the Depreciation amount for the last quarter?,Depreciation
+Can you tell me what was the Amortization last year?,Amortization
+Tell me the value of Amortization in the last quarter.,Amortization
+Can you tell me what was the Accruals last year?,Accruals
+Could you share the Accruals for the last quarter?,Accruals
+Can you tell me what was the Provisions last year?,Provisions
+Tell me the value of Provisions in the last quarter.,Provisions
+Can you tell me what was the Contingent Liabilities last year?,Contingent Liabilities
+I'd like to know the Contingent Liabilities from the last quarter.,Contingent Liabilities
+Can you tell me what was the Gross Profit Margin last year?,Gross Profit Margin
+Can you provide the Gross Profit Margin amount for the last quarter?,Gross Profit Margin
+Can you tell me what was the Operating Profit Margin last year?,Operating Profit Margin
+What was the Operating Profit Margin in the last quarter?,Operating Profit Margin
+Can you tell me what was the Net Profit Margin last year?,Net Profit Margin
+I'd like to know the Net Profit Margin from the last quarter.,Net Profit Margin
+Can you tell me what was the Return on Assets (ROA) last year?,Return on Assets (ROA)
+What was the ROA in the last quarter?,Return on Assets (ROA)
+Can you tell me what was the Return on Equity (ROE) last year?,Return on Equity (ROE)
+Give me the ROE figure for the last quarter.,Return on Equity (ROE)
+Can you tell me what was the Return on Capital Employed (ROCE) last year?,Return on Capital Employed (ROCE)
+I'd like to know the ROCE from the last quarter.,Return on Capital Employed (ROCE)
+Can you tell me what was the EBITDA Margin last year?,EBITDA Margin
+I'd like to know the EBITDA Margin from the last quarter.,EBITDA Margin
+Can you tell me what was the Current Ratio last year?,Current Ratio
+How much was the Current Ratio during the last quarter?,Current Ratio
+Can you tell me what was the Quick Ratio last year?,Quick Ratio (Acid Test)
+Tell me the value of Quick Ratio (Acid Test) in the last quarter.,Quick Ratio (Acid Test)
+Can you tell me what was the Cash Ratio last year?,Cash Ratio
+I'd like to know the Cash Ratio from the last quarter.,Cash Ratio
+Can you tell me what was the Inventory Turnover last year?,Inventory Turnover
+Tell me the value of Inventory Turnover in the last quarter.,Inventory Turnover
+Can you tell me what was the Receivables Turnover last year?,Receivables Turnover
+I'd like to know the Receivables Turnover from the last quarter.,Receivables Turnover
+Can you tell me what was the Payables Turnover last year?,Payables Turnover
+Give me the Payables Turnover figure for the last quarter.,Payables Turnover
+Can you tell me what was the Asset Turnover last year?,Asset Turnover
+How much was the Asset Turnover during the last quarter?,Asset Turnover
+Can you tell me what was the Working Capital Turnover last year?,Working Capital Turnover
+I'd like to know the Working Capital Turnover from the last quarter.,Working Capital Turnover
+Can you tell me what was the Debt-to-Equity Ratio last year?,Debt-to-Equity Ratio
+Give me the D/E Ratio figure for the last quarter.,Debt-to-Equity Ratio
+Can you tell me what was the Debt Ratio last year?,Debt Ratio
+How much was the Debt Ratio during the last quarter?,Debt Ratio
+Can you tell me what was the Interest Coverage Ratio last year?,Interest Coverage Ratio
+Give me the Interest Coverage Ratio figure for the last quarter.,Interest Coverage Ratio
+Can you tell me what was the Equity Ratio last year?,Equity Ratio
+Tell me the value of Equity Ratio in the last quarter.,Equity Ratio
+Can you tell me what was the Capital Gearing Ratio last year?,Capital Gearing Ratio
+Could you share the Capital Gearing Ratio for the last quarter?,Capital Gearing Ratio
+Can you tell me what was the Earnings Per Share (EPS) last year?,Earnings Per Share (EPS)
+How much was the EPS during the last quarter?,Earnings Per Share (EPS)
+Can you tell me what was the Price-to-Earnings (P/E) Ratio last year?,Price-to-Earnings (P/E) Ratio
+Can you provide the P/E Ratio amount for the last quarter?,Price-to-Earnings (P/E) Ratio
+Can you tell me what was the P/B Ratio last year?,Price-to-Book (P/B) Ratio
+Tell me the value of Price-to-Book Ratio in the last quarter.,Price-to-Book (P/B) Ratio
+Can you tell me what was the Dividend Yield last year?,Dividend Yield
+What was the Dividend Yield in the last quarter?,Dividend Yield
+Can you tell me what was the Dividend Payout Ratio last year?,Dividend Payout Ratio
+How much was the Dividend Payout Ratio during the last quarter?,Dividend Payout Ratio
+Can you tell me what was the Enterprise Value (EV) last year?,Enterprise Value (EV)
+How much was the EV during the last quarter?,Enterprise Value (EV)
+Can you tell me what was the EV/EBITDA last year?,EV/EBITDA
+Could you share the EV/EBITDA for the last quarter?,EV/EBITDA
+"Can you tell me what was the Property, Plant and Equipment (PPE) last year?","Property, Plant and Equipment (PPE)"
+"Could you share the PPE for the last quarter?","Property, Plant and Equipment (PPE)"
+Can you tell me what was the Intangible Assets last year?,Intangible Assets
+How much was the Intangible Assets during the last quarter?,Intangible Assets
+Can you tell me what was the Investment Property last year?,Investment Property
+Could you share the Investment Property for the last quarter?,Investment Property
+Can you tell me what was the Financial Assets last year?,Financial Assets
+Give me the Financial Assets figure for the last quarter.,Financial Assets
+Can you tell me what was the Inventories last year?,Inventories
+Can you provide the Inventories amount for the last quarter?,Inventories
+Can you tell me what was the Deferred Tax Assets last year?,Deferred Tax Assets
+I'd like to know the Deferred Tax Assets from the last quarter.,Deferred Tax Assets
+Can you tell me what was the Borrowings last year?,Borrowings
+Can you provide the Borrowings amount for the last quarter?,Borrowings
+Can you tell me what was the Trade Payables last year?,Trade Payables
+Can you provide the Trade Payables amount for the last quarter?,Trade Payables
+Can you tell me what was the Provisions last year?,Provisions
+Can you provide the Provisions amount for the last quarter?,Provisions
+Can you tell me what was the Deferred Tax Liabilities last year?,Deferred Tax Liabilities
+Can you provide the Deferred Tax Liabilities amount for the last quarter?,Deferred Tax Liabilities
+Can you tell me what was the Other Financial Liabilities last year?,Other Financial Liabilities
+How much was the Other Financial Liabilities during the last quarter?,Other Financial Liabilities
+Can you tell me what was the Share Capital last year?,Share Capital
+Can you provide the Share Capital amount for the last quarter?,Share Capital
+Can you tell me what was the Other Equity / Reserves & Surplus last year?,Other Equity / Reserves & Surplus
+How much was the Other Equity / Reserves & Surplus during the last quarter?,Other Equity / Reserves & Surplus
