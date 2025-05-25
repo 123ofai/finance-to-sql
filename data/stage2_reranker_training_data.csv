@@ -1,0 +1,45 @@
+query,label,score
+"What is Assets? Resources owned by a company (e.g., cash, inventory, equipment).",        Total Assets,1
+"What is Assets? Resources owned by a company (e.g., cash, inventory, equipment).",            Assets ROU,0
+"What is Liabilities? Obligations or debts the company must pay (e.g., loans, payables).",(Current liabilities) + (Non-current liablilities),1
+"What is Liabilities? Obligations or debts the company must pay (e.g., loans, payables).",            Current liabilities,0
+What is Equity? Owners’ interest in the company (Assets - Liabilities).,            Equity,1
+What is Equity? Owners’ interest in the company (Assets - Liabilities).,    Equity,0
+What is Current Assets? Assets expected to be used or converted to cash within a year.,            Current assets,1
+"What is Non-Current Assets? Long-term assets (e.g., property, plant, and equipment).",            Non-current assets,1
+What is Current Liabilities? Obligations due within one year.,            Current liabilities,1
+"What is Non-Current Liabilities? Long-term obligations (e.g., long-term loans).",            Non-current liabilities,1
+What is Working Capital? Current Assets - Current Liabilities.,Current Assets - Current Liabilities.,1
+What is Working Capital? Current Assets - Current Liabilities.,                    Changes in working capital,0
+What is Net Worth? Another term for equity,total assets - total liabilities,1
+What is Net Worth? Another term for equity,Net Value,0
+What is Revenue? Income from sales of goods or services.,                    Revenue from operations,1
+"What is Operating Expenses? Expenses incurred in the normal course of business (e.g., salaries, rent).",                Total expenses,1
+"What is Operating Expenses? Expenses incurred in the normal course of business (e.g., salaries, rent).",                    Revenue from operations,0
+What is Operating Profit (EBIT)? Earnings before interest and tax.,Profit before tax,1
+What is Operating Profit (EBIT)? Earnings before interest and tax.,                    Revenue from operations,0
+"What is EBITDA? Earnings before interest, tax, depreciation, and amortization.",(Profit before tax) + (Depreciation and amortization expense) + (Finance costs),1
+"What is EBITDA? Earnings before interest, tax, depreciation, and amortization.",    EBITDA,0
+"What is Net Profit (PAT)? Profit after all expenses, interest, and tax.",        Profit/(loss) for the period,1
+"What is Net Profit (PAT)? Profit after all expenses, interest, and tax.",                        Net profit as per statement of profit and loss,0
+What is Operating Cash Flow? Cash generated from core business operations.,            Cash flow (used in) operating activities,1
+"What is Investing Cash Flow? Cash used in or generated from investments (e.g., asset purchase, sale).",            Cash flow (used in) investing activities,1
+"What is Financing Cash Flow? Cash from borrowing, issuing shares, or dividend payments.",            Cash flow (used in)/from financing activities,1
+What is Depreciation? Reduction in asset value over time due to use or obsolescence.,                        Depreciation of tangible assets,1
+What is Amortization? Similar to depreciation but applied to intangible assets.,                        Amortisation of intangible assets,1
+"What is Property, Plant and Equipment (PPE)? Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).","                Property, plant and equipment",1
+"What is Property, Plant and Equipment (PPE)? Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).","            Property, plant and equipment",0
+"What is Intangible Assets? Identifiable non-monetary assets without physical substance, such as software, patents, etc.,",                Intangible assets,1
+"What is Financial Assets? Includes investments, trade receivables, and cash equivalents",(Financial assets - Current assets)+ (Financial assets - Non-Current assets),1
+"What is Financial Assets? Includes investments, trade receivables, and cash equivalents",                Financial assets - Current assets,0
+What is Inventories? Assets held for sale in the ordinary course of business or for use in the production process,                Inventory,1
+"What is Borrowings? Loans from banks and financial institutions, classified as current or non", (Borrowings - Current) +   (Borrowings - Non Current),1
+"What is Borrowings? Loans from banks and financial institutions, classified as current or non",                    Borrowings - Current,0
+What is Trade Payables? Amounts due to suppliers of goods or services.,                    Trade payables,1
+What is Trade Payables? Amounts due to suppliers of goods or services.,                Trade payables,0
+What is Deferred Tax Liabilities? Tax obligations deferred to future periods (AS 22 / Ind AS 12).,                Deferred tax liabilities (net),1
+What is Deferred Tax Liabilities? Tax obligations deferred to future periods (AS 22 / Ind AS 12).,        Deferred Tax Liability,0
+"What is Other Financial Liabilities? Includes derivative liabilities, lease obligations, etc.",                        Others - Other financial liabilities,1
+"What is Other Financial Liabilities? Includes derivative liabilities, lease obligations, etc.",            Other financial liabilities,0
+What is Share Capital? Funds raised by issuing shares.,                Unit capital / Equity share capital,1
+"What is Other Equity / Reserves & Surplus? Includes retained earnings, general reserves, and other comprehensive income items.",                Other Equity,1

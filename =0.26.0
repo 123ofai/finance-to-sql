@@ -1,0 +1,79 @@
+Collecting sentence-transformers
+  Using cached sentence_transformers-4.1.0-py3-none-any.whl.metadata (13 kB)
+Collecting accelerate
+  Using cached accelerate-1.7.0-py3-none-any.whl.metadata (19 kB)
+Collecting transformers<5.0.0,>=4.41.0 (from sentence-transformers)
+  Downloading transformers-4.52.3-py3-none-any.whl.metadata (40 kB)
+Collecting tqdm (from sentence-transformers)
+  Downloading tqdm-4.67.1-py3-none-any.whl.metadata (57 kB)
+Requirement already satisfied: torch>=1.11.0 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from sentence-transformers) (2.5.1)
+Collecting scikit-learn (from sentence-transformers)
+  Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl.metadata (31 kB)
+Collecting scipy (from sentence-transformers)
+  Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl.metadata (61 kB)
+Collecting huggingface-hub>=0.20.0 (from sentence-transformers)
+  Downloading huggingface_hub-0.32.0-py3-none-any.whl.metadata (14 kB)
+Requirement already satisfied: Pillow in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from sentence-transformers) (11.1.0)
+Requirement already satisfied: typing_extensions>=4.5.0 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from sentence-transformers) (4.12.2)
+Requirement already satisfied: filelock in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers) (3.17.0)
+Requirement already satisfied: numpy>=1.17 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers) (2.0.1)
+Collecting packaging>=20.0 (from transformers<5.0.0,>=4.41.0->sentence-transformers)
+  Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB)
+Requirement already satisfied: pyyaml>=5.1 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers) (6.0.2)
+Collecting regex!=2019.12.17 (from transformers<5.0.0,>=4.41.0->sentence-transformers)
+  Downloading regex-2024.11.6-cp310-cp310-macosx_11_0_arm64.whl.metadata (40 kB)
+Requirement already satisfied: requests in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from transformers<5.0.0,>=4.41.0->sentence-transformers) (2.32.3)
+Collecting tokenizers<0.22,>=0.21 (from transformers<5.0.0,>=4.41.0->sentence-transformers)
+  Downloading tokenizers-0.21.1-cp39-abi3-macosx_11_0_arm64.whl.metadata (6.8 kB)
+Collecting safetensors>=0.4.3 (from transformers<5.0.0,>=4.41.0->sentence-transformers)
+  Downloading safetensors-0.5.3-cp38-abi3-macosx_11_0_arm64.whl.metadata (3.8 kB)
+Collecting fsspec>=2023.5.0 (from huggingface-hub>=0.20.0->sentence-transformers)
+  Downloading fsspec-2025.5.1-py3-none-any.whl.metadata (11 kB)
+Collecting hf-xet<2.0.0,>=1.1.2 (from huggingface-hub>=0.20.0->sentence-transformers)
+  Downloading hf_xet-1.1.2-cp37-abi3-macosx_11_0_arm64.whl.metadata (879 bytes)
+Collecting psutil (from accelerate)
+  Downloading psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl.metadata (22 kB)
+Requirement already satisfied: networkx in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from torch>=1.11.0->sentence-transformers) (3.4.2)
+Requirement already satisfied: jinja2 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from torch>=1.11.0->sentence-transformers) (3.1.6)
+Collecting sympy==1.13.1 (from torch>=1.11.0->sentence-transformers)
+  Downloading sympy-1.13.1-py3-none-any.whl.metadata (12 kB)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from sympy==1.13.1->torch>=1.11.0->sentence-transformers) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from jinja2->torch>=1.11.0->sentence-transformers) (3.0.2)
+Requirement already satisfied: charset-normalizer<4,>=2 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from requests->transformers<5.0.0,>=4.41.0->sentence-transformers) (3.3.2)
+Requirement already satisfied: idna<4,>=2.5 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from requests->transformers<5.0.0,>=4.41.0->sentence-transformers) (3.7)
+Requirement already satisfied: urllib3<3,>=1.21.1 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from requests->transformers<5.0.0,>=4.41.0->sentence-transformers) (2.3.0)
+Requirement already satisfied: certifi>=2017.4.17 in /opt/miniconda3/envs/crossencoder/lib/python3.10/site-packages (from requests->transformers<5.0.0,>=4.41.0->sentence-transformers) (2025.4.26)
+Collecting joblib>=1.2.0 (from scikit-learn->sentence-transformers)
+  Downloading joblib-1.5.1-py3-none-any.whl.metadata (5.6 kB)
+Collecting threadpoolctl>=3.1.0 (from scikit-learn->sentence-transformers)
+  Using cached threadpoolctl-3.6.0-py3-none-any.whl.metadata (13 kB)
+Using cached sentence_transformers-4.1.0-py3-none-any.whl (345 kB)
+Downloading transformers-4.52.3-py3-none-any.whl (10.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.5/10.5 MB 49.2 MB/s eta 0:00:00
+Downloading huggingface_hub-0.32.0-py3-none-any.whl (509 kB)
+Downloading hf_xet-1.1.2-cp37-abi3-macosx_11_0_arm64.whl (2.5 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 47.5 MB/s eta 0:00:00
+Downloading tokenizers-0.21.1-cp39-abi3-macosx_11_0_arm64.whl (2.7 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.7/2.7 MB 46.4 MB/s eta 0:00:00
+Using cached accelerate-1.7.0-py3-none-any.whl (362 kB)
+Downloading fsspec-2025.5.1-py3-none-any.whl (199 kB)
+Downloading packaging-25.0-py3-none-any.whl (66 kB)
+Downloading regex-2024.11.6-cp310-cp310-macosx_11_0_arm64.whl (284 kB)
+Downloading safetensors-0.5.3-cp38-abi3-macosx_11_0_arm64.whl (418 kB)
+Downloading sympy-1.13.1-py3-none-any.whl (6.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.2/6.2 MB 47.3 MB/s eta 0:00:00
+Downloading tqdm-4.67.1-py3-none-any.whl (78 kB)
+Downloading psutil-7.0.0-cp36-abi3-macosx_11_0_arm64.whl (239 kB)
+Downloading scikit_learn-1.6.1-cp310-cp310-macosx_12_0_arm64.whl (11.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.1/11.1 MB 47.9 MB/s eta 0:00:00
+Downloading joblib-1.5.1-py3-none-any.whl (307 kB)
+Downloading scipy-1.15.3-cp310-cp310-macosx_14_0_arm64.whl (22.4 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 22.4/22.4 MB 53.5 MB/s eta 0:00:00
+Using cached threadpoolctl-3.6.0-py3-none-any.whl (18 kB)
+Installing collected packages: tqdm, threadpoolctl, sympy, scipy, safetensors, regex, psutil, packaging, joblib, hf-xet, fsspec, scikit-learn, huggingface-hub, tokenizers, accelerate, transformers, sentence-transformers
+  Attempting uninstall: sympy
+    Found existing installation: sympy 1.13.3
+    Uninstalling sympy-1.13.3:
+      Successfully uninstalled sympy-1.13.3
+
+Successfully installed accelerate-1.7.0 fsspec-2025.5.1 hf-xet-1.1.2 huggingface-hub-0.32.0 joblib-1.5.1 packaging-25.0 psutil-7.0.0 regex-2024.11.6 safetensors-0.5.3 scikit-learn-1.6.1 scipy-1.15.3 sentence-transformers-4.1.0 sympy-1.13.1 threadpoolctl-3.6.0 tokenizers-0.21.1 tqdm-4.67.1 transformers-4.52.3
