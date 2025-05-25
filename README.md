@@ -25,9 +25,19 @@
 
 #### 1a_simpler_noisy
 - This contains natural spelling, grammatical mistakes
+
 | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
 |----------------------|----------------------|----------|----------|---------|
 | Terms + Desc         | bge-large-en-v1.5    | 0.9688     | 0.9583    |   With re-ranker, top10   |
+
+### Stage 2
+#### 1b_clean_data
+| Glossary Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|----------------------|----------------------|----------|----------|---------|
+| Term         | all-mpnet-base-v2            | 0.41     | 0.26     |        |
+| Term         | bge-large-en-v1.5            | 0.48     | 0.32     |        |
+| Term + Desc        | bge-large-en-v1.5      | 0.44     | 0.29     |        |
+
 
 ## Files
 nl2glossary.py: 
