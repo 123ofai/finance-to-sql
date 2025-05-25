@@ -37,6 +37,7 @@
 | Term         | all-mpnet-base-v2            | 0.41     | 0.26     |        |
 | Term         | bge-large-en-v1.5            | 0.48     | 0.32     |        |
 | Term + Desc        | bge-large-en-v1.5      | 0.44     | 0.29     |        |
+| Term         | bge-large-en-v1.5            | 0.38    | 0.23     | With reranker       |
 
 
 ## Files
