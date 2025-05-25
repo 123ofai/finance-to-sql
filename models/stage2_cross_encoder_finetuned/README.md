@@ -140,8 +140,9 @@ You can finetune this model on your own dataset.
 ### Training Hyperparameters
 #### Non-Default Hyperparameters
 
-- `per_device_train_batch_size`: 16
-- `per_device_eval_batch_size`: 16
+- `per_device_train_batch_size`: 4
+- `per_device_eval_batch_size`: 4
+- `num_train_epochs`: 20
 - `disable_tqdm`: True
 
 #### All Hyperparameters
@@ -151,8 +152,8 @@ You can finetune this model on your own dataset.
 - `do_predict`: False
 - `eval_strategy`: no
 - `prediction_loss_only`: True
-- `per_device_train_batch_size`: 16
-- `per_device_eval_batch_size`: 16
+- `per_device_train_batch_size`: 4
+- `per_device_eval_batch_size`: 4
 - `per_gpu_train_batch_size`: None
 - `per_gpu_eval_batch_size`: None
 - `gradient_accumulation_steps`: 1
@@ -164,7 +165,7 @@ You can finetune this model on your own dataset.
 - `adam_beta2`: 0.999
 - `adam_epsilon`: 1e-08
 - `max_grad_norm`: 1
-- `num_train_epochs`: 3
+- `num_train_epochs`: 20
 - `max_steps`: -1
 - `lr_scheduler_type`: linear
 - `lr_scheduler_kwargs`: {}

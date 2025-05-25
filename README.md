@@ -3,41 +3,43 @@
 ## Experiment Results
 ### Stage 1
 #### 1a_tougher
-| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
-|----------------------|----------------------|----------|----------|---------|
-| Terms                | all-mpnet-base-v2    | 0.29     | 0.23     |         |
-| Desc                 | all-mpnet-base-v2    | 0.35     | 0.252    |         |
-| Terms + Desc         | all-mpnet-base-v2    | 0.36     | 0.29     |         |
-| Terms + Desc         | bge-base-en-v1.5     | 0.31     | 0.23     |         |
-| Terms + Desc         | bge-large-en-v1.5    | 0.36     | 0.29     |         |
-| Terms + Desc         | mxbai-embed-large-v1 | 0.38     | 0.32     |         |
-| Terms + Desc         | bge-large-en-v1.5    | 0.39     | 0.325    |   added 'defined as' as stitching term   |
-| Terms + Desc         | all-mpnet-base-v2    | 0.39     | 0.318     |   added 'is' as stitching term      |
-| Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added 'can be defined as' as stitching term   |
-| Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added re-ranker: didn't help   |
+| S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Terms                | all-mpnet-base-v2    | 0.29     | 0.23     |         |
+| 2    | Desc                 | all-mpnet-base-v2    | 0.35     | 0.252    |         |
+| 3    | Terms + Desc         | all-mpnet-base-v2    | 0.36     | 0.29     |         |
+| 4    | Terms + Desc         | bge-base-en-v1.5     | 0.31     | 0.23     |         |
+| 5    | Terms + Desc         | bge-large-en-v1.5    | 0.36     | 0.29     |         |
+| 6    | Terms + Desc         | mxbai-embed-large-v1 | 0.38     | 0.32     |         |
+| 7    | Terms + Desc         | bge-large-en-v1.5    | 0.39     | 0.325    | added 'defined as' as stitching term |
+| 8    | Terms + Desc         | all-mpnet-base-v2    | 0.39     | 0.318    | added 'is' as stitching term |
+| 9    | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    | added 'can be defined as' as stitching term |
+| 10   | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    | added re-ranker: didn't help |
 
 #### 1a_simpler
-| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
-|----------------------|----------------------|----------|----------|---------|
-| Terms + Desc         | bge-large-en-v1.5    | 0.863     | 0.845    |         |
-| Terms + Desc         | bge-large-en-v1.5    | 0.954     | 0.941    |   With re-ranker, top5   |
-| Terms + Desc         | bge-large-en-v1.5    | 0.962     | 0.95    |   With re-ranker, top10   |
+| S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Terms + Desc         | bge-large-en-v1.5    | 0.863    | 0.845    |         |
+| 2    | Terms + Desc         | bge-large-en-v1.5    | 0.954    | 0.941    | With re-ranker, top5 |
+| 3    | Terms + Desc         | bge-large-en-v1.5    | 0.962    | 0.95     | With re-ranker, top10 |
 
-#### 1a_simpler_noisy
+#### 1a_simpler_noisy  
 - This contains natural spelling, grammatical mistakes
 
-| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
-|----------------------|----------------------|----------|----------|---------|
-| Terms + Desc         | bge-large-en-v1.5    | 0.9688     | 0.9583    |   With re-ranker, top10   |
+| S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Terms + Desc         | bge-large-en-v1.5    | 0.9688   | 0.9583   | With re-ranker, top10 |
 
 ### Stage 2
 #### 1b_clean_data
-| Glossary Input       | Model Used           | Accuracy | F1 Score | Remarks |
-|----------------------|----------------------|----------|----------|---------|
-| Term         | all-mpnet-base-v2            | 0.41     | 0.26     |        |
-| Term         | bge-large-en-v1.5            | 0.48     | 0.32     |        |
-| Term + Desc        | bge-large-en-v1.5      | 0.44     | 0.29     |        |
-| Term         | bge-large-en-v1.5            | 0.38    | 0.23     | With reranker       |
+| S.No | Glossary Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Term                 | all-mpnet-base-v2    | 0.41     | 0.26     |         |
+| 2    | Term                 | bge-large-en-v1.5    | 0.48     | 0.32     |         |
+| 3    | Term + Desc          | bge-large-en-v1.5    | 0.44     | 0.29     |         |
+| 4    | Term                 | bge-large-en-v1.5    | 0.38     | 0.23     | With reranker |
+| 5    | Term                 | bge-large-en-v1.5    | 0.51     | 0.35     | With reranker fine-tuned** |
+| 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker fine-tuned + weights b/w ranker & sim |
 
 
 ## Files
