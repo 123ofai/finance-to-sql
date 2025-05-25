@@ -39,8 +39,8 @@
 | 3    | Term + Desc          | bge-large-en-v1.5    | 0.44     | 0.29     |         |
 | 4    | Term                 | bge-large-en-v1.5    | 0.38     | 0.23     | With reranker |
 | 5    | Term                 | bge-large-en-v1.5    | 0.51     | 0.35     | With reranker fine-tuned** |
-| 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker fine-tuned + weights b/w ranker & sim |
-
+| 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker miniLM fine-tuned + weights b/w ranker & sim |
+| 7    | Term                 | bge-large-en-v1.5    | 0.62     | 0.45     | reranker miniLM fine-tuned on more hard-negative + weights b/w ranker & sim  |
 
 ## Files
 nl2glossary.py: 

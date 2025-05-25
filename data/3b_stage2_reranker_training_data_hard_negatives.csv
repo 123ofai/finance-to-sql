@@ -1,0 +1,130 @@
+query,label,score
+Assets,        Total Assets,1
+Assets,                Total expenses,0
+Assets,            Cash flow (used in) investing activities,0
+Assets,                    Operating profit before working capital changes,0
+Liabilities,(Current liabilities) + (Non-current liablilities),1
+Liabilities,            Other financial liabilities,0
+Liabilities,                Total expenses,0
+Liabilities,            Cash flow (used in) investing activities,0
+Liabilities,                    Operating profit before working capital changes,0
+Equity,            Equity,1
+Equity,    Equity,0
+Equity,                Total expenses,0
+Equity,            Cash flow (used in) investing activities,0
+Equity,                    Operating profit before working capital changes,0
+Current Assets,            Current assets,1
+Current Assets,                Financial assets - Current assets,0
+Current Assets,                Total expenses,0
+Current Assets,            Cash flow (used in) investing activities,0
+Current Assets,                    Operating profit before working capital changes,0
+Non-Current Assets,            Non-current assets,1
+Non-Current Assets,                Total expenses,0
+Non-Current Assets,            Cash flow (used in) investing activities,0
+Non-Current Assets,                    Operating profit before working capital changes,0
+Current Liabilities,            Current liabilities,1
+Current Liabilities,                Total expenses,0
+Current Liabilities,            Cash flow (used in) investing activities,0
+Current Liabilities,                    Operating profit before working capital changes,0
+Non-Current Liabilities,            Non-current liabilities,1
+Non-Current Liabilities,                Total expenses,0
+Non-Current Liabilities,            Cash flow (used in) investing activities,0
+Non-Current Liabilities,                    Operating profit before working capital changes,0
+Working Capital,Current Assets - Current Liabilities.,1
+Working Capital,                    Changes in working capital,0
+Working Capital,                Total expenses,0
+Working Capital,            Cash flow (used in) investing activities,0
+Working Capital,                    Operating profit before working capital changes,0
+Net Worth,total assets - total liabilities,1
+Net Worth,        Total Assets,0
+Net Worth,                Total expenses,0
+Net Worth,            Cash flow (used in) investing activities,0
+Net Worth,                    Operating profit before working capital changes,0
+Revenue,                    Revenue from operations,1
+Revenue,                Total expenses,0
+Revenue,            Cash flow (used in) investing activities,0
+Revenue,                    Operating profit before working capital changes,0
+Operating Expenses,                Total expenses,1
+Operating Expenses,                    Revenue from operations,0
+Operating Expenses,            Cash flow (used in) investing activities,0
+Operating Expenses,                    Operating profit before working capital changes,0
+Operating Profit (EBIT),Profit before tax,1
+Operating Profit (EBIT),                    Operating profit before working capital changes,0
+Operating Profit (EBIT),                    Revenue from operations,0
+Operating Profit (EBIT),            Cash flow (used in) investing activities,0
+Operating Profit (EBIT),                Total expenses,0
+EBITDA,(Profit before tax) + (Depreciation and amortization expense) + (Finance costs),1
+EBITDA,    EBITDA,0
+EBITDA,                    Revenue from operations,0
+EBITDA,            Cash flow (used in) investing activities,0
+EBITDA,                Total expenses,0
+Net Profit (PAT),        Profit/(loss) for the period,1
+Net Profit (PAT),                    Revenue from operations,0
+Net Profit (PAT),            Cash flow (used in) investing activities,0
+Net Profit (PAT),                Total expenses,0
+Operating Cash Flow,            Cash flow (used in) operating activities,1
+Operating Cash Flow,                    Revenue from operations,0
+Operating Cash Flow,            Cash flow (used in) investing activities,0
+Operating Cash Flow,                Total expenses,0
+Investing Cash Flow,            Cash flow (used in) investing activities,1
+Investing Cash Flow,                    Revenue from operations,0
+Investing Cash Flow,            Cash flow (used in) operating activities,0
+Investing Cash Flow,                Total expenses,0
+Financing Cash Flow,            Cash flow (used in)/from financing activities,1
+Financing Cash Flow,                    Revenue from operations,0
+Financing Cash Flow,            Cash flow (used in) operating activities,0
+Financing Cash Flow,                Total expenses,0
+Depreciation,                        Depreciation of tangible assets,1
+Depreciation,                    Revenue from operations,0
+Depreciation,            Cash flow (used in) operating activities,0
+Depreciation,                Total expenses,0
+Amortization,                        Amortisation of intangible assets,1
+Amortization,                    Revenue from operations,0
+Amortization,            Cash flow (used in) operating activities,0
+Amortization,                Total expenses,0
+"Property, Plant and Equipment (PPE)","                Property, plant and equipment",1
+"Property, Plant and Equipment (PPE)","            Property, plant and equipment",0
+"Property, Plant and Equipment (PPE)",                    Revenue from operations,0
+"Property, Plant and Equipment (PPE)",            Cash flow (used in) operating activities,0
+"Property, Plant and Equipment (PPE)",                Total expenses,0
+Intangible Assets,                Intangible assets,1
+Intangible Assets,                    Revenue from operations,0
+Intangible Assets,            Cash flow (used in) operating activities,0
+Intangible Assets,                Total expenses,0
+Financial Assets,(Financial assets - Current assets)+ (Financial assets - Non-Current assets),1
+Financial Assets,                Financial assets - Non-current assets,0
+Financial Assets,                    Revenue from operations,0
+Financial Assets,            Cash flow (used in) operating activities,0
+Financial Assets,                Total expenses,0
+Inventories,                Inventory,1
+Inventories,                            Projects Acquired - Inventories,0
+Inventories,                    Revenue from operations,0
+Inventories,            Cash flow (used in) operating activities,0
+Inventories,                Total expenses,0
+Borrowings, (Borrowings - Current) +   (Borrowings - Non Current),1
+Borrowings,                    Borrowings - Non Current,0
+Borrowings,                    Revenue from operations,0
+Borrowings,            Cash flow (used in) operating activities,0
+Borrowings,                Total expenses,0
+Trade Payables,                    Trade payables,1
+Trade Payables,                Trade payables,0
+Trade Payables,                    Revenue from operations,0
+Trade Payables,            Cash flow (used in) operating activities,0
+Trade Payables,                Total expenses,0
+Deferred Tax Liabilities,                Deferred tax liabilities (net),1
+Deferred Tax Liabilities,                    Deferred tax liabilities (net),0
+Deferred Tax Liabilities,                    Revenue from operations,0
+Deferred Tax Liabilities,            Cash flow (used in) operating activities,0
+Deferred Tax Liabilities,                Total expenses,0
+Other Financial Liabilities,                        Others - Other financial liabilities,1
+Other Financial Liabilities,                    Revenue from operations,0
+Other Financial Liabilities,            Cash flow (used in) operating activities,0
+Other Financial Liabilities,                Total expenses,0
+Share Capital,                Unit capital / Equity share capital,1
+Share Capital,                    Revenue from operations,0
+Share Capital,            Cash flow (used in) operating activities,0
+Share Capital,                Total expenses,0
+Other Equity / Reserves & Surplus,                Other Equity,1
+Other Equity / Reserves & Surplus,                    Revenue from operations,0
+Other Equity / Reserves & Surplus,            Cash flow (used in) operating activities,0
+Other Equity / Reserves & Surplus,                Total expenses,0
