@@ -2,14 +2,19 @@
 
 ## Experiment Results
 ### Stage 1
-| Matching Input       | Model Used          | Accuracy | F1 Score |
-|------------------------|---------------------|----------|----------|
-| Terms               | all-mpnet-base-v2 | 0.29     | 0.23     |
-| Desc               | all-mpnet-base-v2  | 0.35     | 0.252    |
-| Terms + Desc        | all-mpnet-base-v2 | 0.36     | 0.29     |
-| Terms + Desc        | bge-base-en-v1.5 | 0.31     | 0.23     |
-| Terms + Desc        | bge-large-en-v1.5 | 0.36     | 0.29     |
-| Terms + Desc        | mxbai-embed-large-v1 | 0.38     | 0.32     |
+| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|----------------------|----------------------|----------|----------|---------|
+| Terms                | all-mpnet-base-v2    | 0.29     | 0.23     |         |
+| Desc                 | all-mpnet-base-v2    | 0.35     | 0.252    |         |
+| Terms + Desc         | all-mpnet-base-v2    | 0.36     | 0.29     |         |
+| Terms + Desc         | bge-base-en-v1.5     | 0.31     | 0.23     |         |
+| Terms + Desc         | bge-large-en-v1.5    | 0.36     | 0.29     |         |
+| Terms + Desc         | mxbai-embed-large-v1 | 0.38     | 0.32     |         |
+| Terms + Desc         | bge-large-en-v1.5    | 0.39     | 0.325    |   added 'defined as' as stitching term   |
+| Terms + Desc         | all-mpnet-base-v2    | 0.39     | 0.318     |   added 'is' as stitching term      |
+| Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added 'can be defined as' as stitching term   |
+| Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added re-ranker: didn't help   |
+
 
 
 
