@@ -15,6 +15,9 @@
 | 8    | Terms + Desc         | all-mpnet-base-v2    | 0.39     | 0.318    | added 'is' as stitching term |
 | 9    | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    | added 'can be defined as' as stitching term |
 | 10   | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    | added re-ranker: didn't help |
+| 11   | Terms + Desc         | bge-large-en-v1.5    | 0.46     | 0.355    | miniLM re-ranker finetuned on hard-neg, noisy queries |
+| 12   | Terms + Desc         | bge-large-en-v1.5    | 0.49     | 0.40     | sno 11 + reranker trained with glossary desc |
+
 
 #### 1a_simpler
 | S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
@@ -29,6 +32,8 @@
 | S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
 |------|----------------------|----------------------|----------|----------|---------|
 | 1    | Terms + Desc         | bge-large-en-v1.5    | 0.9688   | 0.9583   | With re-ranker, top10 |
+| 2    | Terms + Desc         | bge-large-en-v1.5    | 0.89     | 0.86   | miniLM re-ranker finetuned on hard-neg, noisy queries |
+| 3    | Terms + Desc         | bge-large-en-v1.5    | 0.87     | 0.85   | sno 2 + glossary data 4b with desc |
 
 ### Stage 2
 #### 1b_clean_data

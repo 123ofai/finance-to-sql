@@ -1,0 +1,65 @@
+NL_Query,GT_Glossary,Predicted_Glossary,Similarity_Score
+Can yu share what was the Assets last year?,Assets,Current Assets,1.5251
+Can u tell me what was the Liabilities last year?,Liabilities,Current Liabilities,2.8112
+Can yu share what was the Equity last year?,Equity,Equity,0.3168
+Can yu share what was the Current Assets last year?,Current Assets,Current Assets,2.2131
+What's was the Non-Current Assets last quarter?,Non-Current Assets,Non-Current Assets,2.7299
+Wat was the Current Liabilities last quarter?,Current Liabilities,Current Liabilities,2.548
+What's was the Non-Current Liabilities last quarter?,Non-Current Liabilities,Non-Current Liabilities,2.7967
+Can u tell me what was the Working Capital last year?,Working Capital,Working Capital,2.5386
+Give me Net Worth figure for last quater?,Net Worth,Net Worth,1.343
+Can you tell me what is the Revenue last year?,Revenue,Revenue,2.1478
+I wanna know the Cost of Goods Sold (COGS) for the last quarter.,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),2.4921
+Tell me the Gross Profit last yr?,Gross Profit,Gross Profit Margin,2.2871
+I wanna know the Operating Expenses for the last quarter.,Operating Expenses,Operating Expenses,1.8171
+Give me Operating Profit (EBIT) figure for last quater?,Operating Profit (EBIT),Operating Profit (EBIT),2.3535
+What's was the EBITDA last quarter?,EBITDA,EBITDA,2.6369
+I wanna know the Net Profit (PAT) for the last quarter.,Net Profit (PAT),Net Profit (PAT),2.4697
+Can you pls tel me Earnings Per Share (EPS) from last year?,Earnings Per Share (EPS),Earnings Per Share (EPS),2.306
+Give me Operating Cash Flow figure for last quater?,Operating Cash Flow,Operating Cash Flow,1.643
+Can yu share what was the Investing Cash Flow last year?,Investing Cash Flow,Investing Cash Flow,1.9686
+Can you tell me what is the Financing Cash Flow last year?,Financing Cash Flow,Financing Cash Flow,2.8257
+Can you pls tel me Free Cash Flow from last year?,Free Cash Flow,Free Cash Flow,2.2693
+Wat was the Depreciation last quarter?,Depreciation,Depreciation,1.8746
+Tell me the Amortization last yr?,Amortization,Amortization,1.4112
+Can you pls tel me Accruals from last year?,Accruals,Current Liabilities,1.5193
+Give me Provisions figure for last quater?,Provisions,Provisions,2.06
+Wat was the Contingent Liabilities last quarter?,Contingent Liabilities,Contingent Liabilities,2.2027
+I wanna know the Gross Profit Margin for the last quarter.,Gross Profit Margin,Gross Profit Margin,2.4219
+Can you pls tel me Operating Profit Margin from last year?,Operating Profit Margin,Operating Profit Margin,2.0819
+What's was the Net Profit Margin last quarter?,Net Profit Margin,Net Profit Margin,2.6561
+I wanna know the Return on Assets (ROA) for the last quarter.,Return on Assets (ROA),Return on Assets (ROA),2.317
+Can u tell me what was the Return on Equity (ROE) last year?,Return on Equity (ROE),Return on Equity (ROE),2.7588
+How much was Return on Capital Employed (ROCE) last quater?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),2.7991
+Wat was the EBITDA Margin last quarter?,EBITDA Margin,EBITDA Margin,2.1181
+Can you pls tel me Current Ratio from last year?,Current Ratio,Current Ratio,1.5798
+Give me Quick Ratio (Acid Test) figure for last quater?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),2.4562
+What's was the Cash Ratio last quarter?,Cash Ratio,Cash Ratio,2.6456
+Wat was the Inventory Turnover last quarter?,Inventory Turnover,Inventory Turnover,1.9341
+I wanna know the Receivables Turnover for the last quarter.,Receivables Turnover,Receivables Turnover,2.1116
+Wat was the Payables Turnover last quarter?,Payables Turnover,Payables Turnover,2.0933
+I wanna know the Asset Turnover for the last quarter.,Asset Turnover,Asset Turnover,2.1746
+Can you pls tel me Working Capital Turnover from last year?,Working Capital Turnover,Working Capital Turnover,1.7668
+Tell me the Debt-to-Equity Ratio last yr?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,2.2226
+Can u tell me what was the Debt Ratio last year?,Debt Ratio,Debt Ratio,2.6488
+Wat was the Interest Coverage Ratio last quarter?,Interest Coverage Ratio,Interest Coverage Ratio,2.1943
+How much was Equity Ratio last quater?,Equity Ratio,Equity Ratio,2.084
+Wat was the Capital Gearing Ratio last quarter?,Capital Gearing Ratio,Capital Gearing Ratio,2.2773
+Tell me the Price-to-Earnings (P/E) Ratio last yr?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,2.9832
+Can u tell me what was the Price-to-Book (P/B) Ratio last year?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,3.1195
+I wanna know the Dividend Yield for the last quarter.,Dividend Yield,Dividend Yield,2.0293
+Can yu share what was the Dividend Payout Ratio last year?,Dividend Payout Ratio,Dividend Payout Ratio,2.0769
+How much was Enterprise Value (EV) last quater?,Enterprise Value (EV),Enterprise Value (EV),2.8055
+Wat was the EV/EBITDA last quarter?,EV/EBITDA,EV/EBITDA,1.8382
+"Wat was the Property, Plant and Equipment (PPE) last quarter?","Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",2.427
+Can you pls tel me Intangible Assets from last year?,Intangible Assets,Current Assets,1.625
+Give me Investment Property figure for last quater?,Investment Property,Investment Property,0.8203
+Tell me the Financial Assets last yr?,Financial Assets,Current Assets,2.1475
+What's was the Inventories last quarter?,Inventories,Inventories,1.6281
+Wat was the Deferred Tax Assets last quarter?,Deferred Tax Assets,Deferred Tax Liabilities,2.5048
+Wat was the Borrowings last quarter?,Borrowings,Debt Ratio,0.6842
+I wanna know the Trade Payables for the last quarter.,Trade Payables,Trade Payables,1.3139
+Can u tell me what was the Deferred Tax Liabilities last year?,Deferred Tax Liabilities,Deferred Tax Liabilities,2.9889
+Give me Other Financial Liabilities figure for last quater?,Other Financial Liabilities,Other Financial Liabilities,1.7964
+Can u tell me what was the Share Capital last year?,Share Capital,Share Capital,2.4023
+Can you tell me what is the Other Equity / Reserves & Surplus last year?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,3.3131

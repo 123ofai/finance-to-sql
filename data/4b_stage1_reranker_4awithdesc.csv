@@ -1,0 +1,564 @@
+query,label,score
+How much money did we bring in from sales this quarter?,Revenue can be defined as Income from sales of goods or services.,1
+How much money did we bring in from sales this quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much money did we bring in from sales this quarter?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much money did we bring in from sales this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What did it cost us to make the stuff we sold last month?,Cost of Goods Sold (COGS) can be defined as Direct costs of producing goods sold.,1
+What did it cost us to make the stuff we sold last month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What did it cost us to make da stuff we sold last month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What did it cost us to make the stuff we sold last month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What did it cost us to make the stuff we sold last month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After paying for production, how much did we keep last year?",Gross Profit can be defined as Revenue - COGS.,1
+"After paying 4 production, how much did we keep last year?",Gross Profit can be defined as Revenue - COGS.,1
+"After paying for production, how much did we keep last year?",Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+"After paying 4 production, how much did we keep last year?",Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+"After paying for production, how much did we keep last year?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"After paying for production, how much we did keep last year?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"After paying for production, how much did we keep last year?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After paying for production, how much we did keep last year?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What are we spending to keep the business running this year?,"Operating Expenses can be defined as Expenses incurred in the normal course of business (e.g., salaries, rent).",1
+What are we spending to keep da business running this year?,"Operating Expenses can be defined as Expenses incurred in the normal course of business (e.g., salaries, rent).",1
+What are we spending to keep the business running this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What are we spending to keep the business running this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What are we spending to keep da business running this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What are we spending to keep the business running this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much did our main operations earn us in the last quarter?,Operating Profit (EBIT) can be defined as Earnings before interest and tax.,1
+How much did our main operations earn us in the last quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How much did our main operations earn us in the last quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much did our main operations earn us in da last quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much did our main operations earn us in the last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"What’s our profit before taxes, interest, and equipment costs this month?","EBITDA can be defined as Earnings before interest, tax, depreciation, and amortization.",1
+"What’s our profit be4e taxes, interest, and equipment costs this month?","EBITDA can be defined as Earnings before interest, tax, depreciation, and amortization.",1
+"What’s our profit before taxes, interest, and equipment costs this month?",Return on Equity (ROE) can be defined as Profitability for owners.,0
+"What’s our proffit before taxes, interest, and equipment costs this month?",Return on Equity (ROE) can be defined as Profitability for owners.,0
+"What’s our profit before taxes, interest, and equipment costs this month?","Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+"What’s our profit before taxes, interest, and equipment costs this month?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"What’s our provit before taxes, interest, and equipment costs this month?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"What’s our proffit be4e taxes, interest, and equipment costs this month?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After all expenses, how much did we end up with last year?","Net Profit (PAT) can be defined as Profit after all expenses, interest, and tax.",1
+"After all expenses, how much we did end up with last year?","Net Profit (PAT) can be defined as Profit after all expenses, interest, and tax.",1
+"After all expenses, how much did we end up with last year?",Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+"After all expenses, how much did we end up with last year?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"After all expenses, how much did we end up with last year?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After all expenses, how much we did end up with last year?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After all expenses, how much did we end up with last yr?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much profit did each share make last quarter?,Earnings Per Share (EPS) can be defined as Net profit divided by the number of outstanding shares.,1
+How much profit did each share make last quarter?,Earnings Per Share (EPS) can be defined as Profit attributable per share.,1
+How much provit did each share make last quarter?,Earnings Per Share (EPS) can be defined as Net profit divided by the number of outstanding shares.,1
+How much provit did each share make last quarter?,Earnings Per Share (EPS) can be defined as Profit attributable per share.,1
+How much profit did each share make last quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much profit did each share make last quarter?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much profit did each share make last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much proffit did each share make last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash came in from our operations in April?,Operating Cash Flow can be defined as Cash generated from core business operations.,1
+How much cash came in from our operations in April?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much cash came in from our operations in April?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash came in from our operations in April?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What did we spend on new equipment or investments last year?,"Investing Cash Flow can be defined as Cash used in or generated from investments (e.g., asset purchase, sale).",1
+What did we spend on new equipment or investments last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What did we spend on new equipment or investments last year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What did we spend on new equipment or investments last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Did we get any cash from loans or investors in the first quarter?,"Financing Cash Flow can be defined as Cash from borrowing, issuing shares, or dividend payments.",1
+Did we get any cash from loans or inves2rs in the first quarter?,"Financing Cash Flow can be defined as Cash from borrowing, issuing shares, or dividend payments.",1
+Did we get any cash from loans or investors in the first quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Did we get any cash from loans or investors in the first quarter?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Did we get any cash from loans or investors in the first quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Did we get any cash from loans or investors in da first quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Did we get any cash from loans or inves2rs in the first quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"After buying what we needed, how much cash is left this year?",Free Cash Flow can be defined as Cash available after capital expenditures (Operating Cash Flow - CapEx).,1
+"After buying what we needed, how much cash is left this year?",Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+"After buying what we needed, how mch cash is left this year?",Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+"After buying what we needed, how much cash is left this year?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"After buying what we needed, how mch cash is left this year?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"After buying what we needed, how much cash is left this year?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much are we writing off for old equipment this month?,Depreciation can be defined as Reduction in asset value over time due to use or obsolescence.,1
+How much are we writing off 4 old equipment this month?,Depreciation can be defined as Reduction in asset value over time due to use or obsolescence.,1
+How much are we writing off for old equipment this month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much are we writing ovf 4 old equipment this month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much are we writing off for old equipment this month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much are we writing off for old equipment this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the cost we’re spreading out for things like patents?,Amortization can be defined as Similar to depreciation but applied to intangible assets.,1
+What’s the cost we’re spreading out for things like patents?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s the cost we’re spreading out for things like patents?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the cost we’re spreading out 4 things like patents?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the cost we’re spreading out for things like patents?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What bills have we noted but not paid yet as of last month?,Accruals can be defined as Revenues or expenses recognized before cash is exchanged.,1
+What bills have we noted but not paid yet as of last month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What bills have we noted but not paid yet as of last month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What bills have we noted but not paid yet as of last month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we saving enough for future costs like repairs?,Provisions can be defined as Funds set aside for future liabilities or losses.,1
+Are we saving enough for future costs like repairs?,Provisions can be defined as Liabilities of uncertain timing or amount (AS 29 / Ind AS 37).,1
+Are we saving enough for future costs like repairs?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we saving enough for future costs like repairs?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we saving enough for future costs like repairs?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Could we owe money later depending on things like lawsuits?,Contingent Liabilities can be defined as Potential obligations depending on future events.,1
+Could we owe money later depending on things like lawsuits?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Could we owe money later depending on things like lawsuits?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Could we owe money later depending on things like lawsuits?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What chunk of our sales is profit after making our products this quarter?,Gross Profit Margin can be defined as Measures profitability after direct costs.,1
+What chunk of our sales is profit after making our products dis quater?,Gross Profit Margin can be defined as Measures profitability after direct costs.,1
+What chunk of our sales is profit after making our products this quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What chunk of our sales is profit after making our products this quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What chunk ov our sales is provit after making our products dis quater?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What chunk of our sales is profit after making our products this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What chunk of our sales is profit after making our products dis quater?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of each sale stays with us after regular costs in 2024?,Operating Profit Margin can be defined as Profit from operations as a % of revenue.,1
+How much of each sale stays with us after regular costs in 2024?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How much of each sale stays with us after regular costs in 2024?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much of each sale stays with us after regular costs in 2024?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much ov each sale stays with us after regular costs in 2024?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our real profit percentage from all sales last year?,Net Profit Margin can be defined as Bottom-line profitability.,1
+What’s our real profit percentage from all sales last year?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What’s our real provit percentage from all sales last year?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What’s our real profit percentage from all sales last year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s our real profit percentage from all sales last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we making good money from the things we own this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,1
+Are we making good money from da things we own this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,1
+Are we making good money from the things we own this year?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we making good money from the things we own this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we making good money from the things we own this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much are shareholders earning from their investment last quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,1
+How much are shareholders earning from dair investment last quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,1
+How much are shareholders earning from their investment last quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much are shareholders earning from their investment last quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much are shareholders earning from dair investment last quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much are shareholders earning from their investment last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we using our money wisely to make profits this year?,Return on Capital Employed (ROCE) can be defined as Efficiency of capital usage.,1
+Are we using our money wisely to make profits this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we using our money wisely to make profits this year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we using our money wisely 2 make provits this year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we using our money wisely 2 make profits this year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we using our money wisely to make profits this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we using our money wisely to make proffits this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What part of our sales is profit before taxes and wear-and-tear costs this month?,EBITDA Margin can be defined as Operating performance before non-cash items.,1
+What part ov our sales is provit before taxes and wear-and-tear costs this month?,EBITDA Margin can be defined as Operating performance before non-cash items.,1
+What part of our sales is proffit before taxes and wear-and-tear costs this month?,EBITDA Margin can be defined as Operating performance before non-cash items.,1
+What part of our sales is profit before taxes and wear-and-tear costs this month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What part of our sales is profit before taxes and wear-and-tear costs this month?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What part ov our sales is provit before taxes and wear-and-tear costs this month?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What part of our sales is proffit before taxes and wear-and-tear costs this month?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What part of our sales is profit before taxes and wear-and-tear costs this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What part of our sales is proffit before taxes and wear-and-tear costs this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Can we pay off our short-term bills easily right now?,Current Ratio can be defined as Measures short-term liquidity.,1
+Can we pay off our short-term bills easily right now?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Can we pay off our short-term bills easily right now?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we pay off our short-term bills easily right now?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"Without counting our stock, can we cover what we owe soon?",Quick Ratio (Acid Test) can be defined as More stringent liquidity test.,1
+"Without counting our stock, can we cover what we owe soon?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"Without counting our stock, can we cover what we owe soon?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"Without counting our stock, can we cover what we owe soon?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"Without counting our s2ck, can we cover what we owe soon?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash do we have to handle bills due this month?,Cash Ratio can be defined as Most conservative liquidity measure.,1
+How much cash do we have to handle bills due this month?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much cash do we have 2 handle bills due this month?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much cash do we have to handle bills due this month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash do we have to handle bills due this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we selling our products fast enough compared to what’s in stock?,Inventory Turnover can be defined as How quickly inventory is sold.,1
+Are we selling our products fast enough compared to what’s in stock?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we selling our products fast enough compared to what’s in stock?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we selling our products fast enough compared to what’s in stock?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are customers paying us faster than they did last year?,Receivables Turnover can be defined as How efficiently receivables are collected.,1
+Are customers paying us faster than they did last year?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are customers paying us faster than they did last year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are customers paying us faster than they did last yr?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are customers paying us faster than they did last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How often are we paying our suppliers this quarter?,Payables Turnover can be defined as How quickly payables are paid.,1
+How often are we paying our suppliers this quarter?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How often are we paying our suppliers this quarter?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How often are we paying our suppliers dis quater?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How often are we paying our suppliers this quarter?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+Are we using what we own to boost sales well?,Asset Turnover can be defined as How efficiently assets are used.,1
+Are we using what we own to boost sales well?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we using what we own to boost sales well?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we using what we own to boost sales well?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are our short-term resources helping us sell more?,Working Capital Turnover can be defined as Efficiency in using working capital.,1
+Are our short-term resources helping us sell more?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are our short-term resources helping us sell more?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are our short-term resources helping us sell more?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Do we owe more than what we’ve put into the company?,Debt-to-Equity Ratio can be defined as Financial leverage.,1
+Do we owe more than what we’ve put into the company?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Do we owe more than what we’ve put into the company?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Do we owe more than what we’ve put into the company?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of what we own comes from borrowed money?,Debt Ratio can be defined as Proportion of assets financed by debt.,1
+How much ov what we own comes from borrowed money?,Debt Ratio can be defined as Proportion of assets financed by debt.,1
+How much of what we own comes from borrowed money?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much of what we own comes from borrowed money?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How much of what we own comes from borrowed money?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How much ov what we own comes from borrowed money?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+Can we handle the interest on our loans comfortably?,Interest Coverage Ratio can be defined as Ability to pay interest on debt.,1
+Can we handle da interest on our loans comfortably?,Interest Coverage Ratio can be defined as Ability to pay interest on debt.,1
+Can we handle the interest on our loans comfortably?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Can we handle the interest on our loans comfortably?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we handle da interest on our loans comfortably?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we handle the interest on our loans com4tably?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we handle the interest on our loans comfortably?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Can we handle the interest on our loans com4tably?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of the company really belongs to the owners?,Equity Ratio can be defined as Portion of assets funded by equity.,1
+How much of the company really belongs to the owners?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much of da company really belongs to da owners?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much of the company really belongs to the owners?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much of da company really belongs to da owners?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much of the company really belongs to the owners?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the split between borrowed money and our own funds?,Capital Gearing Ratio can be defined as Proportion of debt in capital structure.,1
+What’s the split between borrowed money and our own funds?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the split between borrowed money and our own funds?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the split between borrowed money and our own funds?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How much is each share earning us this year?,Earnings Per Share (EPS) can be defined as Net profit divided by the number of outstanding shares.,1
+How much is each share earning us this year?,Earnings Per Share (EPS) can be defined as Profit attributable per share.,1
+How much is each share earning us this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much is each share earning us this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much is each share earning us this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are people paying a lot for our stock compared to profits?,Price-to-Earnings (P/E) Ratio can be defined as Valuation relative to earnings.,1
+Are people paying a lot for our stock compared to proffits?,Price-to-Earnings (P/E) Ratio can be defined as Valuation relative to earnings.,1
+Are people paying a lot for our stock compared to provits?,Price-to-Earnings (P/E) Ratio can be defined as Valuation relative to earnings.,1
+Are people paying a lot for our stock compared to profits?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are people paying a lot for our stock compared to provits?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are people paying a lot for our stock compared to profits?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are people paying a lot for our stock compared to proffits?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are people paying a lot for our stock compared to profits?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Is our stock worth more than what we actually own per share?,Price-to-Book (P/B) Ratio can be defined as Market value vs. net asset value.,1
+Is our stock worth more than what we actually own per share?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Is our stock worth more than what we actually own per share?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Is our stock worth more than what we actually own per share?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Is our s2ck worth more than what we actually own per share?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the payout to investors from dividends right now?,Dividend Yield can be defined as Cash return from dividends.,1
+What’s the payout to investors from dividends right now?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the payout to investors from dividends right now?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s the payout 2 inves2rs from dividends right now?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s the payout to investors from dividends right now?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the payout 2 inves2rs from dividends right now?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of our earnings are we giving out to shareholders?,Dividend Payout Ratio can be defined as % of earnings distributed as dividends.,1
+How much ov our earnings are we giving out to shareholders?,Dividend Payout Ratio can be defined as % of earnings distributed as dividends.,1
+How much of our earnings are we giving out to shareholders?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much of our erning are we giving out to shareholders?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much of our earnings are we giving out to shareholders?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much of our erning are we giving out to shareholders?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much of our earnings are we giving out to shareholders?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"What’s the total worth of our company, debts included?",Enterprise Value (EV) can be defined as Total company value.,1
+"What’s the 2tal worth of our company, debts included?",Enterprise Value (EV) can be defined as Total company value.,1
+"What’s da total worth of our company, debts included?",Enterprise Value (EV) can be defined as Total company value.,1
+"What’s the total worth of our company, debts included?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"What’s the 2tal worth of our company, debts included?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"What’s the total worth of our company, debts included?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"What’s the total worth of our company, debts included?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our value stack up against profits before taxes and depreciation?,EV/EBITDA can be defined as Company valuation relative to EBITDA,1
+How does our value stack up against profits before taxes and depreciation?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How does our value stack up against proffits before taxes and depreciation?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How does our value stack up against profits before taxes and depreciation?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our valeu stack up against profits before taxes and depreciation?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our value stack up against provits before taxes and depreciation?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our value stack up against profits before taxes and depreciation?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the value of our buildings and machines right now?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",1
+What’s da value of our buildings and machines right now?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",1
+What’s the value of our buildings and machines right now?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the value of our buildings and machines right now?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s da value of our buildings and machines right now?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the value of our buildings and machines right now?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the valeu of our buildings and machines right now?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much are things like our patents worth?,"Intangible Assets can be defined as Identifiable non-monetary assets without physical substance, such as software, patents, etc.,",1
+How much are things like our patents worth?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much are things like our patents worth?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much are things like our patents worth?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the value of properties we’re holding to rent or sell?,Investment Property can be defined as Property held to earn rentals or for capital appreciation,1
+What’s the valeu of properties we’re holding to rent or sell?,Investment Property can be defined as Property held to earn rentals or for capital appreciation,1
+What’s the value ov properties we’re holding to rent or sell?,Investment Property can be defined as Property held to earn rentals or for capital appreciation,1
+What’s the value of properties we’re holding to rent or sell?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the valeu of properties we’re holding to rent or sell?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the value of properties we’re holding to rent or sell?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What’s da value of properties we’re holding to rent or sell?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What’s the value of properties we’re holding to rent or sell?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the valeu of properties we’re holding to rent or sell?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much do we have tied up in stocks or bonds?,"Financial Assets can be defined as Includes investments, trade receivables, and cash equivalents",1
+How much do we have tied up in stocks or bonds?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much do we got tied up in s2cks or bonds?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much do we have tied up in stocks or bonds?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How much do we have tied up in stocks or bonds?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much do we have tied up in s2cks or bonds?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the worth of all the products we’ve got ready to sell?,Inventories can be defined as Assets held for sale in the ordinary course of business or for use in the production process,1
+What’s da worth of all da products we’ve got ready to sell?,Inventories can be defined as Assets held for sale in the ordinary course of business or for use in the production process,1
+What’s the worth of all the products we’ve got ready to sell?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s the worth of all the products we’ve got ready to sell?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the worth ov all the products we’ve got ready to sell?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the worth of all the products we’ve got ready to sell?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Can we save on taxes later because of past losses?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,1
+Can we save on taxes later because ov past losses?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,1
+Can we save on taxes later because of past losses?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Can we save on taxes later because of past losses?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we save on taxes later because of past losses?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much have we borrowed altogether?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",1
+How much have we borrowed al2gether?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",1
+How much have we borrowed altogether?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much have we borrowed altogether?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much have we borrowed altogether?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+What do we owe suppliers for stuff we’ve bought?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,1
+What do we owe suppliers for stuff we’ve bought?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What do we owe suppliers 4 stuff we’ve bought?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What do we owe suppliers for stuff we’ve bought?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What do we owe suppliers for stuff we’ve bought?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+What do we owe suppliers 4 stuff we’ve bought?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+Are we setting aside money for future employee costs?,Provisions can be defined as Funds set aside for future liabilities or losses.,1
+Are we setting aside money for future employee costs?,Provisions can be defined as Liabilities of uncertain timing or amount (AS 29 / Ind AS 37).,1
+Are we setting aside money for future employee costs?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we setting aside money for future employee costs?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we setting aside money for future employee costs?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much tax will we owe down the road?,Deferred Tax Liabilities can be defined as Tax obligations deferred to future periods (AS 22 / Ind AS 12).,1
+How much tax will we owe down the road?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much tax will we owe down the road?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much tax will we owe down the road?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+What other debts do we have hanging out there?,"Other Financial Liabilities can be defined as Includes derivative liabilities, lease obligations, etc.",1
+What other debts do we have hanging out there?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What other debts do we have hanging out there?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What other debts do we have hanging out there?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How much cash did shareholders put into the company?,Share Capital can be defined as Funds raised by issuing shares.,1
+How much cash did shareholders put into the company?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much cash did shareholders put into the company?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How much cash did shareholders put in2 the company?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+How much cash did shareholders put into the company?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How much cash did shareholders put into da company?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+What’s the total of profits we’ve kept over time?,"Other Equity / Reserves & Surplus can be defined as Includes retained earnings, general reserves, and other comprehensive income items.",1
+What’s the total ov provits we’ve kept over time?,"Other Equity / Reserves & Surplus can be defined as Includes retained earnings, general reserves, and other comprehensive income items.",1
+What’s the total of profits we’ve kept over time?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s da total of profits we’ve kept over time?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s the total of profits we’ve kept over time?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the total of profits we’ve kept over time?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How does our sales money this quarter compare to last year?,Revenue can be defined as Income from sales of goods or services.,1
+How does our sales money dis quater compare to last year?,Revenue can be defined as Income from sales of goods or services.,1
+How does our sales money this quarter compare to last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How does our sales money this quarter compare to last yr?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How does our sales money this quarter compare to last year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How does our sales money this quarter compare to last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our sales money dis quater compare to last yr?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Did it cost more to make things this month than last month?,Cost of Goods Sold (COGS) can be defined as Direct costs of producing goods sold.,1
+Did it cost more to make things this month than last month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Did it cost more to make things this month than last month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Did it cost more 2 make things this month than last month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Did it cost more to make things this month than last month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Did it cost more 2 make things this month than last month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How has our profit after production been trending lately?,Gross Profit can be defined as Revenue - COGS.,1
+How has our provit after production been trending lately?,Gross Profit can be defined as Revenue - COGS.,1
+How has our profit after production been trending lately?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How has our profit after production been trending lately?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How has our profit after production been trending lately?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How has our proffit after production been trending lately?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we spending more than planned this year?,"Operating Expenses can be defined as Expenses incurred in the normal course of business (e.g., salaries, rent).",1
+Are we spending more than planned this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we spending more than planned this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we spending more than planned this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What did we earn from operations before interest last year?,Operating Profit (EBIT) can be defined as Earnings before interest and tax.,1
+What did we earn from operations before interest last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What we did earn from operations before interest last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What did we earn from operations before interest last year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What did we earn from operations before interest last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What did we earn from operations before interest last yr?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our profit before equipment costs this quarter?,"EBITDA can be defined as Earnings before interest, tax, depreciation, and amortization.",1
+What’s our profit before equipment costs dis quater?,"EBITDA can be defined as Earnings before interest, tax, depreciation, and amortization.",1
+What’s our profit before equipment costs this quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What’s our provit before equipment costs this quarter?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What’s our profit before equipment costs this quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s our proffit before equipment costs this quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s our profit before equipment costs this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our provit before equipment costs this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much did we keep after everything last month?,"Net Profit (PAT) can be defined as Profit after all expenses, interest, and tax.",1
+How much did we keep after everything last month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much did we keep after everything last month?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much we did keep after everything last month?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much did we keep after everything last month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much is each share earning so far this year?,Earnings Per Share (EPS) can be defined as Net profit divided by the number of outstanding shares.,1
+How much is each share earning so far this year?,Earnings Per Share (EPS) can be defined as Profit attributable per share.,1
+How much is each share earning so far this year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much is each share earning so far this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much is each share earning so far this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash did we make in the first half of 2025?,Operating Cash Flow can be defined as Cash generated from core business operations.,1
+How much cash did we make in the first half of 2025?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much cash we did make in the first half of 2025?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much cash did we make in the first half of 2025?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash we did make in the first half of 2025?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash did we make in the first half of 2025?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash we did make in the first half of 2025?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What did we spend on investments last quarter?,"Investing Cash Flow can be defined as Cash used in or generated from investments (e.g., asset purchase, sale).",1
+What did we spend on investments last quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What did we spend on investments last quarter?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What did we spend on investments last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Have we borrowed or sold shares for cash recently?,"Financing Cash Flow can be defined as Cash from borrowing, issuing shares, or dividend payments.",1
+Have we borrowed or sold shares for cash recently?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Have we borrowed or sold shares 4 cash recently?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Have we borrowed or sold shares for cash recently?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Have we borrowed or sold shares 4 cash recently?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Have we borrowed or sold shares for cash recently?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Have we borrowed or sold shares 4 cash recently?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash do we have left after equipment buys this month?,Free Cash Flow can be defined as Cash available after capital expenditures (Operating Cash Flow - CapEx).,1
+How much cash do we got left after equipment buys this month?,Free Cash Flow can be defined as Cash available after capital expenditures (Operating Cash Flow - CapEx).,1
+How much cash do we have left after equipment buys this month?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much cash do we have left after equipment buys this month?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash do we have left after equipment buys this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash do we got left after equipment buys this month?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the write-off for our gear this quarter?,Depreciation can be defined as Reduction in asset value over time due to use or obsolescence.,1
+What’s the write-ovf for our gear this quarter?,Depreciation can be defined as Reduction in asset value over time due to use or obsolescence.,1
+What’s the write-off 4 our gear this quarter?,Depreciation can be defined as Reduction in asset value over time due to use or obsolescence.,1
+What’s the write-off for our gear this quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s the write-off for our gear this quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s da write-off for our gear this quarter?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s the write-off for our gear this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the write-off 4 our gear this quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we spreading out costs for non-physical stuff?,Amortization can be defined as Similar to depreciation but applied to intangible assets.,1
+Are we spreading out costs for non-physical stuff?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we spreading out costs 4 non-physical stuff?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we spreading out costs for non-physical stuff?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+Are we spreading out costs for non-physical stuff?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What expenses are on the books but not paid today?,Accruals can be defined as Revenues or expenses recognized before cash is exchanged.,1
+What expenses are on the books but not paid today?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+What expenses are on the books but not paid today?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What expenses are on da books but not paid today?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What expenses are on the books but not paid 2day?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What expenses are on the books but not paid today?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What expenses are on the books but not paid 2day?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Have we saved up for any big costs coming up?,Provisions can be defined as Funds set aside for future liabilities or losses.,1
+Have we saved up for any big costs coming up?,Provisions can be defined as Liabilities of uncertain timing or amount (AS 29 / Ind AS 37).,1
+Have we saved up for any big costs coming up?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Have we saved up for any big costs coming up?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Have we saved up for any big costs coming up?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Might we owe money depending on future events?,Contingent Liabilities can be defined as Potential obligations depending on future events.,1
+Might we owe money depending on future events?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Might we owe money depending on future events?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Might we owe money depending on future events?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our profit after making goods compare to others?,Gross Profit Margin can be defined as Measures profitability after direct costs.,1
+How does our proffit after making goods compare to odars?,Gross Profit Margin can be defined as Measures profitability after direct costs.,1
+How does our profit after making goods compare to others?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How does our profit after making goods compare to odars?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How does our proffit after making goods compare 2 others?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How does our profit after making goods compare to others?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our profit after making goods compare to odars?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our profit after making goods compare to others?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our provit after making goods compare to others?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Is our profit after regular expenses getting better?,Operating Profit Margin can be defined as Profit from operations as a % of revenue.,1
+Is our proffit after regular expenses getting better?,Operating Profit Margin can be defined as Profit from operations as a % of revenue.,1
+Is our profit after regular expenses getting better?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+Is our profit after regular expenses getting better?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Is our profit after regular expenses getting better?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Is our proffit after regular expenses getting better?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our final profit percentage compare to competitors?,Net Profit Margin can be defined as Bottom-line profitability.,1
+How does our final profit percentage compare to competitors?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How does our final profit percentage compare 2 competi2rs?,Return on Equity (ROE) can be defined as Profitability for owners.,0
+How does our final profit percentage compare to competitors?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our final proffit percentage compare to competitors?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How does our final profit percentage compare to competitors?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How does our final provit percentage compare to competitors?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we earning well from what we own?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,1
+Are we earning well from what we own?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we earning well from what we own?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we earning well from what we own?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the payback for shareholders this year?,Return on Equity (ROE) can be defined as Profitability for owners.,1
+What’s the payback for shareholders this year?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s da payback for shareholders this year?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the payback for shareholders this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What’s da payback for shareholders this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What’s the payback 4 shareholders this year?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+What’s the payback for shareholders this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s da payback 4 shareholders this year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we making smart use of our funds for profit?,Return on Capital Employed (ROCE) can be defined as Efficiency of capital usage.,1
+Are we making smart use of our funds for proffit?,Return on Capital Employed (ROCE) can be defined as Efficiency of capital usage.,1
+Are we making smart use of our funds 4 profit?,Return on Capital Employed (ROCE) can be defined as Efficiency of capital usage.,1
+Are we making smart use of our funds for profit?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we making smart use of our funds for proffit?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we making smart use of our funds 4 profit?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we making smart use of our funds for profit?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we making smart use of our funds for proffit?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we making smart use of our funds for profit?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our profit percentage before taxes over the last year?,EBITDA Margin can be defined as Operating performance before non-cash items.,1
+What’s our profit percentage before taxes over the last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s our proffit percentage before taxes over the last year?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+What’s our profit percentage before taxes over the last year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s our profit percentage before taxes over da last year?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+What’s our profit percentage before taxes over the last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our provit percentage before taxes over the last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s our provit percentage before taxes over da last year?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Can we handle our short-term debts with what we’ve got?,Current Ratio can be defined as Measures short-term liquidity.,1
+Can we handle our short-term debts with what we’ve got?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Can we handle our short-term debts with what we’ve got?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we handle our short-term debts with what we’ve got?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"Without our inventory, can we pay what’s due soon?",Quick Ratio (Acid Test) can be defined as More stringent liquidity test.,1
+"Without our inventory, can we pay what’s due soon?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"Without our inventory, can we pay what’s due soon?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"Without our inventory, can we pay what’s due soon?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much cash do we have for immediate bills?,Cash Ratio can be defined as Most conservative liquidity measure.,1
+How much cash do we got for immediate bills?,Cash Ratio can be defined as Most conservative liquidity measure.,1
+How much cash do we have for immediate bills?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much cash do we got for immediate bills?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much cash do we have for immediate bills?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much cash do we have for immediate bills?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we moving our stock fast enough?,Inventory Turnover can be defined as How quickly inventory is sold.,1
+Are we moving our stock fast enough?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we moving our s2ck fast enough?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we moving our stock fast enough?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we moving our stock fast enough?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How quick are we getting paid by customers?,Receivables Turnover can be defined as How efficiently receivables are collected.,1
+How quick are we getting paid by cus2mers?,Receivables Turnover can be defined as How efficiently receivables are collected.,1
+How quick are we getting paid by customers?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How quick are we getting paid by cus2mers?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How quick are we getting paid by customers?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How quick are we getting paid by customers?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How quick are we getting paid by cus2mers?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we keeping up with supplier payments?,Payables Turnover can be defined as How quickly payables are paid.,1
+Are we keeping up with supplier payments?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we keeping up with supplier payments?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+Are we keeping up with supplier payments?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+Are we using our stuff to make sales efficiently?,Asset Turnover can be defined as How efficiently assets are used.,1
+Are we using our stuff to make sales efficiently?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we using our stuff to make sales efficiently?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we using our stuff to make sales efficiently?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we getting good sales from our short-term cash?,Working Capital Turnover can be defined as Efficiency in using working capital.,1
+Are we getting good sales from our short-term cash?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+Are we getting good sales from our short-term cash?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+Are we getting good sales from our short-term cash?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Do we owe too much compared to what we own?,Debt-to-Equity Ratio can be defined as Financial leverage.,1
+Do we owe 2o much compared 2 what we own?,Debt-to-Equity Ratio can be defined as Financial leverage.,1
+Do we owe too much compared to what we own?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Do we owe too much compared to what we own?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Do we owe too much compared to what we own?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of what we have is paid for with loans?,Debt Ratio can be defined as Proportion of assets financed by debt.,1
+How much of what we have is paid for with loans?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much of what we have is paid for with loans?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much of what we got is paid for with loans?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much of what we have is paid for with loans?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Can we cover loan interest without stress?,Interest Coverage Ratio can be defined as Ability to pay interest on debt.,1
+Can we cover loan interest without stress?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Can we cover loan interest without stress?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Can we cover loan interest without stress?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much of the company do the owners control?,Equity Ratio can be defined as Portion of assets funded by equity.,1
+How much of the company do the owners control?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much of the company do the owners control?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much of the company do the owners control?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+What’s the mix of loans versus our own money?,Capital Gearing Ratio can be defined as Proportion of debt in capital structure.,1
+What’s the mix of loans versus our own money?,Net Profit Margin can be defined as Bottom-line profitability.,0
+What’s the mix of loans versus our own money?,EV/EBITDA can be defined as Company valuation relative to EBITDA,0
+What’s the mix of loans versus our own money?,Deferred Tax Assets can be defined as Future tax benefits from deductible temporary differences,0
+How much did each share earn last quarter?,Earnings Per Share (EPS) can be defined as Net profit divided by the number of outstanding shares.,1
+How much did each share earn last quarter?,Earnings Per Share (EPS) can be defined as Profit attributable per share.,1
+How much did each share earn last quarter?,Return on Assets (ROA) can be defined as How efficiently assets generate profit.,0
+How much did each share earn last quarter?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+How much did each share earn last quarter?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Is our stock price too high for our earnings?,Price-to-Earnings (P/E) Ratio can be defined as Valuation relative to earnings.,1
+Is our s2ck price 2o high for our earnings?,Price-to-Earnings (P/E) Ratio can be defined as Valuation relative to earnings.,1
+Is our stock price too high for our earnings?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Is our stock price too high for our earnings?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Is our stock price too high for our earnings?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Does our stock price match what we’re really worth?,Price-to-Book (P/B) Ratio can be defined as Market value vs. net asset value.,1
+Does our stock price match what we’re really worth?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Does our stock price match what we’re really worth?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Does our s2ck price match what we’re really worth?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Does our stock price match what we’re really worth?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+Are we giving investors a good return via dividends?,Dividend Yield can be defined as Cash return from dividends.,1
+Are we giving inves2rs a good return via dividends?,Dividend Yield can be defined as Cash return from dividends.,1
+Are we giving investors a good return via dividends?,Net Profit Margin can be defined as Bottom-line profitability.,0
+Are we giving investors a good return via dividends?,Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+Are we giving investors a good return via dividends?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+How much profit are we sharing with shareholders?,Dividend Payout Ratio can be defined as % of earnings distributed as dividends.,1
+How much profit are we sharing with shareholders?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much proffit are we sharing with shareholders?,Net Profit Margin can be defined as Bottom-line profitability.,0
+How much profit are we sharing with shareholders?,"Property, Plant and Equipment (PPE) can be defined as Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",0
+How much profit are we sharing with shareholders?,"Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
+"What’s our company worth, including all debts, today?",Enterprise Value (EV) can be defined as Total company value.,1
+"What’s our company worth, including all debts, today?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"What’s our company worth, including all debts, 2day?",Net Profit Margin can be defined as Bottom-line profitability.,0
+"What’s our company worth, including all debts, today?",Trade Payables can be defined as Amounts due to suppliers of goods or services.,0
+"What’s our company worth, including all debts, today?","Borrowings can be defined as Loans from banks and financial institutions, classified as current or non",0
