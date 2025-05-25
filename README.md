@@ -2,6 +2,7 @@
 
 ## Experiment Results
 ### Stage 1
+#### 1a_tougher
 | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
 |----------------------|----------------------|----------|----------|---------|
 | Terms                | all-mpnet-base-v2    | 0.29     | 0.23     |         |
@@ -15,8 +16,18 @@
 | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added 'can be defined as' as stitching term   |
 | Terms + Desc         | bge-large-en-v1.5    | 0.41     | 0.341    |   added re-ranker: didn't help   |
 
+#### 1a_simpler
+| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|----------------------|----------------------|----------|----------|---------|
+| Terms + Desc         | bge-large-en-v1.5    | 0.863     | 0.845    |         |
+| Terms + Desc         | bge-large-en-v1.5    | 0.954     | 0.941    |   With re-ranker, top5   |
+| Terms + Desc         | bge-large-en-v1.5    | 0.962     | 0.95    |   With re-ranker, top10   |
 
-
+#### 1a_simpler_noisy
+- This contains natural spelling, grammatical mistakes
+| Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|----------------------|----------------------|----------|----------|---------|
+| Terms + Desc         | bge-large-en-v1.5    | 0.9688     | 0.9583    |   With re-ranker, top10   |
 
 ## Files
 nl2glossary.py: 
