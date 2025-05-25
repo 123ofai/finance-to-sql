@@ -8,7 +8,8 @@
 | Desc               | all-mpnet-base-v2  | 0.35     | 0.252    |
 | Terms + Desc        | all-mpnet-base-v2 | 0.36     | 0.29     |
 | Terms + Desc        | bge-base-en-v1.5 | 0.31     | 0.23     |
-
+| Terms + Desc        | bge-large-en-v1.5 | 0.36     | 0.29     |
+| Terms + Desc        | mxbai-embed-large-v1 | 0.38     | 0.32     |
 
 
 
