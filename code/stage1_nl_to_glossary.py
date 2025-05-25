@@ -1,6 +1,7 @@
 import pandas as pd
 from sentence_transformers import SentenceTransformer, util
 import torch
+from sklearn.metrics import accuracy_score, f1_score, classification_report
 
 # 2. Load the glossary
 glossary_df = pd.read_csv("../data/1b_glossary_descriptions.csv")            # your glossary CSV
@@ -18,6 +19,8 @@ term_embeddings = model.encode(glossary_terms, convert_to_tensor=True)
 
 # 6. Iterate through each query and find the best matching glossary term
 results = []
+y_true = []
+y_pred = []
 for _, row in queries_df.iterrows():
     query_text = row['NL_Query']
     original = row['GT_Glossary']
@@ -32,6 +35,10 @@ for _, row in queries_df.iterrows():
     best_idx = torch.argmax(sims).item()
     predicted = glossary_terms[best_idx]
     score = sims[0][best_idx].item()
+
+    # For metric calc
+    y_true.append(original)
+    y_pred.append(predicted)
     
     results.append({
         'NL_Query': query_text,
@@ -42,6 +49,16 @@ for _, row in queries_df.iterrows():
 
 # 7. Convert to DataFrame and save or inspect
 results_df = pd.DataFrame(results)
-print(results_df.head(10))
+print(results_df.head(5))
+
+# 8. Evaluate
+accuracy = accuracy_score(y_true, y_pred)
+f1_macro = f1_score(y_true, y_pred, average="macro")
+
+print(f"Accuracy (labels): {accuracy:.4f}")
+print(f"Macro F1 (labels): {f1_macro:.4f}")
+#print("\nClassification Report (labels):\n")
+#print(classification_report(y_true, y_pred, digits=4))
+
 # Save the results to a CSV file
 results_df.to_csv('../results/24May_refactor/stage1_nl2glossary.csv', index=False)
