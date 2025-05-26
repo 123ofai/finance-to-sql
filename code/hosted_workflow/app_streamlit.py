@@ -7,6 +7,8 @@ from sentence_transformers import CrossEncoder
 from sshtunnel import SSHTunnelForwarder
 import sqlalchemy
 
+st.set_page_config(page_title='Finance-to-SQL')
+
 # ─── CONFIG ────────────────────────────────────────────────────────────
 # Adjust paths relative to the repo root
 GLOSSARY_CSV        = "data/1b_glossary_descriptions.csv"
@@ -109,7 +111,7 @@ def infer_nature(nl_query: str) -> str:
     return 'Standalone'
 
 # ─── STREAMLIT LAYOUT ─────────────────────────────────────────────────
-st.set_page_config(page_title='Finance-to-SQL')
+
 st.title('📊 Finance-to-SQL Dashboard')
 mode = st.sidebar.selectbox('Mode', ['Run Query', 'Inspect Metrics'])
 
