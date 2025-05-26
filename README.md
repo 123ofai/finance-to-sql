@@ -48,6 +48,12 @@
 | 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker miniLM fine-tuned + weights b/w ranker & sim |
 | 7    | Term                 | bge-large-en-v1.5    | 0.62     | 0.45     | reranker miniLM fine-tuned on more hard-negative + weights b/w ranker & sim  |
 
+## Ideas to Try
+- Improve the re-ranker's data with top-k data -> what is it really getting confused at?
+- Instead of binary scoring, use triplet scoring with hard-negative being different from random negative
+- Add in type, etc. in the matching queries. 
+- Fine-tune BGE with contrastive loss
+
 ## Files
 nl2glossary.py: 
 - natural language to glossary
