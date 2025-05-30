@@ -1,0 +1,221 @@
+NL_Query,period_id,period_view,predicted_view,predicted_period_id
+I want to know the Current Assets as of for Second half 2023.,2023_FH_PRD_2,PRD,PRD,2023_FH_PRD_2
+I want to know the EBITDA year to date for October 2016.,2016_M_PRD_12,PRD,PRD,2016_M_PRD_0
+I want to know the Free Cash Flow as of for First half 2010.,2010_FH_PRD_1,PRD,FTP,2010_FH_FTP_1
+I want to know the Gross Profit so far for Second half 2017.,2017_FH_PRD_2,PRD,PRD,2017_FH_PRD_2
+Please give me the Financing Cash Flow to date for FY 2019.,2019_FY_PRD_1,PRD,PRD,2019_FY_PRD_1
+What was the Gross Profit so far for Second half 2025?,2025_FH_PRD_2,PRD,PRD,2025_FH_PRD_2
+What was the Financing Cash Flow so far for First half 2021?,2021_FH_PRD_1,PRD,PRD,2021_FH_PRD_1
+Please give me the Non-Current Liabilities so far for July 2013.,2013_M_PRD_12,PRD,PRD,2013_M_PRD_0
+What was the Assets as of for Q2 2021?,2021_FQ_PRD_2,PRD,PRD,2021_FQ_PRD_2
+I want to know the EBITDA up to for Q4 2014.,2014_FQ_PRD_4,PRD,PRD,2014_FQ_PRD_4
+Please give me the Working Capital cumulative through for FY 2016.,2016_FY_PRD_1,PRD,PRD,2016_FY_PRD_1
+Please give me the Investing Cash Flow cumulative through for December 2013.,2013_M_PRD_5,PRD,PRD,2013_M_PRD_0
+Please give me the Net Profit as of for FY 2019.,2019_FY_PRD_1,PRD,PRD,2019_FY_PRD_1
+I want to know the Equity to date for Second half 2020.,2020_FH_PRD_2,PRD,PRD,2020_FH_PRD_2
+Could you tell me the Equity up to for Q1 2024?,2024_FQ_PRD_1,PRD,PRD,2024_FQ_PRD_1
+Please give me the Gross Profit up to for First half 2023.,2023_FH_PRD_1,PRD,PRD,2023_FH_PRD_1
+I want to know the EPS as of for FY 2016.,2016_FY_PRD_1,PRD,PRD,2016_FY_PRD_1
+Can you share the Current Liabilities to date for Q4 2019?,2019_FQ_PRD_4,PRD,PRD,2019_FQ_PRD_4
+Could you tell me the Assets so far for Q3 2022?,2022_FQ_PRD_3,PRD,PRD,2022_FQ_PRD_3
+What was the Current Assets as of for April 2023?,2023_M_PRD_9,PRD,PRD,2023_M_PRD_0
+Can you share the Amortization for the period for Q1 2021?,2021_FQ_FTP_1,FTP,FTP,2021_FQ_FTP_1
+What was the Current Assets for the period for FY 2011?,2011_FY_FTP_1,FTP,PRD,2011_FY_PRD_1
+Could you tell me the Operating Cash Flow so far for FY 2011?,2011_FY_PRD_1,PRD,PRD,2011_FY_PRD_1
+What was the Revenue  for First half 2021?,2021_FH_FTP_1,FTP,PRD,2021_FH_PRD_1
+Could you tell me the Amortization for the period for FY 2014?,2014_FY_FTP_1,FTP,FTP,2014_FY_FTP_1
+I want to know the Net Worth  for FY 2019.,2019_FY_FTP_1,FTP,PRD,2019_FY_PRD_1
+I want to know the Current Assets cumulative through for Second half 2017.,2017_FH_PRD_2,PRD,PRD,2017_FH_PRD_2
+I want to know the Non-Current Assets so far for Second half 2017.,2017_FH_PRD_2,PRD,PRD,2017_FH_PRD_2
+Please give me the Operating Expenses so far for Q4 2021.,2021_FQ_PRD_4,PRD,PRD,2021_FQ_PRD_4
+Please give me the Free Cash Flow for the period for Q4 2014.,2014_FQ_FTP_4,FTP,FTP,2014_FQ_FTP_4
+Can you share the Operating Cash Flow for the period for Q3 2020?,2020_FQ_FTP_3,FTP,PRD,2020_FQ_PRD_3
+Can you share the Financing Cash Flow year to date for August 2011?,2011_M_PRD_6,PRD,PRD,2011_M_PRD_0
+Can you share the Equity to date for Second half 2022?,2022_FH_PRD_2,PRD,PRD,2022_FH_PRD_2
+Could you tell me the Operating Cash Flow  for Q3 2016?,2016_FQ_FTP_3,FTP,PRD,2016_FQ_PRD_3
+I want to know the Revenue for the period for FY 2021.,2021_FY_FTP_1,FTP,FTP,2021_FY_FTP_1
+Could you tell me the Working Capital  for Q3 2019?,2019_FQ_FTP_3,FTP,PRD,2019_FQ_PRD_3
+Please give me the Operating Expenses  for Second half 2016.,2016_FH_FTP_2,FTP,PRD,2016_FH_PRD_2
+I want to know the Depreciation for the period for Q2 2014.,2014_FQ_FTP_2,FTP,FTP,2014_FQ_FTP_2
+Can you share the Revenue cumulative through for First half 2023?,2023_FH_PRD_1,PRD,PRD,2023_FH_PRD_1
+Please give me the Equity  for Q3 2016.,2016_FQ_FTP_3,FTP,PRD,2016_FQ_PRD_3
+What was the Non-Current Liabilities up to for May 2020?,2020_M_PRD_7,PRD,PRD,2020_M_PRD_0
+Please give me the Net Worth for the period for FY 2025.,2025_FY_FTP_1,FTP,FTP,2025_FY_FTP_1
+What was the Non-Current Liabilities year to date for March 2013?,2013_M_PRD_6,PRD,PRD,2013_M_PRD_0
+I want to know the Amortization  for Q3 2024.,2024_FQ_FTP_3,FTP,FTP,2024_FQ_FTP_3
+I want to know the Liabilities to date for FY 2021.,2021_FY_PRD_1,PRD,PRD,2021_FY_PRD_1
+What was the Net Worth  for FY 2022?,2022_FY_FTP_1,FTP,PRD,2022_FY_PRD_1
+Could you tell me the Financing Cash Flow to date for November 2022?,2022_M_PRD_7,PRD,PRD,2022_M_PRD_0
+Please give me the Net Profit  for Q2 2022.,2022_FQ_FTP_2,FTP,PRD,2022_FQ_PRD_2
+I want to know the Revenue  for Q4 2018.,2018_FQ_FTP_4,FTP,PRD,2018_FQ_PRD_4
+I want to know the Liabilities as of for FY 2018.,2018_FY_PRD_1,PRD,PRD,2018_FY_PRD_1
+Please give me the Investing Cash Flow up to for FY 2025.,2025_FY_PRD_1,PRD,PRD,2025_FY_PRD_1
+Can you share the Non-Current Assets for the period for First half 2022?,2022_FH_FTP_1,FTP,PRD,2022_FH_PRD_1
+What was the Amortization up to for FY 2014?,2014_FY_PRD_1,PRD,PRD,2014_FY_PRD_1
+What was the Free Cash Flow  for FY 2024?,2024_FY_FTP_1,FTP,FTP,2024_FY_FTP_1
+I want to know the Operating Expenses year to date for July 2016.,2016_M_PRD_1,PRD,PRD,2016_M_PRD_0
+Can you share the Investing Cash Flow year to date for October 2018?,2018_M_PRD_7,PRD,PRD,2018_M_PRD_0
+I want to know the Equity so far for FY 2014.,2014_FY_PRD_1,PRD,PRD,2014_FY_PRD_1
+I want to know the Depreciation cumulative through for February 2018.,2018_M_PRD_4,PRD,PRD,2018_M_PRD_0
+Please give me the Net Worth up to for FY 2015.,2015_FY_PRD_1,PRD,FTP,2015_FY_FTP_1
+Could you tell me the Revenue so far for FY 2016?,2016_FY_PRD_1,PRD,PRD,2016_FY_PRD_1
+I want to know the Operating Cash Flow for the period for First half 2019.,2019_FH_FTP_1,FTP,PRD,2019_FH_PRD_1
+Could you tell me the Operating Expenses to date for FY 2025?,2025_FY_PRD_1,PRD,PRD,2025_FY_PRD_1
+Can you share the Operating Cash Flow so far for Q1 2011?,2011_FQ_PRD_1,PRD,PRD,2011_FQ_PRD_1
+Could you tell me the Current Liabilities cumulative through for Q4 2022?,2022_FQ_PRD_4,PRD,PRD,2022_FQ_PRD_4
+What was the Depreciation for the period for FY 2014?,2014_FY_FTP_1,FTP,FTP,2014_FY_FTP_1
+Can you share the Gross Profit  for June 2011?,2011_M_FTP_1,FTP,FTP,2011_M_FTP_0
+What was the Depreciation as of for Q4 2015?,2015_FQ_PRD_4,PRD,FTP,2015_FQ_FTP_4
+I want to know the Assets  for Q3 2018.,2018_FQ_FTP_3,FTP,PRD,2018_FQ_PRD_3
+Could you tell me the Investing Cash Flow  for First half 2014?,2014_FH_FTP_1,FTP,PRD,2014_FH_PRD_1
+What was the Revenue up to for Q3 2022?,2022_FQ_PRD_3,PRD,PRD,2022_FQ_PRD_3
+Can you share the Revenue for the period for Second half 2019?,2019_FH_FTP_2,FTP,FTP,2019_FH_FTP_2
+Could you tell me the Non-Current Assets  for Second half 2020?,2020_FH_FTP_2,FTP,PRD,2020_FH_PRD_2
+Can you share the Current Liabilities for the period for FY 2021?,2021_FY_FTP_1,FTP,PRD,2021_FY_PRD_1
+Could you tell me the Depreciation to date for Second half 2017?,2017_FH_PRD_2,PRD,PRD,2017_FH_PRD_2
+Can you share the Revenue for the period for Q4 2016?,2016_FQ_FTP_4,FTP,FTP,2016_FQ_FTP_4
+Please give me the Net Profit for the period for Q3 2015.,2015_FQ_FTP_3,FTP,FTP,2015_FQ_FTP_3
+What was the Assets cumulative through for Q2 2018?,2018_FQ_PRD_2,PRD,PRD,2018_FQ_PRD_2
+What was the Operating Cash Flow for the period for FY 2011?,2011_FY_FTP_1,FTP,FTP,2011_FY_FTP_1
+Please give me the Amortization  for Q3 2010.,2010_FQ_FTP_3,FTP,FTP,2010_FQ_FTP_3
+Could you tell me the Current Assets as of for FY 2015?,2015_FY_PRD_1,PRD,PRD,2015_FY_PRD_1
+What was the Current Liabilities for the period for August 2025?,2025_M_FTP_11,FTP,PRD,2025_M_PRD_0
+Could you tell me the Financing Cash Flow  for FY 2015?,2015_FY_FTP_1,FTP,PRD,2015_FY_PRD_1
+I want to know the EBITDA for the period for June 2016.,2016_M_FTP_12,FTP,FTP,2016_M_FTP_0
+Can you share the Working Capital to date for April 2015?,2015_M_PRD_4,PRD,PRD,2015_M_PRD_0
+Could you tell me the Amortization cumulative through for Second half 2022?,2022_FH_PRD_2,PRD,PRD,2022_FH_PRD_2
+Can you share the Depreciation for the period for August 2016?,2016_M_FTP_12,FTP,FTP,2016_M_FTP_0
+Can you share the Free Cash Flow for the period for Q3 2015?,2015_FQ_FTP_3,FTP,FTP,2015_FQ_FTP_3
+What was the Current Liabilities for the period for FY 2016?,2016_FY_FTP_1,FTP,PRD,2016_FY_PRD_1
+Can you share the Revenue for the period for Second half 2025?,2025_FH_FTP_2,FTP,FTP,2025_FH_FTP_2
+Please give me the Investing Cash Flow so far for First half 2024.,2024_FH_PRD_1,PRD,PRD,2024_FH_PRD_1
+Can you share the Current Liabilities  for Second half 2014?,2014_FH_FTP_2,FTP,PRD,2014_FH_PRD_2
+Could you tell me the Depreciation so far for FY 2023?,2023_FY_PRD_1,PRD,PRD,2023_FY_PRD_1
+Please give me the Equity up to for FY 2018.,2018_FY_PRD_1,PRD,PRD,2018_FY_PRD_1
+Could you tell me the Net Worth as of for Q3 2011?,2011_FQ_PRD_3,PRD,PRD,2011_FQ_PRD_3
+Could you tell me the Operating Cash Flow for the period for November 2023?,2023_M_FTP_4,FTP,PRD,2023_M_PRD_0
+Please give me the Depreciation  for Second half 2025.,2025_FH_FTP_2,FTP,PRD,2025_FH_PRD_2
+What was the EBITDA so far for FY 2014?,2014_FY_PRD_1,PRD,PRD,2014_FY_PRD_1
+I want to know the Free Cash Flow  for Second half 2011.,2011_FH_FTP_2,FTP,FTP,2011_FH_FTP_2
+Could you tell me the Net Profit to date for First half 2011?,2011_FH_PRD_1,PRD,PRD,2011_FH_PRD_1
+What was the EBITDA up to for May 2024?,2024_M_PRD_3,PRD,PRD,2024_M_PRD_0
+Could you tell me the Amortization for the period for Second half 2024?,2024_FH_FTP_2,FTP,FTP,2024_FH_FTP_2
+Can you share the Current Liabilities year to date for FY 2021?,2021_FY_PRD_1,PRD,PRD,2021_FY_PRD_1
+Can you share the Gross Profit up to for FY 2011?,2011_FY_PRD_1,PRD,FTP,2011_FY_FTP_1
+Can you share the Net Worth as of for FY 2023?,2023_FY_PRD_1,PRD,PRD,2023_FY_PRD_1
+Can you share the Free Cash Flow up to for Second half 2015?,2015_FH_PRD_2,PRD,PRD,2015_FH_PRD_2
+I want to know the Working Capital so far for First half 2018.,2018_FH_PRD_1,PRD,PRD,2018_FH_PRD_1
+Please give me the Current Liabilities cumulative through for Second half 2013.,2013_FH_PRD_2,PRD,PRD,2013_FH_PRD_2
+Can you share the EBITDA for the period for First half 2014?,2014_FH_FTP_1,FTP,FTP,2014_FH_FTP_1
+Please give me the Equity for the period for Q1 2017.,2017_FQ_FTP_1,FTP,PRD,2017_FQ_PRD_1
+Please give me the Depreciation for the period for FY 2020.,2020_FY_FTP_1,FTP,FTP,2020_FY_FTP_1
+Please give me the Non-Current Liabilities cumulative through for First half 2017.,2017_FH_PRD_1,PRD,PRD,2017_FH_PRD_1
+Can you share the Free Cash Flow  for First half 2025?,2025_FH_FTP_1,FTP,FTP,2025_FH_FTP_1
+What was the Investing Cash Flow  for Second half 2011?,2011_FH_FTP_2,FTP,PRD,2011_FH_PRD_2
+Could you tell me the Working Capital to date for Q4 2017?,2017_FQ_PRD_4,PRD,PRD,2017_FQ_PRD_4
+I want to know the Liabilities so far for FY 2015.,2015_FY_PRD_1,PRD,PRD,2015_FY_PRD_1
+Can you share the Operating Expenses  for FY 2013?,2013_FY_FTP_1,FTP,FTP,2013_FY_FTP_1
+Could you tell me the Assets for the period for Q4 2023?,2023_FQ_FTP_4,FTP,FTP,2023_FQ_FTP_4
+Can you share the Operating Expenses  for Q4 2020?,2020_FQ_FTP_4,FTP,PRD,2020_FQ_PRD_4
+Please give me the Current Liabilities for the period for Second half 2017.,2017_FH_FTP_2,FTP,PRD,2017_FH_PRD_2
+Can you share the Financing Cash Flow cumulative through for FY 2022?,2022_FY_PRD_1,PRD,PRD,2022_FY_PRD_1
+I want to know the Net Profit up to for First half 2021.,2021_FH_PRD_1,PRD,PRD,2021_FH_PRD_1
+Please give me the Operating Cash Flow up to for Q4 2011.,2011_FQ_PRD_4,PRD,PRD,2011_FQ_PRD_4
+Could you tell me the Net Worth as of for Q2 2021?,2021_FQ_PRD_2,PRD,PRD,2021_FQ_PRD_2
+Can you share the EBITDA  for Q4 2016?,2016_FQ_FTP_4,FTP,PRD,2016_FQ_PRD_4
+Please give me the Operating Cash Flow so far for Q3 2017.,2017_FQ_PRD_3,PRD,PRD,2017_FQ_PRD_3
+I want to know the Assets for the period for FY 2024.,2024_FY_FTP_1,FTP,FTP,2024_FY_FTP_1
+Could you tell me the Equity for the period for Second half 2024?,2024_FH_FTP_2,FTP,FTP,2024_FH_FTP_2
+I want to know the Non-Current Liabilities cumulative through for Q1 2023.,2023_FQ_PRD_1,PRD,PRD,2023_FQ_PRD_1
+I want to know the Non-Current Assets  for Second half 2017.,2017_FH_FTP_2,FTP,PRD,2017_FH_PRD_2
+Could you tell me the Free Cash Flow as of for Q3 2014?,2014_FQ_PRD_3,PRD,FTP,2014_FQ_FTP_3
+Can you share the Assets for the period for FY 2010?,2010_FY_FTP_1,FTP,FTP,2010_FY_FTP_1
+Please give me the Operating Expenses year to date for July 2012.,2012_M_PRD_12,PRD,PRD,2012_M_PRD_0
+Can you share the Net Worth up to for September 2025?,2025_M_PRD_5,PRD,PRD,2025_M_PRD_0
+Please give me the EBITDA  for FY 2020.,2020_FY_FTP_1,FTP,FTP,2020_FY_FTP_1
+What was the Depreciation for the period for FY 2015?,2015_FY_FTP_1,FTP,FTP,2015_FY_FTP_1
+Please give me the Operating Cash Flow cumulative through for FY 2022.,2022_FY_PRD_1,PRD,PRD,2022_FY_PRD_1
+What was the Working Capital for the period for First half 2020?,2020_FH_FTP_1,FTP,FTP,2020_FH_FTP_1
+I want to know the Operating Cash Flow  for FY 2025.,2025_FY_FTP_1,FTP,PRD,2025_FY_PRD_1
+I want to know the Financing Cash Flow for the period for November 2017.,2017_M_FTP_6,FTP,PRD,2017_M_PRD_0
+Please give me the EPS so far for FY 2012.,2012_FY_PRD_1,PRD,PRD,2012_FY_PRD_1
+I want to know the EBITDA year to date for April 2012.,2012_M_PRD_5,PRD,PRD,2012_M_PRD_0
+I want to know the Assets for the period for First half 2011.,2011_FH_FTP_1,FTP,FTP,2011_FH_FTP_1
+Please give me the Current Assets year to date for March 2016.,2016_M_PRD_7,PRD,PRD,2016_M_PRD_0
+Could you tell me the Depreciation for the period for Second half 2015?,2015_FH_FTP_2,FTP,FTP,2015_FH_FTP_2
+Please give me the Financing Cash Flow  for August 2015.,2015_M_FTP_12,FTP,PRD,2015_M_PRD_0
+Could you tell me the Working Capital year to date for Q2 2024?,2024_FQ_PRD_2,PRD,PRD,2024_FQ_PRD_2
+Please give me the Depreciation as of for FY 2021.,2021_FY_PRD_1,PRD,FTP,2021_FY_FTP_1
+I want to know the Investing Cash Flow up to for First half 2024.,2024_FH_PRD_1,PRD,PRD,2024_FH_PRD_1
+What was the Net Worth for the period for February 2014?,2014_M_FTP_6,FTP,FTP,2014_M_FTP_0
+Please give me the Operating Expenses year to date for Second half 2012.,2012_FH_PRD_2,PRD,PRD,2012_FH_PRD_2
+Could you tell me the EPS to date for First half 2022?,2022_FH_PRD_1,PRD,PRD,2022_FH_PRD_1
+Please give me the Assets for the period for FY 2022.,2022_FY_FTP_1,FTP,PRD,2022_FY_PRD_1
+Could you tell me the Current Assets so far for July 2018?,2018_M_PRD_8,PRD,PRD,2018_M_PRD_0
+Can you share the Gross Profit as of for April 2010?,2010_M_PRD_12,PRD,FTP,2010_M_FTP_0
+I want to know the Net Worth to date for July 2024.,2024_M_PRD_11,PRD,PRD,2024_M_PRD_0
+Please give me the Liabilities  for Second half 2013.,2013_FH_FTP_2,FTP,PRD,2013_FH_PRD_2
+What was the EPS as of for FY 2017?,2017_FY_PRD_1,PRD,PRD,2017_FY_PRD_1
+I want to know the Equity for the period for October 2013.,2013_M_FTP_6,FTP,FTP,2013_M_FTP_0
+What was the EBITDA for the period for FY 2025?,2025_FY_FTP_1,FTP,FTP,2025_FY_FTP_1
+Can you share the Amortization for the period for Q1 2013?,2013_FQ_FTP_1,FTP,FTP,2013_FQ_FTP_1
+Can you share the Financing Cash Flow  for Q1 2025?,2025_FQ_FTP_1,FTP,PRD,2025_FQ_PRD_1
+What was the EPS year to date for FY 2014?,2014_FY_PRD_1,PRD,PRD,2014_FY_PRD_1
+Can you share the Investing Cash Flow for the period for September 2017?,2017_M_FTP_5,FTP,PRD,2017_M_PRD_0
+I want to know the EBITDA up to for Second half 2016.,2016_FH_PRD_2,PRD,PRD,2016_FH_PRD_2
+I want to know the Working Capital  for FY 2014.,2014_FY_FTP_1,FTP,PRD,2014_FY_PRD_1
+What was the Amortization to date for Q3 2022?,2022_FQ_PRD_3,PRD,PRD,2022_FQ_PRD_3
+Could you tell me the Financing Cash Flow  for October 2018?,2018_M_FTP_3,FTP,PRD,2018_M_PRD_0
+Could you tell me the Net Worth  for FY 2014?,2014_FY_FTP_1,FTP,PRD,2014_FY_PRD_1
+Can you share the Net Worth for the period for Q2 2011?,2011_FQ_FTP_2,FTP,FTP,2011_FQ_FTP_2
+What was the Revenue as of for Q4 2018?,2018_FQ_PRD_4,PRD,PRD,2018_FQ_PRD_4
+Please give me the Assets to date for First half 2016.,2016_FH_PRD_1,PRD,PRD,2016_FH_PRD_1
+Can you share the Operating Expenses to date for February 2025?,2025_M_PRD_3,PRD,PRD,2025_M_PRD_0
+What was the Net Profit  for FY 2014?,2014_FY_FTP_1,FTP,FTP,2014_FY_FTP_1
+Please give me the Equity for the period for First half 2015.,2015_FH_FTP_1,FTP,FTP,2015_FH_FTP_1
+Could you tell me the Operating Cash Flow to date for December 2012?,2012_M_PRD_7,PRD,PRD,2012_M_PRD_0
+Can you share the Liabilities  for FY 2024?,2024_FY_FTP_1,FTP,FTP,2024_FY_FTP_1
+Can you share the Liabilities for the period for June 2011?,2011_M_FTP_4,FTP,FTP,2011_M_FTP_0
+Can you share the Equity for the period for November 2013?,2013_M_FTP_3,FTP,FTP,2013_M_FTP_0
+Can you share the Operating Expenses to date for FY 2018?,2018_FY_PRD_1,PRD,PRD,2018_FY_PRD_1
+Can you share the Assets as of for Q2 2011?,2011_FQ_PRD_2,PRD,PRD,2011_FQ_PRD_2
+Please give me the EBITDA  for August 2024.,2024_M_FTP_7,FTP,PRD,2024_M_PRD_0
+Could you tell me the Gross Profit  for FY 2023?,2023_FY_FTP_1,FTP,PRD,2023_FY_PRD_1
+Could you tell me the Current Liabilities to date for October 2020?,2020_M_PRD_11,PRD,PRD,2020_M_PRD_0
+Please give me the Financing Cash Flow  for Second half 2022.,2022_FH_FTP_2,FTP,PRD,2022_FH_PRD_2
+Could you tell me the Non-Current Liabilities to date for First half 2016?,2016_FH_PRD_1,PRD,PRD,2016_FH_PRD_1
+Could you tell me the Current Liabilities for the period for First half 2024?,2024_FH_FTP_1,FTP,PRD,2024_FH_PRD_1
+What was the Current Liabilities as of for June 2014?,2014_M_PRD_9,PRD,PRD,2014_M_PRD_0
+I want to know the Current Liabilities  for First half 2025.,2025_FH_FTP_1,FTP,PRD,2025_FH_PRD_1
+What was the Equity for the period for Q4 2017?,2017_FQ_FTP_4,FTP,FTP,2017_FQ_FTP_4
+I want to know the Investing Cash Flow for the period for FY 2011.,2011_FY_FTP_1,FTP,FTP,2011_FY_FTP_1
+Could you tell me the Non-Current Liabilities  for Q3 2018?,2018_FQ_FTP_3,FTP,PRD,2018_FQ_PRD_3
+I want to know the Investing Cash Flow  for Q3 2013.,2013_FQ_FTP_3,FTP,PRD,2013_FQ_PRD_3
+Please give me the Current Liabilities  for Q2 2015.,2015_FQ_FTP_2,FTP,PRD,2015_FQ_PRD_2
+What was the Net Profit as of for First half 2014?,2014_FH_PRD_1,PRD,PRD,2014_FH_PRD_1
+Could you tell me the Non-Current Liabilities  for Q3 2010?,2010_FQ_FTP_3,FTP,PRD,2010_FQ_PRD_3
+Could you tell me the Assets  for FY 2012?,2012_FY_FTP_1,FTP,PRD,2012_FY_PRD_1
+Please give me the Operating Cash Flow up to for June 2022.,2022_M_PRD_11,PRD,PRD,2022_M_PRD_0
+Could you tell me the Revenue  for October 2023?,2023_M_FTP_12,FTP,PRD,2023_M_PRD_0
+Could you tell me the Operating Cash Flow  for Second half 2021?,2021_FH_FTP_2,FTP,PRD,2021_FH_PRD_2
+Please give me the Net Worth for the period for June 2025.,2025_M_FTP_12,FTP,FTP,2025_M_FTP_0
+Could you tell me the Investing Cash Flow year to date for FY 2020?,2020_FY_PRD_1,PRD,PRD,2020_FY_PRD_1
+Can you share the Free Cash Flow  for Q1 2025?,2025_FQ_FTP_1,FTP,PRD,2025_FQ_PRD_1
+Please give me the Current Liabilities for the period for January 2010.,2010_M_FTP_8,FTP,FTP,2010_M_FTP_0
+Could you tell me the Current Assets cumulative through for Second half 2019?,2019_FH_PRD_2,PRD,PRD,2019_FH_PRD_2
+I want to know the Depreciation to date for October 2017.,2017_M_PRD_3,PRD,PRD,2017_M_PRD_0
+Could you tell me the Operating Cash Flow cumulative through for Q1 2018?,2018_FQ_PRD_1,PRD,PRD,2018_FQ_PRD_1
+Can you share the Investing Cash Flow  for Q4 2022?,2022_FQ_FTP_4,FTP,PRD,2022_FQ_PRD_4
+What was the Financing Cash Flow  for March 2021?,2021_M_FTP_3,FTP,PRD,2021_M_PRD_0
+Could you tell me the EBITDA as of for FY 2015?,2015_FY_PRD_1,PRD,PRD,2015_FY_PRD_1
+Could you tell me the Amortization for the period for FY 2013?,2013_FY_FTP_1,FTP,FTP,2013_FY_FTP_1
+Could you tell me the Revenue  for Q1 2012?,2012_FQ_FTP_1,FTP,PRD,2012_FQ_PRD_1
+Can you share the Working Capital  for Q4 2017?,2017_FQ_FTP_4,FTP,PRD,2017_FQ_PRD_4
+Can you share the Non-Current Assets for the period for FY 2015?,2015_FY_FTP_1,FTP,FTP,2015_FY_FTP_1
+What was the Non-Current Liabilities  for FY 2017?,2017_FY_FTP_1,FTP,PRD,2017_FY_PRD_1
+I want to know the Working Capital  for Q3 2023.,2023_FQ_FTP_3,FTP,PRD,2023_FQ_PRD_3
+Can you share the Depreciation up to for First half 2014?,2014_FH_PRD_1,PRD,FTP,2014_FH_FTP_1
+Please give me the Net Profit for the period for Second half 2016.,2016_FH_FTP_2,FTP,FTP,2016_FH_FTP_2
+I want to know the EPS up to for August 2020.,2020_M_PRD_9,PRD,PRD,2020_M_PRD_0
+I want to know the Working Capital cumulative through for Second half 2019.,2019_FH_PRD_2,PRD,PRD,2019_FH_PRD_2
+Can you share the Investing Cash Flow for the period for October 2010?,2010_M_FTP_11,FTP,FTP,2010_M_FTP_0
