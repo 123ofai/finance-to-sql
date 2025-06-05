@@ -48,6 +48,16 @@
 | 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker miniLM fine-tuned + weights b/w ranker & sim |
 | 7    | Term                 | bge-large-en-v1.5    | 0.62     | 0.45     | reranker miniLM fine-tuned on more hard-negative + weights b/w ranker & sim  |
 
+
+### Period
+| S.No | Method Used          | Model Used           | Accuracy           | F1 Score         | Remarks |
+|------|----------------------|----------------------|--------------------|------------------|---------|
+| 1    | Regex                | Regex Matching       | 0.00               | 0.00             |         |
+| 2    | Semantic             | bge-large-en-v1.5    | Overall- 0.48, View- 0.67     | Overall-0.34     | Used semantic matching with basic prototypes of PRD and FTP, like for the period and to date        |
+| 3    | Semantic + Rule          | bge-large-en-v1.5    | Overall- 0.48, View- 0.67     | Overall-0.34     | used rules-based system along with semantic to improve the sequence ,but no improvement        |
+| 4    | Extended Prototype + Semantic fall back                 | bge-large-en-v1.5    | Overall- 0.55, View- 0.77    | Overall 0.39     | Extended prototype list with more keywords, first the matching of the word from the list, then semantic fallback |
+| 5    | Above + Verbose                 | bge-large-en-v1.5    | Overall- 0.69, View- 1.00     | Overall 0.54     | added verbosity like FTP and PRd "can be defined as" in the prototypes  |
+
 ## Ideas to Try
 - Improve the re-ranker's data with top-k data -> what is it really getting confused at?
 - Instead of binary scoring, use triplet scoring with hard-negative being different from random negative
