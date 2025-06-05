@@ -57,6 +57,7 @@
 | 3    | Semantic + Rule          | bge-large-en-v1.5    | Overall- 0.48, View- 0.67     | Overall-0.34     | used rules-based system along with semantic to improve the sequence ,but no improvement        |
 | 4    | Extended Prototype + Semantic fall back                 | bge-large-en-v1.5    | Overall- 0.55, View- 0.77    | Overall 0.39     | Extended prototype list with more keywords, first the matching of the word from the list, then semantic fallback |
 | 5    | Above + Verbose                 | bge-large-en-v1.5    | Overall- 0.69, View- 1.00     | Overall 0.54     | added verbosity like FTP and PRd "can be defined as" in the prototypes  |
+| 6    | Above + fuzzy matching                 | bge-large-en-v1.5    | Overall- 1.00, View- 1.00, Sequence- 1.00    | Overall 1     | improved the regex in which `calendar.month_name[0]` is the empty string, and added fuzzy matching for the sequence""  |
 
 ## Ideas to Try
 - Improve the re-ranker's data with top-k data -> what is it really getting confused at?
