@@ -1,0 +1,26 @@
+Glossary,ground_label,grouping_id,Description,predicted_label,predicted_grouping_id
+Assets,        Total Assets,5300004,"Resources owned by a company (e.g., cash, inventory, equipment).",Financial assets - Current assets,5300089.0
+Equity,            Equity,5300007,Owners’ interest in the company (Assets - Liabilities).,Equity,5300007.0
+Current Assets,            Current assets,5300033,Assets expected to be used or converted to cash within a year.,Financial assets - Current assets,5300089.0
+Non-Current Assets,            Non-current assets,5300031,"Long-term assets (e.g., property, plant, and equipment).",Non-current assets,5300031.0
+Current Liabilities,            Current liabilities,5300177,Obligations due within one year.,Current liabilities,5300177.0
+Non-Current Liabilities,            Non-current liabilities,5300146,"Long-term obligations (e.g., long-term loans).",Non-current liabilities,5300146.0
+Revenue,                    Revenue from operations,5300260,Income from sales of goods or services.,Revenue as per contracted price,5300266.0
+Operating Expenses,                Total expenses,5300002,"Expenses incurred in the normal course of business (e.g., salaries, rent).",Total expenses,5300002.0
+Operating Profit (EBIT),Profit before tax,5300258,Earnings before interest and tax.,Operating profit before working capital changes,5301667.0
+Net Profit (PAT),        Profit/(loss) for the period,5300015,"Profit after all expenses, interest, and tax.",Net profit as per statement of profit and loss,5301668.0
+Operating Cash Flow,            Cash flow (used in) operating activities,5300354,Cash generated from core business operations.,Cash Flow - Operating Activites - Assets and Liabilities written off / (written back),5301606.0
+Investing Cash Flow,            Cash flow (used in) investing activities,5300357,"Cash used in or generated from investments (e.g., asset purchase, sale).",Cash flow (used in) investing activities,5300357.0
+Financing Cash Flow,            Cash flow (used in)/from financing activities,5300358,"Cash from borrowing, issuing shares, or dividend payments.",Cash Flow - Financing Activities - Payment of upfront fees of long term borrowings,5300503.0
+Depreciation,                        Depreciation of tangible assets,5300318,Reduction in asset value over time due to use or obsolescence.,"Accumulated Depreciation - Property, plant and equipment",5300054.0
+Amortization,                        Amortisation of intangible assets,5300320,Similar to depreciation but applied to intangible assets.,Depreciation and amortization expense,5300317.0
+"Property, Plant and Equipment (PPE)","                Property, plant and equipment",5300034,"Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).","Property, plant and equipment",5300034.0
+Intangible Assets,                Intangible assets,5300037,"Identifiable non-monetary assets without physical substance, such as software, patents, etc.,",Intangible assets,5300037.0
+Inventories,                Inventory,5301327,Assets held for sale in the ordinary course of business or for use in the production process,Projects Acquired - Inventories,5300726.0
+Trade Payables,                    Trade payables,5300189,Amounts due to suppliers of goods or services.,Trade payables,5300189.0
+Deferred Tax Liabilities,                Deferred tax liabilities (net),5300176,Tax obligations deferred to future periods (AS 22 / Ind AS 12).,Deferred tax liabilities (net),5300176.0
+Other Financial Liabilities,                        Others - Other financial liabilities,5300172,"Includes derivative liabilities, lease obligations, etc.",Other financial liabilities - Non Current,5300170.0
+Share Capital,                Unit capital / Equity share capital,5300126,Funds raised by issuing shares.,Unit capital / Equity share capital,5300126.0
+Other Equity / Reserves & Surplus,                Other Equity,5300008,"Includes retained earnings, general reserves, and other comprehensive income items.",Other Equity,5300008.0
+Return on Equity (ROE),Return on Equity,5300626,Profitability for owners.,Return on Equity,5300626.0
+Net Profit Margin,Net profit as per statement of profit and loss,5300363,Bottom-line profitability.,Net profit as per statement of profit and loss,5301668.0

@@ -1,0 +1,927 @@
+NL_Query,GT_Glossary,Predicted_Glossary,Combined_Score
+What’s the total value of everything we own right now?,Assets,Assets,-3.1925
+How much do we owe to banks and suppliers today?,Liabilities,Trade Payables,0.8358
+What’s the company worth to our shareholders this quarter?,Equity,Return on Equity (ROE),-0.9981
+How much cash and stuff can we turn into cash within a year?,Current Assets,Current Assets,2.094
+What’s the value of our long-term stuff like factories?,Non-Current Assets,Non-Current Assets,3.74
+What bills do we need to pay off in the next 12 months?,Current Liabilities,Provisions,-2.9844
+What debts are we carrying for the long haul?,Non-Current Liabilities,Non-Current Liabilities,4.1604
+How much cash do we have after covering short-term bills?,Working Capital,Current Ratio,0.4525
+What’s our company’s value to owners after paying debts?,Net Worth,Return on Equity (ROE),-0.4084
+How much money did we make from sales in May 2025?,Revenue,Revenue,4.5325
+How much cash did we pull in from selling products in Q2 2025?,Revenue,Revenue,1.8227
+What’s the cost of making the goods we sold last week?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.1033
+How much did it cost to produce our stuff in April 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),3.8792
+"After covering production, what did we keep in Q2 2025?",Gross Profit,Financial Assets,-3.1535
+What’s left after paying to make our products this month?,Gross Profit,Cost of Goods Sold (COGS),-0.02
+What are we spending on rent and wages this quarter?,Operating Expenses,Operating Expenses,2.5957
+How much goes to running the business daily in 2025?,Operating Expenses,Operating Expenses,2.2211
+How much profit came from operations before taxes in Q2?,Operating Profit (EBIT),Operating Profit (EBIT),5.5602
+What did our core business earn before interest this year?,Operating Profit (EBIT),EBITDA,5.1446
+What’s our earnings before taxes and equipment costs in June?,EBITDA,EBITDA,3.5811
+How much profit did we make before depreciation this month?,EBITDA,EBITDA,3.2039
+What’s left after all costs and taxes in Q1 2025?,Net Profit (PAT),Net Profit (PAT),5.7818
+How much profit did we keep after everything last quarter?,Net Profit (PAT),Net Profit (PAT),3.2337
+What’s each share earning for investors this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.7164
+How much profit per share did we make in Q2 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),2.0247
+How much cash did our business operations bring in last month?,Operating Cash Flow,Operating Cash Flow,4.2469
+What cash came from our core activities in May 2025?,Operating Cash Flow,Operating Cash Flow,5.1749
+What did we spend on new machines in Q1 2025?,Investing Cash Flow,Investing Cash Flow,-2.3356
+How much went to buying assets last quarter?,Investing Cash Flow,Investing Cash Flow,2.0994
+Did we get any cash from loans in June 2025?,Financing Cash Flow,Financing Cash Flow,5.0094
+Any money raised from investors or borrowing this month?,Financing Cash Flow,Financing Cash Flow,-0.1847
+How much cash is left after buying gear this quarter?,Free Cash Flow,Current Ratio,-3.7481
+What’s the cash we have after capital spending in 2025?,Free Cash Flow,Free Cash Flow,6.1366
+How much are we writing off for old equipment this month?,Depreciation,Depreciation,-3.2725
+What’s the depreciation on our assets in Q2 2025?,Depreciation,Depreciation,6.255
+What costs are we spreading for patents this year?,Amortization,Cost of Goods Sold (COGS),-4.4763
+Are we spreading out expenses for software over time?,Amortization,Depreciation,1.0561
+What bills are on the books but unpaid as of now?,Accruals,Accruals,4.1983
+What expenses have we logged but not paid in June?,Accruals,Accruals,4.0155
+Are we saving enough for future repairs or costs?,Provisions,Provisions,4.4668
+Do we have funds set aside for upcoming liabilities?,Provisions,Provisions,6.4166
+Might we owe money if a legal case goes against us?,Contingent Liabilities,Contingent Liabilities,1.0231
+Are there any potential debts from future risks?,Contingent Liabilities,Contingent Liabilities,5.7076
+What share of our sales is profit after production in Q2?,Net Profit Margin,Net Profit Margin,3.1665
+How much of our revenue stays after making goods?,Net Profit Margin,Revenue,-2.5414
+Are we earning good money from our assets this year?,Return on Assets (ROA),Return on Assets (ROA),5.1668
+How well are our assets generating profits in 2025?,Return on Assets (ROA),Return on Assets (ROA),5.8202
+What’s the return for shareholders this quarter?,Return on Equity (ROE),Return on Equity (ROE),4.8473
+How much are investors earning on their stake in Q2?,Return on Equity (ROE),Earnings Per Share (EPS),-3.6653
+Are we using our capital wisely to make money?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.874
+Is our capital generating strong profits this year?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),4.2319
+What’s our profit percentage before taxes this month?,EBITDA Margin,Operating Profit (EBIT),-3.3108
+How much of sales is profit before depreciation in Q2?,EBITDA Margin,EBITDA,-0.5532
+Can we cover short-term bills easily right now?,Current Ratio,Current Ratio,4.4006
+Do we have enough to pay debts due soon?,Current Ratio,Working Capital,0.3159
+Can we pay off debts without selling our stock?,Quick Ratio (Acid Test),Working Capital,-3.2495
+Are we liquid enough without inventory for short-term bills?,Quick Ratio (Acid Test),Current Ratio,5.4923
+Do we have enough cash for bills due immediately?,Cash Ratio,Current Ratio,2.4231
+Can we handle urgent bills with our cash on hand?,Cash Ratio,Quick Ratio (Acid Test),3.7311
+How fast are we selling our inventory this month?,Inventory Turnover,Inventory Turnover,5.8842
+Are we moving our stock quickly enough in Q2?,Inventory Turnover,Quick Ratio (Acid Test),-0.8841
+Are customers paying us faster than in Q1 2025?,Receivables Turnover,Payables Turnover,-3.9954
+How quick are we collecting payments this quarter?,Receivables Turnover,Receivables Turnover,5.0184
+How often are we paying suppliers this month?,Payables Turnover,Payables Turnover,0.3167
+Are we settling vendor bills on time in 2025?,Payables Turnover,Trade Payables,2.0397
+Are our assets driving enough sales this year?,Asset Turnover,Asset Turnover,5.8081
+How well are we using our stuff to boost revenue?,Asset Turnover,Return on Assets (ROA),-3.0615
+Is our short-term cash fueling sales effectively?,Working Capital Turnover,Current Ratio,0.0273
+Are we getting good sales from our working capital?,Working Capital Turnover,Working Capital Turnover,5.4178
+Do we owe more than our company’s worth to shareholders?,Debt-to-Equity Ratio,EV/EBITDA,-1.6996
+Are our debts higher than our equity this quarter?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,1.1412
+How much of our assets are paid for with loans?,Debt Ratio,Debt Ratio,4.9688
+What portion of our stuff is funded by borrowing?,Debt Ratio,Debt Ratio,4.6046
+Can we cover our loan interest without stress?,Interest Coverage Ratio,Interest Coverage Ratio,4.7681
+Are our profits enough to handle interest payments?,Interest Coverage Ratio,Interest Coverage Ratio,-0.0726
+How much of the company belongs to shareholders?,Equity Ratio,Share Capital,1.1377
+What share of our assets comes from owners’ funds?,Equity Ratio,Equity Ratio,-0.0447
+What’s the balance of loans versus our own money?,Capital Gearing Ratio,Capital Gearing Ratio,1.828
+How much debt do we have compared to equity?,Capital Gearing Ratio,Debt-to-Equity Ratio,1.8981
+How much profit is each share making this year?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.6267
+What’s the per-share profit for investors in Q2?,Earnings Per Share (EPS),Earnings Per Share (EPS),0.3038
+Is our stock price too high for our earnings?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,4.872
+Are investors overpaying for our stock based on profits?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.6717
+Does our stock value match our actual worth?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,5.8172
+Is our stock price in line with our net assets?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.3486
+What’s the dividend return for investors right now?,Dividend Yield,Dividend Yield,5.3259
+How much are we paying out in dividends to shareholders?,Dividend Yield,Dividend Yield,0.5935
+How much of our profits are we giving as dividends?,Dividend Payout Ratio,Dividend Payout Ratio,3.3132
+What share of earnings goes to dividend payments?,Dividend Payout Ratio,Dividend Payout Ratio,5.7138
+"What’s our company’s total worth, including debts?",Enterprise Value (EV),Enterprise Value (EV),3.7466
+How much is the business valued at with all debts?,Enterprise Value (EV),Enterprise Value (EV),4.1877
+How does our value compare to profits before taxes?,EV/EBITDA,Price-to-Earnings (P/E) Ratio,1.9651
+What’s our company worth relative to core earnings?,EV/EBITDA,EV/EBITDA,1.9546
+What’s the value of our factories and machines today?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",-0.7509
+How much are our physical assets worth right now?,"Property, Plant and Equipment (PPE)",Intangible Assets,-3.7309
+How much are our patents and brands valued at?,Intangible Assets,Intangible Assets,2.9649
+What’s the worth of our non-physical assets like software?,Intangible Assets,Intangible Assets,5.0625
+What’s the value of our rental properties?,Investment Property,Investment Property,3.9317
+How much are our properties for rent or sale worth?,Investment Property,Investment Property,4.0617
+How much do we have in stocks or bonds?,Financial Assets,Financial Assets,-2.2225
+What’s the value of our financial investments today?,Financial Assets,Financial Assets,-1.3248
+What’s the worth of our unsold products in stock?,Inventories,Inventories,-1.4039
+How much value is tied up in our inventory?,Inventories,Inventories,0.215
+Can we save on taxes later from past losses?,Deferred Tax Assets,Deferred Tax Assets,3.2898
+Are there tax benefits we can claim in the future?,Deferred Tax Assets,Deferred Tax Assets,5.7955
+How much have we borrowed from banks overall?,Borrowings,Borrowings,4.5397
+What’s the total of our outstanding loans?,Borrowings,Borrowings,-0.9119
+What do we owe suppliers for materials this month?,Trade Payables,Trade Payables,5.1921
+How much are we behind on vendor payments?,Trade Payables,Trade Payables,5.4264
+Are we setting aside enough for employee benefits?,Provisions,Provisions,2.6894
+Do we have funds reserved for future liabilities?,Provisions,Provisions,6.417
+What taxes might we owe down the line?,Deferred Tax Liabilities,Deferred Tax Assets,-4.002
+Are there future tax payments we’re deferring?,Deferred Tax Liabilities,Deferred Tax Liabilities,4.496
+What other debts do we have besides loans?,Other Financial Liabilities,Other Financial Liabilities,-0.3979
+Are there any non-loan debts we’re carrying?,Other Financial Liabilities,Borrowings,-3.7446
+How much did shareholders invest in the company?,Share Capital,Share Capital,4.6926
+What’s the total cash from issuing shares?,Share Capital,Share Capital,4.4754
+What’s the total of profits we’ve kept over time?,Other Equity / Reserves & Surplus,Net Profit Margin,-1.4572
+How much have we saved from past earnings?,Other Equity / Reserves & Surplus,Working Capital,-3.1628
+How’s our sales revenue looking compared to Q1 2025?,Revenue,Revenue,2.6997
+Did we make more from sales this month than last June?,Revenue,Gross Profit,1.5315
+What’s the cost trend for producing our goods in 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),4.9123
+Did it cost more to make products in May 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),3.577
+How much profit did we keep after production in Q1?,Gross Profit,Net Profit Margin,-2.2402
+What’s left after covering production costs this year?,Gross Profit,Working Capital,1.3762
+Are we overspending on salaries and utilities?,Operating Expenses,EV/EBITDA,-4.5393
+How much are we burning through on daily operations?,Operating Expenses,Operating Expenses,1.9974
+What did we earn from operations in Q1 2025?,Operating Profit (EBIT),Operating Profit (EBIT),4.9865
+How’s our core profit before interest this month?,Operating Profit (EBIT),EBITDA,3.3879
+What’s our profit before taxes and write-offs in Q2?,EBITDA,Operating Profit (EBIT),-1.7192
+How much are we earning before depreciation this year?,EBITDA,EBITDA,5.2946
+How much profit did we clear after all costs in May?,Net Profit (PAT),Net Profit (PAT),5.3349
+What’s our bottom line for Q2 2025?,Net Profit (PAT),Net Profit Margin,2.4189
+How much is each share earning this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.8553
+What’s the profit per share in the first half of 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),-1.5107
+How much cash flowed from operations in June 2025?,Operating Cash Flow,Operating Cash Flow,5.6774
+What’s the cash from our business activities this quarter?,Operating Cash Flow,Operating Cash Flow,3.9948
+What did we spend on investments in May 2025?,Investing Cash Flow,Investing Cash Flow,3.45
+How much went to buying new assets this month?,Investing Cash Flow,Investing Cash Flow,4.3009
+Did we raise funds through financing in Q2 2025?,Financing Cash Flow,Financing Cash Flow,-4.1875
+Any cash from loans or shares this quarter?,Financing Cash Flow,Financing Cash Flow,5.7881
+How much cash is left after equipment buys in June?,Free Cash Flow,Current Ratio,-3.1427
+What’s our free cash after capital expenses this month?,Free Cash Flow,Free Cash Flow,6.2893
+What’s the write-off for our gear this quarter?,Depreciation,Capital Gearing Ratio,-3.9073
+How much are we depreciating our assets in 2025?,Depreciation,Depreciation,4.6562
+Are we spreading costs for trademarks over time?,Amortization,Depreciation,-1.6508
+What costs are we stretching out for intangibles?,Amortization,Amortization,5.578
+What expenses are we tracking but haven’t paid yet?,Accruals,Accruals,5.5428
+Do we have unpaid bills recorded for this month?,Accruals,Accruals,-3.0259
+Are we prepared for unexpected costs like lawsuits?,Provisions,Provisions,2.0838
+Do we have enough saved for future expenses?,Provisions,Provisions,5.5163
+Could we face debts from unresolved legal issues?,Contingent Liabilities,Contingent Liabilities,1.0182
+Are there potential liabilities from future events?,Contingent Liabilities,Contingent Liabilities,6.0049
+How does our profit after production compare to others?,Net Profit Margin,Net Profit Margin,3.3633
+What’s our profit margin after making goods in Q2?,Net Profit Margin,Net Profit Margin,1.6372
+Are our assets producing good profits this quarter?,Return on Assets (ROA),Return on Assets (ROA),5.7299
+How much are our assets earning us in 2025?,Return on Assets (ROA),Assets,-3.5286
+What’s the payback for investors this year?,Return on Equity (ROE),Return on Equity (ROE),1.1977
+How much are shareholders earning in Q2 2025?,Return on Equity (ROE),Return on Equity (ROE),2.4559
+Are we getting good returns on our capital?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.6446
+Is our capital working hard to make profits?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.3879
+What’s our profit share before taxes in Q1 2025?,EBITDA Margin,Operating Profit (EBIT),-3.6817
+How much of revenue is profit before depreciation?,EBITDA Margin,EBITDA,-0.4366
+Can we handle short-term debts without issues?,Current Ratio,Current Ratio,3.3123
+Are we good for bills due in the next year?,Current Ratio,Working Capital,-2.4734
+Can we pay debts without selling our stockpile?,Quick Ratio (Acid Test),Working Capital,-3.9458
+Do we have enough without inventory for debts?,Quick Ratio (Acid Test),Financial Assets,-1.5046
+Is our cash enough for immediate bills?,Cash Ratio,Quick Ratio (Acid Test),2.0876
+Can we cover urgent expenses with cash on hand?,Cash Ratio,Accruals,-2.109
+How fast are we selling our stock this quarter?,Inventory Turnover,Inventory Turnover,3.4339
+Are we clearing inventory quickly in 2025?,Inventory Turnover,Inventory Turnover,-0.9323
+Are clients paying us faster than last month?,Receivables Turnover,Receivables Turnover,-2.3851
+How quick are customer payments this year?,Receivables Turnover,Receivables Turnover,3.4726
+Are we paying vendors on time this month?,Payables Turnover,Trade Payables,0.3812
+How often are we settling supplier bills in Q2?,Payables Turnover,Payables Turnover,4.0124
+Are we using assets efficiently for sales?,Asset Turnover,Asset Turnover,5.2291
+Do our assets generate strong revenue?,Asset Turnover,Return on Assets (ROA),3.3354
+Is our working capital driving enough sales?,Working Capital Turnover,Working Capital Turnover,5.3081
+Are we getting sales from short-term resources?,Working Capital Turnover,Current Ratio,-2.0728
+Are our debts higher than our equity?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,4.9612
+Do we owe more than shareholders’ stake?,Debt-to-Equity Ratio,EV/EBITDA,-3.4868
+How much of our stuff is funded by loans?,Debt Ratio,Debt Ratio,3.2196
+What portion of assets comes from borrowing?,Debt Ratio,Debt Ratio,5.6853
+Can we cover loan interest with our profits?,Interest Coverage Ratio,Interest Coverage Ratio,5.0195
+Are we okay with interest payments this quarter?,Interest Coverage Ratio,Interest Coverage Ratio,4.0012
+How much of our company do owners control?,Equity Ratio,Share Capital,-1.4582
+What share of assets is from shareholders?,Equity Ratio,Equity Ratio,-1.9001
+What’s the debt-to-equity balance in our funding?,Capital Gearing Ratio,Debt-to-Equity Ratio,-2.3797
+How does our debt compare to our own funds?,Capital Gearing Ratio,Capital Gearing Ratio,4.8804
+How much profit per share did we make in May?,Earnings Per Share (EPS),Earnings Per Share (EPS),2.5468
+What’s the per-share earning for Q2 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.6489
+Is our stock price high compared to profits?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.9942
+Are we overvalued based on our earnings?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.4064
+Does our stock price reflect our real value?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,5.2637
+Is our stock in line with our net assets?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,5.9569
+What’s the dividend return for investors in Q2?,Dividend Yield,Dividend Yield,4.994
+How much are dividends paying out this year?,Dividend Yield,Dividend Yield,2.3843
+How much of profits are we sharing as dividends?,Dividend Payout Ratio,Dividend Payout Ratio,4.2394
+What portion of earnings goes to shareholders?,Dividend Payout Ratio,Dividend Payout Ratio,4.4671
+What’s our company worth with all debts included?,Enterprise Value (EV),Enterprise Value (EV),4.0016
+How much is the business valued at today?,Enterprise Value (EV),Enterprise Value (EV),5.3788
+How does our value compare to core profits?,EV/EBITDA,Price-to-Earnings (P/E) Ratio,5.4836
+What’s our worth relative to earnings before taxes?,EV/EBITDA,Price-to-Earnings (P/E) Ratio,1.269
+What’s the value of our equipment and buildings?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",3.2581
+How much are our physical assets worth in Q2?,"Property, Plant and Equipment (PPE)",Assets,-4.424
+What’s the worth of our patents and software?,Intangible Assets,Intangible Assets,4.7557
+How much value is in our non-physical assets?,Intangible Assets,Intangible Assets,4.0287
+What’s the value of properties we rent out?,Investment Property,Investment Property,4.4645
+How much are our rental properties worth?,Investment Property,Investment Property,3.1274
+How much is tied up in our stocks or bonds?,Financial Assets,Equity Ratio,-2.188
+What’s the worth of our financial investments?,Financial Assets,Financial Assets,2.2845
+What’s the total value of our unsold stock?,Inventories,Current Ratio,-3.8474
+How much are our products in storage worth?,Inventories,Inventories,-0.4631
+Can we save taxes from past business losses?,Deferred Tax Assets,Deferred Tax Assets,-0.7173
+Are there tax benefits we can use later?,Deferred Tax Assets,Deferred Tax Assets,5.5395
+What’s the total of our bank loans?,Borrowings,Borrowings,3.4058
+How much do we owe on loans this quarter?,Borrowings,Borrowings,-0.1904
+How much do we owe suppliers this month?,Trade Payables,Trade Payables,5.4811
+What’s the balance for vendor payments in Q2?,Trade Payables,Trade Payables,3.2724
+Are we saving enough for future employee costs?,Provisions,Provisions,4.7675
+Do we have funds for upcoming obligations?,Provisions,Provisions,4.9743
+What taxes are we deferring to later years?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.1511
+Are there future tax bills we’re holding off?,Deferred Tax Liabilities,Deferred Tax Assets,2.2878
+What other debts do we have besides loans?,Other Financial Liabilities,Other Financial Liabilities,-0.3979
+Are there non-loan debts we’re responsible for?,Other Financial Liabilities,Non-Current Liabilities,-3.5488
+How much cash came from issuing shares?,Share Capital,Share Capital,5.2206
+What’s the total from shareholder investments?,Share Capital,Share Capital,4.7099
+What’s the sum of profits we’ve saved up?,Other Equity / Reserves & Surplus,Return on Equity (ROE),-3.8813
+How much have we kept from past profits?,Other Equity / Reserves & Surplus,Net Profit Margin,-0.3528
+Did our sales beat last year’s numbers for Q1?,Revenue,Gross Profit,-4.1385
+How much more did we earn from sales this month?,Revenue,Revenue,3.7538
+Are production costs higher than last quarter?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),-0.8197
+What’s the cost of making our goods this year?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.4709
+How’s our profit after production trending in 2025?,Gross Profit,Net Profit Margin,-3.0994
+What did we keep after making products in May?,Gross Profit,Inventories,-0.6912
+Are we overspending on daily operations this month?,Operating Expenses,Working Capital Turnover,-3.2521
+How much are we spending to keep things running?,Operating Expenses,Operating Expenses,0.3021
+What’s our profit from operations in Q2 2025?,Operating Profit (EBIT),Operating Profit (EBIT),5.7035
+How much did we earn before taxes in May?,Operating Profit (EBIT),Operating Profit (EBIT),-0.0472
+What’s our profit before write-offs this quarter?,EBITDA,Operating Profit (EBIT),-2.123
+How much are we earning before depreciation in Q2?,EBITDA,EBITDA,5.0258
+What’s our final profit after all costs this month?,Net Profit (PAT),Net Profit (PAT),4.7314
+How much did we clear after expenses in Q1?,Net Profit (PAT),Net Profit (PAT),1.0601
+How much profit is each share making in June?,Earnings Per Share (EPS),Earnings Per Share (EPS),3.358
+What’s the per-share profit for this quarter?,Earnings Per Share (EPS),Earnings Per Share (EPS),2.6617
+How much cash did we generate from operations in Q1?,Operating Cash Flow,Operating Cash Flow,5.0432
+What’s the cash flow from our business this month?,Operating Cash Flow,Operating Cash Flow,0.4345
+What did we spend on new assets in Q2 2025?,Investing Cash Flow,Investing Cash Flow,1.0405
+How much went to investments this quarter?,Investing Cash Flow,Investing Cash Flow,3.7094
+Did we get cash from loans or shares in May?,Financing Cash Flow,Financing Cash Flow,5.8986
+Any financing cash raised this month?,Financing Cash Flow,Financing Cash Flow,4.9771
+How much cash remains after buying equipment?,Free Cash Flow,Assets,-3.1064
+What’s our free cash flow for Q2 2025?,Free Cash Flow,Free Cash Flow,6.4153
+What’s the depreciation on our machines this year?,Depreciation,Depreciation,6.1145
+How much are we writing off for assets in June?,Depreciation,Investing Cash Flow,-3.7892
+Are we spreading costs for software this quarter?,Amortization,Deferred Tax Assets,-5.3014
+What costs are we stretching for intangibles?,Amortization,Amortization,5.4504
+What bills are we holding off this month?,Accruals,Accruals,3.3044
+Are there unpaid expenses logged for Q2?,Accruals,Accruals,-3.0147
+Are we prepared for unexpected costs in 2025?,Provisions,Provisions,-2.1793
+Do we have enough saved for future liabilities?,Provisions,Provisions,6.3561
+Could we owe money from legal disputes?,Contingent Liabilities,Contingent Liabilities,-0.7698
+Are there debts tied to future risks?,Contingent Liabilities,Contingent Liabilities,4.4105
+How’s our profit margin after production in Q1?,Net Profit Margin,Net Profit Margin,-1.5046
+What’s our profitability after making goods?,Net Profit Margin,Net Profit Margin,0.8258
+Are our assets earning strong profits?,Return on Assets (ROA),Return on Assets (ROA),5.724
+How much profit do our assets generate this year?,Return on Assets (ROA),Return on Assets (ROA),5.6426
+What’s the return for shareholders in Q1 2025?,Return on Equity (ROE),Return on Equity (ROE),4.7013
+How much are investors earning this month?,Return on Equity (ROE),Investing Cash Flow,-2.5496
+Are we using capital efficiently for profits?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0186
+Is our capital producing good returns?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.11
+What’s our profit percentage before taxes in Q2?,EBITDA Margin,EBITDA Margin,2.2927
+How much of sales is profit before write-offs?,EBITDA Margin,Net Profit Margin,-2.2163
+Can we handle short-term debts comfortably?,Current Ratio,Current Ratio,2.6964
+Are we okay for bills due in the next year?,Current Ratio,Current Liabilities,-3.8803
+Can we pay debts without our inventory?,Quick Ratio (Acid Test),Inventory Turnover,-3.865
+Do we have enough without stock for debts?,Quick Ratio (Acid Test),Working Capital,-1.102
+Is our cash sufficient for urgent bills?,Cash Ratio,Quick Ratio (Acid Test),2.2892
+Can we cover immediate expenses with cash?,Cash Ratio,Accruals,-1.1393
+How quickly are we selling inventory this year?,Inventory Turnover,Inventory Turnover,6.0352
+Are we moving stock fast enough in Q2?,Inventory Turnover,Quick Ratio (Acid Test),-2.5916
+Are we collecting client payments quickly?,Receivables Turnover,Receivables Turnover,2.1753
+How fast are customers paying us in 2025?,Receivables Turnover,Payables Turnover,3.3806
+Are we paying suppliers promptly this quarter?,Payables Turnover,Receivables Turnover,-1.4652
+How often do we settle vendor bills?,Payables Turnover,Receivables Turnover,2.8556
+Are our assets generating enough sales?,Asset Turnover,Asset Turnover,4.8612
+Do our assets drive revenue efficiently?,Asset Turnover,Asset Turnover,3.5069
+Is our short-term cash boosting sales?,Working Capital Turnover,Current Ratio,-0.7253
+Are we getting sales from working capital?,Working Capital Turnover,Working Capital Turnover,4.8022
+Are our debts bigger than our equity?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,4.2474
+Do we owe more than our shareholders’ worth?,Debt-to-Equity Ratio,EV/EBITDA,-2.3076
+How much of our assets are from loans?,Debt Ratio,Debt Ratio,5.7519
+What portion of our stuff is borrowed?,Debt Ratio,Borrowings,-2.8115
+Can we cover interest with our earnings?,Interest Coverage Ratio,Interest Coverage Ratio,4.2054
+Are profits enough for loan interest?,Interest Coverage Ratio,Interest Coverage Ratio,2.2392
+How much do shareholders own of the company?,Equity Ratio,Share Capital,0.979
+What share of assets is from owners?,Equity Ratio,Assets,-1.5207
+What’s the debt-to-equity mix in our funds?,Capital Gearing Ratio,Capital Gearing Ratio,5.5884
+How does debt balance with our own money?,Capital Gearing Ratio,Capital Gearing Ratio,3.7001
+Can you tell me what was the Assets last year?,Assets,Assets,5.4103
+Give me the Assets figure for the last quarter.,Assets,Assets,5.2514
+What was the total Assets this month?,Assets,Assets,3.4102
+Can you share the Assets value for Q1 2025?,Assets,Assets,2.378
+How much were the Assets in May 2025?,Assets,Assets,5.3462
+Can you tell me what was the Liabilities last year?,Liabilities,Liabilities,5.3085
+Can you provide the Liabilities amount for the last quarter?,Liabilities,Liabilities,3.6787
+What was the Liabilities total this month?,Liabilities,Liabilities,5.3578
+Could you share the Liabilities for Q1 2025?,Liabilities,Liabilities,4.6021
+How much were the Liabilities in May 2025?,Liabilities,Liabilities,5.0341
+Can you tell me what was the Equity last year?,Equity,Equity,5.3796
+Could you share the Equity for the last quarter?,Equity,Equity,3.5834
+What was the Equity amount this month?,Equity,Equity,4.9011
+Can you provide the Equity value for Q1 2025?,Equity,Equity,2.1172
+How much was the Equity in May 2025?,Equity,Equity,5.1686
+Can you tell me what was the Current Assets last year?,Current Assets,Current Assets,6.0505
+Tell me the value of Current Assets in the last quarter.,Current Assets,Current Assets,5.1397
+What was the Current Assets total this month?,Current Assets,Current Assets,6.0267
+Could you share the Current Assets for Q1 2025?,Current Assets,Current Assets,6.0641
+How much were the Current Assets in May 2025?,Current Assets,Current Assets,5.8132
+Can you tell me what was the Non-Current Assets last year?,Non-Current Assets,Non-Current Assets,5.8136
+What was the Non-Current Assets in the last quarter?,Non-Current Assets,Non-Current Assets,6.1721
+Can you provide the Non-Current Assets total this month?,Non-Current Assets,Non-Current Assets,5.6443
+How much were the Non-Current Assets in Q1 2025?,Non-Current Assets,Non-Current Assets,5.6833
+What was the Non-Current Assets value in May 2025?,Non-Current Assets,Non-Current Assets,5.4189
+Can you tell me what was the Current Liabilities last year?,Current Liabilities,Current Liabilities,5.7667
+I'd like to know the Current Liabilities from the last quarter.,Current Liabilities,Current Liabilities,5.6507
+What was the Current Liabilities amount this month?,Current Liabilities,Current Liabilities,5.8867
+Can you share the Current Liabilities for Q1 2025?,Current Liabilities,Current Liabilities,5.9336
+How much were the Current Liabilities in May 2025?,Current Liabilities,Current Liabilities,5.4494
+Can you tell me what was the Non-Current Liabilities last year?,Non-Current Liabilities,Non-Current Liabilities,5.7288
+What was the Non-Current Liabilities in the last quarter?,Non-Current Liabilities,Non-Current Liabilities,6.1102
+Can you provide the Non-Current Liabilities total this month?,Non-Current Liabilities,Non-Current Liabilities,5.3595
+How much were the Non-Current Liabilities in Q1 2025?,Non-Current Liabilities,Non-Current Liabilities,5.4574
+What was the Non-Current Liabilities value in May 2025?,Non-Current Liabilities,Non-Current Liabilities,5.6297
+Can you tell me what was the Working Capital last year?,Working Capital,Working Capital,5.2499
+Could you share the Working Capital for the last quarter?,Working Capital,Working Capital,5.1892
+What was the Working Capital amount this month?,Working Capital,Working Capital,5.5354
+Can you provide the Working Capital value for Q1 2025?,Working Capital,Working Capital,4.9024
+How much was the Working Capital in May 2025?,Working Capital,Working Capital,5.2093
+Can you tell me what was the Net Worth last year?,Net Worth,Net Worth,5.6872
+What was the Net Worth in the last quarter?,Net Worth,Net Worth,6.103
+Can you share the Net Worth total this month?,Net Worth,Net Worth,5.2563
+How much was the Net Worth in Q1 2025?,Net Worth,Net Worth,5.6896
+What was the Net Worth value in May 2025?,Net Worth,Net Worth,5.9932
+Can you tell me what was the Revenue last year?,Revenue,Revenue,5.9024
+Give me the Revenue figure for the last quarter.,Revenue,Revenue,5.7006
+What was the Revenue total this month?,Revenue,Revenue,5.7395
+Can you provide the Revenue amount for Q1 2025?,Revenue,Revenue,5.5556
+How much was the Revenue in May 2025?,Revenue,Revenue,5.986
+Can you tell me what was the Cost of Goods Sold (COGS) last year?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.4401
+Tell me the value of COGS in the last quarter.,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.4065
+What was the COGS amount this month?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.9774
+Could you share the COGS for Q1 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.9513
+How much was the COGS in May 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.0255
+Can you tell me what was the Gross Profit last year?,Gross Profit,Gross Profit,6.1713
+Could you share the Gross Profit for the last quarter?,Gross Profit,Gross Profit,6.1009
+What was the Gross Profit total this month?,Gross Profit,Gross Profit,6.2263
+Can you provide the Gross Profit value for Q1 2025?,Gross Profit,Gross Profit,5.8461
+How much was the Gross Profit in May 2025?,Gross Profit,Gross Profit,6.0549
+Can you tell me what was the Operating Expenses last year?,Operating Expenses,Operating Expenses,6.0619
+I'd like to know the Operating Expenses from the last quarter.,Operating Expenses,Operating Expenses,5.8041
+What was the Operating Expenses amount this month?,Operating Expenses,Operating Expenses,6.1029
+Can you share the Operating Expenses for Q1 2025?,Operating Expenses,Operating Expenses,6.0743
+How much were the Operating Expenses in May 2025?,Operating Expenses,Operating Expenses,6.0329
+Can you tell me what was the Operating Profit last year?,Operating Profit (EBIT),Operating Profit (EBIT),5.9297
+I'd like to know the EBIT from the last quarter.,Operating Profit (EBIT),Operating Profit (EBIT),3.6674
+What was the Operating Profit total this month?,Operating Profit (EBIT),Operating Profit (EBIT),6.0863
+How much was the Operating Profit in Q1 2025?,Operating Profit (EBIT),Operating Profit (EBIT),6.024
+What was the EBIT value in May 2025?,Operating Profit (EBIT),Operating Profit (EBIT),1.1087
+Can you tell me what was the EBITDA last year?,EBITDA,EBITDA,5.374
+"Could you share the Earnings before Interest, Tax, Depreciation, and Amortisation for the last quarter?",EBITDA,EBITDA,6.3159
+What was the EBITDA amount this month?,EBITDA,EBITDA,5.412
+Can you provide the EBITDA value for Q1 2025?,EBITDA,EBITDA,3.4171
+How much was the EBITDA in May 2025?,EBITDA,EBITDA,5.437
+Can you tell me what was the Net Profit (PAT) last year?,Net Profit (PAT),Net Profit (PAT),6.3131
+Can you provide the Net Profit (PAT) amount for the last quarter?,Net Profit (PAT),Net Profit (PAT),6.1086
+What was the Net Profit total this month?,Net Profit (PAT),Net Profit (PAT),6.0943
+How much was the Net Profit in Q1 2025?,Net Profit (PAT),Net Profit (PAT),5.9832
+What was the Net Profit value in May 2025?,Net Profit (PAT),Net Profit (PAT),5.5841
+Can you tell me what was the Earnings Per Share (EPS) last year?,Earnings Per Share (EPS),Earnings Per Share (EPS),6.2854
+How much was the EPS during the last quarter?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.5866
+What was the EPS amount this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.3029
+Can you share the EPS for Q1 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),2.6644
+How much was the EPS in May 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.7776
+Can you tell me what was the Operating Cash Flow last year?,Operating Cash Flow,Operating Cash Flow,6.1339
+Can you provide the Operating Cash Flow amount for the last quarter?,Operating Cash Flow,Operating Cash Flow,5.6926
+What was the Operating Cash Flow total this month?,Operating Cash Flow,Operating Cash Flow,6.1831
+How much was the Operating Cash Flow in Q1 2025?,Operating Cash Flow,Operating Cash Flow,6.0591
+What was the Operating Cash Flow value in May 2025?,Operating Cash Flow,Operating Cash Flow,5.9367
+Can you tell me what was the Investing Cash Flow last year?,Investing Cash Flow,Investing Cash Flow,6.2489
+Can you provide the Investing Cash Flow amount for the last quarter?,Investing Cash Flow,Investing Cash Flow,5.9536
+What was the Investing Cash Flow total this month?,Investing Cash Flow,Investing Cash Flow,6.2445
+Could you share the Investing Cash Flow for Q1 2025?,Investing Cash Flow,Investing Cash Flow,6.2336
+How much was the Investing Cash Flow in May 2025?,Investing Cash Flow,Investing Cash Flow,6.1584
+Can you tell me what was the Financing Cash Flow last year?,Financing Cash Flow,Financing Cash Flow,6.3074
+Can you provide the Financing Cash Flow amount for the last quarter?,Financing Cash Flow,Financing Cash Flow,6.0655
+What was the Financing Cash Flow total this month?,Financing Cash Flow,Financing Cash Flow,6.2763
+How much was the Financing Cash Flow in Q1 2025?,Financing Cash Flow,Financing Cash Flow,6.2602
+What was the Financing Cash Flow value in May 2025?,Financing Cash Flow,Financing Cash Flow,6.0918
+Can you tell me what was the Free Cash Flow last year?,Free Cash Flow,Free Cash Flow,6.1818
+Tell me the value of Free Cash Flow in the last quarter.,Free Cash Flow,Free Cash Flow,5.9257
+What was the Free Cash Flow amount this month?,Free Cash Flow,Free Cash Flow,6.2537
+Can you share the Free Cash Flow for Q1 2025?,Free Cash Flow,Free Cash Flow,6.2307
+How much was the Free Cash Flow in May 2025?,Free Cash Flow,Free Cash Flow,6.1149
+Can you tell me what was the Depreciation last year?,Depreciation,Depreciation,5.796
+Can you provide the Depreciation amount for the last quarter?,Depreciation,Depreciation,5.4043
+What was the Depreciation total this month?,Depreciation,Depreciation,5.8292
+How much was the Depreciation in Q1 2025?,Depreciation,Depreciation,5.8391
+What was the Depreciation value in May 2025?,Depreciation,Depreciation,5.8676
+Can you tell me what was the Amortization last year?,Amortization,Amortization,5.6959
+Tell me the value of Amortization in the last quarter.,Amortization,Amortization,5.0013
+What was the Amortization amount this month?,Amortization,Amortization,5.513
+Could you share the Amortization for Q1 2025?,Amortization,Amortization,5.9553
+How much was the Amortization in May 2025?,Amortization,Amortization,5.478
+Can you tell me what was the Accruals last year?,Accruals,Accruals,5.8348
+Could you share the Accruals for the last quarter?,Accruals,Accruals,5.9518
+What was the Accruals total this month?,Accruals,Accruals,5.9438
+Can you provide the Accruals value for Q1 2025?,Accruals,Accruals,5.6379
+How much were the Accruals in May 2025?,Accruals,Accruals,5.9626
+Can you tell me what was the Provisions last year?,Provisions,Provisions,5.9282
+Tell me the value of Provisions in the last quarter.,Provisions,Provisions,5.4358
+What was the Provisions amount this month?,Provisions,Provisions,5.9884
+How much were the Provisions in Q1 2025?,Provisions,Provisions,6.1114
+What was the Provisions value in May 2025?,Provisions,Provisions,5.9051
+Can you tell me what was the Contingent Liabilities last year?,Contingent Liabilities,Contingent Liabilities,6.2492
+I'd like to know the Contingent Liabilities from the last quarter.,Contingent Liabilities,Contingent Liabilities,6.149
+What was the Contingent Liabilities total this month?,Contingent Liabilities,Contingent Liabilities,6.2359
+Can you share the Contingent Liabilities for Q1 2025?,Contingent Liabilities,Contingent Liabilities,6.3238
+How much were the Contingent Liabilities in May 2025?,Contingent Liabilities,Contingent Liabilities,5.9724
+Can you tell me what was the Net Profit Margin last year?,Net Profit Margin,Net Profit Margin,6.1427
+I'd like to know the Net Profit Margin from the last quarter.,Net Profit Margin,Net Profit Margin,6.1853
+What was the Net Profit Margin total this month?,Net Profit Margin,Net Profit Margin,6.2539
+Can you provide the Net Profit Margin value for Q1 2025?,Net Profit Margin,Net Profit Margin,6.0101
+How much was the Net Profit Margin in May 2025?,Net Profit Margin,Net Profit Margin,5.9453
+Can you tell me what was the Return on Assets (ROA) last year?,Return on Assets (ROA),Return on Assets (ROA),6.4246
+What was the ROA in the last quarter?,Return on Assets (ROA),Return on Assets (ROA),6.425
+Can you share the ROA total this month?,Return on Assets (ROA),Return on Assets (ROA),5.7378
+How much was the ROA in Q1 2025?,Return on Assets (ROA),Return on Assets (ROA),6.0738
+What was the ROA value in May 2025?,Return on Assets (ROA),Return on Assets (ROA),5.9984
+Can you tell me what was the Return on Equity (ROE) last year?,Return on Equity (ROE),Return on Equity (ROE),6.324
+Give me the ROE figure for the last quarter.,Return on Equity (ROE),Return on Equity (ROE),6.1288
+What was the ROE total this month?,Return on Equity (ROE),Return on Equity (ROE),5.9278
+Can you provide the ROE value for Q1 2025?,Return on Equity (ROE),Return on Equity (ROE),6.0327
+How much was the ROE in May 2025?,Return on Equity (ROE),Return on Equity (ROE),5.9554
+Can you tell me what was the Return on Capital Employed (ROCE) last year?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.4334
+I'd like to know the ROCE from the last quarter.,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0136
+What was the ROCE total this month?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0377
+How much was the ROCE in Q1 2025?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0237
+What was the ROCE value in May 2025?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0653
+Can you tell me what was the EBITDA Margin last year?,EBITDA Margin,EBITDA Margin,6.1709
+I'd like to know the EBITDA Margin from the last quarter.,EBITDA Margin,EBITDA Margin,6.1332
+Can you share the EBITDA Margin this month?,EBITDA Margin,EBITDA Margin,6.0821
+Can you provide the EBITDA Margin value for Q1 2025?,EBITDA Margin,EBITDA Margin,5.9426
+How much was the EBITDA Margin in May 2025?,EBITDA Margin,EBITDA Margin,6.0972
+Can you tell me what was the Current Ratio last year?,Current Ratio,Current Ratio,6.2257
+How much was the Current Ratio during the last quarter?,Current Ratio,Current Ratio,6.1655
+What was the Current Ratio total this month?,Current Ratio,Current Ratio,6.2649
+How much was the Current Ratio in Q1 2025?,Current Ratio,Current Ratio,6.2321
+What was the Current Ratio value in May 2025?,Current Ratio,Current Ratio,6.1732
+Can you tell me what was the Quick Ratio last year?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1137
+Tell me the value of Quick Ratio (Acid Test) in the last quarter.,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1212
+What was the Quick Ratio total this month?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.0714
+Can you share the Quick Ratio for Q1 2025?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.2171
+How much was the Quick Ratio in May 2025?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1428
+Can you tell me what was the Cash Ratio last year?,Cash Ratio,Cash Ratio,6.105
+I'd like to know the Cash Ratio from the last quarter.,Cash Ratio,Cash Ratio,5.9165
+What was the Cash Ratio total this month?,Cash Ratio,Cash Ratio,6.1502
+Can you provide the Cash Ratio value for Q1 2025?,Cash Ratio,Cash Ratio,5.9598
+How much was the Cash Ratio in May 2025?,Cash Ratio,Cash Ratio,5.9311
+Can you tell me what was the Inventory Turnover last year?,Inventory Turnover,Inventory Turnover,6.2336
+Tell me the value of Inventory Turnover in the last quarter.,Inventory Turnover,Inventory Turnover,5.5754
+What was the Inventory Turnover total this month?,Inventory Turnover,Inventory Turnover,6.1852
+How much was the Inventory Turnover in Q1 2025?,Inventory Turnover,Inventory Turnover,6.0624
+What was the Inventory Turnover value in May 2025?,Inventory Turnover,Inventory Turnover,6.0365
+Can you tell me what was the Receivables Turnover last year?,Receivables Turnover,Receivables Turnover,6.1256
+I'd like to know the Receivables Turnover from the last quarter.,Receivables Turnover,Receivables Turnover,6.0513
+Can you share the Receivables Turnover this month?,Receivables Turnover,Receivables Turnover,6.0953
+Can you provide the Receivables Turnover value for Q1 2025?,Receivables Turnover,Receivables Turnover,5.9672
+How much was the Receivables Turnover in May 2025?,Receivables Turnover,Receivables Turnover,5.9076
+Can you tell me what was the Payables Turnover last year?,Payables Turnover,Payables Turnover,6.2255
+Give me the Payables Turnover figure for the last quarter.,Payables Turnover,Payables Turnover,6.2046
+What was the Payables Turnover total this month?,Payables Turnover,Payables Turnover,6.2154
+How much was the Payables Turnover in Q1 2025?,Payables Turnover,Payables Turnover,6.1304
+What was the Payables Turnover value in May 2025?,Payables Turnover,Payables Turnover,6.0427
+Can you tell me what was the Asset Turnover last year?,Asset Turnover,Asset Turnover,6.254
+How much was the Asset Turnover during the last quarter?,Asset Turnover,Asset Turnover,5.967
+What was the Asset Turnover total this month?,Asset Turnover,Asset Turnover,6.1751
+Can you share the Asset Turnover for Q1 2025?,Asset Turnover,Asset Turnover,6.2025
+How much was the Asset Turnover in May 2025?,Asset Turnover,Asset Turnover,6.0942
+Can you tell me what was the Working Capital Turnover last year?,Working Capital Turnover,Working Capital Turnover,5.8476
+I'd like to know the Working Capital Turnover from the last quarter.,Working Capital Turnover,Working Capital Turnover,5.7864
+Can you provide the Working Capital Turnover value this month?,Working Capital Turnover,Working Capital Turnover,5.8124
+How much was the Working Capital Turnover in Q1 2025?,Working Capital Turnover,Working Capital Turnover,5.8218
+What was the Working Capital Turnover value in May 2025?,Working Capital Turnover,Working Capital Turnover,5.8009
+Can you tell me what was the Debt-to-Equity Ratio last year?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.3525
+Give me the D/E Ratio figure for the last quarter.,Debt-to-Equity Ratio,Price-to-Earnings (P/E) Ratio,-3.3831
+What was the Debt-to-Equity Ratio total this month?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.5899
+Can you share the Debt-to-Equity Ratio for Q1 2025?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.9357
+How much was the Debt-to-Equity Ratio in May 2025?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.2671
+Can you tell me what was the Debt Ratio last year?,Debt Ratio,Debt Ratio,6.2433
+How much was the Debt Ratio during the last quarter?,Debt Ratio,Debt Ratio,6.1246
+What was the Debt Ratio total this month?,Debt Ratio,Debt Ratio,6.3296
+Can you provide the Debt Ratio value for Q1 2025?,Debt Ratio,Debt Ratio,5.8235
+How much was the Debt Ratio in May 2025?,Debt Ratio,Debt Ratio,6.1967
+Can you tell me what was the Interest Coverage Ratio last year?,Interest Coverage Ratio,Interest Coverage Ratio,6.3729
+Give me the Interest Coverage Ratio figure for the last quarter.,Interest Coverage Ratio,Interest Coverage Ratio,6.3932
+What was the Interest Coverage Ratio total this month?,Interest Coverage Ratio,Interest Coverage Ratio,6.3956
+How much was the Interest Coverage Ratio in Q1 2025?,Interest Coverage Ratio,Interest Coverage Ratio,6.3829
+What was the Interest Coverage Ratio value in May 2025?,Interest Coverage Ratio,Interest Coverage Ratio,6.3286
+Can you tell me what was the Equity Ratio last year?,Equity Ratio,Equity Ratio,6.3094
+Tell me the value of Equity Ratio in the last quarter.,Equity Ratio,Equity Ratio,5.6944
+What was the Equity Ratio total this month?,Equity Ratio,Equity Ratio,6.3927
+Can you share the Equity Ratio for Q1 2025?,Equity Ratio,Equity Ratio,6.2964
+How much was the Equity Ratio in May 2025?,Equity Ratio,Equity Ratio,6.3195
+Can you tell me what was the Capital Gearing Ratio last year?,Capital Gearing Ratio,Capital Gearing Ratio,6.3729
+Could you share the Capital Gearing Ratio for the last quarter?,Capital Gearing Ratio,Capital Gearing Ratio,6.3816
+What was the Capital Gearing Ratio total this month?,Capital Gearing Ratio,Capital Gearing Ratio,6.3711
+Can you provide the Capital Gearing Ratio value for Q1 2025?,Capital Gearing Ratio,Capital Gearing Ratio,6.2101
+How much was the Capital Gearing Ratio in May 2025?,Capital Gearing Ratio,Capital Gearing Ratio,6.3169
+Can you tell me what was the Price-to-Earnings (P/E) Ratio last year?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.1596
+Can you provide the P/E Ratio amount for the last quarter?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.9298
+What was the P/E Ratio total this month?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.1458
+How much was the P/E Ratio in Q1 2025?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.1272
+What was the P/E Ratio value in May 2025?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.0807
+Can you tell me what was the P/B Ratio last year?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.1551
+Tell me the value of Price-to-Book Ratio in the last quarter.,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,5.8023
+What was the Price-to-Book Ratio total this month?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.0537
+Can you share the Price-to-Book Ratio for Q1 2025?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.1993
+How much was the Price-to-Book Ratio in May 2025?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.0031
+Can you tell me what was the Dividend Yield last year?,Dividend Yield,Dividend Yield,6.2713
+What was the Dividend Yield in the last quarter?,Dividend Yield,Dividend Yield,6.5028
+Can you provide the Dividend Yield value this month?,Dividend Yield,Dividend Yield,6.1069
+How much was the Dividend Yield in Q1 2025?,Dividend Yield,Dividend Yield,6.3078
+What was the Dividend Yield value in May 2025?,Dividend Yield,Dividend Yield,6.2908
+Can you tell me what was the Dividend Payout Ratio last year?,Dividend Payout Ratio,Dividend Payout Ratio,6.2936
+How much was the Dividend Payout Ratio during the last quarter?,Dividend Payout Ratio,Dividend Payout Ratio,6.0974
+What was the Dividend Payout Ratio total this month?,Dividend Payout Ratio,Dividend Payout Ratio,6.3681
+Can you share the Dividend Payout Ratio for Q1 2025?,Dividend Payout Ratio,Dividend Payout Ratio,6.3229
+How much was the Dividend Payout Ratio in May 2025?,Dividend Payout Ratio,Dividend Payout Ratio,6.1574
+Can you tell me what was the Enterprise Value (EV) last year?,Enterprise Value (EV),Enterprise Value (EV),6.3884
+How much was the EV during the last quarter?,Enterprise Value (EV),Enterprise Value (EV),5.005
+What was the Enterprise Value total this month?,Enterprise Value (EV),Enterprise Value (EV),6.4091
+Can you provide the Enterprise Value for Q1 2025?,Enterprise Value (EV),Enterprise Value (EV),6.3299
+How much was the Enterprise Value in May 2025?,Enterprise Value (EV),Enterprise Value (EV),6.3302
+Can you tell me what was the EV/EBITDA last year?,EV/EBITDA,EV/EBITDA,5.5187
+Could you share the EV/EBITDA for the last quarter?,EV/EBITDA,EV/EBITDA,5.639
+What was the EV/EBITDA total this month?,EV/EBITDA,EV/EBITDA,5.7014
+How much was the EV/EBITDA in Q1 2025?,EV/EBITDA,EV/EBITDA,5.4638
+What was the EV/EBITDA value in May 2025?,EV/EBITDA,EV/EBITDA,5.8547
+"Can you tell me what was the Property, Plant and Equipment (PPE) last year?","Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.4101
+Could you share the PPE for the last quarter?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",5.9615
+What was the PPE total this month?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.0902
+Can you provide the PPE value for Q1 2025?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.1834
+How much was the PPE in May 2025?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.1054
+Can you tell me what was the Intangible Assets last year?,Intangible Assets,Intangible Assets,5.8958
+How much was the Intangible Assets during the last year?,Intangible Assets,Intangible Assets,5.1665
+What was the Intangible Assets total this year?,Intangible Assets,Intangible Assets,5.9871
+Can you share the Intangible Assets for Q1 2025?,,Intangible Assets,5.9248
+",Intangible Assets""",,Intangible Assets,6.6452
+"
+How much was the Intangible Assets in May? 2025?""",Intangible Assets,Intangible Assets,5.5708
+Can you tell me what was the Investment Property last year?,Investment Property,Investment Property,6.1403
+How much was the Investment Property during the last year?,Investment Property,Investment Property,6.0944
+What was the Investment Property total this year?,Investment Property,Investment Property,6.3097
+Can you share the Investment Property for Q1 2025?,Investment Property,Investment Property,6.1201
+How much was the Investment Property in May 2025?,Investment Property,Investment Property,6.1989
+Can you tell me what was the Financial Assets last year?,Financial Assets,Financial Assets,6.1143
+Give me the Financial Assets figure for Q1 2025.,Financial Assets,Financial Assets,6.1159
+How much was the Intangible Assets in Q1 2025?,Financial Assets,Intangible Assets,5.5485
+Can you share the Financial Assets for Q3 2024?,Financial Assets,Financial Assets,6.236
+What was the Financial Assets total this month?,Financial Assets,Financial Assets,6.1963
+Can you tell me what was the Inventories last year?,Inventories,Inventories,6.1023
+Can you provide the Inventories amount for the last quarter?,Inventories,Inventories,5.8381
+What was the Inventories total this month?,Inventories,Inventories,6.1689
+How much was the Inventories in Q2 2025?,Inventories,Inventories,6.2297
+Could you share the Inventories for Q1 2025?,Inventories,Inventories,6.0776
+Can you tell me what was the Deferred Tax Assets last year?,Deferred Tax Assets,Deferred Tax Assets,5.9596
+I'd like to know the Deferred Tax Assets from the last quarter.,Deferred Tax Assets,Deferred Tax Assets,5.9401
+How much was the Deferred Tax Assets in Q4 2024?,Deferred Tax Assets,Deferred Tax Assets,5.6522
+What was the total Deferred Tax Assets this year?,Deferred Tax Assets,Deferred Tax Assets,5.8494
+Can you share the Deferred Tax Assets for Q1 2025?,Deferred Tax Assets,Deferred Tax Assets,6.2316
+Can you tell me what was the Borrowings last year?,Borrowings,Borrowings,5.8947
+How much was the Borrowings during Q1 2025?,Borrowings,Borrowings,5.5087
+What was the Borrowings total this month?,Borrowings,Borrowings,5.981
+Can you provide the Borrowings amount for the last quarter?,Borrowings,Borrowings,5.0693
+Could you share the Borrowings for Q2 2025?,Borrowings,Borrowings,5.8747
+Can you tell me what was the Trade Payables last year?,Trade Payables,Trade Payables,6.2874
+How much was tha Trade Payables during Q1 2025?,Trade Payables,Trade Payables,5.7377
+What was the Trade Payables total this month?,Trade Payables,Trade Payables,6.3549
+Can you provide the Trade Payables amount for the last quarter?,Trade Payables,Trade Payables,6.1402
+Could you share the Trade Payables for Q2 2025?,Trade Payables,Trade Payables,6.3235
+Can you tell me what was the Provisions last year?,Provisions,Provisions,5.9282
+How much was the Provisions during Q1?,Provisions,Provisions,5.9279
+What was the Provisions total this year?,Provisions,Provisions,5.923
+Can you provide the Provisions amount for Q1 2025?,Provisions,Provisions,6.0959
+Could you share the Provisions for Q2 2025?,Provisions,Provisions,5.9482
+Can you tell me what was the Deferred Tax Liabilities last year?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.0291
+How much was the Deferred Tax Liabilities during Q1?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.628
+What was the Deferred Tax Liabilities total this year?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.1157
+Can you provide the Deferred Tax Liabilities amount for Q1 2025?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.7287
+Could you share the Deferred Tax Liabilities for Q2 2025?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.0409
+Can you tell me what was the Other Financial Liabilities last year?,Other Financial Liabilities,Other Financial Liabilities,6.3826
+How much was the Other Financial Liabilities during Q1 2025?,Other Financial Liabilities,Other Financial Liabilities,6.1996
+What was the Other Financial Liabilities total this month?,Other Financial Liabilities,Other Financial Liabilities,6.3939
+Can you provide the Other Financial Liabilities value for Q2 2025?,Other Financial Liabilities,Other Financial Liabilities,6.3084
+Could you share the Other Financial Liabilities for Q1 2025?,Other Financial Liabilities,Other Financial Liabilities,6.5097
+Can you tell me what was the Share Capital last year?,Share Capital,Share Capital,6.1685
+How much was the Share Capital during Q1?,Share Capital,Share Capital,6.1083
+What was the Share Capital total this year?,Share Capital,Share Capital,6.3537
+Can you provide the Share Capital amount for Q1 2025?,Share Capital,Share Capital,6.1609
+Could you share the Share Capital for Q2 2025?,Share Capital,Share Capital,6.256
+Can you tell me what was the Other Equity last year?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.1496
+How much was the Other Equity in Q1 2025?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.1428
+What was the total Other Equity this year?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.066
+Can you provide the Other Equity value for Q2 2025?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.1307
+Could you share the Other Equity for Q1 2025?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.1971
+Can yu share what was the Assets last year?,Assets,Assets,3.5094
+Gimme the Assets figure for last quater?,Assets,Assets,5.6218
+Wat was the Assets this month?,Assets,Assets,5.0514
+Can u pls tel me Assets from Q1 2025?,Assets,Assets,5.9656
+How much was Assets in May 2025?,Assets,Assets,5.4087
+Can u tell me what was the Liabilities last year?,Liabilities,Liabilities,5.2597
+Wat was the Liabilities last quater?,Liabilities,Liabilities,5.2797
+Can yu share Liabilities for this month?,Liabilities,Liabilities,-1.6118
+I wanna know Liabilities in Q1 2025?,Liabilities,Liabilities,4.6938
+How much was the Liabilities in May 2025?,Liabilities,Liabilities,5.1028
+Can yu share what was the Equity last year?,Equity,Equity,4.0278
+Gimme Equity figure for last quater?,Equity,Equity,3.0616
+Wat was Equity this month?,Equity,Equity,5.4998
+Can u pls tel me Equity from Q1 2025?,Equity,Equity,5.902
+How much was Equity in May 2025?,Equity,Equity,5.5572
+Can yu share what was the Current Assets last year?,Current Assets,Current Assets,5.6772
+Tell me Current Assets last quater?,Current Assets,Current Assets,5.952
+Wat was the Current Assets this month?,Current Assets,Current Assets,6.12
+Can u tell me Current Assets in Q1 2025?,Current Assets,Current Assets,6.2105
+How much was Current Assets in May 2025?,Current Assets,Current Assets,5.9001
+What's was the Non-Current Assets last quarter?,Non-Current Assets,Non-Current Assets,6.0509
+Can yu share Non-Current Assets last yr?,Non-Current Assets,Non-Current Assets,5.4402
+Wat was Non-Current Assets this month?,Non-Current Assets,Non-Current Assets,6.1454
+I wanna know Non-Current Assets in Q1 2025?,Non-Current Assets,Non-Current Assets,6.1204
+How much was Non-Current Assets in May 2025?,Non-Current Assets,Non-Current Assets,5.6822
+Wat was the Current Liabilities last quarter?,Current Liabilities,Current Liabilities,6.0438
+Can u tell me Current Liabilities last yr?,Current Liabilities,Current Liabilities,6.0083
+Gimme Current Liabilities for this month?,Current Liabilities,Current Liabilities,6.0016
+Can yu share Current Liabilities in Q1 2025?,Current Liabilities,Current Liabilities,4.9815
+How much was Current Liabilities in May 2025?,Current Liabilities,Current Liabilities,5.663
+What's was the Non-Current Liabilities last quarter?,Non-Current Liabilities,Non-Current Liabilities,5.9824
+Can u pls tel me Non-Current Liabilities last yr?,Non-Current Liabilities,Non-Current Liabilities,5.9857
+Wat was Non-Current Liabilities this month?,Non-Current Liabilities,Non-Current Liabilities,6.0344
+Tell me Non-Current Liabilities in Q1 2025?,Non-Current Liabilities,Non-Current Liabilities,5.887
+How much was Non-Current Liabilities in May 2025?,Non-Current Liabilities,Non-Current Liabilities,5.3386
+Can u tell me what was the Working Capital last year?,Working Capital,Working Capital,5.1594
+Gimme Working Capital figure for last quater?,Working Capital,Working Capital,5.3895
+Wat was Working Capital this month?,Working Capital,Working Capital,5.0989
+Can yu share Working Capital in Q1 2025?,Working Capital,Working Capital,4.8332
+How much was Working Capital in May 2025?,Working Capital,Working Capital,5.2267
+Give me Net Worth figure for last quater?,Net Worth,Net Worth,5.6937
+Can u tell me Net Worth last yr?,Net Worth,Net Worth,5.7209
+Wat was the Net Worth this month?,Net Worth,Net Worth,5.6785
+I wanna know Net Worth in Q1 2025?,Net Worth,Net Worth,5.9318
+How much was Net Worth in May 2025?,Net Worth,Net Worth,5.8851
+Can you tell me what is the Revenue last year?,Revenue,Revenue,5.9591
+Gimme Revenue figure for last quater?,Revenue,Revenue,5.0644
+Wat was Revenue this month?,Revenue,Revenue,5.8052
+Can u pls tel me Revenue from Q1 2025?,Revenue,Revenue,6.2085
+How much was Revenue in May 2025?,Revenue,Revenue,6.0643
+I wanna know the Cost of Goods Sold (COGS) for the last quarter.,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.481
+Can u tell me COGS last yr?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.6912
+Wat was the COGS this month?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.8981
+Tell me COGS in Q1 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.95
+How much was COGS in May 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.0306
+Tell me the Gross Profit last yr?,Gross Profit,Gross Profit,6.0359
+Gimme Gross Profit for last quater?,Gross Profit,Gross Profit,6.2577
+Wat was Gross Profit this month?,Gross Profit,Gross Profit,6.2354
+Can yu share Gross Profit in Q1 2025?,Gross Profit,Gross Profit,5.8354
+How much was Gross Profit in May 2025?,Gross Profit,Gross Profit,6.1236
+I wanna know the Operating Expenses for the last quarter.,Operating Expenses,Operating Expenses,6.0502
+Can u tell me Operating Expenses last yr?,Operating Expenses,Operating Expenses,5.8586
+Wat was Operating Expenses this month?,Operating Expenses,Operating Expenses,6.0173
+Can u pls tel me Operating Expenses in Q1 2025?,Operating Expenses,Operating Expenses,6.3094
+How much was Operating Expenses in May 2025?,Operating Expenses,Operating Expenses,6.0476
+Give me Operating Profit (EBIT) figure for last quater?,Operating Profit (EBIT),Operating Profit (EBIT),6.2285
+Can yu share EBIT last yr?,Operating Profit (EBIT),Operating Profit (EBIT),0.5337
+Wat was the Operating Profit this month?,Operating Profit (EBIT),Operating Profit (EBIT),5.9683
+Tell me EBIT in Q1 2025?,Operating Profit (EBIT),Operating Profit (EBIT),3.8997
+How much was Operating Profit in May 2025?,Operating Profit (EBIT),Operating Profit (EBIT),6.0607
+What's was the EBITDA last quarter?,EBITDA,EBITDA,5.816
+Can u tell me EBITDA last yr?,EBITDA,EBITDA,5.0031
+Wat was EBITDA this month?,EBITDA,EBITDA,5.7737
+Can yu share EBITDA in Q1 2025?,EBITDA,EBITDA,3.604
+How much was EBITDA in May 2025?,EBITDA,EBITDA,5.6883
+I wanna know the Net Profit (PAT) for the last quarter.,Net Profit (PAT),Net Profit (PAT),6.3194
+Can u pls tel me Net Profit last yr?,Net Profit (PAT),Net Profit (PAT),6.217
+Wat was Net Profit this month?,Net Profit (PAT),Net Profit (PAT),6.1116
+Tell me Net Profit in Q1 2025?,Net Profit (PAT),Net Profit (PAT),6.0516
+How much was Net Profit in May 2025?,Net Profit (PAT),Net Profit (PAT),6.0576
+Can you pls tel me Earnings Per Share (EPS) from last year?,Earnings Per Share (EPS),Earnings Per Share (EPS),6.2303
+Gimme EPS figure for last quater?,Earnings Per Share (EPS),Earnings Per Share (EPS),-3.1224
+Wat was EPS this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.2339
+Can yu share EPS in Q1 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),-2.915
+How much was EPS in May 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.5733
+Give me Operating Cash Flow figure for last quater?,Operating Cash Flow,Operating Cash Flow,5.9572
+Can u tell me Operating Cash Flow last yr?,Operating Cash Flow,Operating Cash Flow,6.017
+Wat was Operating Cash Flow this month?,Operating Cash Flow,Operating Cash Flow,6.1225
+Tell me Operating Cash Flow in Q1 2025?,Operating Cash Flow,Operating Cash Flow,6.1942
+How much was Operating Cash Flow in May 2025?,Operating Cash Flow,Operating Cash Flow,6.0644
+Can yu share what was the Investing Cash Flow last year?,Investing Cash Flow,Investing Cash Flow,6.1616
+Gimme Investing Cash Flow for last quater?,Investing Cash Flow,Investing Cash Flow,6.2525
+Wat was Investing Cash Flow this month?,Investing Cash Flow,Investing Cash Flow,6.2077
+Can u pls tel me Investing Cash Flow in Q1 2025?,Investing Cash Flow,Investing Cash Flow,6.41
+How much was Investing Cash Flow in May 2025?,Investing Cash Flow,Investing Cash Flow,6.1596
+Can you tell me what is the Financing Cash Flow last year?,Financing Cash Flow,Financing Cash Flow,6.3607
+Tell me Financing Cash Flow last quater?,Financing Cash Flow,Financing Cash Flow,6.2772
+Wat was Financing Cash Flow this month?,Financing Cash Flow,Financing Cash Flow,6.2901
+Can yu share Financing Cash Flow in Q1 2025?,Financing Cash Flow,Financing Cash Flow,5.9639
+How much was Financing Cash Flow in May 2025?,Financing Cash Flow,Financing Cash Flow,6.2313
+Can you pls tel me Free Cash Flow from last year?,Free Cash Flow,Free Cash Flow,6.2016
+Gimme Free Cash Flow figure for last quater?,Free Cash Flow,Free Cash Flow,6.1427
+Wat was Free Cash Flow this month?,Free Cash Flow,Free Cash Flow,6.2249
+Tell me Free Cash Flow in Q1 2025?,Free Cash Flow,Free Cash Flow,6.277
+How much was Free Cash Flow in May 2025?,Free Cash Flow,Free Cash Flow,6.1623
+Wat was the Depreciation last quarter?,Depreciation,Depreciation,5.8511
+Can u tell me Depreciation last yr?,Depreciation,Depreciation,5.4839
+Wat was Depreciation this month?,Depreciation,Depreciation,5.9476
+Can yu share Depreciation in Q1 2025?,Depreciation,Depreciation,4.5344
+How much was Depreciation in May 2025?,Depreciation,Depreciation,5.8663
+Tell me the Amortization last yr?,Amortization,Amortization,5.6149
+Gimme Amortization for last quater?,Amortization,Amortization,5.8952
+Wat was Amortization this month?,Amortization,Amortization,5.8605
+Can u pls tel me Amortization in Q1 2025?,Amortization,Amortization,6.2281
+How much was Amortization in May 2025?,Amortization,Amortization,5.5238
+Can you pls tel me Accruals from last year?,Accruals,Accruals,6.03
+Tell me Accruals last quater?,Accruals,Accruals,5.4682
+Wat was Accruals this month?,Accruals,Accruals,6.0196
+Can yu share Accruals in Q1 2025?,Accruals,Accruals,5.545
+How much was Accruals in May 2025?,Accruals,Accruals,6.0853
+Give me Provisions figure for last quater?,Provisions,Provisions,5.6222
+Can u tell me Provisions last yr?,Provisions,Provisions,5.3228
+Wat was Provisions this month?,Provisions,Provisions,5.8677
+Tell me Provisions in Q1 2025?,Provisions,Provisions,5.8534
+How much was Provisions in May 2025?,Provisions,Provisions,6.0507
+Wat was the Contingent Liabilities last quarter?,Contingent Liabilities,Contingent Liabilities,6.2555
+Can yu share Contingent Liabilities last yr?,Contingent Liabilities,Contingent Liabilities,5.9828
+Wat was Contingent Liabilities this month?,Contingent Liabilities,Contingent Liabilities,6.3208
+Can u pls tel me Contingent Liabilities in Q1 2025?,Contingent Liabilities,Contingent Liabilities,6.4878
+How much was Contingent Liabilities in May 2025?,Contingent Liabilities,Contingent Liabilities,6.0786
+What's was the Net Profit Margin last quarter?,Net Profit Margin,Net Profit Margin,6.3971
+Can u tell me Net Profit Margin last yr?,Net Profit Margin,Net Profit Margin,6.1683
+Wat was Net Profit Margin this month?,Net Profit Margin,Net Profit Margin,6.3082
+Tell me Net Profit Margin in Q1 2025?,Net Profit Margin,Net Profit Margin,6.2485
+How much was Net Profit Margin in May 2025?,Net Profit Margin,Net Profit Margin,6.1407
+I wanna know the Return on Assets (ROA) for the last quarter.,Return on Assets (ROA),Return on Assets (ROA),6.4223
+Can yu share ROA last yr?,Return on Assets (ROA),Return on Assets (ROA),5.6153
+Wat was ROA this month?,Return on Assets (ROA),Return on Assets (ROA),6.0088
+Can u pls tel me ROA in Q1 2025?,Return on Assets (ROA),Return on Assets (ROA),6.3307
+How much was ROA in May 2025?,Return on Assets (ROA),Return on Assets (ROA),6.0857
+Can u tell me what was the Return on Equity (ROE) last year?,Return on Equity (ROE),Return on Equity (ROE),6.3071
+Gimme ROE figure for last quater?,Return on Equity (ROE),Return on Equity (ROE),5.3973
+Wat was ROE this month?,Return on Equity (ROE),Return on Equity (ROE),5.8591
+Tell me ROE in Q1 2025?,Return on Equity (ROE),Return on Equity (ROE),6.0265
+How much was ROE in May 2025?,Return on Equity (ROE),Return on Equity (ROE),6.0123
+How much was Return on Capital Employed (ROCE) last quater?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.3956
+Can u tell me ROCE last yr?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0153
+Wat was ROCE this month?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0386
+Can yu share ROCE in Q1 2025?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.7895
+How much was ROCE in May 2025?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.9918
+Wat was the EBITDA Margin last quarter?,EBITDA Margin,EBITDA Margin,6.22
+Can u pls tel me EBITDA Margin last yr?,EBITDA Margin,EBITDA Margin,6.2687
+Wat was EBITDA Margin this month?,EBITDA Margin,EBITDA Margin,6.2964
+Tell me EBITDA Margin in Q1 2025?,EBITDA Margin,EBITDA Margin,6.2636
+How much was EBITDA Margin in May 2025?,EBITDA Margin,EBITDA Margin,6.1361
+Can you pls tel me Current Ratio from last year?,Current Ratio,Current Ratio,6.2921
+Gimme Current Ratio for last quater?,Current Ratio,Current Ratio,6.2602
+Wat was Current Ratio this month?,Current Ratio,Current Ratio,6.2876
+Can yu share Current Ratio in Q1 2025?,Current Ratio,Current Ratio,5.9134
+How much was Current Ratio in May 2025?,Current Ratio,Current Ratio,6.247
+Give me Quick Ratio (Acid Test) figure for last quater?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.3461
+Can u tell me Quick Ratio last yr?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.0312
+Wat was Quick Ratio this month?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1002
+Tell me Quick Ratio in Q1 2025?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1936
+How much was Quick Ratio in May 2025?,Quick Ratio (Acid Test),Quick Ratio (Acid Test),6.1191
+What's was the Cash Ratio last quarter?,Cash Ratio,Cash Ratio,6.3748
+Can yu share Cash Ratio last yr?,Cash Ratio,Cash Ratio,5.7598
+Wat was Cash Ratio this month?,Cash Ratio,Cash Ratio,6.2209
+Can u pls tel me Cash Ratio in Q1 2025?,Cash Ratio,Cash Ratio,6.3739
+How much was Cash Ratio in May 2025?,Cash Ratio,Cash Ratio,5.9872
+Wat was the Inventory Turnover last quarter?,Inventory Turnover,Inventory Turnover,6.1159
+Can u tell me Inventory Turnover last yr?,Inventory Turnover,Inventory Turnover,6.1093
+Wat was Inventory Turnover this month?,Inventory Turnover,Inventory Turnover,6.1452
+Tell me Inventory Turnover in Q1 2025?,Inventory Turnover,Inventory Turnover,6.1839
+How much was Inventory Turnover in May 2025?,Inventory Turnover,Inventory Turnover,6.0683
+I wanna know the Receivables Turnover for the last quarter.,Receivables Turnover,Receivables Turnover,6.102
+Can yu share Receivables Turnover last yr?,Receivables Turnover,Receivables Turnover,5.939
+Wat was Receivables Turnover this month?,Receivables Turnover,Receivables Turnover,6.2005
+Can u pls tel me Receivables Turnover in Q1 2025?,Receivables Turnover,Receivables Turnover,6.3771
+How much was Receivables Turnover in May 2025?,Receivables Turnover,Receivables Turnover,5.9601
+Wat was the Payables Turnover last quarter?,Payables Turnover,Payables Turnover,6.3161
+Can u tell me Payables Turnover last yr?,Payables Turnover,Payables Turnover,6.2471
+Wat was Payables Turnover this month?,Payables Turnover,Payables Turnover,6.3434
+Tell me Payables Turnover in Q1 2025?,Payables Turnover,Payables Turnover,6.3325
+How much was Payables Turnover in May 2025?,Payables Turnover,Payables Turnover,6.189
+I wanna know the Asset Turnover for the last quarter.,Asset Turnover,Asset Turnover,6.2422
+Can yu share Asset Turnover last yr?,Asset Turnover,Asset Turnover,5.8129
+Wat was Asset Turnover this month?,Asset Turnover,Asset Turnover,6.1859
+Can u pls tel me Asset Turnover in Q1 2025?,Asset Turnover,Asset Turnover,6.4335
+How much was Asset Turnover in May 2025?,Asset Turnover,Asset Turnover,6.1343
+Can you pls tel me Working Capital Turnover from last year?,Working Capital Turnover,Working Capital Turnover,6.02
+Gimme Working Capital Turnover for last quater?,Working Capital Turnover,Working Capital Turnover,6.0799
+Wat was Working Capital Turnover this month?,Working Capital Turnover,Working Capital Turnover,5.8792
+Tell me Working Capital Turnover in Q1 2025?,Working Capital Turnover,Working Capital Turnover,6.0387
+How much was Working Capital Turnover in May 2025?,Working Capital Turnover,Working Capital Turnover,5.8708
+Tell me the Debt-to-Equity Ratio last yr?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.6633
+Gimme Debt-to-Equity Ratio for last quater?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.8508
+Wat was Debt-to-Equity Ratio this month?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.7685
+Can yu share Debt-to-Equity Ratio in Q1 2025?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,4.8515
+How much was Debt-to-Equity Ratio in May 2025?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.2262
+Can u tell me what was the Debt Ratio last year?,Debt Ratio,Debt Ratio,6.2442
+Tell me Debt Ratio last quater?,Debt Ratio,Debt Ratio,6.2128
+Wat was Debt Ratio this month?,Debt Ratio,Debt Ratio,6.2707
+Can u pls tel me Debt Ratio in Q1 2025?,Debt Ratio,Debt Ratio,6.3222
+How much was Debt Ratio in May 2025?,Debt Ratio,Debt Ratio,6.1958
+Wat was the Interest Coverage Ratio last quarter?,Interest Coverage Ratio,Interest Coverage Ratio,6.4043
+Can yu share Interest Coverage Ratio last yr?,Interest Coverage Ratio,Interest Coverage Ratio,5.9918
+Wat was Interest Coverage Ratio this month?,Interest Coverage Ratio,Interest Coverage Ratio,6.3867
+Tell me Interest Coverage Ratio in Q1 2025?,Interest Coverage Ratio,Interest Coverage Ratio,6.4222
+How much was Interest Coverage Ratio in May 2025?,Interest Coverage Ratio,Interest Coverage Ratio,6.3738
+How much was Equity Ratio last quater?,Equity Ratio,Equity Ratio,6.2991
+Can u tell me Equity Ratio last yr?,Equity Ratio,Equity Ratio,6.1997
+Wat was Equity Ratio this month?,Equity Ratio,Equity Ratio,6.341
+Can yu share Equity Ratio in Q1 2025?,Equity Ratio,Equity Ratio,5.4574
+How much was Equity Ratio in May 2025?,Equity Ratio,Equity Ratio,6.3285
+Wat was the Capital Gearing Ratio last quarter?,Capital Gearing Ratio,Capital Gearing Ratio,6.4108
+Can u pls tel me Capital Gearing Ratio last yr?,Capital Gearing Ratio,Capital Gearing Ratio,6.4569
+Wat was Capital Gearing Ratio this month?,Capital Gearing Ratio,Capital Gearing Ratio,6.4028
+Tell me Capital Gearing Ratio in Q1 2025?,Capital Gearing Ratio,Capital Gearing Ratio,6.3952
+How much was Capital Gearing Ratio in May 2025?,Capital Gearing Ratio,Capital Gearing Ratio,6.3467
+Tell me the Price-to-Earnings (P/E) Ratio last yr?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.2385
+Gimme P/E Ratio for last quater?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.0906
+Wat was P/E Ratio this month?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.1939
+Can yu share P/E Ratio in Q1 2025?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.7324
+How much was P/E Ratio in May 2025?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,6.1467
+Can u tell me what was the Price-to-Book (P/B) Ratio last year?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.3214
+Tell me P/B Ratio last quater?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.1947
+Wat was P/B Ratio this month?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.2379
+Can u pls tel me P/B Ratio in Q1 2025?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.3462
+How much was P/B Ratio in May 2025?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.252
+I wanna know the Dividend Yield for the last quarter.,Dividend Yield,Dividend Yield,6.2828
+Can yu share Dividend Yield last yr?,Dividend Yield,Dividend Yield,5.8714
+Wat was Dividend Yield this month?,Dividend Yield,Dividend Yield,6.3374
+Tell me Dividend Yield in Q1 2025?,Dividend Yield,Dividend Yield,6.3133
+How much was Dividend Yield in May 2025?,Dividend Yield,Dividend Yield,6.3348
+Can yu share what was the Dividend Payout Ratio last year?,Dividend Payout Ratio,Dividend Payout Ratio,6.0831
+Gimme Dividend Payout Ratio for last quater?,Dividend Payout Ratio,Dividend Payout Ratio,6.3387
+Wat was Dividend Payout Ratio this month?,Dividend Payout Ratio,Dividend Payout Ratio,6.3507
+Can u pls tel me Dividend Payout Ratio in Q1 2025?,Dividend Payout Ratio,Dividend Payout Ratio,6.502
+How much was Dividend Payout Ratio in May 2025?,Dividend Payout Ratio,Dividend Payout Ratio,6.2283
+How much was Enterprise Value (EV) last quater?,Enterprise Value (EV),Enterprise Value (EV),6.4382
+Can u tell me EV last yr?,Enterprise Value (EV),Enterprise Value (EV),4.1165
+Wat was EV this month?,Enterprise Value (EV),Enterprise Value (EV),4.041
+Tell me EV in Q1 2025?,Enterprise Value (EV),Enterprise Value (EV),4.5444
+How much was EV in May 2025?,Enterprise Value (EV),Enterprise Value (EV),5.4848
+Wat was the EV/EBITDA last quarter?,EV/EBITDA,EV/EBITDA,5.7889
+Can yu share EV/EBITDA last yr?,EV/EBITDA,EV/EBITDA,5.6786
+Wat was EV/EBITDA this month?,EV/EBITDA,EV/EBITDA,6.0416
+Can u pls tel me EV/EBITDA in Q1 2025?,EV/EBITDA,EV/EBITDA,6.1203
+How much was EV/EBITDA in May 2025?,EV/EBITDA,EV/EBITDA,5.6981
+"Wat was the Property, Plant and Equipment (PPE) last quarter?","Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.4191
+Can u tell me PPE last yr?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",5.8876
+Wat was PPE this month?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",5.9537
+Tell me PPE in Q1 2025?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.0523
+How much was PPE in May 2025?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",6.1083
+Can you pls tel me Intangible Assets from last year?,Intangible Assets,Intangible Assets,5.9794
+Gimme Intangible Assets for last quater?,Intangible Assets,Intangible Assets,6.2147
+Wat was Intangible Assets this month?,Intangible Assets,Intangible Assets,6.2171
+Can yu share Intangible Assets in Q1 2025?,Intangible Assets,Intangible Assets,5.4511
+How much was Intangible Assets in May 2025?,Intangible Assets,Intangible Assets,5.7917
+Give me Investment Property figure for last quater?,Investment Property,Investment Property,5.9847
+Can u tell me Investment Property last yr?,Investment Property,Investment Property,6.0932
+Wat was Investment Property this month?,Investment Property,Investment Property,6.2323
+Tell me Investment Property in Q1 2025?,Investment Property,Investment Property,6.225
+How much was Investment Property in May 2025?,Investment Property,Investment Property,6.2649
+Tell me the Financial Assets last yr?,Financial Assets,Financial Assets,6.0541
+Gimme Financial Assets for last quater?,Financial Assets,Financial Assets,6.1367
+Wat was Financial Assets this month?,Financial Assets,Financial Assets,6.2236
+Can u pls tel me Financial Assets in Q1 2025?,Financial Assets,Financial Assets,6.4284
+How much was Financial Assets in May 2025?,Financial Assets,Financial Assets,6.1516
+What's was the Inventories last quarter?,Inventories,Inventories,6.3073
+Can yu share Inventories last yr?,Inventories,Inventories,5.6969
+Wat was Inventories this month?,Inventories,Inventories,6.1629
+Tell me Inventories in Q1 2025?,Inventories,Inventories,6.1349
+How much was Inventories in May 2025?,Inventories,Inventories,6.253
+Wat was the Deferred Tax Assets last quarter?,Deferred Tax Assets,Deferred Tax Assets,6.0792
+Can u tell me Deferred Tax Assets last yr?,Deferred Tax Assets,Deferred Tax Assets,6.0258
+Wat was Deferred Tax Assets this month?,Deferred Tax Assets,Deferred Tax Assets,6.1621
+Can yu share Deferred Tax Assets in Q1 2025?,Deferred Tax Assets,Deferred Tax Assets,6.0037
+How much was Deferred Tax Assets in May 2025?,Deferred Tax Assets,Deferred Tax Assets,5.6851
+Wat was the Borrowings last quarter?,Borrowings,Borrowings,5.934
+Can u pls tel me Borrowings last yr?,Borrowings,Borrowings,6.1733
+Wat was Borrowings this month?,Borrowings,Borrowings,5.9458
+Tell me Borrowings in Q1 2025?,Borrowings,Borrowings,6.0361
+How much was Borrowings in May 2025?,Borrowings,Borrowings,5.8972
+I wanna know the Trade Payables for the last quarter.,Trade Payables,Trade Payables,6.3413
+Can yu share Trade Payables last yr?,Trade Payables,Trade Payables,6.0263
+Wat was Trade Payables this month?,Trade Payables,Trade Payables,6.4132
+Can u pls tel me Trade Payables in Q1 2025?,Trade Payables,Trade Payables,6.4449
+How much was Trade Payables in May 2025?,Trade Payables,Trade Payables,6.3889
+Can u tell me what was the Deferred Tax Liabilities last year?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.0398
+Gimme Deferred Tax Liabilities for last quater?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.2129
+Wat was Deferred Tax Liabilities this month?,Deferred Tax Liabilities,Deferred Tax Liabilities,6.1032
+Tell me Deferred Tax Liabilities in Q1 2025?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.9785
+How much was Deferred Tax Liabilities in May 2025?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.699
+Give me Other Financial Liabilities figure for last quater?,Other Financial Liabilities,Other Financial Liabilities,6.3689
+Can u tell me Other Financial Liabilities last yr?,Other Financial Liabilities,Other Financial Liabilities,6.3488
+Wat was Other Financial Liabilities this month?,Other Financial Liabilities,Other Financial Liabilities,6.4591
+Can yu share Other Financial Liabilities in Q1 2025?,Other Financial Liabilities,Other Financial Liabilities,6.2603
+How much was Other Financial Liabilities in May 2025?,Other Financial Liabilities,Other Financial Liabilities,6.2345
+Can u tell me what was the Share Capital last year?,Share Capital,Share Capital,6.1569
+Tell me Share Capital last quater?,Share Capital,Share Capital,5.9537
+Wat was Share Capital this month?,Share Capital,Share Capital,6.1869
+Can u pls tel me Share Capital in Q1 2025?,Share Capital,Share Capital,6.3989
+How much was Share Capital in May 2025?,Share Capital,Share Capital,6.2122
+Can you tell me what is the Other Equity / Reserves & Surplus last year?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.5041
+Gimme Other Equity for last quater?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.0488
+Wat was Other Equity this month?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,6.0869
+Can yu share Other Equity in Q1 2025?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,5.7487
+How much was Other Equity in May 2025?,Other Equity / Reserves & Surplus,Other Equity / Reserves & Surplus,5.979

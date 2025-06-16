@@ -1,0 +1,300 @@
+NL_Query,GT_Glossary,Predicted_Glossary,Combined_Score
+What’s the total value of everything we own right now?,Assets,Financial Assets,-2.0126
+How much do we owe to banks and suppliers today?,Liabilities,Trade Payables,2.6928
+What’s the company worth to our shareholders this quarter?,Equity,Return on Equity (ROE),3.9712
+How much cash and stuff can we turn into cash within a year?,Current Assets,Current Assets,3.7074
+What’s the value of our long-term stuff like factories?,Non-Current Assets,Inventories,3.4366
+What bills do we need to pay off in the next 12 months?,Current Liabilities,Deferred Tax Liabilities,3.0023
+What debts are we carrying for the long haul?,Non-Current Liabilities,Non-Current Liabilities,3.672
+How much cash do we have after covering short-term bills?,Working Capital,Current Ratio,1.0243
+What’s our company’s value to owners after paying debts?,Net Worth,EV/EBITDA,4.5803
+How much money did we make from sales in May 2025?,Revenue,Revenue,5.4571
+How much cash did we pull in from selling products in Q2 2025?,Revenue,Revenue,2.1244
+What’s the cost of making the goods we sold last week?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),6.0155
+How much did it cost to produce our stuff in April 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),1.8741
+"After covering production, what did we keep in Q2 2025?",Gross Profit,Provisions,0.2236
+What’s left after paying to make our products this month?,Gross Profit,Accruals,3.0948
+What are we spending on rent and wages this quarter?,Operating Expenses,Operating Expenses,3.0131
+How much goes to running the business daily in 2025?,Operating Expenses,Operating Expenses,2.0848
+How much profit came from operations before taxes in Q2?,Operating Profit (EBIT),Operating Profit (EBIT),5.079
+What did our core business earn before interest this year?,Operating Profit (EBIT),Operating Profit (EBIT),5.0464
+What’s our earnings before taxes and equipment costs in June?,EBITDA,EBITDA,4.9239
+How much profit did we make before depreciation this month?,EBITDA,Gross Profit,-3.3837
+What’s left after all costs and taxes in Q1 2025?,Net Profit (PAT),Net Profit (PAT),5.3645
+How much profit did we keep after everything last quarter?,Net Profit (PAT),Net Profit (PAT),3.3947
+What’s each share earning for investors this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.3219
+How much profit per share did we make in Q2 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.4121
+How much cash did our business operations bring in last month?,Operating Cash Flow,Operating Cash Flow,5.0607
+What cash came from our core activities in May 2025?,Operating Cash Flow,Operating Cash Flow,4.7725
+What did we spend on new machines in Q1 2025?,Investing Cash Flow,Working Capital,-4.9462
+How much went to buying assets last quarter?,Investing Cash Flow,Investing Cash Flow,4.6732
+Did we get any cash from loans in June 2025?,Financing Cash Flow,Financing Cash Flow,4.2435
+Any money raised from investors or borrowing this month?,Financing Cash Flow,Financing Cash Flow,-2.3116
+How much cash is left after buying gear this quarter?,Free Cash Flow,Provisions,-3.9242
+What’s the cash we have after capital spending in 2025?,Free Cash Flow,Free Cash Flow,5.7509
+How much are we writing off for old equipment this month?,Depreciation,Depreciation,3.5874
+What’s the depreciation on our assets in Q2 2025?,Depreciation,Depreciation,6.2851
+What costs are we spreading for patents this year?,Amortization,Cost of Goods Sold (COGS),-1.1687
+Are we spreading out expenses for software over time?,Amortization,Depreciation,4.0591
+What bills are on the books but unpaid as of now?,Accruals,Non-Current Liabilities,-3.3096
+What expenses have we logged but not paid in June?,Accruals,Accruals,-2.5991
+Are we saving enough for future repairs or costs?,Provisions,Provisions,5.0603
+Do we have funds set aside for upcoming liabilities?,Provisions,Provisions,6.2273
+Might we owe money if a legal case goes against us?,Contingent Liabilities,Other Financial Liabilities,-1.9238
+Are there any potential debts from future risks?,Contingent Liabilities,Contingent Liabilities,4.1302
+What share of our sales is profit after production in Q2?,Net Profit Margin,Gross Profit,0.3555
+How much of our revenue stays after making goods?,Net Profit Margin,Revenue,-1.2045
+Are we earning good money from our assets this year?,Return on Assets (ROA),Return on Equity (ROE),-1.16
+How well are our assets generating profits in 2025?,Return on Assets (ROA),Return on Assets (ROA),5.711
+What’s the return for shareholders this quarter?,Return on Equity (ROE),Return on Equity (ROE),4.5167
+How much are investors earning on their stake in Q2?,Return on Equity (ROE),Equity Ratio,-1.2993
+Are we using our capital wisely to make money?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.8981
+Is our capital generating strong profits this year?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.2818
+What’s our profit percentage before taxes this month?,EBITDA Margin,Operating Profit (EBIT),-0.3951
+How much of sales is profit before depreciation in Q2?,EBITDA Margin,EBITDA,-1.6987
+Can we cover short-term bills easily right now?,Current Ratio,Current Ratio,1.13
+Do we have enough to pay debts due soon?,Current Ratio,Current Liabilities,0.5082
+Can we pay off debts without selling our stock?,Quick Ratio (Acid Test),Interest Coverage Ratio,-1.6342
+Are we liquid enough without inventory for short-term bills?,Quick Ratio (Acid Test),Current Ratio,5.4097
+Do we have enough cash for bills due immediately?,Cash Ratio,Accruals,-4.303
+Can we handle urgent bills with our cash on hand?,Cash Ratio,Accruals,-4.6583
+How fast are we selling our inventory this month?,Inventory Turnover,Inventory Turnover,5.4362
+Are we moving our stock quickly enough in Q2?,Inventory Turnover,Inventory Turnover,4.2522
+Are customers paying us faster than in Q1 2025?,Receivables Turnover,Payables Turnover,-0.2004
+How quick are we collecting payments this quarter?,Receivables Turnover,Quick Ratio (Acid Test),1.8322
+How often are we paying suppliers this month?,Payables Turnover,Payables Turnover,3.4608
+Are we settling vendor bills on time in 2025?,Payables Turnover,Provisions,-4.1805
+Are our assets driving enough sales this year?,Asset Turnover,Asset Turnover,5.8489
+How well are we using our stuff to boost revenue?,Asset Turnover,Return on Assets (ROA),-0.5757
+Is our short-term cash fueling sales effectively?,Working Capital Turnover,Current Ratio,2.3756
+Are we getting good sales from our working capital?,Working Capital Turnover,Working Capital Turnover,5.9782
+Do we owe more than our company’s worth to shareholders?,Debt-to-Equity Ratio,Equity,-0.5149
+Are our debts higher than our equity this quarter?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,4.5637
+How much of our assets are paid for with loans?,Debt Ratio,Debt Ratio,5.4834
+What portion of our stuff is funded by borrowing?,Debt Ratio,Debt Ratio,4.4788
+Can we cover our loan interest without stress?,Interest Coverage Ratio,Interest Coverage Ratio,4.9846
+Are our profits enough to handle interest payments?,Interest Coverage Ratio,Interest Coverage Ratio,1.8879
+How much of the company belongs to shareholders?,Equity Ratio,Equity,3.5877
+What share of our assets comes from owners’ funds?,Equity Ratio,Equity Ratio,4.8904
+What’s the balance of loans versus our own money?,Capital Gearing Ratio,Borrowings,-3.937
+How much debt do we have compared to equity?,Capital Gearing Ratio,Debt-to-Equity Ratio,-0.5131
+How much profit is each share making this year?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.1975
+What’s the per-share profit for investors in Q2?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.7828
+Is our stock price too high for our earnings?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.4501
+Are investors overpaying for our stock based on profits?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.1216
+Does our stock value match our actual worth?,Price-to-Book (P/B) Ratio,Price-to-Earnings (P/E) Ratio,-1.0597
+Is our stock price in line with our net assets?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,6.0685
+What’s the dividend return for investors right now?,Dividend Yield,Dividend Yield,5.3153
+How much are we paying out in dividends to shareholders?,Dividend Yield,Dividend Yield,3.2799
+How much of our profits are we giving as dividends?,Dividend Payout Ratio,Dividend Payout Ratio,4.0331
+What share of earnings goes to dividend payments?,Dividend Payout Ratio,Dividend Payout Ratio,5.9706
+"What’s our company’s total worth, including debts?",Enterprise Value (EV),Enterprise Value (EV),3.44
+How much is the business valued at with all debts?,Enterprise Value (EV),EV/EBITDA,1.8102
+How does our value compare to profits before taxes?,EV/EBITDA,Price-to-Earnings (P/E) Ratio,3.6933
+What’s our company worth relative to core earnings?,EV/EBITDA,EV/EBITDA,5.5264
+What’s the value of our factories and machines today?,"Property, Plant and Equipment (PPE)",Inventories,1.074
+How much are our physical assets worth right now?,"Property, Plant and Equipment (PPE)",Assets,-3.1464
+How much are our patents and brands valued at?,Intangible Assets,Intangible Assets,3.4347
+What’s the worth of our non-physical assets like software?,Intangible Assets,Intangible Assets,5.4585
+What’s the value of our rental properties?,Investment Property,Investment Property,3.9747
+How much are our properties for rent or sale worth?,Investment Property,Investment Property,3.5338
+How much do we have in stocks or bonds?,Financial Assets,Financial Assets,-3.3391
+What’s the value of our financial investments today?,Financial Assets,Financial Assets,2.7848
+What’s the worth of our unsold products in stock?,Inventories,Inventories,4.7963
+How much value is tied up in our inventory?,Inventories,Inventories,-0.539
+Can we save on taxes later from past losses?,Deferred Tax Assets,Provisions,-3.3232
+Are there tax benefits we can claim in the future?,Deferred Tax Assets,Deferred Tax Assets,5.298
+How much have we borrowed from banks overall?,Borrowings,Borrowings,4.6799
+What’s the total of our outstanding loans?,Borrowings,Borrowings,-3.0316
+What do we owe suppliers for materials this month?,Trade Payables,Trade Payables,4.8163
+How much are we behind on vendor payments?,Trade Payables,Trade Payables,3.6596
+Are we setting aside enough for employee benefits?,Provisions,Provisions,4.4937
+Do we have funds reserved for future liabilities?,Provisions,Provisions,6.3155
+What taxes might we owe down the line?,Deferred Tax Liabilities,Deferred Tax Liabilities,3.6944
+Are there future tax payments we’re deferring?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.4703
+What other debts do we have besides loans?,Other Financial Liabilities,Other Financial Liabilities,5.2895
+Are there any non-loan debts we’re carrying?,Other Financial Liabilities,Non-Current Liabilities,-1.4085
+How much did shareholders invest in the company?,Share Capital,Equity,1.5368
+What’s the total cash from issuing shares?,Share Capital,Financing Cash Flow,-0.3627
+What’s the total of profits we’ve kept over time?,Other Equity / Reserves & Surplus,Net Profit (PAT),-3.6167
+How much have we saved from past earnings?,Other Equity / Reserves & Surplus,Accruals,-2.7937
+How’s our sales revenue looking compared to Q1 2025?,Revenue,Revenue,3.4503
+Did we make more from sales this month than last June?,Revenue,Revenue,5.0301
+What’s the cost trend for producing our goods in 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.0323
+Did it cost more to make products in May 2025?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),4.0819
+How much profit did we keep after production in Q1?,Gross Profit,Gross Profit,0.6555
+What’s left after covering production costs this year?,Gross Profit,Provisions,4.6292
+Are we overspending on salaries and utilities?,Operating Expenses,Operating Expenses,-1.4782
+How much are we burning through on daily operations?,Operating Expenses,Operating Expenses,3.2174
+What did we earn from operations in Q1 2025?,Operating Profit (EBIT),Operating Profit (EBIT),4.321
+How’s our core profit before interest this month?,Operating Profit (EBIT),Operating Profit (EBIT),3.6222
+What’s our profit before taxes and write-offs in Q2?,EBITDA,EBITDA,5.308
+How much are we earning before depreciation this year?,EBITDA,EBITDA,5.6173
+How much profit did we clear after all costs in May?,Net Profit (PAT),Net Profit (PAT),3.8903
+What’s our bottom line for Q2 2025?,Net Profit (PAT),Net Profit Margin,3.5963
+How much is each share earning this month?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.5199
+What’s the profit per share in the first half of 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.5532
+How much cash flowed from operations in June 2025?,Operating Cash Flow,Operating Cash Flow,5.7583
+What’s the cash from our business activities this quarter?,Operating Cash Flow,Operating Cash Flow,5.2909
+What did we spend on investments in May 2025?,Investing Cash Flow,Investing Cash Flow,0.9779
+How much went to buying new assets this month?,Investing Cash Flow,Investing Cash Flow,4.5171
+Did we raise funds through financing in Q2 2025?,Financing Cash Flow,Financing Cash Flow,0.3385
+Any cash from loans or shares this quarter?,Financing Cash Flow,Financing Cash Flow,5.5837
+How much cash is left after equipment buys in June?,Free Cash Flow,Inventory Turnover,-3.5144
+What’s our free cash after capital expenses this month?,Free Cash Flow,Free Cash Flow,6.2481
+What’s the write-off for our gear this quarter?,Depreciation,Depreciation,1.7576
+How much are we depreciating our assets in 2025?,Depreciation,Depreciation,5.7372
+Are we spreading costs for trademarks over time?,Amortization,Depreciation,4.3726
+What costs are we stretching out for intangibles?,Amortization,Amortization,5.6056
+What expenses are we tracking but haven’t paid yet?,Acc PDA,Accruals,2.5487
+Do we have unpaid bills recorded for this month?,Accruals,Accruals,-4.3292
+Are we prepared for unexpected costs like lawsuits?,Provisions,Provisions,1.1862
+Do we have enough saved for future expenses?,Provisions,Provisions,5.4349
+Could we face debts from unresolved legal issues?,Contingent Liabilities,Contingent Liabilities,1.3429
+Are there potential liabilities from future events?,Contingent Liabilities,Contingent Liabilities,5.7129
+How does our profit after production compare to others?,Net Profit Margin,Gross Profit,-1.1154
+What’s our profit margin after making goods in Q2?,Net Profit Margin,Net Profit Margin,5.2284
+Are our assets producing good profits this quarter?,Return on Assets (ROA),Return on Assets (ROA),5.3979
+How much are our assets earning us in 2025?,Return on Assets (ROA),Assets,-2.8431
+What’s the payback for investors this year?,Return on Equity (ROE),Return on Equity (ROE),2.4214
+How much are shareholders earning in Q2 2025?,Return on Equity (ROE),Return on Equity (ROE),2.2725
+Are we getting good returns on our capital?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),6.0945
+Is our capital working hard to make profits?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.5686
+What’s our profit share before taxes in Q1 2025?,EBITDA Margin,Operating Profit (EBIT),-0.2261
+How much of revenue is profit before depreciation?,EBITDA Margin,Revenue,-1.518
+Can we handle short-term debts without issues?,Current Ratio,Current Ratio,4.0864
+Are we good for bills due in the next year?,Current Ratio,Contingent Liabilities,0.6607
+Can we pay debts without selling our stockpile?,Quick Ratio (Acid Test),Interest Coverage Ratio,-4.1709
+Do we have enough without inventory for debts?,Quick Ratio (Acid Test),Financial Assets,-3.9258
+Is our cash enough for immediate bills?,Cash Ratio,Current Ratio,-0.743
+Can we cover urgent expenses with cash on hand?,Cash Ratio,Accruals,-3.8915
+How fast are we selling our stock this quarter?,Inventory Turnover,Inventory Turnover,4.6201
+Are we clearing inventory quickly in 2025?,Inventory Turnover,Inventory Turnover,0.7417
+Are clients paying us faster than last month?,Receivables Turnover,Quick Ratio (Acid Test),3.0252
+How quick are customer payments this year?,Receivables Turnover,Quick Ratio (Acid Test),-1.6418
+Are we paying vendors on time this month?,Payables Turnover,Trade Payables,0.5611
+How often are we settling supplier bills in Q2?,Payables Turnover,Trade Payables,-2.9468
+Are we using assets efficiently for sales?,Asset Turnover,Asset Turnover,5.6066
+Do our assets generate strong revenue?,Asset Turnover,Return on Assets (ROA),0.4689
+Is our working capital driving enough sales?,Working Capital Turnover,Working Capital Turnover,5.671
+Are we getting sales from short-term resources?,Working Capital Turnover,Current Ratio,2.1103
+Are our debts higher than our equity?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,5.6882
+Do we owe more than shareholders’ stake?,Debt-to-Equity Ratio,Equity,-2.6837
+How much of our stuff is funded by loans?,Debt Ratio,Debt Ratio,1.875
+What portion of assets comes from borrowing?,Debt Ratio,Debt Ratio,5.4152
+Can we cover loan interest with our profits?,Interest Coverage Ratio,Interest Coverage Ratio,5.1039
+Are we okay with interest payments this quarter?,Interest Coverage Ratio,Interest Coverage Ratio,4.3436
+How much of our company do owners control?,Equity Ratio,Equity,3.2063
+What share of assets is from shareholders?,Equity Ratio,Equity Ratio,4.1374
+What’s the debt-to-equity balance in our funding?,Capital Gearing Ratio,Debt-to-Equity Ratio,0.0484
+How does our debt compare to our own funds?,Capital Gearing Ratio,Capital Gearing Ratio,4.4105
+How much profit per share did we make in May?,Earnings Per Share (EPS),Earnings Per Share (EPS),4.4756
+What’s the per-share earning for Q2 2025?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.4933
+Is our stock price high compared to profits?,Price-to-Earnings (P/E) Ratio,Return on Equity (ROE),-3.0118
+Are we overvalued based on our earnings?,Price-to-Earnings (P/E) Ratio,Price-to-Earnings (P/E) Ratio,5.7692
+Does our stock price reflect our real value?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,1.753
+Is our stock in line with our net assets?,Price-to-Book (P/B) Ratio,Price-to-Book (P/B) Ratio,3.8785
+What’s the dividend return for investors in Q2?,Dividend Yield,Dividend Yield,5.2066
+How much are dividends paying out this year?,Dividend Yield,Dividend Payout Ratio,5.4162
+How much of profits are we sharing as dividends?,Dividend Payout Ratio,Dividend Payout Ratio,4.4995
+What portion of earnings goes to shareholders?,Dividend Payout Ratio,Dividend Payout Ratio,2.0925
+What’s our company worth with all debts included?,Enterprise Value (EV),Enterprise Value (EV),4.2028
+How much is the business valued at today?,Enterprise Value (EV),Enterprise Value (EV),4.7385
+How does our value compare to core profits?,EV/EBITDA,Price-to-Earnings (P/E) Ratio,3.5705
+What’s our worth relative to earnings before taxes?,EV/EBITDA,EV/EBITDA,2.4167
+What’s the value of our equipment and buildings?,"Property, Plant and Equipment (PPE)","Property, Plant and Equipment (PPE)",5.2063
+How much are our physical assets worth in Q2?,"Property, Plant and Equipment (PPE)",Intangible Assets,-1.4906
+What’s the worth of our patents and software?,Intangible Assets,Intangible Assets,5.0072
+How much value is in our non-physical assets?,Intangible Assets,Intangible Assets,5.1582
+What’s the value of properties we rent out?,Investment Property,Investment Property,4.1775
+How much are our rental properties worth?,Investment Property,Investment Property,4.1304
+How much is tied up in our stocks or bonds?,Financial Assets,Debt-to-Equity Ratio,-0.859
+What’s the worth of our financial investments?,Financial Assets,Financial Assets,5.4793
+What’s the total value of our unsold stock?,Inventories,EV/EBITDA,-1.1394
+How much are our products in storage worth?,Inventories,Inventories,4.2504
+Can we save taxes from past business losses?,Deferred Tax Assets,Deferred Tax Liabilities,-4.0254
+Are there tax benefits we can use later?,Deferred Tax Assets,Deferred Tax Assets,3.8475
+What’s the total of our bank loans?,Borrowings,Borrowings,3.4905
+How much do we owe on loans this quarter?,Borrowings,Borrowings,1.1751
+How much do we owe suppliers this month?,Trade Payables,Trade Payables,4.8204
+What’s the balance for vendor payments in Q2?,Trade Payables,Trade Payables,1.3636
+Are we saving enough for future employee costs?,Provisions,Provisions,5.3347
+Do we have funds for upcoming obligations?,Provisions,Provisions,5.4137
+What taxes are we deferring to later years?,Deferred Tax Liabilities,Deferred Tax Liabilities,5.2529
+Are there future tax bills we’re holding off?,Deferred Tax Liabilities,Deferred Tax Liabilities,4.5695
+What other debts do we have besides loans?,Other Financial Liabilities,Other Financial Liabilities,5.2895
+Are there non-loan debts we’re responsible for?,Other Financial Liabilities,Non-Current Liabilities,0.178
+How much cash came from issuing shares?,Share Capital,Share Capital,0.3156
+What’s the total from shareholder investments?,Share Capital,Equity,-4.2492
+What’s the sum of profits we’ve saved up?,Other Equity / Reserves & Surplus,Gross Profit,-4.0219
+How much have we kept from past profits?,Other Equity / Reserves & Surplus,Net Profit (PAT),-3.7562
+Did our sales beat last year’s numbers for Q1?,Revenue,Gross Profit,-4.3605
+How much more did we earn from sales this month?,Revenue,Revenue,5.437
+Are production costs higher than last quarter?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),-1.0345
+What’s the cost of making our goods this year?,Cost of Goods Sold (COGS),Cost of Goods Sold (COGS),5.3094
+How’s our profit after production trending in 2025?,Gross Profit,Net Profit Margin,3.7101
+What did we keep after making products in May?,Gross Profit,"Property, Plant and Equipment (PPE)",-0.5876
+Are we overspending on daily operations this month?,Operating Expenses,Operating Expenses,-2.6717
+How much are we spending to keep things running?,Operating Expenses,Operating Expenses,4.41
+What’s our profit from operations in Q2 2025?,Operating Profit (EBIT),Operating Profit (EBIT),5.4547
+How much did we earn before taxes in May?,Operating Profit (EBIT),EBITDA,2.6275
+What’s our profit before write-offs this quarter?,EBITDA,EBITDA,5.0026
+How much are we earning before depreciation in Q2?,EBITDA,EBITDA,5.3293
+What’s our final profit after all costs this month?,Net Profit (PAT),Net Profit (PAT),4.7541
+How much did we clear after expenses in Q1?,Net Profit (PAT),Accruals,-1.4961
+How much profit is each share making in June?,Earnings Per Share (EPS),Earnings Per Share (EPS),3.6094
+What’s the per-share profit for this quarter?,Earnings Per Share (EPS),Earnings Per Share (EPS),5.183
+How much cash did we generate from operations in Q1?,Operating Cash Flow,Operating Cash Flow,5.0899
+What’s the cash flow from our business this month?,Operating Cash Flow,Operating Cash Flow,4.6143
+What did we spend on new assets in Q2 2025?,Investing Cash Flow,Financial Assets,-2.9994
+How much went to investments this quarter?,Investing Cash Flow,Investing Cash Flow,3.8692
+Did we get cash from loans or shares in May?,Financing Cash Flow,Financing Cash Flow,5.2027
+Any financing cash raised this month?,Financing Cash Flow,Financing Cash Flow,4.9043
+How much cash remains after buying equipment?,Free Cash Flow,Assets,-3.496
+What’s our free cash flow for Q2 2025?,Free Cash Flow,Free Cash Flow,6.3556
+What’s the depreciation on our machines this year?,Depreciation,Depreciation,6.0012
+How much are we writing off for assets in June?,Depreciation,Provisions,-1.4818
+Are we spreading costs for software this quarter?,Amortization,Accruals,0.8466
+What costs are we stretching for intangibles?,Amortization,Amortization,5.5916
+What bills are we holding off this month?,Accruals,Provisions,2.744
+Are there unpaid expenses logged for Q2?,Accruals,Accruals,-1.6356
+Are we prepared for unexpected costs in 2025?,Provisions,Provisions,-0.914
+Do we have enough saved for future liabilities?,Provisions,Provisions,5.6842
+Could we owe money from legal disputes?,Contingent Liabilities,Contingent Liabilities,-0.6041
+Are there debts tied to future risks?,Contingent Liabilities,Contingent Liabilities,2.0164
+How’s our profit margin after production in Q1?,Net Profit Margin,Net Profit Margin,4.9095
+What’s our profitability after making goods?,Net Profit Margin,Net Profit Margin,3.8645
+Are our assets earning strong profits?,Return on Assets (ROA),Return on Assets (ROA),4.9669
+How much profit do our assets generate this year?,Return on Assets (ROA),Return on Assets (ROA),4.666
+What’s the return for shareholders in Q1 2025?,Return on Equity (ROE),Return on Equity (ROE),3.4979
+How much are investors earning this month?,Return on Equity (ROE),Investing Cash Flow,1.1705
+Are we using capital efficiently for profits?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.9746
+Is our capital producing good returns?,Return on Capital Employed (ROCE),Return on Capital Employed (ROCE),5.7821
+What’s our profit percentage before taxes in Q2?,EBITDA Margin,Operating Profit (EBIT),-0.8332
+How much of sales is profit before write-offs?,EBITDA Margin,Operating Profit (EBIT),-2.3001
+Can we handle short-term debts comfortably?,Current Ratio,Current Ratio,2.4821
+Are we okay for bills due in the next year?,Current Ratio,Non-Current Liabilities,-1.2643
+Can we pay debts without our inventory?,Quick Ratio (Acid Test),Non-Current Liabilities,-3.0063
+Do we have enough without stock for debts?,Quick Ratio (Acid Test),Financial Assets,-3.8547
+Is our cash sufficient for urgent bills?,Cash Ratio,Current Ratio,1.0524
+Can we cover immediate expenses with cash?,Cash Ratio,Accruals,-2.4392
+How quickly are we selling inventory this year?,Inventory Turnover,Inventory Turnover,5.7558
+Are we moving stock fast enough in Q2?,Inventory Turnover,Inventory Turnover,2.419
+Are we collecting client payments quickly?,Receivables Turnover,Receivables Turnover,5.401
+How fast are customers paying us in 2025?,Receivables Turnover,Payables Turnover,2.25
+Are we paying suppliers promptly this quarter?,Payables Turnover,Payables Turnover,1.3698
+How often do we settle vendor bills?,Payables Turnover,Trade Payables,-2.1657
+Are our assets generating enough sales?,Asset Turnover,Return on Assets (ROA),-1.3995
+Do our assets drive revenue efficiently?,Asset Turnover,Asset Turnover,5.2889
+Is our short-term cash boosting sales?,Working Capital Turnover,Current Ratio,2.0018
+Are we getting sales from working capital?,Working Capital Turnover,Working Capital Turnover,5.5542
+Are our debts bigger than our equity?,Debt-to-Equity Ratio,Debt-to-Equity Ratio,4.8824
+Do we owe more than our shareholders’ worth?,Debt-to-Equity Ratio,Return on Equity (ROE),4.865
+How much of our assets are from loans?,Debt Ratio,Debt Ratio,5.6091
+What portion of our stuff is borrowed?,Debt Ratio,Borrowings,-1.6917
+Can we cover interest with our earnings?,Interest Coverage Ratio,Interest Coverage Ratio,4.3754
+Are profits enough for loan interest?,Interest Coverage Ratio,Net Profit Margin,-3.714
+How much do shareholders own of the company?,Equity Ratio,Equity,4.2292
+What share of assets is from owners?,Equity Ratio,Equity Ratio,3.9853
+What’s the debt-to-equity mix in our funds?,Capital Gearing Ratio,Debt-to-Equity Ratio,3.7369
+How does debt balance with our own money?,Capital Gearing Ratio,Debt Ratio,-4.2738

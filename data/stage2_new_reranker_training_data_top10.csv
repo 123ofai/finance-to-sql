@@ -1,0 +1,251 @@
+query,label,score
+Assets,Assets ROU,0.0
+Assets,Current assets,0.0
+Assets,Plan Assets,0.0
+Assets,Total Assets,1.0
+Assets,Other current assets,0.0
+Assets,Other current assets,0.0
+Assets,Other current assets,0.0
+Assets,Financial assets - Current assets,0.0
+Assets,Income tax Assets,0.0
+Assets,Income tax Assets,0.0
+Equity,Equity,1.0
+Equity,Equity,0.0
+Equity,Other Equity,0.0
+Equity,Other Equity,0.0
+Equity,Other Equity,0.0
+Equity,Equity - Non TB,0.0
+Equity,Return on Equity,0.0
+Equity,Total Equity and Liabilites,0.0
+Equity,Total Equity and Liabilites,0.0
+Equity,Movement in Other Equity,0.0
+Current Assets,Current assets,1.0
+Current Assets,Financial assets - Current assets,0.0
+Current Assets,Other current assets,0.0
+Current Assets,Other current assets,0.0
+Current Assets,Other current assets,0.0
+Current Assets,Movement in current assets,0.0
+Current Assets,Other financial assets - Current,0.0
+Current Assets,Other financial assets - Current,0.0
+Current Assets,Other financial assets - Current,0.0
+Current Assets,Others - Other current assets,0.0
+Non-Current Assets,Non-current assets,1.0
+Non-Current Assets,Other non-current assets,0.0
+Non-Current Assets,Other non-current assets,0.0
+Non-Current Assets,Other non-current assets,0.0
+Non-Current Assets,Financial assets - Non-current assets,0.0
+Non-Current Assets,Other financial assets - Non Current,0.0
+Non-Current Assets,Other financial assets - Non Current,0.0
+Non-Current Assets,Other financial assets - Non Current,0.0
+Non-Current Assets,Others - Other non-current assets,0.0
+Non-Current Assets,Non-current liabilities,0.0
+Current Liabilities,Current liabilities,1.0
+Current Liabilities,Financial liabilities - Current,0.0
+Current Liabilities,Other current liabilities,0.0
+Current Liabilities,Other current liabilities,0.0
+Current Liabilities,Other current liabilities,0.0
+Current Liabilities,Current tax liabilities,0.0
+Current Liabilities,Current tax liabilities,0.0
+Current Liabilities,Other financial liabilities - Current,0.0
+Current Liabilities,Other financial liabilities - Current,0.0
+Current Liabilities,Other financial liabilities - Current,0.0
+Non-Current Liabilities,Non-current liabilities,1.0
+Non-Current Liabilities,Other non-current liabilities,0.0
+Non-Current Liabilities,Other non-current liabilities,0.0
+Non-Current Liabilities,Other non-current liabilities,0.0
+Non-Current Liabilities,Financial liabilities - Non Current,0.0
+Non-Current Liabilities,Other financial liabilities - Non Current,0.0
+Non-Current Liabilities,Other financial liabilities - Non Current,0.0
+Non-Current Liabilities,Other financial liabilities - Non Current,0.0
+Non-Current Liabilities,Other financial liabilities - Non Current,0.0
+Non-Current Liabilities,Change in other current and non-current liabilities,0.0
+Revenue,Revenue from operations,1.0
+Revenue,Revenue as per contracted price,0.0
+Revenue,Revenue from contracts with customers,0.0
+Revenue,Deferred revenue (Current),0.0
+Revenue,Total Income,0.0
+Revenue,Elimination Revenue - Transmission,0.0
+Revenue,Elimination Revenue - Others,0.0
+Revenue,Contract assets - unbilled revenue,0.0
+Revenue,Deferred revenue (Non Current),0.0
+Revenue,Cash generated from operations,0.0
+Operating Expenses,Revenue from operations,0.0
+Operating Expenses,Total expenses,0.0
+Operating Expenses,Total expenses,1.0
+Operating Expenses,Advertisement expenses,0.0
+Operating Expenses,Other expenses,0.0
+Operating Expenses,Miscellaneous expenses,0.0
+Operating Expenses,Insurance expenses,0.0
+Operating Expenses,Employee benefit expenses,0.0
+Operating Expenses,Tax expense,0.0
+Operating Expenses,Tax expense,0.0
+Operating Profit (EBIT),Profit before tax,1.0
+Operating Profit (EBIT),Revenue from operations,0.0
+Operating Profit (EBIT),Operating profit before working capital changes,0.0
+Operating Profit (EBIT),Operating profit before working capital changes,0.0
+Operating Profit (EBIT),Cash flow from operating activities as per Cash Flow Statement,0.0
+Operating Profit (EBIT),Cash flow (used in) operating activities,0.0
+Operating Profit (EBIT),Cash generated from operations,0.0
+Operating Profit (EBIT),Cash generated from operations,0.0
+Operating Profit (EBIT),Profit for the year - attributable to Unit holders,0.0
+Operating Profit (EBIT),Net profit as per statement of profit and loss,0.0
+Net Profit (PAT),Net profit as per statement of profit and loss,0.0
+Net Profit (PAT),Net profit as per statement of profit and loss,0.0
+Net Profit (PAT),Profit/(loss) for the period,0.0
+Net Profit (PAT),Profit/(loss) for the period,0.0
+Net Profit (PAT),Profit/(loss) for the period,1.0
+Net Profit (PAT),Profit/(loss) for the period,0.0
+Net Profit (PAT),Net Value,0.0
+Net Profit (PAT),Profit before tax,0.0
+Net Profit (PAT),Profit and Loss for the period,0.0
+Net Profit (PAT),"Profit on sale of property, plant and equipment",0.0
+Operating Cash Flow,Cash flow (used in) operating activities,1.0
+Operating Cash Flow,Cash flow from operating activities as per Cash Flow Statement,0.0
+Operating Cash Flow,Cash generated from operations,0.0
+Operating Cash Flow,Cash generated from operations,0.0
+Operating Cash Flow,Revenue from operations,0.0
+Operating Cash Flow,Cash flow (used in) investing activities,0.0
+Operating Cash Flow,Cash Flow - Operating Activites - Assets and Liabilities written off / (written back),0.0
+Operating Cash Flow,Cash Flow - Operating Activites - Movement of NCD conversion - Borrowings,0.0
+Operating Cash Flow,Cash Flow - Operating Activites - Movement of NCD conversion - Borrowings,0.0
+Operating Cash Flow,Cash Flow - Operating Activites - Movement of NCD conversion - Borrowings,0.0
+Investing Cash Flow,Cash flow (used in) investing activities,1.0
+Investing Cash Flow,Cash Flow - Investing Activities - Unrealised income from investments,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Interest Capitalised,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Interest Capitalised,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Interest Capitalised,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Interest Capitalised,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Proceeds from mutual funds,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Proceeds from mutual funds,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Proceeds from mutual funds,0.0
+Investing Cash Flow,Cash Flow - Investing Activities - Proceeds from Fixed deposits,0.0
+Financing Cash Flow,Cash flow (used in)/from financing activities,1.0
+Financing Cash Flow,Cash Flow - Financing Activities - Proceeds of long term borrowings,0.0
+Financing Cash Flow,Cash Flow - Financing Activities - Proceeds of long term borrowings,0.0
+Financing Cash Flow,Cash Flow - Financing Activities - Proceeds of long term borrowings,0.0
+Financing Cash Flow,Cash flow (used in) investing activities,0.0
+Financing Cash Flow,Cash Flow - Financing Activities - Payment of upfront fees of long term borrowings,0.0
+Financing Cash Flow,Cash Flow - Financing Activities - Payment of upfront fees of long term borrowings,0.0
+Financing Cash Flow,Cash Flow - Financing Activities - Payment of upfront fees of long term borrowings,0.0
+Financing Cash Flow,Financing Activities,0.0
+Financing Cash Flow,Cash flow note,0.0
+Depreciation,Depreciation of tangible assets,1.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,Depreciation and amortization expense,0.0
+Depreciation,"Accumulated Depreciation - Property, plant and equipment",0.0
+Amortization,Amortisation of intangible assets,1.0
+Amortization,Amortisation Of Deferred Government Grant,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+Amortization,Depreciation and amortization expense,0.0
+"Property, Plant and Equipment (PPE)","Property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Property, plant and equipment",1.0
+"Property, Plant and Equipment (PPE)","Property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)",PPE,0.0
+"Property, Plant and Equipment (PPE)","Payables for purchase of property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Payables for purchase of property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Payables for purchase of property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Payables for purchase of property, plant and equipment",0.0
+"Property, Plant and Equipment (PPE)","Payables for purchase of property, plant and equipment",0.0
+Intangible Assets,Intangible assets,0.0
+Intangible Assets,Intangible assets,0.0
+Intangible Assets,Intangible assets,1.0
+Intangible Assets,Intangible assets,0.0
+Intangible Assets,Intangibles,0.0
+Intangible Assets,Amortisation of intangible assets,0.0
+Intangible Assets,Gross Block - Intangible assets,0.0
+Intangible Assets,Accumulated Depreciation - Intangible assets,0.0
+Intangible Assets,Projects Acquired - Intangible assets,0.0
+Intangible Assets,Enterprise Value of Assets,0.0
+Inventories,Inventory,0.0
+Inventories,Inventory,1.0
+Inventories,Inventory and Spares,0.0
+Inventories,Projects Acquired - Inventories,0.0
+Inventories,Projects Acquired - Inventories,0.0
+Inventories,Projects Acquired - Inventories,0.0
+Inventories,Change in Inventory,0.0
+Inventories,NDCF - Projects Acquired - Inventories,0.0
+Inventories,Current assets,0.0
+Inventories,Total Assets,0.0
+Trade Payables,Trade payables,0.0
+Trade Payables,Trade payables,0.0
+Trade Payables,Trade payables,1.0
+Trade Payables,Trade payables,0.0
+Trade Payables,Movement in Trade Payables,0.0
+Trade Payables,Trade payable - Non TB,0.0
+Trade Payables,Trade receivables,0.0
+Trade Payables,Sale of Traded goods,0.0
+Trade Payables,WCT payable,0.0
+Trade Payables,Liquidity Risk - Trade payables - 1 to 5 years,0.0
+Deferred Tax Liabilities,Deferred Tax Liability,0.0
+Deferred Tax Liabilities,Deferred tax liabilities (net),0.0
+Deferred Tax Liabilities,Deferred tax liabilities (net),1.0
+Deferred Tax Liabilities,Deferred Tax on defferal liability,0.0
+Deferred Tax Liabilities,Deferred tax,0.0
+Deferred Tax Liabilities,Deferred tax,0.0
+Deferred Tax Liabilities,Tax Expense and deferred tax - Lease liability,0.0
+Deferred Tax Liabilities,Deferred Tax Asset,0.0
+Deferred Tax Liabilities,Current tax liabilities,0.0
+Deferred Tax Liabilities,Current tax liabilities,0.0
+Other Financial Liabilities,Other financial liabilities,0.0
+Other Financial Liabilities,Others - Other financial liabilities,1.0
+Other Financial Liabilities,Other financial liabilities - Current,0.0
+Other Financial Liabilities,Other financial liabilities - Current,0.0
+Other Financial Liabilities,Other financial liabilities - Current,0.0
+Other Financial Liabilities,Other current liabilities,0.0
+Other Financial Liabilities,Other current liabilities,0.0
+Other Financial Liabilities,Other current liabilities,0.0
+Other Financial Liabilities,Others - Other current liabilities,0.0
+Other Financial Liabilities,Other financial liabilities - Non Current,0.0
+Share Capital,Unit capital / Equity share capital,1.0
+Share Capital,"Issued, subscribed and paid-up - Preference Share Capital",0.0
+Share Capital,"Issued, subscribed and paid-up - Unit capital / Equity share capital",0.0
+Share Capital,"Issued, subscribed and paid-up - Unit capital / Equity share capital",0.0
+Share Capital,SOCIE & ESC - Authorised Capital - No. of shares,0.0
+Share Capital,SOCIE & ESC - Authorised Capital - Face Value per share,0.0
+Share Capital,Proceeds from issue of unit capital,0.0
+Share Capital,SOCIE & ESC - Preference Authorised Capital - Face Value per share,0.0
+Share Capital,SOCIE & ESC - Preference Authorised Capital - No. of shares,0.0
+Share Capital,Investment in Equity Shares,0.0
+Other Equity / Reserves & Surplus,Other Equity,1.0
+Other Equity / Reserves & Surplus,Other Equity,0.0
+Other Equity / Reserves & Surplus,Other Equity,0.0
+Other Equity / Reserves & Surplus,Others - Other current assets,0.0
+Other Equity / Reserves & Surplus,Other current assets,0.0
+Other Equity / Reserves & Surplus,Other current assets,0.0
+Other Equity / Reserves & Surplus,Other current assets,0.0
+Other Equity / Reserves & Surplus,Others - Other non-current assets,0.0
+Other Equity / Reserves & Surplus,Other non-current assets,0.0
+Other Equity / Reserves & Surplus,Other non-current assets,0.0
+Return on Equity (ROE),Return on Equity,1.0
+Return on Equity (ROE),Equity,0.0
+Return on Equity (ROE),Equity,0.0
+Return on Equity (ROE),Total Equity and Liabilites,0.0
+Return on Equity (ROE),Total Equity and Liabilites,0.0
+Return on Equity (ROE),Investment in Equity Shares,0.0
+Return on Equity (ROE),Investment in units (valued at fair value through profit or loss) Child,0.0
+Return on Equity (ROE),Other Equity,0.0
+Return on Equity (ROE),Other Equity,0.0
+Return on Equity (ROE),Other Equity,0.0
+Net Profit Margin,Net profit as per statement of profit and loss,0.0
+Net Profit Margin,Net profit as per statement of profit and loss,1.0
+Net Profit Margin,Net Value,0.0
+Net Profit Margin,Profit before tax,0.0
+Net Profit Margin,Profit/(loss) for the period,0.0
+Net Profit Margin,Profit/(loss) for the period,0.0
+Net Profit Margin,Profit/(loss) for the period,0.0
+Net Profit Margin,Profit/(loss) for the period,0.0
+Net Profit Margin,Profit and Loss for the period,0.0
+Net Profit Margin,Net distributable cash flow,0.0
