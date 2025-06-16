@@ -1,0 +1,8 @@
+streamlit
+pandas
+sentence-transformers
+torch
+sshtunnel
+sqlalchemy
+psycopg2-binary
+rapidfuzz

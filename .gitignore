@@ -1,1 +1,7 @@
 bsq-devops-3rdparty-vendor.pem
+models/
+*.ts
+*.bin
+*.pth
+deployment/aws_worflow/models/
+*.tar.gz
