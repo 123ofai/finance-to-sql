@@ -1,8 +1,0 @@
-{
-  "host": "10.200.51.243",
-  "port": 3306,
-  "dbname": "superset",
-  "user": "superset_user",
-  "password": "FINadmin123#"
-}
-
