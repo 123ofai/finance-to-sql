@@ -35,6 +35,16 @@
 | 3    | Terms + Desc         | bge-large-en-v1.5    | **0.87**     | 0.85   | sno 2 + glossary data 4b with desc |
 | 4    | Terms + Desc         | bge-large-en-v1.5    | 0.82     | 0.78   | sno 3 + finetuned on simpler data too |
 
+#### 1a_balanced  
+- This contains tougher interpreted queries, direct queries, and natural spelling/ grammatical mistakes: ~1k queries
+
+| S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Best setting #12 in 1a_noisy       | bge-large-en-v1.5    | 0.8746   | 0.8626   | miniLM retrained, top 5 used|
+| 2    | Best setting #12 in 1a_noisy       | bge-large-en-v1.5    | 0.8973   | 0.8849   | miniLM retrained, top 10 used|
+| 2b    | model in no. 2       | bge-large-en-v1.5    | 0.69   | 0.62   | Only Eval on only tough set |
+| 3    |    Same as 2    | bge-large-en-v1.5    | **0.926**   | **0.911**   | reranker changed to BGE |
+
 
 ### Stage 2
 #### 1b_clean_data
@@ -48,6 +58,15 @@
 | 6    | Term                 | bge-large-en-v1.5    | 0.55     | 0.38     | reranker miniLM fine-tuned + weights b/w ranker & sim |
 | 7    | Term                 | bge-large-en-v1.5    | 0.62     | 0.45     | reranker miniLM fine-tuned on more hard-negative + weights b/w ranker & sim  |
 
+#### higher quality data
+- Top-K misclassifications in re-ranker's negative set
+- Ratios removed
+| S.No | Description       | Model Used           | Accuracy | F1 Score | Remarks |
+|------|----------------------|----------------------|----------|----------|---------|
+| 1    | Using top-5 failures for re-ranker | bge-large-en-v1.5    | 0.68     | 0.53     |         |
+| 2    | Using top-10 failures for re-ranker | bge-large-en-v1.5    | 0.56     | 0.40     |         |
+| 3    | Only using embedding model | bge-large-en-v1.5    | **0.76**     | 0.64     |         |
+
 
 ### Period
 | S.No | Method Used          | Model Used           | Accuracy           | F1 Score         | Remarks |
@@ -59,11 +78,23 @@
 | 5    | Above + Verbose                 | bge-large-en-v1.5    | Overall- 0.69, View- 1.00     | Overall 0.54     | added verbosity like FTP and PRd "can be defined as" in the prototypes  |
 | 6    | Above + fuzzy matching                 | bge-large-en-v1.5    | Overall- 1.00, View- 1.00, Sequence- 1.00    | Overall 1     | improved the regex in which `calendar.month_name[0]` is the empty string, and added fuzzy matching for the sequence""  |
 
-## Ideas to Try
-- Improve the re-ranker's data with top-k data -> what is it really getting confused at?
-- Instead of binary scoring, use triplet scoring with hard-negative being different from random negative
-- Add in type, etc. in the matching queries. 
-- Fine-tune BGE with contrastive loss
+## Summary of Data (14/06/25)
+1. **Stage 1:** NL Query to Glossary
+    1. NL Query: We generated (~1k queries)
+    2. Glossary (with description): 64 terms
+2. **Stage 2:** Glossary to Grouping Label
+    1. Labeled and given: 30
+        1. Removed formulae - Multiple queries
+    2. Final list: 25
+
+## Ongoing Work-List
+- Stage 1:
+  - Scenario Detection: Actual/Budget/Cashflow
+- Stage 2: 
+  - Add in type, etc. in the matching queries.
+- Multi-SQL query generation
+  - Ratio Computation (basis glossary)
+  - Comparison queries
 
 ## Files
 nl2glossary.py: 
