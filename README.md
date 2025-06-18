@@ -59,15 +59,15 @@
 | 7    | Term                 | bge-large-en-v1.5    | 0.62     | 0.45     | reranker miniLM fine-tuned on more hard-negative + weights b/w ranker & sim  |
 
 #### higher quality data
-- Top-K misclassifications in re-ranker's negative set
-- Ratios removed
 
 | S.No | Description       | Model Used           | Accuracy | F1 Score | 
-|------|----------------------|----------------------|----------|----------|---------|
+|------|----------------------|----------------------|----------|----------|
 | 1    | Using top-5 failures for re-ranker | bge-large-en-v1.5    | 0.68     | 0.53     |
 | 2    | Using top-10 failures for re-ranker | bge-large-en-v1.5    | 0.56     | 0.40    |
 | 3    | Only using embedding model | bge-large-en-v1.5    | **0.76**     | 0.64     |
 
+- Top-K misclassifications in re-ranker's negative set
+- Ratios removed
 
 ### Period
 | S.No | Method Used          | Model Used           | Accuracy           | F1 Score         | Remarks |
