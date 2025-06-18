@@ -61,11 +61,12 @@
 #### higher quality data
 - Top-K misclassifications in re-ranker's negative set
 - Ratios removed
-| S.No | Description       | Model Used           | Accuracy | F1 Score | Remarks |
+
+| S.No | Description       | Model Used           | Accuracy | F1 Score | 
 |------|----------------------|----------------------|----------|----------|---------|
-| 1    | Using top-5 failures for re-ranker | bge-large-en-v1.5    | 0.68     | 0.53     |         |
-| 2    | Using top-10 failures for re-ranker | bge-large-en-v1.5    | 0.56     | 0.40     |         |
-| 3    | Only using embedding model | bge-large-en-v1.5    | **0.76**     | 0.64     |         |
+| 1    | Using top-5 failures for re-ranker | bge-large-en-v1.5    | 0.68     | 0.53     |
+| 2    | Using top-10 failures for re-ranker | bge-large-en-v1.5    | 0.56     | 0.40    |
+| 3    | Only using embedding model | bge-large-en-v1.5    | **0.76**     | 0.64     |
 
 
 ### Period
