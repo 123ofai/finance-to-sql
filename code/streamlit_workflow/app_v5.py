@@ -80,8 +80,8 @@ def load_resources():
     stage1_dir    = download_model_folder_from_blob(s1_prefix)
     stage2_dir    = download_model_folder_from_blob(s2_prefix)
 
-    reranker_1 = CrossEncoder.from_pretrained(stage1_dir)
-    reranker_2 = CrossEncoder.from_pretrained(stage2_dir)
+    reranker_1 = CrossEncoder(stage1_dir)
+    reranker_2 = CrossEncoder(stage2_dir)
 
     # 5) Precompute embeddings
     with torch.no_grad():
