@@ -6,3 +6,4 @@ sshtunnel
 sqlalchemy
 psycopg2-binary
 rapidfuzz
+azure-storage-blob
