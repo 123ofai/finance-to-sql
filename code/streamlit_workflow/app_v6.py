@@ -146,7 +146,7 @@ def load_resources():
             f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
         )
         engine   = sqlalchemy.create_engine(conn_str)
-        group_df = pd.read_sql("SELECT grouping_id, grouping_label FROM fbi_grouping_master", con=engine)
+        group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{SCHEMA}".fbi_grouping_master', con=engine)
 
     # 3) Build enriched texts
     def build_full_text(r):
