@@ -1,4 +1,18 @@
 ## Experiment Results
+### Stage 0
+Classifying into 4 parts:
+Label 0: Query the data
+Label 1: Comparison queries
+Label 2: Invoke Anomaly Detection
+Label 3: Other (Trend/Forecast/Interpret)
+
+| type | precision |   recall | f1-score  | 
+|------|-----------|----------|------------|
+|  Querying (0)  |     0.86  |    1.00  |    0.92 |
+|Comparison (1)  |     1.00  |    1.00  |    1.00 |
+|   Anomaly (2)  |     0.83  |    1.00  |    0.91 |
+|     Other (3) |      1.00  |    0.60  |    0.75 |
+
 ### Stage 1
 #### 1a_tougher
 | S.No | Matching Input       | Model Used           | Accuracy | F1 Score | Remarks |
