@@ -32,20 +32,14 @@ W_SIM1, W_RERANK1 = 0.5, 0.5
 W_SIM2, W_RERANK2 = 0.6, 0.4
 
 # ─── SECRETS FROM ENV ────────────────────────────────────────────────────────
-ssh_conf   = {
-    "tunnel_host": "3.110.31.32",
-    "tunnel_port": 22,
-    "ssh_username": "ec2-user",
-    "ssh_pkey": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEAue87byNbSPgjucopUb6GoGqWRwjhgeSXOQsCKvo/o4FlVK83\nVsJAGMms/r20lT0MK+u8B3CJ/QNshJEd4lkshDw/Ei4Eh9zpMHw37wecPiIO0b/w\nbtvfVALp1ww/sEjjGib7Wv1BK9dlwVuHWzVHClSkfu/a52UsVwqmSnXKTCY0+dn3\njeDYA3Yyuo8ngp7V7588DH7IP2M2gePzO7zjOfFzPWlHgmsxEckzUnvDIiODYiLl\nnT9Rul3LhwsMmbUEV9Qy6671u+NuKzQaxbKmK6Nhsp5W12xsVZWjjsLBP78GW/43\nN1JgDtqrPAKVym+x6ioB65iiSHW9nWNw8yzyzwIDAQABAoIBAEEw0cPbv6vL5KrF\naMtSY91mwZ3STU6/mQ3VAEOVTi7DtYWFkX+Hx/Vo8JC4btJMfzH/CwQIvzjItIme\nX732yhbrEKoNHGWOXOw1AV97aZqXUl7UTzZvPNQ12Use7k2eoJGQzVxPo0P91519\nu+2MtoW2u54N9tBetrcl8rv0pKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7\nC385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385Zj\r\n-----END RSA PRIVATE KEY-----\n"
-}
 
-pg_conf    = {
-    "host": "10.200.51.243",  
-    "port": 3306,
-    "dbname": "superset",
-    "user": "superset_user",
-    "password": "FINadmin123#"
-}
+from dotenv import dotenv_values
+
+env_vars = dotenv_values("./.env")  # returns a dict
+#print(env_vars["SSH_CONF_JSON"])
+
+ssh_conf   = env_vars["SSH_CONF_JSON"]
+pg_conf    = env_vars["PG_CONF_JSON"]
 
 # ─── FORMULA DICTIONARY & HELPERS ────────────────────────────────────────────
 formula_dict = {
@@ -390,7 +384,6 @@ def model_fn(model_dir, *args):
     Chages to be made:
     - This fn loads only once upon creation of the endpoint. So, 
     we need to change the location of group_df
-    - Load Stage 0
     """
     # Reading grouping ID table
     tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
@@ -398,7 +391,7 @@ def model_fn(model_dir, *args):
     with SSHTunnelForwarder(
         (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
         ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey=tf.name,
+        ssh_pkey=ssh_conf['ssh_pkey'],
         remote_bind_address=(pg_conf['host'], pg_conf['port'])
     ) as tunnel:
         conn_str = (
