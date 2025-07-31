@@ -340,7 +340,7 @@ def construct_period_id(nl: str) -> str:
     return f"{extract_year(nl)}_{extract_nature(nl)}_{detect_view(nl)}_{extract_sequence(nl, extract_nature(nl))}"
 
 # ─── INFERENCE ENTRYPOINT ───────────────────────────────────────────────────
-def handler(event, context):
+def handler(event):
     body     = json.loads(event["body"])
     query    = body["query"]
     ctx      = body["context"]
@@ -398,15 +398,15 @@ def handler(event, context):
 
         nature = extract_nature(query)
         sql    = f"""
-SELECT value FROM "{SCHEMA}"."{TABLE}"
-WHERE entity_id={DEFAULT_ENTITY_ID}
-  AND grouping_id={gid}
-  AND period_id='{period_id}'
-  AND nature_of_report='{nature}'
-  AND scenario='{scenario}'
-  AND taxonomy_id={DEFAULT_TAXONOMY}
-  AND reporting_currency='{DEFAULT_CURRENCY}';
-""".strip()
+                    SELECT value FROM "{SCHEMA}"."{TABLE}"
+                    WHERE entity_id={DEFAULT_ENTITY_ID}
+                    AND grouping_id={gid}
+                    AND period_id='{period_id}'
+                    AND nature_of_report='{nature}'
+                    AND scenario='{scenario}'
+                    AND taxonomy_id={DEFAULT_TAXONOMY}
+                    AND reporting_currency='{DEFAULT_CURRENCY}';
+                    """.strip()
         logger.info(json.dumps({
             "event": "sql_generated",
             "sql":   sql
