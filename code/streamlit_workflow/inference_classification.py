@@ -97,21 +97,12 @@ formula_dict = {
     'Equity':                    'Assets - Liabilities'
 }
 
-OPS = {
-    ast.Add:  op.add,
-    ast.Sub:  op.sub,
-    ast.Mult: op.mul,
-    ast.Div:  op.truediv,
-    ast.USub: op.neg,
-}
-
 def extract_vars_regex(formula_str):
-    tokens = re.split(r"[+\-*/()]", formula_str)
+    tokens = re.split(r"[+\-*/\(\)]", formula_str)
     return {tok.strip().rstrip('.') for tok in tokens if tok.strip()}
 
 def resolve_terms(term, seen=None):
-    if seen is None:
-        seen = set()
+    if seen is None: seen = set()
     if term in seen:
         raise RuntimeError(f"Cyclic dependency on '{term}'")
     seen.add(term)
@@ -121,6 +112,14 @@ def resolve_terms(term, seen=None):
     for v in extract_vars_regex(formula_dict[term]):
         atoms |= resolve_terms(" ".join(v.split()), seen.copy())
     return atoms
+
+OPS = {
+    ast.Add:  op.add,
+    ast.Sub:  op.sub,
+    ast.Mult: op.mul,
+    ast.Div:  op.truediv,
+    ast.USub: op.neg,
+}
 
 def eval_node(node, vars_):
     if isinstance(node, ast.Num):
@@ -140,6 +139,7 @@ def eval_node(node, vars_):
 def compute_formula(formula_str, variables):
     tree = ast.parse(formula_str, mode="eval")
     return eval_node(tree.body, variables)
+
 
 # ─── DATABASE FETCH HELPER ───────────────────────────────────────────────────
 def fetch_metric(gid, period_id, nature, scenario):
@@ -316,9 +316,11 @@ def detect_view(nl: str) -> str:
             return "PRD"
     if re.search(rf"\bfor\b.*\b{period_unit_rx}\b", low):
         return "FTP"
-    q_emb = period_encoder.encode(nl, convert_to_tensor=True, normalize_embeddings=True)
-    sims  = util.cos_sim(q_emb, view_embs)[0]
-    idx   = int(sims.argmax().item())
+    q_emb      = period_encoder.encode(nl, convert_to_tensor=True, normalize_embeddings=True)
+    sims       = util.cos_sim(q_emb, view_embs)[0]
+    idx, sc    = int(sims.argmax()), sims.max().item()
+    if sc < 0.45:
+        return "FTP"
     return "FTP" if VIEW_PROTOS[idx] in FTP_PROTOS else "PRD"
 
 ORDINAL_MAP  = {"first":1,"1st":1,"second":2,"2nd":2,"third":3,"3rd":3,"fourth":4,"4th":4}
