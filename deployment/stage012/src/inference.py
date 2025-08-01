@@ -32,14 +32,20 @@ W_SIM1, W_RERANK1 = 0.5, 0.5
 W_SIM2, W_RERANK2 = 0.6, 0.4
 
 # ─── SECRETS FROM ENV ────────────────────────────────────────────────────────
+ssh_conf   = {
+    "tunnel_host": "3.110.31.32",
+    "tunnel_port": 22,
+    "ssh_username": "ec2-user",
+    "ssh_pkey": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEAue87byNbSPgjucopUb6GoGqWRwjhgeSXOQsCKvo/o4FlVK83\nVsJAGMms/r20lT0MK+u8B3CJ/QNshJEd4lkshDw/Ei4Eh9zpMHw37wecPiIO0b/w\nbtvfVALp1ww/sEjjGib7Wv1BK9dlwVuHWzVHClSkfu/a52UsVwqmSnXKTCY0+dn3\njeDYA3Yyuo8ngp7V7588DH7IP2M2gePzO7zjOfFzPWlHgmsxEckzUnvDIiODYiLl\nnT9Rul3LhwsMmbUEV9Qy6671u+NuKzQaxbKmK6Nhsp5W12xsVZWjjsLBP78GW/43\nN1JgDtqrPAKVym+x6ioB65iiSHW9nWNw8yzyzwIDAQABAoIBAEEw0cPbv6vL5KrF\naMtSY91mwZ3STU6/mQ3VAEOVTi7DtYWFkX+Hx/Vo8JC4btJMfzH/CwQIvzjItIme\nX732yhbrEKoNHGWOXOw1AV97aZqXUl7UTzZvPNQ12Use7k2eoJGQzVxPo0P91519\nu+2MtoW2u54N9tBetrcl8rv0pKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7\nC385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385Zj\r\n-----END RSA PRIVATE KEY-----\n"
+}
 
-from dotenv import dotenv_values
-
-env_vars = dotenv_values("./.env")  # returns a dict
-#print(env_vars["SSH_CONF_JSON"])
-
-ssh_conf   = env_vars["SSH_CONF_JSON"]
-pg_conf    = env_vars["PG_CONF_JSON"]
+pg_conf    = {
+    "host": "10.200.51.243",  
+    "port": 3306,
+    "dbname": "superset",
+    "user": "superset_user",
+    "password": "FINadmin123#"
+}
 
 # ─── FORMULA DICTIONARY & HELPERS ────────────────────────────────────────────
 formula_dict = {
@@ -130,12 +136,12 @@ WHERE entity_id={DEFAULT_ENTITY_ID}
   AND taxonomy_id={DEFAULT_TAXONOMY}
   AND reporting_currency='{DEFAULT_CURRENCY}';
 """
-    tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
-    tf.write(ssh_conf['ssh_pkey']); tf.flush()
+    #tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
+    #tf.write(ssh_conf['ssh_pkey']); tf.flush()
     with SSHTunnelForwarder(
         (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
         ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey=tf.name,
+        ssh_pkey='./private_key.pem',
         remote_bind_address=(pg_conf['host'], pg_conf['port'])
     ) as tunnel:
         conn = (
@@ -145,7 +151,7 @@ WHERE entity_id={DEFAULT_ENTITY_ID}
         engine = sqlalchemy.create_engine(conn)
         df     = pd.read_sql(sql, engine)
     if df.empty:
-        raise ValueError(f"No data for grouping_id={gid}")
+        return -1.0
     return float(df['value'].iat[0])
 
 def extract_glossary(nl: str, resources) -> str:
@@ -386,12 +392,12 @@ def model_fn(model_dir, *args):
     we need to change the location of group_df
     """
     # Reading grouping ID table
-    tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
-    tf.write(ssh_conf['ssh_pkey']); tf.flush()
+    #tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
+    #tf.write(ssh_conf['ssh_pkey']); tf.flush()
     with SSHTunnelForwarder(
         (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
         ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey=ssh_conf['ssh_pkey'],
+        ssh_pkey='./private_key.pem',
         remote_bind_address=(pg_conf['host'], pg_conf['port'])
     ) as tunnel:
         conn_str = (
@@ -400,6 +406,7 @@ def model_fn(model_dir, *args):
         )
         engine   = sqlalchemy.create_engine(conn_str)
         group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{SCHEMA}".fbi_grouping_master', con=engine)
+        print('Connection done - group_df available')
 
     # Creating Label Term Infra
     gloss_df = pd.read_csv(os.path.join(model_dir, "data", "glossary.csv"))
@@ -421,7 +428,7 @@ def model_fn(model_dir, *args):
 
     # Loading Stage 0
     tokenizer = AutoTokenizer.from_pretrained(os.path.join(model_dir, "models", "stage0_model"), use_fast=False)
-    model     = AutoModelForSequenceClassification.from_pretrained(model_dir)
+    model     = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
     device = 0 if torch.cuda.is_available() else -1
     # instantiate HF pipeline for text-classification
@@ -484,7 +491,7 @@ def predict_fn(input_data, resources):
     # Parse Inputs
     query    = input_data["query"]
     ctx      = input_data["context"]
-    scenario = ctx.get("scenario", "Actual")
+    scenario = 'Actual'
     if scenario == "Actual":
         scenario = 'Forecast' if 'forecast' in query.lower() or 'budget' in query.lower() else \
                     ('Cashflow' if 'cash' in query.lower() else 'Actual')
@@ -553,7 +560,7 @@ def predict_fn(input_data, resources):
 
     else:
         # Stage 2
-        label, gid = lookup_grouping(gloss)
+        label, gid = lookup_grouping(gloss, resources)
         logger.info(json.dumps({
             "event":          "stage2_complete",
             "glossary_term":  gloss,
@@ -561,7 +568,7 @@ def predict_fn(input_data, resources):
             "grouping_id":    gid
         }))
 
-        period_id = construct_period_id(query)
+        period_id = construct_period_id(query, resources)
         logger.info(json.dumps({
             "event":     "period_constructed",
             "period_id": period_id
