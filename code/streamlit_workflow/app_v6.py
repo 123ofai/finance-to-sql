@@ -380,7 +380,7 @@ SELECT value FROM "{SCHEMA}"."{TABLE}"
 WHERE entity_id={DEFAULT_ENTITY_ID}
   AND grouping_id={gid}
   AND period_id='{period_id}'
-  AND nature_of_report='{nature}'
+  AND nature_of_report='Standalone'
   AND scenario='{scenario}'
   AND taxonomy_id={DEFAULT_TAXONOMY}
   AND reporting_currency='{DEFAULT_CURRENCY}';
