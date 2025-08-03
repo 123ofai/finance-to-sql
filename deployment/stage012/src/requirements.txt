@@ -1,5 +1,5 @@
-torch==1.13.1
-transformers==4.26.1
+torch==2.7.1
+transformers==4.40.2
 sentencepiece
 pandas
 nvgpu

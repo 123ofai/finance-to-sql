@@ -6,11 +6,9 @@ from sagemaker import Session
 
 # 1. IAM role (must have SageMaker permissions)
 session = Session()
-#role    = "arn:aws:iam::460493273466:role/AmazonSageMakerFullAccess-custom"
 role_fin = "arn:aws:iam::641712484995:role/service-role/SageMaker-ExecutionRole-20250730T224347"
 
 # 2. S3 path to your model.tar.gz (created by trainer.save_model + tar + upload)
-#model_uri = "s3://finalyser/finance-to-sql/v2/stage0_model.tar.gz"
 model_fin = "s3://finalyzer-ai-ml-test/e2e/models.tar.gz"
 
 print('')
@@ -19,17 +17,17 @@ hf_model = HuggingFaceModel(
     model_data           = model_fin,
     role                 = role_fin,
     transformers_version = "4.26",
-    pytorch_version      = "1.13",
+    pytorch_version      = "1.13", #sagemaker doesn't allow any other version
     py_version           = "py39",
     entry_point          = "inference.py",
     source_dir           = "./src"  # where inference.py lives
 )
 print('Model created')
 
-endpoint_name = "finance-to-sql-e2e-v1-hfmodel"
+endpoint_name = "finance-to-sql-e2e-v6-hfmodel"
 predictor = hf_model.deploy(
     initial_instance_count=1,
-    instance_type="ml.g5.xlarge",
+    instance_type="ml.g4dn.xlarge",
     endpoint_name=endpoint_name
 )
 

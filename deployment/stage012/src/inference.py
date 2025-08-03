@@ -22,7 +22,7 @@ logger = logging.getLogger("inference")
 logger.setLevel(logging.INFO)       
 
 # ─── CONFIG & CONSTANTS ─────────────────────────────────────────────────────
-SCHEMA            = "epm1-replica.finalyzer.info_100032"
+DEFAULT_SCHEMA            = "epm1-replica.finalyzer.info_100032"
 TABLE             = "fbi_entity_analysis_report"
 DEFAULT_ENTITY_ID = 6450
 DEFAULT_TAXONOMY  = 71
@@ -36,7 +36,6 @@ ssh_conf   = {
     "tunnel_host": "3.110.31.32",
     "tunnel_port": 22,
     "ssh_username": "ec2-user",
-    "ssh_pkey": "-----BEGIN RSA PRIVATE KEY-----\nMIIEpQIBAAKCAQEAue87byNbSPgjucopUb6GoGqWRwjhgeSXOQsCKvo/o4FlVK83\nVsJAGMms/r20lT0MK+u8B3CJ/QNshJEd4lkshDw/Ei4Eh9zpMHw37wecPiIO0b/w\nbtvfVALp1ww/sEjjGib7Wv1BK9dlwVuHWzVHClSkfu/a52UsVwqmSnXKTCY0+dn3\njeDYA3Yyuo8ngp7V7588DH7IP2M2gePzO7zjOfFzPWlHgmsxEckzUnvDIiODYiLl\nnT9Rul3LhwsMmbUEV9Qy6671u+NuKzQaxbKmK6Nhsp5W12xsVZWjjsLBP78GW/43\nN1JgDtqrPAKVym+x6ioB65iiSHW9nWNw8yzyzwIDAQABAoIBAEEw0cPbv6vL5KrF\naMtSY91mwZ3STU6/mQ3VAEOVTi7DtYWFkX+Hx/Vo8JC4btJMfzH/CwQIvzjItIme\nX732yhbrEKoNHGWOXOw1AV97aZqXUl7UTzZvPNQ12Use7k2eoJGQzVxPo0P91519\nu+2MtoW2u54N9tBetrcl8rv0pKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7\nC385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385ZrjUrpKMhwHoRA+wrrD/7C385Zj\r\n-----END RSA PRIVATE KEY-----\n"
 }
 
 pg_conf    = {
@@ -125,23 +124,22 @@ def compute_formula(formula_str, variables):
     return eval_node(tree.body, variables)
 
 # ─── DATABASE FETCH HELPER ───────────────────────────────────────────────────
-def fetch_metric(gid, period_id, nature, scenario):
+def fetch_metric(gid, period_id, key_path, input_data):
     sql = f"""
-SELECT value FROM "{SCHEMA}"."{TABLE}"
-WHERE entity_id={DEFAULT_ENTITY_ID}
-  AND grouping_id={gid}
-  AND period_id='{period_id}'
-  AND nature_of_report='{nature}'
-  AND scenario='{scenario}'
-  AND taxonomy_id={DEFAULT_TAXONOMY}
-  AND reporting_currency='{DEFAULT_CURRENCY}';
-"""
-    #tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
-    #tf.write(ssh_conf['ssh_pkey']); tf.flush()
+            SELECT value FROM "{input_data["schema"]}"."{TABLE}"
+            WHERE entity_id={input_data["entity_id"]}
+            AND grouping_id={gid}
+            AND period_id='{period_id}'
+            AND nature_of_report='{input_data["nature"]}'
+            AND scenario='{input_data["scenario"]}'
+            AND taxonomy_id={input_data["taxonomy"]}
+            AND reporting_currency='{input_data["currency"]}';
+            """
+
     with SSHTunnelForwarder(
         (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
         ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey='./private_key.pem',
+        ssh_pkey=key_path,
         remote_bind_address=(pg_conf['host'], pg_conf['port'])
     ) as tunnel:
         conn = (
@@ -387,26 +385,8 @@ def construct_period_id(nl: str, resources) -> str:
 def model_fn(model_dir, *args):
     """
     1st function called by SageMaker to load the model and any other artifacts.
-    Chages to be made:
-    - This fn loads only once upon creation of the endpoint. So, 
-    we need to change the location of group_df
+    - Should load/return all resources that are required during the predict phase
     """
-    # Reading grouping ID table
-    #tf = tempfile.NamedTemporaryFile(mode='w+', delete=False)
-    #tf.write(ssh_conf['ssh_pkey']); tf.flush()
-    with SSHTunnelForwarder(
-        (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
-        ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey='./private_key.pem',
-        remote_bind_address=(pg_conf['host'], pg_conf['port'])
-    ) as tunnel:
-        conn_str = (
-            f"postgresql://{pg_conf['user']}:{pg_conf['password']}@"
-            f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
-        )
-        engine   = sqlalchemy.create_engine(conn_str)
-        group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{SCHEMA}".fbi_grouping_master', con=engine)
-        print('Connection done - group_df available')
 
     # Creating Label Term Infra
     gloss_df = pd.read_csv(os.path.join(model_dir, "data", "glossary.csv"))
@@ -416,27 +396,30 @@ def model_fn(model_dir, *args):
             txt += f". Formula: {r['Formulas, if any']}"
         return txt
     term_texts  = gloss_df.apply(build_full_text, axis=1).tolist()
-    label_texts = group_df['grouping_label'].tolist()
 
     # Loading other trained models
+    print('Loading Models')
     bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5')
     s1_dir     = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
     s2_dir     = os.path.join(model_dir, "models", "stage2_cross_encoder_finetuned_MiniLM_new_top5")
     device     = 'cuda' if torch.cuda.is_available() else 'cpu' 
     reranker_1 = CrossEncoder(s1_dir, num_labels=1, device=device)
     reranker_2 = CrossEncoder(s2_dir, num_labels=1, device=device)
+    print('Stage 1,2 models loaded')
 
     # Loading Stage 0
+    print('Loading Stage 0 tokeniser')
     tokenizer = AutoTokenizer.from_pretrained(os.path.join(model_dir, "models", "stage0_model"), use_fast=False)
+    print('Loading stage 0 model')
     model     = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
     device = 0 if torch.cuda.is_available() else -1
     # instantiate HF pipeline for text-classification
     stage0_clf = pipeline("text-classification", model=model, tokenizer=tokenizer, device=device)
+    print('Pipeline loaded - stage 0')
 
     with torch.no_grad():
         term_embs  = bi_encoder.encode(term_texts,  convert_to_tensor=True, normalize_embeddings=True)
-        label_embs = bi_encoder.encode(label_texts, convert_to_tensor=True, normalize_embeddings=True)
         view_embs  = bi_encoder.encode(
             [
                 "FTP can be defined as ‘for the period’ meaning only that month or quarter",
@@ -455,19 +438,16 @@ def model_fn(model_dir, *args):
 
     return {
         "gloss_df":       gloss_df,
-        "group_df":       group_df,
         "bi_encoder":     bi_encoder,
         "reranker_1":     reranker_1,
         "reranker_2":     reranker_2,
         "period_encoder": bi_encoder,
         "term_texts":     term_texts,
         "term_embs":      term_embs,
-        "label_texts":    label_texts,
-        "label_embs":     label_embs,
         "view_embs":      view_embs,
-        "stage0_clf": stage0_clf
+        "stage0_clf": stage0_clf,
+        "model_dir": model_dir
     }
-
 
 def input_fn(request_body, content_type="application/json"):
     """
@@ -481,22 +461,69 @@ def input_fn(request_body, content_type="application/json"):
 def predict_fn(input_data, resources):
     """
     Call the handler in inference_log module with the deserialized input.
-    input_data should be a dict: {"query": ..., "context": {...}}
+    input_data = {
+        "query": "find the total income for july 2024", 
+        "taxonomy": "", 
+        "currency": "", 
+        "schema": "" , 
+        "entity_id":"", 
+        "scenario": "",
+        "nature": ""
+        }
     """
-
-    # Load relevant resources
-    stage0_clf = resources["stage0_clf"]
-    group_df = resources["group_df"]
 
     # Parse Inputs
     query    = input_data["query"]
-    ctx      = input_data["context"]
-    scenario = 'Actual'
-    if scenario == "Actual":
-        scenario = 'Forecast' if 'forecast' in query.lower() or 'budget' in query.lower() else \
-                    ('Cashflow' if 'cash' in query.lower() else 'Actual')
-    nature   = 'Standalone'
 
+    ###### 0) Load relevant resources #####
+    stage0_clf = resources["stage0_clf"]
+    key_path = os.path.join(resources["model_dir"],'data', 'private_key.pem')
+
+    # Load context variables
+    if input_data["taxonomy"] == '':
+        input_data["taxonomy"] = DEFAULT_TAXONOMY
+    
+    if input_data["currency"] == '':
+        input_data["currency"] = DEFAULT_CURRENCY
+
+    if input_data["schema"] == '':
+        input_data["schema"] = DEFAULT_SCHEMA
+    
+    if input_data["entity_id"] == '':
+        input_data["entity_id"] = DEFAULT_ENTITY_ID
+    
+    # Will pick from query if mentioned, else fallback to 'Actual'
+    if input_data["scenario"] == '':
+        input_data["scenario"] = 'Forecast' if 'forecast' in query.lower() or 'budget' in query.lower() else \
+                    ('Cashflow' if 'cash' in query.lower() else 'Actual')
+    
+    if input_data["nature"] == '':
+        input_data["nature"] = 'Standalone'
+    
+    # Load Schema Level (Client Level) resources
+    with SSHTunnelForwarder(
+        (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
+        ssh_username=ssh_conf['ssh_username'],
+        ssh_pkey=os.path.join(resources["model_dir"],'data', 'private_key.pem'),
+        remote_bind_address=(pg_conf['host'], pg_conf['port'])
+    ) as tunnel:
+        conn_str = (
+            f"postgresql://{pg_conf['user']}:{pg_conf['password']}@"
+            f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
+        )
+        engine   = sqlalchemy.create_engine(conn_str)
+        group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
+        print('Connection done - group_df available')
+
+    with torch.no_grad():
+        label_texts = group_df['grouping_label'].tolist()
+        label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True)
+
+    resources["group_df"] = group_df
+    resources["label_texts"] = label_texts
+    resources["label_embs"] = label_embs
+
+    ######## PIPELINE BEGINS #########
     # 1) Classification + logging
     cls_out   = stage0_clf(query, top_k=None)[0]
     label_idx = int(cls_out["label"].split("_")[-1])
@@ -525,7 +552,6 @@ def predict_fn(input_data, resources):
     logger.info(json.dumps({
         "event":   "request_received: label 0 complete",
         "query":   query,
-        "context": ctx
     }))
 
     # Stage 1
@@ -553,9 +579,8 @@ def predict_fn(input_data, resources):
             "period_id": period_id
         }))
 
-        #nature = extract_nature(query)
         sql    = None
-        vals   = {t: fetch_metric(label2id[t], period_id, nature, scenario) for t in atoms}
+        vals   = {t: fetch_metric(label2id[t], period_id, key_path, input_data) for t in atoms}
         result = compute_formula(formula_dict[gloss], vals)
 
     else:
@@ -576,21 +601,21 @@ def predict_fn(input_data, resources):
 
         #nature = extract_nature(query)
         sql    = f"""
-SELECT value FROM "{SCHEMA}"."{TABLE}"
-WHERE entity_id={DEFAULT_ENTITY_ID}
-  AND grouping_id={gid}
-  AND period_id='{period_id}'
-  AND nature_of_report='{nature}'
-  AND scenario='{scenario}'
-  AND taxonomy_id={DEFAULT_TAXONOMY}
-  AND reporting_currency='{DEFAULT_CURRENCY}';
-""".strip()
+                    SELECT value FROM "{input_data["schema"]}"."{TABLE}"
+                    WHERE entity_id={input_data["entity_id"]}
+                    AND grouping_id={gid}
+                    AND period_id='{period_id}'
+                    AND nature_of_report='{input_data["nature"]}'
+                    AND scenario='{input_data["scenario"]}'
+                    AND taxonomy_id={input_data["taxonomy"]}
+                    AND reporting_currency='{input_data["currency"]}';
+                    """.strip()
         logger.info(json.dumps({
             "event": "sql_generated",
             "sql":   sql
         }))
 
-        result = fetch_metric(gid, period_id, nature, scenario)
+        result = fetch_metric(gid, period_id, key_path, input_data)
 
     logger.info(json.dumps({
         "event": "result_ready",
@@ -607,8 +632,8 @@ WHERE entity_id={DEFAULT_ENTITY_ID}
         response.update({
             "grouping_label": label,
             "grouping_id":    gid,
-            "nature":         nature,
-            "scenario":       scenario
+            "nature":         input_data["nature"],
+            "scenario":       input_data["scenario"]
         })
 
     return response

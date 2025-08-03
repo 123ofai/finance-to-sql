@@ -8,9 +8,18 @@ runtime = boto3.client("sagemaker-runtime", region_name="ap-south-1")  # update 
 
 # 2. Helper to call your endpoint
 def classify_query(query_text: str):
-    payload = json.dumps({"query": query_text})
+    input_data = {
+        "query": query_text, 
+        "taxonomy": "", 
+        "currency": "", 
+        "schema": "" , 
+        "entity_id":"", 
+        "scenario": "",
+        "nature": ""
+    }
+    payload = json.dumps(input_data)
     resp = runtime.invoke_endpoint(
-        EndpointName="finance-to-sql-e2e-v1-hfmodel",
+        EndpointName="finance-to-sql-e2e-v4-hfmodel",
         ContentType="application/json",
         Body=payload
     )
