@@ -2,9 +2,7 @@ import boto3
 import json
 
 # 1. Initialize SageMaker runtime client
-#runtime = boto3.client("sagemaker-runtime", region_name="us-east-1")  # update region
 runtime = boto3.client("sagemaker-runtime", region_name="ap-south-1")  # update region
-
 
 # 2. Helper to call your endpoint
 def classify_query(query_text: str):

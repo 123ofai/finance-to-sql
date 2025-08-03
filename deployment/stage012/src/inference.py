@@ -633,7 +633,6 @@ def predict_fn(input_data, resources):
             "period_id": period_id
         }))
 
-        #nature = extract_nature(query)
         sql    = f"""
                     SELECT value FROM "{input_data["schema"]}"."{TABLE}"
                     WHERE entity_id={input_data["entity_id"]}
