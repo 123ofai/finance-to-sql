@@ -16,15 +16,16 @@ print('-------------')
 hf_model = HuggingFaceModel(
     model_data           = model_fin,
     role                 = role_fin,
-    transformers_version = "4.26",
-    pytorch_version      = "1.13", #sagemaker doesn't allow any other version
-    py_version           = "py39",
+    image_uri = "763104351884.dkr.ecr.ap-south-1.amazonaws.com/huggingface-pytorch-inference:2.6.0-transformers4.49.0-gpu-py312-cu124-ubuntu22.04",
+    #transformers_version = "4.26",
+    #pytorch_version      = "1.13", #sagemaker doesn't allow any other version
+    py_version           = "py312",
     entry_point          = "inference.py",
     source_dir           = "./src"  # where inference.py lives
 )
 print('Model created')
 
-endpoint_name = "finance-to-sql-e2e-v6-hfmodel"
+endpoint_name = "finance-to-sql-e2e-v10-hfmodel-image"
 predictor = hf_model.deploy(
     initial_instance_count=1,
     instance_type="ml.g4dn.xlarge",

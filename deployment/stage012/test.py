@@ -19,7 +19,7 @@ def classify_query(query_text: str):
     }
     payload = json.dumps(input_data)
     resp = runtime.invoke_endpoint(
-        EndpointName="finance-to-sql-e2e-v4-hfmodel",
+        EndpointName="finance-to-sql-e2e-v10-hfmodel-image",
         ContentType="application/json",
         Body=payload
     )

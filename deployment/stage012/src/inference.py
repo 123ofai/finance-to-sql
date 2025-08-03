@@ -169,10 +169,10 @@ def extract_glossary(nl: str, resources) -> str:
 
 def lookup_grouping(gloss: str, resources):
     bi_encoder = resources['bi_encoder']
-    label_embs = resources['label_embs']
-    label_texts = resources['label_texts']
+    label_embs = resources[resources['cur_schema']+'_label_embs']
+    label_texts = resources[resources['cur_schema']+'_label_texts']
     reranker_2 = resources['reranker_2']
-    group_df = resources['group_df']
+    group_df = resources[resources['cur_schema']+'_group_df']
     q_emb    = bi_encoder.encode(gloss, convert_to_tensor=True, normalize_embeddings=True)
     sims     = util.cos_sim(q_emb, label_embs)[0]
     idx      = torch.topk(sims, k=TOP_K).indices.tolist()
@@ -399,10 +399,11 @@ def model_fn(model_dir, *args):
 
     # Loading other trained models
     print('Loading Models')
-    bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5')
+    device     = 'cuda' if torch.cuda.is_available() else 'cpu' 
+    print('CUDA Availability: ', torch.cuda.is_available())
+    bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5', device=device)
     s1_dir     = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
     s2_dir     = os.path.join(model_dir, "models", "stage2_cross_encoder_finetuned_MiniLM_new_top5")
-    device     = 'cuda' if torch.cuda.is_available() else 'cpu' 
     reranker_1 = CrossEncoder(s1_dir, num_labels=1, device=device)
     reranker_2 = CrossEncoder(s2_dir, num_labels=1, device=device)
     print('Stage 1,2 models loaded')
@@ -435,6 +436,26 @@ def model_fn(model_dir, *args):
             convert_to_tensor=True,
             normalize_embeddings=True
         )
+    
+    # Loading default schema's embeddings - for caching
+    with SSHTunnelForwarder(
+        (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
+        ssh_username=ssh_conf['ssh_username'],
+        ssh_pkey=os.path.join(model_dir,'data', 'private_key.pem'),
+        remote_bind_address=(pg_conf['host'], pg_conf['port'])
+    ) as tunnel:  
+            conn_str = (
+                f"postgresql://{pg_conf['user']}:{pg_conf['password']}@"
+                f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
+            )
+            engine   = sqlalchemy.create_engine(conn_str)
+            group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{DEFAULT_SCHEMA}".fbi_grouping_master', con=engine)
+            print('Connection done - default group_df loaded')
+
+    with torch.no_grad():
+        label_texts = group_df['grouping_label'].tolist()
+        label_embs = bi_encoder.encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
+    print('Grouping Embeddings Loaded')
 
     return {
         "gloss_df":       gloss_df,
@@ -446,7 +467,10 @@ def model_fn(model_dir, *args):
         "term_embs":      term_embs,
         "view_embs":      view_embs,
         "stage0_clf": stage0_clf,
-        "model_dir": model_dir
+        "model_dir": model_dir,
+        DEFAULT_SCHEMA + '_group_df': group_df,
+        DEFAULT_SCHEMA + "_label_texts": label_texts,
+        DEFAULT_SCHEMA + "_label_embs": label_embs
     }
 
 def input_fn(request_body, content_type="application/json"):
@@ -462,7 +486,7 @@ def predict_fn(input_data, resources):
     """
     Call the handler in inference_log module with the deserialized input.
     input_data = {
-        "query": "find the total income for july 2024", 
+        "query": "Find the Net assets for july 2024",
         "taxonomy": "", 
         "currency": "", 
         "schema": "" , 
@@ -485,9 +509,6 @@ def predict_fn(input_data, resources):
     
     if input_data["currency"] == '':
         input_data["currency"] = DEFAULT_CURRENCY
-
-    if input_data["schema"] == '':
-        input_data["schema"] = DEFAULT_SCHEMA
     
     if input_data["entity_id"] == '':
         input_data["entity_id"] = DEFAULT_ENTITY_ID
@@ -500,31 +521,44 @@ def predict_fn(input_data, resources):
     if input_data["nature"] == '':
         input_data["nature"] = 'Standalone'
     
-    # Load Schema Level (Client Level) resources
-    with SSHTunnelForwarder(
-        (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
-        ssh_username=ssh_conf['ssh_username'],
-        ssh_pkey=os.path.join(resources["model_dir"],'data', 'private_key.pem'),
-        remote_bind_address=(pg_conf['host'], pg_conf['port'])
-    ) as tunnel:
-        conn_str = (
-            f"postgresql://{pg_conf['user']}:{pg_conf['password']}@"
-            f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
-        )
-        engine   = sqlalchemy.create_engine(conn_str)
-        group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
-        print('Connection done - group_df available')
+    if input_data["schema"] == '':
+        input_data["schema"] = DEFAULT_SCHEMA
+    elif input_data["schema"] + '_group_df' not in resources.keys():
+        # Caching group_df, embedding results for future use
+        # Load Schema Level (Client Level) resources
+        with SSHTunnelForwarder(
+            (ssh_conf['tunnel_host'], ssh_conf['tunnel_port']),
+            ssh_username=ssh_conf['ssh_username'],
+            ssh_pkey=os.path.join(resources["model_dir"],'data', 'private_key.pem'),
+            remote_bind_address=(pg_conf['host'], pg_conf['port'])
+        ) as tunnel:
+            conn_str = (
+                f"postgresql://{pg_conf['user']}:{pg_conf['password']}@"
+                f"127.0.0.1:{tunnel.local_bind_port}/{pg_conf['dbname']}"
+            )
+            engine   = sqlalchemy.create_engine(conn_str)
+            group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
+            print('Connection done - given group_df available')
+        
+        if group_df.empty:
+            return "Invalid Schema"
 
-    with torch.no_grad():
-        label_texts = group_df['grouping_label'].tolist()
-        label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True)
+        with torch.no_grad():
+            label_texts = group_df['grouping_label'].tolist()
+            label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
 
-    resources["group_df"] = group_df
-    resources["label_texts"] = label_texts
-    resources["label_embs"] = label_embs
+        resources[input_data["schema"] + "_group_df"] = group_df
+        resources[input_data["schema"] + "_label_texts"] = label_texts
+        resources[input_data["schema"] + "_label_embs"] = label_embs
+
+    group_df = resources[input_data["schema"]+'_group_df']
+    label_texts = resources[input_data["schema"]+'_label_texts']
+    label_embs = resources[input_data["schema"]+'_label_embs']
+    resources['cur_schema'] = input_data['schema']
 
     ######## PIPELINE BEGINS #########
     # 1) Classification + logging
+    print('Stage 0 - Classification starting')
     cls_out   = stage0_clf(query, top_k=None)[0]
     label_idx = int(cls_out["label"].split("_")[-1])
     logger.info(json.dumps({
