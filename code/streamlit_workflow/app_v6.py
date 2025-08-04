@@ -222,59 +222,104 @@ def lookup_grouping(gloss: str) -> (str,int):
     gid      = int(group_df.loc[group_df['grouping_label']==lbl,'grouping_id'].iat[0])
     return lbl, gid
 
-# ─── PERIOD HANDLING ──────────────────────────────────────────────────────
-FTP_KEYWORDS = [r"\bfor the period\b", r"\bfor that period\b", r"\bjust that month\b",
-                r"\bonly that quarter\b", r"\bas at\b", r"\bas at\s+(?:month|quarter)\b"]
-PRD_KEYWORDS = [r"\byear to date\b", r"\bytd\b", r"\bso far\b", r"\bcumulative\b",
-                r"\bthrough\b", r"\bup to\b", r"\bas of\b", r"\bto date\b",
-                r"\bsince the start of the year\b", r"\bmonth to date\b", r"\bmtd\b",
-                r"\bquarter to date\b", r"\bqtd\b", r"\bthrough end of\b",
-                r"\bthrough end-of-period\b"]
+# ─── PERIOD RESOLUTION FUNCTIONS ─────────────────────────────────────────
+# Keywords for view detection
+FTP_KEYWORDS = [
+    r"\bfor the period\b", r"\bfor that period\b", r"\bjust that month\b",
+    r"\bonly that quarter\b", r"\bas at\b", r"\bas at\s+(?:month|quarter)\b",
+]
+PRD_KEYWORDS = [
+    r"\byear to date\b", r"\bytd\b", r"\bso far\b", r"\bcumulative\b",
+    r"\bthrough\b", r"\bup to\b", r"\bas of\b", r"\bto date\b",
+    r"\bsince the start of the year\b", r"\bmonth to date\b", r"\bmtd\b",
+    r"\bquarter to date\b", r"\bqtd\b", r"\bthrough end of\b",
+    r"\bthrough end-of-period\b"
+]
 
-months        = [m.lower() for m in calendar.month_name if m]
-month_regex   = rf"(?:{'|'.join(months)})"
+# Build regex for any period unit
+months = [m.lower() for m in calendar.month_name if m]
+month_regex   = r"(?:{})".format("|".join(months))
 quarter_regex = r"(?:q[1-4]|quarter\s*[1-4])"
 half_regex    = r"(?:h1|h2|first half|second half|half-year\s*[12])"
 fy_regex      = r"(?:fy\s*\d{2,4}|financial year)"
-period_unit_rx= rf"{month_regex}|{quarter_regex}|{half_regex}|{fy_regex}"
+period_unit_regex = rf"{month_regex}|{quarter_regex}|{half_regex}|{fy_regex}"
 
-FTP_PROTOS = [
+# “Verbose” prototypes for semantic fallback
+FTP_PROTOS_VERB = [
     "FTP can be defined as ‘for the period’ meaning only that month or quarter",
     "FTP can be defined as ‘for that period only’ meaning the single slice of time",
     "FTP can be defined as ‘at month end’ meaning only that month",
-    "FTP can be defined as ‘year ended’ meaning the year-end snapshot",
+    "FTP can be defined as ‘year ended’ meaning the year‐end snapshot",
 ]
-PRD_PROTOS = [
+PRD_PROTOS_VERB = [
     "PRD can be defined as ‘to date’ meaning cumulative up until now",
     "PRD can be defined as ‘year to date’ meaning aggregated so far this fiscal year",
     "PRD can be defined as ‘month to date’ meaning cumulative this month",
     "PRD can be defined as ‘quarter to date’ meaning cumulative this quarter",
     "PRD can be defined as ‘so far’ meaning sum of all periods up until date",
 ]
-VIEW_PROTOS = FTP_PROTOS + PRD_PROTOS
-view_embs   = period_encoder.encode(VIEW_PROTOS, convert_to_tensor=True, normalize_embeddings=True)
+VIEW_PROTOS = FTP_PROTOS_VERB + PRD_PROTOS_VERB
+
+# Precompute embeddings for view prototypes
+view_embs = period_encoder.encode(
+    VIEW_PROTOS, 
+    convert_to_tensor=True, 
+    normalize_embeddings=True
+)
 
 def detect_view(nl: str) -> str:
     low = nl.lower()
+
+    # 1) If any explicit PRD keyword, return PRD
     for pat in PRD_KEYWORDS:
         if re.search(pat, low):
             return "PRD"
-    if re.search(rf"\bfor\b.*\b{period_unit_rx}\b", low):
-        return "FTP"
-    q_emb      = period_encoder.encode(nl, convert_to_tensor=True, normalize_embeddings=True)
-    sims       = util.cos_sim(q_emb, view_embs)[0]
-    idx, sc    = int(sims.argmax()), sims.max().item()
-    if sc < 0.45:
-        return "FTP"
-    return "FTP" if VIEW_PROTOS[idx] in FTP_PROTOS else "PRD"
 
-ORDINAL_MAP  = {"first":1,"1st":1,"second":2,"2nd":2,"third":3,"3rd":3,"fourth":4,"4th":4}
-NUM_WORD_MAP = {"one":1,"two":2,"three":3,"four":4,"five":5,"six":6,"seven":7,
-                "eight":8,"nine":9,"ten":10,"eleven":11,"twelve":12}
+    # 2) If "for <period-unit>" pattern without PRD keyword, return FTP
+    if re.search(rf"\bfor\b.*\b{period_unit_regex}\b", low):
+        return "FTP"
+
+    # 3) Semantic fallback
+    q_emb = period_encoder.encode(nl, convert_to_tensor=True, normalize_embeddings=True)
+    sims  = util.cos_sim(q_emb, view_embs)[0]
+    best_idx   = int(sims.argmax().item())
+    best_score = sims[best_idx].item()
+
+    # 4) If best semantic score is low, default to FTP
+    if best_score < 0.45:
+        return "FTP"
+
+    best_proto = VIEW_PROTOS[best_idx]
+    return "FTP" if best_proto in FTP_PROTOS_VERB else "PRD"
+
+
+# Candidates for fuzzy matching
+month_names_full = [m.lower() for m in calendar.month_name if m]
+month_names_abbr = [m[:3].lower() for m in calendar.month_name if m]
+all_month_candidates = list(set(month_names_full + month_names_abbr))
+
+quarter_candidates = [
+    "q1","q2","q3","q4",
+    "quarter 1","quarter 2","quarter 3","quarter 4",
+    "1st quarter","2nd quarter","3rd quarter","4th quarter"
+]
+half_candidates = ["h1","h2","first half","second half","half-year 1","half-year 2"]
+
+ORDINAL_MAP = {
+    "first":1,"1st":1,
+    "second":2,"2nd":2,
+    "third":3,"3rd":3,
+    "fourth":4,"4th":4
+}
+NUM_WORD_MAP = {
+    "one":1,"two":2,"three":3,"four":4,
+    "five":5,"six":6,"seven":7,"eight":8,
+    "nine":9,"ten":10,"eleven":11,"twelve":12
+}
 
 def extract_year(nl: str) -> int:
     m = re.search(r"\b(19|20)\d{2}\b", nl)
-    return int(m.group()) if m else datetime.now().year
+    return int(m.group(0)) if m else datetime.now().year
 
 def extract_nature(nl: str) -> str:
     low = nl.lower()
@@ -283,37 +328,128 @@ def extract_nature(nl: str) -> str:
     if re.search(r"\bfinancial year\b|\bfy\b", low): return "FY"
     return "M"
 
-def extract_sequence(nl: str, nature: str) -> int:
-    low = nl.lower(); now = datetime.now()
-    if nature == "M":
-        for i,m in enumerate(calendar.month_name[1:],start=1):
-            if m.lower() in low or m.lower()[:3] in low: return i
-        for w,v in NUM_WORD_MAP.items():
-            if re.search(rf"\b{w}\b", low): return v
-        if "last month" in low: return max(1, now.month-1)
+def fuzzy_match_token(token: str, candidates: list, threshold=75):
+    match, score, _ = process.extractOne(token, candidates, scorer=fuzz.ratio)
+    return match if score >= threshold else None
+
+def extract_sequence(nl: str, nat: str) -> int:
+    low = nl.lower()
+
+    # 1) EXPLICIT MONTH
+    if nat == "M":
+        # (a) Exact full month
+        for i, name in enumerate(calendar.month_name[1:], start=1):
+            if name.lower() in low:
+                return i
+        # (b) Exact 3-letters
+        for i, name in enumerate(calendar.month_name[1:], start=1):
+            if name.lower()[:3] in low:
+                return i
+        # (c) Numeric word “one” → 1 … “twelve” → 12
+        for word, val in NUM_WORD_MAP.items():
+            if re.search(rf"\b{word}\b", low) and 1 <= val <= 12:
+                return val
+        # (d) Regex “month <number>”
+        m = re.search(r"month\s+(\d{1,2})", low)
+        if m:
+            num = int(m.group(1))
+            if 1 <= num <= 12:
+                return num
+        # (e) Fuzzy-match tokens
+        tokens = re.findall(r"\w+", low)
+        for t in tokens:
+            fm = fuzzy_match_token(t, all_month_candidates)
+            if fm:
+                if fm in month_names_full:
+                    return month_names_full.index(fm) + 1
+                if fm in month_names_abbr:
+                    return month_names_abbr.index(fm) + 1
+        # (f) “last month” or “last N months”
+        if re.search(r"last\s+month", low):
+            seq = datetime.now().month - 1
+            return seq if seq >= 1 else 1
         m = re.search(r"last\s+(\d+)\s+months?", low)
-        if m: return max(1, now.month-int(m.group(1)))
-    if nature == "FQ":
+        if m:
+            n = int(m.group(1))
+            seq = datetime.now().month - n
+            return seq if seq >= 1 else 1
+
+    # 2) EXPLICIT QUARTER
+    if nat == "FQ":
         m = re.search(r"q([1-4])", low)
-        if m: return int(m.group(1))
-        if "last quarter" in low:
-            cur_q = (now.month-1)//3 + 1; return max(1, cur_q-1)
-        for w,v in ORDINAL_MAP.items():
-            if f"{w} quarter" in low: return v
-    if nature == "FH":
-        return 1 if now.month <= 6 else 2
+        if m:
+            return int(m.group(1))
+        for w, val in ORDINAL_MAP.items():
+            if f"{w} quarter" in low:
+                return val
+        tokens = re.findall(r"\w+", low)
+        for t in tokens:
+            fm = fuzzy_match_token(t, quarter_candidates)
+            if fm:
+                num = re.search(r"([1-4])", fm)
+                if num:
+                    return int(num.group(1))
+        if re.search(r"last\s+quarter", low):
+            anchor = (datetime.now().month - 1)//3 + 1
+            seq = anchor - 1
+            return seq if seq >= 1 else 1
+        m = re.search(r"last\s+(\d+)\s+quarters?", low)
+        if m:
+            n = int(m.group(1))
+            anchor = (datetime.now().month - 1)//3 + 1
+            seq = anchor - n
+            return seq if seq >= 1 else 1
+
+    # 3) EXPLICIT HALF
+    if nat == "FH":
+        if re.search(r"h1\b|first\s+half", low):
+            return 1
+        if re.search(r"h2\b|second\s+half", low):
+            return 2
+        for w, val in ORDINAL_MAP.items():
+            if f"{w} half" in low:
+                return val
+        tokens = re.findall(r"\w+", low)
+        for t in tokens:
+            fm = fuzzy_match_token(t, half_candidates)
+            if fm:
+                if "1" in fm or "first" in fm:
+                    return 1
+                if "2" in fm or "second" in fm:
+                    return 2
+        # Fallback half by current month
+        month = datetime.now().month
+        return 1 if month <= 6 else 2
+
+    # 4) FISCAL YEAR → always 1
+    if nat == "FY":
+        return 1
+
+    # 5) FALLBACK: current period
+    month = datetime.now().month
+    if nat == "M":
+        return month
+    if nat == "FQ":
+        return (month - 1)//3 + 1
+    if nat == "FH":
+        return 1 if month <= 6 else 2
     return 1
 
 def construct_period_id(nl: str) -> str:
-    return f"{extract_year(nl)}_{extract_nature(nl)}_{detect_view(nl)}_{extract_sequence(nl, extract_nature(nl))}"
+    year   = extract_year(nl)
+    period_nature = extract_nature(nl)
+    view   = detect_view(nl)
+    seq    = extract_sequence(nl, nature)
+    return f"{year}_{period_nature}_{view}_{seq}"
 
-def fetch_metric(gid, period_id, nature, scenario):
+
+def fetch_metric(gid, period_id, scenario):
     sql = f"""
 SELECT value FROM "{SCHEMA}"."{TABLE}"
 WHERE entity_id={DEFAULT_ENTITY_ID}
   AND grouping_id={gid}
   AND period_id='{period_id}'
-  AND nature_of_report='{nature}'
+  AND nature_of_report='Standalone'
   AND scenario='{scenario}'
   AND taxonomy_id={DEFAULT_TAXONOMY}
   AND reporting_currency='{DEFAULT_CURRENCY}';
@@ -352,28 +488,46 @@ else:
         # Stage 1
         gloss = extract_glossary(nl_query)
 
-        # Stage 1.5
+        # Stage 1.5 (formula case)
         if gloss in formula_dict:
             atoms     = resolve_terms(gloss)
             period_id = construct_period_id(nl_query)
-            nature    = extract_nature(nl_query)
-            scenario  = ('Forecast' if 'forecast' in nl_query.lower()
-                         else 'Cashflow' if 'cash' in nl_query.lower()
-                         else 'Actual')
-            vals      = {t: fetch_metric(label2id[t], period_id, nature, scenario) for t in atoms}
-            result    = compute_formula(formula_dict[gloss], vals)
+            nature    = "Standalone"
+            scenario  = (
+                'Forecast' if 'forecast' in nl_query.lower()
+                else 'Cashflow' if 'cash' in nl_query.lower()
+                else 'Actual'
+            )
+
+            # build vals by looking up each atom’s grouping_id
+            vals = {}
+            for atom in atoms:
+                # find the best grouping label & its ID for this atom
+                grouping_label, gid = lookup_grouping(atom)
+                # fetch the metric value
+                vals[atom] = fetch_metric(
+                    gid,
+                    period_id,
+                    nature,
+                    scenario
+                )
+
+            result = compute_formula(formula_dict[gloss], vals)
+
             st.subheader(f"📐 Computed **{gloss}**")
             st.write(f"Formula: `{formula_dict[gloss]}`")
             st.write(f"Value: **{result}**")
             st.stop()
 
-        # Stage 2
+        # Stage 2 (non-formula lookup)
         label, gid = lookup_grouping(gloss)
         period_id  = construct_period_id(nl_query)
-        nature     = extract_nature(nl_query)
-        scenario   = ('Forecast' if 'forecast' in nl_query.lower()
-                      else 'Cashflow' if 'cash' in nl_query.lower()
-                      else 'Actual')
+        nature     = "Standalone"
+        scenario   = (
+            'Forecast' if 'forecast' in nl_query.lower()
+            else 'Cashflow' if 'cash' in nl_query.lower()
+            else 'Actual'
+        )
 
         sql = f"""
 SELECT value FROM "{SCHEMA}"."{TABLE}"
