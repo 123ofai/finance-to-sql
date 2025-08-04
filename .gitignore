@@ -1,4 +1,4 @@
-bsq-devops-3rdparty-vendor.pem
+*.pem
 models/
 *.ts
 *.bin
