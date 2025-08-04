@@ -148,9 +148,19 @@ def fetch_metric(gid, period_id, key_path, input_data):
         )
         engine = sqlalchemy.create_engine(conn)
         df     = pd.read_sql(sql, engine)
+
     if df.empty:
         return -1.0
-    return float(df['value'].iat[0])
+    
+    ret_value = df['value'].iat[0].strip().replace(',', '')
+    if ret_value == '-':
+        return 0.0
+    else:
+        return float(ret_value)
+    
+    ## fix the commas issue, and empty text
+    ## 10963614701.8, ' -   ', ' 41,27,25,64,728.87 '
+    ## PAT ftp 2025, revenue in jan 2024, total assets in july 2024, equity in jul 2024
 
 def extract_glossary(nl: str, resources) -> str:
     bi_encoder = resources['bi_encoder']
@@ -486,7 +496,7 @@ def predict_fn(input_data, resources):
     """
     Call the handler in inference_log module with the deserialized input.
     input_data = {
-        "query": "Find the Net assets for july 2024",
+        "query": "Find the PAT for the period jan 2025",
         "taxonomy": "", 
         "currency": "", 
         "schema": "" , 
@@ -595,6 +605,10 @@ def predict_fn(input_data, resources):
         "glossary_term": gloss
     }))
 
+    print('Query: ', query)
+    print('Stage 0 - Classification', label_idx)
+    print('Glossary: ', gloss)
+
     # Logic to check if ratio or not
     label2id = dict(zip(group_df['grouping_label'].str.strip(), group_df['grouping_id']))
     if gloss in formula_dict:
@@ -608,6 +622,7 @@ def predict_fn(input_data, resources):
         }))
 
         period_id = construct_period_id(query, resources)
+        print('Period: ', period_id)
         logger.info(json.dumps({
             "event":     "period_constructed",
             "period_id": period_id
@@ -620,6 +635,7 @@ def predict_fn(input_data, resources):
     else:
         # Stage 2
         label, gid = lookup_grouping(gloss, resources)
+        print('Grouping label & ID: ', label, gid)
         logger.info(json.dumps({
             "event":          "stage2_complete",
             "glossary_term":  gloss,
@@ -628,6 +644,7 @@ def predict_fn(input_data, resources):
         }))
 
         period_id = construct_period_id(query, resources)
+        print('Period: ', period_id)
         logger.info(json.dumps({
             "event":     "period_constructed",
             "period_id": period_id
@@ -647,6 +664,7 @@ def predict_fn(input_data, resources):
             "event": "sql_generated",
             "sql":   sql
         }))
+        print('SQL: ', sql)
 
         result = fetch_metric(gid, period_id, key_path, input_data)
 
