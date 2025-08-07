@@ -4,4 +4,5 @@ models/
 *.bin
 *.pth
 deployment/aws_worflow/models/
+deployment/stage012/models/
 *.tar.gz

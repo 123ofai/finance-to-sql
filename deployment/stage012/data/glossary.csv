@@ -1,65 +1,67 @@
 S.No,Type,Glossary,Description,Nature,"Formulas, if any"
 1,BS,Assets,"Resources owned by a company (e.g., cash, inventory, equipment).",Absolute,
 2,BS,Liabilities,"Obligations or debts the company must pay (e.g., loans, payables).",Absolute,
-3,BS,Equity,Owners’ interest in the company (Assets - Liabilities).,Absolute,
+3,BS,Equity,Owners’ interest in the company (Assets - Liabilities).,Absolute,Assets – Liabilities
 4,BS,Current Assets,Assets expected to be used or converted to cash within a year.,Absolute,
 5,BS,Non-Current Assets,"Long-term assets (e.g., property, plant, and equipment).",Absolute,
 6,BS,Current Liabilities,Obligations due within one year.,Absolute,
 7,BS,Non-Current Liabilities,"Long-term obligations (e.g., long-term loans).",Absolute,
 8,BS,Working Capital,Current Assets - Current Liabilities.,Absolute,
-9,BS,Net Worth,Another term for equity, the company’s value to shareholders.,Absolute
+9,BS,Net Worth,Another term for equity,Absolute,Current Assets - Current Liabilities
 10,IS,Revenue,Income from sales of goods or services.,Relative,
 11,IS,Cost of Goods Sold (COGS),Direct costs of producing goods sold.,Relative,
-12,IS,Gross Profit,Revenue - COGS.,Relative,
+12,IS,Gross Profit,Revenue - COGS.,Relative,Revenue – Cost of Goods Sold (COGS)
 13,IS,Operating Expenses,"Expenses incurred in the normal course of business (e.g., salaries, rent).",Relative,
-14,IS,Operating Profit (EBIT),Earnings before interest and tax.,Relative,
+14,IS,Operating Profit (EBIT),Profit before interest and tax.,Relative,
 15,IS,EBITDA,"Earnings before interest, tax, depreciation, and amortization.",Relative,
 16,IS,Net Profit (PAT),"Profit after all expenses, interest, and tax.",Relative,
 17,IS,Earnings Per Share (EPS),Net profit divided by the number of outstanding shares.,Relative,
 18,CF,Operating Cash Flow,Cash generated from core business operations.,Relative,
 19,CF,Investing Cash Flow,"Cash used in or generated from investments (e.g., asset purchase, sale).",Relative,
 20,CF,Financing Cash Flow,"Cash from borrowing, issuing shares, or dividend payments.",Relative,
-21,CF,Free Cash Flow,Cash available after capital expenditures (Operating Cash Flow - CapEx).,Relative,
+21,CF,Free Cash Flow,Cash available after capital expenditures (Operating Cash Flow - CapEx).,Relative,Operating Cash Flow – CapEx
 22,IS,Depreciation,Reduction in asset value over time due to use or obsolescence.,Relative,
 23,IS,Amortization,Similar to depreciation but applied to intangible assets.,Relative,
 24,BS,Accruals,Revenues or expenses recognized before cash is exchanged.,Relative,
 25,BS,Provisions,Funds set aside for future liabilities or losses.,Relative,
 26,BS,Contingent Liabilities,Potential obligations depending on future events.,Relative,
-27,Ratio,Net Profit Margin,Bottom-line profitability.,Absolute,Net Profit / Revenue
-28,Ratio,Return on Assets (ROA),How efficiently assets generate profit.,Absolute,Net Profit / Total Assets
-29,Ratio,Return on Equity (ROE),Profitability for owners.,Absolute,Net Profit / Shareholder's Equity
-30,Ratio,Return on Capital Employed (ROCE),Efficiency of capital usage.,Absolute,EBIT / Capital Employed
-31,Ratio,EBITDA Margin,Operating performance before non-cash items.,Absolute,EBITDA / Revenue
-32,Ratio,Current Ratio,Measures short-term liquidity.,Absolute,Current Assets / Current Liabilities
-33,Ratio,Quick Ratio (Acid Test),More stringent liquidity test.,Absolute,(Current Assets - Inventory) / Current Liabilities
-34,Ratio,Cash Ratio,Most conservative liquidity measure.,Absolute,Cash & Equivalents / Current Liabilities
-35,Ratio,Inventory Turnover,How quickly inventory is sold.,Absolute,COGS / Average Inventory
-36,Ratio,Receivables Turnover,How efficiently receivables are collected.,Absolute,Revenue / Accounts Receivable
-37,Ratio,Payables Turnover,How quickly payables are paid.,Absolute,COGS / Accounts Payable
-38,Ratio,Asset Turnover,How efficiently assets are used.,Absolute,Revenue / Total Assets
-39,Ratio,Working Capital Turnover,Efficiency in using working capital.,Absolute,Revenue / Working Capital
-40,Ratio,Debt-to-Equity Ratio,Financial leverage.,Absolute,Total Debt / Shareholder’s Equity
-41,Ratio,Debt Ratio,Proportion of assets financed by debt.,Absolute,Total Debt / Total Assets
-42,Ratio,Interest Coverage Ratio,Ability to pay interest on debt.,Absolute,EBIT / Interest Expense
-43,Ratio,Equity Ratio,Portion of assets funded by equity.,Absolute,Equity / Total Assets
-44,Ratio,Capital Gearing Ratio,Proportion of debt in capital structure.,Absolute,(Debt / (Debt + Equity))
-45,Ratio,Earnings Per Share (EPS),Profit attributable per share.,Absolute,Net Income / No. of Shares
-46,Ratio,Price-to-Earnings (P/E) Ratio,Valuation relative to earnings.,Absolute,Market Price / EPS
-47,Ratio,Price-to-Book (P/B) Ratio,Market value vs. net asset value.,Absolute,Market Price / Book Value per Share
-48,Ratio,Dividend Yield,Cash return from dividends.,Absolute,Dividend per Share / Market Price
-49,Ratio,Dividend Payout Ratio,% of earnings distributed as dividends.,Absolute,Dividend / Net Profit
-50,Ratio,Enterprise Value (EV),Total company value.,Absolute,Market Cap + Debt - Cash
-51,Ratio,EV/EBITDA,Company valuation relative to EBITDA,Absolute,Enterprise Value / EBITDA
-52,BS,"Property, Plant and Equipment (PPE)","Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",Absolute,
-53,BS,Intangible Assets,"Identifiable non-monetary assets without physical substance, such as software, patents, etc.,",Absolute,
-54,BS,Investment Property,Property held to earn rentals or for capital appreciation,Absolute,
-55,BS,Financial Assets,"Includes investments, trade receivables, and cash equivalents",Absolute,
-56,BS,Inventories,Assets held for sale in the ordinary course of business or for use in the production process,Absolute,
-57,BS,Deferred Tax Assets,Future tax benefits from deductible temporary differences,Absolute,
-58,BS,Borrowings,"Loans from banks and financial institutions, classified as current or non",Absolute,
-59,BS,Trade Payables,Amounts due to suppliers of goods or services.,Absolute,
-60,BS,Provisions,Liabilities of uncertain timing or amount (AS 29 / Ind AS 37).,Absolute,
-61,BS,Deferred Tax Liabilities,Tax obligations deferred to future periods (AS 22 / Ind AS 12).,Absolute,
-62,BS,Other Financial Liabilities,"Includes derivative liabilities, lease obligations, etc.",Absolute,
-63,BS,Share Capital,Funds raised by issuing shares.,Absolute,
-64,BS,Other Equity / Reserves & Surplus,"Includes retained earnings, general reserves, and other comprehensive income items.",Absolute
+27,Ratio,Gross Profit Margin,Measures profitability after direct costs.,Absolute,Gross Profit / Revenue
+28,Ratio,Operating Profit Margin,Profit from operations as a % of revenue.,Absolute,Operating Profit (EBIT) / Revenue
+29,Ratio,Net Profit Margin,Bottom-line profitability.,Absolute,Net Profit (PAT) / Revenue
+30,Ratio,Return on Assets (ROA),How efficiently assets generate profit.,Absolute,Net Profit (PAT) / Total Assets
+31,Ratio,Return on Equity (ROE),Profitability for owners.,Absolute,Net Profit (PAT) / Shareholder's Equity
+32,Ratio,Return on Capital Employed (ROCE),Efficiency of capital usage.,Absolute,Operating Profit (EBIT) / Capital Employed
+33,Ratio,EBITDA Margin,Operating performance before non-cash items.,Absolute,EBITDA / Revenue
+34,Ratio,Current Ratio,Measures short-term liquidity.,Absolute,Current Assets / Current Liabilities
+35,Ratio,Quick Ratio (Acid Test),More stringent liquidity test.,Absolute,(Current Assets - Inventory) / Current Liabilities
+36,Ratio,Cash Ratio,Most conservative liquidity measure.,Absolute,Cash & Equivalents / Current Liabilities
+37,Ratio,Inventory Turnover,How quickly inventory is sold.,Absolute,Cost of Goods Sold (COGS) / Average Inventory
+38,Ratio,Receivables Turnover,How efficiently receivables are collected.,Absolute,Revenue / Accounts Receivable
+39,Ratio,Payables Turnover,How quickly payables are paid.,Absolute,Cost of Goods Sold (COGS) / Accounts Payable
+40,Ratio,Asset Turnover,How efficiently assets are used.,Absolute,Revenue / Total Assets
+41,Ratio,Working Capital Turnover,Efficiency in using working capital.,Absolute,Revenue / Working Capital
+42,Ratio,Debt-to-Equity Ratio,Financial leverage.,Absolute,Total Debt / Shareholder’s Equity
+43,Ratio,Debt Ratio,Proportion of assets financed by debt.,Absolute,Total Debt / Total Assets
+44,Ratio,Interest Coverage Ratio,Ability to pay interest on debt.,Absolute,Operating Profit (EBIT) / Interest Expense
+45,Ratio,Equity Ratio,Portion of assets funded by equity.,Absolute,Equity / Total Assets
+46,Ratio,Capital Gearing Ratio,Proportion of debt in capital structure.,Absolute,(Debt / (Debt + Equity))
+47,Ratio,Earnings Per Share (EPS),Profit attributable per share.,Absolute,Net Income / No. of Shares
+48,Ratio,Price-to-Earnings (P/E) Ratio,Valuation relative to earnings.,Absolute,Market Price / Earnings Per Share (EPS)
+49,Ratio,Price-to-Book (P/B) Ratio,Market value vs. net asset value.,Absolute,Market Price / Book Value per Share
+50,Ratio,Dividend Yield,Cash return from dividends.,Absolute,Dividend per Share / Market Price
+51,Ratio,Dividend Payout Ratio,% of earnings distributed as dividends.,Absolute,Dividend / Net Profit (PAT)
+52,Ratio,Enterprise Value (EV),Total company value.,Absolute,Market Cap + Debt - Cash
+53,Ratio,EV/EBITDA,Company valuation relative to EBITDA,Absolute,Enterprise Value (EV) / EBITDA
+54,BS,"Property, Plant and Equipment (PPE)","Tangible items held for use in the production or supply of goods or services, or for administrative purposes (Ind AS 16).",Absolute,
+55,BS,Intangible Assets,"Identifiable non-monetary assets without physical substance, such as software, patents, etc.,",Absolute,
+56,BS,Investment Property,Property held to earn rentals or for capital appreciation,Absolute,
+57,BS,Financial Assets,"Includes investments, trade receivables, and cash equivalents",Absolute,
+58,BS,Inventories,Assets held for sale in the ordinary course of business or for use in the production process,Absolute,
+59,BS,Deferred Tax Assets,Future tax benefits from deductible temporary differences,Absolute,
+60,BS,Borrowings,"Loans from banks and financial institutions, classified as current or non",Absolute,
+61,BS,Trade Payables,Amounts due to suppliers of goods or services.,Absolute,
+62,BS,Provisions,Liabilities of uncertain timing or amount (AS 29 / Ind AS 37).,Absolute,
+63,BS,Deferred Tax Liabilities,Tax obligations deferred to future periods (AS 22 / Ind AS 12).,Absolute,
+64,BS,Other Financial Liabilities,"Includes derivative liabilities, lease obligations, etc.",Absolute,
+65,BS,Share Capital,Funds raised by issuing shares.,Absolute,
+66,BS,Other Equity / Reserves & Surplus,"Includes retained earnings, general reserves, and other comprehensive income items.",Absolute,
