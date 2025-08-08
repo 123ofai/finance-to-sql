@@ -17,7 +17,7 @@ def classify_query(query_text: str):
     }
     payload = json.dumps(input_data)
     resp = runtime.invoke_endpoint(
-        EndpointName="finance-to-sql-e2e-v10-hfmodel-image",
+        EndpointName="v11-live-test",
         ContentType="application/json",
         Body=payload
     )
@@ -27,10 +27,16 @@ def classify_query(query_text: str):
 # 3. Example usage
 if __name__ == "__main__":
     sample_queries = [
-        "What is the PAT?", #label 0: Query
-        "Compare ROE 2023 vs 2024", #label 1: Comparison
-        "Is there any anomaly in EBITDA?", #label 2: Anomaly
-        "Forecast Revenue for next year" #label 3: Others
+        "What is the net worth for July 2024",
+        "What are the assets in june 2023",
+        "What is the current ratio until June 2023",
+        "Give me the net profit margin till July 2024"
+        #"What is the PAT?", #label 0: Query
+        #"Compare ROE 2023 vs 2024", #label 1: Comparison
+        #"Is there any anomaly in EBITDA?", #label 2: Anomaly
+        #"Forecast Revenue for next year" #label 3: Others
     ]
     for q in sample_queries:
         print(q, "→", classify_query(q))
+        print('-----')
+        print()

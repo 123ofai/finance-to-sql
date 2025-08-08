@@ -9,7 +9,7 @@ session = Session()
 role_fin = "arn:aws:iam::641712484995:role/service-role/SageMaker-ExecutionRole-20250730T224347"
 
 # 2. S3 path to your model.tar.gz (created by trainer.save_model + tar + upload)
-model_fin = "s3://finalyzer-ai-ml-test/e2e/models.tar.gz"
+model_fin = "s3://finalyzer-ai-ml-test/e2e/models_v2.tar.gz"
 
 print('')
 print('-------------')
@@ -25,7 +25,7 @@ hf_model = HuggingFaceModel(
 )
 print('Model created')
 
-endpoint_name = "finance-to-sql-e2e-v10-hfmodel-image"
+endpoint_name = "finance-to-sql-e2e-v11"
 predictor = hf_model.deploy(
     initial_instance_count=1,
     instance_type="ml.g4dn.xlarge",

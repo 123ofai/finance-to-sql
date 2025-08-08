@@ -619,8 +619,7 @@ def model_fn(model_dir, *args):
 
     # Loading other trained models
     print('Loading Models')
-    #device = 'cuda' if torch.cuda.is_available() else 'cpu' 
-    device = 'cpu'
+    device = 'cuda' if torch.cuda.is_available() else 'cpu' 
     print('CUDA Availability: ', torch.cuda.is_available())
     bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5', device=device)
     s1_dir = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
@@ -635,8 +634,7 @@ def model_fn(model_dir, *args):
     print('Loading stage 0 model')
     model = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
-    #device = 0 if torch.cuda.is_available() else -1
-    device = 0
+    device = 0 if torch.cuda.is_available() else -1
     # instantiate HF pipeline for text-classification
     stage0_clf = pipeline("text-classification", model=model, tokenizer=tokenizer, device=device)
     print('Pipeline loaded - stage 0')
