@@ -59,35 +59,35 @@ def setup_financial_formulas():
     
     # Core formula dictionary - tested and verified
     formula_dict = {
-        "Net Worth": "Current Assets - Current Liabilities",
-        "Gross Profit": "Revenue - Cost of Goods Sold (COGS)",
-        "Free Cash Flow": "Operating Cash Flow - CapEx",
-        "Gross Profit Margin": "Gross Profit / Revenue",
-        "Operating Profit Margin": "Operating Profit (EBIT) / Revenue",
-        "Return on Assets (ROA)": "Net Profit (PAT) / Total Assets",
-        "Return on Equity (ROE)": "Net Profit (PAT) / Shareholder's Equity",
-        "Return on Capital Employed (ROCE)": "Operating Profit (EBIT) / Capital Employed",
-        "EBITDA Margin": "EBITDA / Revenue",
-        "Current Ratio": "Current Assets / Current Liabilities",
+        "Working Capital": "Current Assets - Current Liabilities",
+        "Gross Profit": "Revenue - Cost of Goods Sold (COGS)", #Do not have Grouping Id for COGS
+        "Free Cash Flow": "Operating Cash Flow - CapEx", # Capex is not clear
+        "Gross Profit Margin": "Gross Profit / Revenue", # Do not have Grouping Id for Gros Profit
+        "Operating Profit Margin": "Operating Profit (EBIT) / Revenue", 
+        "Return on Assets (ROA)": "Net Profit (PAT) / Assets",
+        #"Return on Equity (ROE)": "Net Profit (PAT) / Shareholder's Equity", # Shareholder's Equity terms is not defined
+        "Return on Capital Employed (ROCE)": "Operating Profit (EBIT) / Capital Employed", #Capital Employed not defined 
+        "EBITDA Margin": "EBITDA / Revenue", #Do not have Grouping Id for EBITDA
+        "Current Ratio": "Current Assets / Current Liabilities", 
         "Quick Ratio (Acid Test)": "(Current Assets - Inventory) / Current Liabilities",
-        "Cash Ratio": "Cash & Equivalents / Current Liabilities",
-        "Inventory Turnover": "Cost of Goods Sold (COGS) / Average Inventory",
-        "Receivables Turnover": "Revenue / Accounts Receivable",
-        "Payables Turnover": "Cost of Goods Sold (COGS) / Accounts Payable",
-        "Asset Turnover": "Revenue / Total Assets",
+        "Cash Ratio": "Cash & Equivalents / Current Liabilities", #Cash & Equivalents not defined
+        "Inventory Turnover": "Cost of Goods Sold (COGS) / Average Inventory", # Do not have Grouping Id for COGS
+        "Receivables Turnover": "Revenue / Accounts Receivable", #Accounts Receivable not defined
+        "Payables Turnover": "Cost of Goods Sold (COGS) / Accounts Payable", #Accounts Payable not defined
+        "Asset Turnover": "Revenue / Assets",
         "Working Capital Turnover": "Revenue / Working Capital",
-        "Debt-to-Equity Ratio": "Total Debt / Shareholder's Equity",
-        "Debt Ratio": "Total Debt / Total Assets",
-        "Interest Coverage Ratio": "Operating Profit (EBIT) / Interest Expense",
-        "Equity Ratio": "Equity / Total Assets",
-        "Capital Gearing Ratio": "Debt / (Debt + Equity)",
-        "Earnings Per Share (EPS)": "Net Income / No. of Shares",
-        "Price-to-Earnings (P/E) Ratio": "Market Price / Earnings Per Share (EPS)",
-        "Price-to-Book (P/B) Ratio": "Market Price / Book Value per Share",
-        "Dividend Yield": "Dividend per Share / Market Price",
-        "Dividend Payout Ratio": "Dividend / Net Profit",
-        "Enterprise Value (EV)": "Market Cap + Debt - Cash",
-        "EV/EBITDA": "Enterprise Value (EV) / EBITDA"
+        "Debt-to-Equity Ratio": "Total Debt / Shareholder's Equity", #Shareholder's Equity & Total Debt not defined
+        "Debt Ratio": "Total Debt / Assets", #Total Debt not defined
+        "Interest Coverage Ratio": "Operating Profit (EBIT) / Interest Expense", #Interest Expense not defined
+        "Equity Ratio": "Equity / Assets",
+        "Capital Gearing Ratio": "Debt / (Debt + Equity)", #Debt is not defined
+        "Earnings Per Share (EPS)": "Net Income / No. of Shares", #Net Income & No. of Shares not defined
+        "Price-to-Earnings (P/E) Ratio": "Market Price / Earnings Per Share (EPS)", #Market Price not defined
+        "Price-to-Book (P/B) Ratio": "Market Price / Book Value per Share", # Book Value per Share not defined
+        "Dividend Yield": "Dividend per Share / Market Price", #dividend per share not defined
+        "Dividend Payout Ratio": "Dividend / Net Profit", #Dividend not defined
+        "Enterprise Value (EV)": "Market Cap + Debt - Cash", # Market Cap & Cash not defined
+        "EV/EBITDA": "Enterprise Value (EV) / EBITDA" # Do not have Grouping Id for EBITDA & Enterprise Value is not defined
     }
 
     # Optimized operators (same as before)

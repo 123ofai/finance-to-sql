@@ -43,50 +43,277 @@ RATIO_TERMS = {
     "gross profit margin", "operating profit margin", "net profit margin"
 }
 
-# Text templates for different scenarios
+# Currency formatting configurations
+CURRENCY_CONFIGS = {
+    # Indian Subcontinent
+    'INR': {
+        'symbol': '₹',
+        'position': 'prefix',
+        'grouping': 'indian',  # Uses Lakh/Crore system
+        'units': [
+            (10000000, 'Cr'),    # 1 crore
+            (100000, 'L'),       # 1 lakh  
+            (1000, 'K')          # 1 thousand
+        ]
+    },
+    
+    # Major Western Currencies
+    'USD': {
+        'symbol': '$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),   # 1 billion
+            (1000000, 'M'),      # 1 million
+            (1000, 'K')          # 1 thousand
+        ]
+    },
+    'EUR': {
+        'symbol': '€',
+        'position': 'prefix', 
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'GBP': {
+        'symbol': '£',
+        'position': 'prefix',
+        'grouping': 'western', 
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    
+    # Asia-Pacific Currencies
+    'AUD': {
+        'symbol': 'A$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'NZD': {
+        'symbol': 'NZ$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'JPY': {
+        'symbol': '¥',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (100000000, 'Oku'),   # 100 million (Japanese style)
+            (10000, 'Man'),       # 10 thousand (Japanese style)
+            (1000, 'K')
+        ]
+    },
+    'SGD': {
+        'symbol': 'S$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'HKD': {
+        'symbol': 'HK$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    
+    # North American Currencies
+    'CAD': {
+        'symbol': 'C$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'MXN': {
+        'symbol': 'MX$',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    
+    # Middle East & Africa
+    'AED': {
+        'symbol': 'AED',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'SAR': {
+        'symbol': 'SAR',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'ZAR': {
+        'symbol': 'R',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    
+    # Southeast Asia
+    'MYR': {
+        'symbol': 'RM',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'THB': {
+        'symbol': '฿',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'IDR': {
+        'symbol': 'Rp',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000000, 'T'),  # Trillion for IDR (high denomination)
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'PHP': {
+        'symbol': '₱',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    
+    # Other Major Currencies
+    'CHF': {
+        'symbol': 'CHF',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    },
+    'CNY': {
+        'symbol': '¥',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (100000000, 'Yi'),    # 100 million (Chinese style)
+            (10000, 'Wan'),       # 10 thousand (Chinese style)
+            (1000, 'K')
+        ]
+    },
+    'KRW': {
+        'symbol': '₩',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (100000000, 'Eok'),   # 100 million (Korean style)
+            (10000, 'Man'),       # 10 thousand (Korean style)
+            (1000, 'K')
+        ]
+    },
+    
+    # Default fallback (same as USD)
+    'DEFAULT': {
+        'symbol': '',
+        'position': 'prefix',
+        'grouping': 'western',
+        'units': [
+            (1000000000, 'B'),
+            (1000000, 'M'),
+            (1000, 'K')
+        ]
+    }
+}
+
+# Expanded and more natural text templates (WITHOUT FORMULA TEMPLATES)
 TEXT_TEMPLATES = {
     "success_ratio": [
         "The {glossary_term} is {value}%",
-        "For {period_text}, the {glossary_term} you asked for is {value}%",
-        "It is {value}%",
-        "{glossary_term} stands at {value}%",
-        "The calculated {glossary_term} comes to {value}%",
-        "Based on the data, {glossary_term} is {value}%"
+        "For {period_text}, the {glossary_term} stands at {value}%", 
+        "{glossary_term} is {value}%",
+        "The {glossary_term} comes to {value}% for {period_text}",
+        "Using the predefined formula for {glossary_term}, it  is {value}%"
     ],
     "success_currency": [
-        "The {glossary_term} is {value} {currency}",
-        "For {period_text}, the {glossary_term} you asked for is {value} {currency}",
-        "It is {value} {currency}",
-        "{glossary_term} stands at {value} {currency}",
-        "The amount for {glossary_term} is {value} {currency}",
-        "Based on the data, {glossary_term} totals {value} {currency}"
-    ],
-    "formula_success_ratio": [
-        "The calculated {glossary_term} is {value}%",
-        "Based on the formula ({formula}), {glossary_term} is {value}%",
-        "Using the pre-defined formula, {glossary_term} comes to {value}%",
-        "The computed {glossary_term} for {period_text} is {value}%",
-        "Formula result: {glossary_term} = {value}%"
-    ],
-    "formula_success_currency": [
-        "The calculated {glossary_term} is {value} {currency}",
-        "Based on the formula ({formula}), {glossary_term} is {value} {currency}",
-        "Using financial calculation, {glossary_term} comes to {value} {currency}",
-        "The computed {glossary_term} for {period_text} is {value} {currency}",
-        "Formula result: {glossary_term} = {value} {currency}"
+        "The {glossary_term} is {formatted_value}",
+        "For {period_text}, the {glossary_term} amounts to {formatted_value}",
+        "{glossary_term} stands at {formatted_value}",
+        "The {glossary_term} for {period_text} is {formatted_value}",
+        "Based on the financial records, {glossary_term} totals {formatted_value}",
+        "{glossary_term} comes to {formatted_value} for {period_text}"
     ],
     "missing_data": [
         "Sorry, data for {glossary_term} is not available for {period_text}",
-        "Unfortunately, I couldn't find {glossary_term} data for the requested period",
-        "The information for {glossary_term} is not available in our records for {period_text}",
-        "Data not found for {glossary_term} during {period_text}",
-        "I don't have {glossary_term} information for {period_text}"
+        "Unfortunately, I couldn't find {glossary_term} information for {period_text}",
+        "The {glossary_term} data is not available in our records for {period_text}",
+        "{glossary_term} information is not found for {period_text}",
+        "I don't have {glossary_term} data for {period_text}",
+        "No data available for {glossary_term} during {period_text}"
     ],
     "calculation_error": [
-        "Unable to calculate {glossary_term} due to missing data",
-        "Calculation for {glossary_term} couldn't be completed - some required data is missing",
+        "Unable to calculate {glossary_term} due to insufficient data",
+        "The {glossary_term} calculation couldn't be completed - some required data is missing",
         "Sorry, I can't compute {glossary_term} as some financial data is unavailable",
-        "The formula for {glossary_term} cannot be calculated with current data"
+        "Cannot calculate {glossary_term} - missing required financial information",
+        "The formula for {glossary_term} cannot be processed with the available data"
     ]
 }
 
@@ -94,6 +321,116 @@ def is_ratio_term(glossary_term):
     """Check if a glossary term is a ratio/percentage that shouldn't have currency"""
     term_lower = glossary_term.lower()
     return any(ratio_keyword in term_lower for ratio_keyword in RATIO_TERMS)
+
+def format_number_with_commas(value, grouping='western'):
+    """Format number with appropriate comma grouping based on currency system"""
+    if value is None:
+        return "N/A"
+    
+    # Convert to float and handle negative values
+    num = float(value)
+    is_negative = num < 0
+    abs_num = abs(num)
+    
+    if grouping == 'indian':
+        # Indian numbering system: 1,00,00,000 (1 crore)
+        if abs_num >= 10000000:  # >= 1 crore
+            crores = abs_num / 10000000
+            if crores.is_integer():
+                formatted = f"{int(crores):,}".replace(',', ',')
+            else:
+                formatted = f"{crores:,.2f}".replace(',', ',')
+            # Convert western comma format to Indian format
+            formatted = convert_to_indian_format(formatted)
+        elif abs_num >= 100000:  # >= 1 lakh
+            lakhs = abs_num / 100000
+            if lakhs.is_integer():
+                formatted = f"{int(lakhs):,}".replace(',', ',')
+            else:
+                formatted = f"{lakhs:,.2f}".replace(',', ',')
+            formatted = convert_to_indian_format(formatted)
+        else:
+            formatted = f"{abs_num:,.2f}" if abs_num != int(abs_num) else f"{int(abs_num):,}"
+            formatted = convert_to_indian_format(formatted)
+    else:
+        # Western numbering system: 10,000,000
+        formatted = f"{abs_num:,.2f}" if abs_num != int(abs_num) else f"{int(abs_num):,}"
+    
+    return f"-{formatted}" if is_negative else formatted
+
+def convert_to_indian_format(western_format):
+    """Convert western comma format to Indian format"""
+    # Remove existing commas and decimal part
+    parts = western_format.split('.')
+    number_part = parts[0].replace(',', '')
+    decimal_part = f".{parts[1]}" if len(parts) > 1 else ""
+    
+    # Apply Indian comma grouping
+    if len(number_part) > 3:
+        # First group of 3 from right
+        result = number_part[-3:]
+        remaining = number_part[:-3]
+        
+        # Then groups of 2
+        while len(remaining) > 2:
+            result = remaining[-2:] + "," + result
+            remaining = remaining[:-2]
+        
+        if remaining:
+            result = remaining + "," + result
+    else:
+        result = number_part
+    
+    return result + decimal_part
+
+def format_value_smart(value, is_ratio=False, currency="INR"):
+    """Enhanced smart value formatting with extended currency support"""
+    if value is None:
+        return "N/A"
+    
+    # For ratio/percentage terms, just format as percentage
+    if is_ratio:
+        return f"{float(value):.2f}"
+    
+    # Get currency config with fallback to DEFAULT, then USD
+    config = CURRENCY_CONFIGS.get(currency, CURRENCY_CONFIGS.get('DEFAULT', CURRENCY_CONFIGS['USD']))
+    abs_value = abs(float(value))
+    
+    # Check if we should use abbreviated format
+    for threshold, unit in config['units']:
+        if abs_value >= threshold:
+            abbreviated_value = value / threshold
+            if abbreviated_value == int(abbreviated_value):
+                number_str = f"{int(abbreviated_value)}"
+            else:
+                number_str = f"{abbreviated_value:.2f}"
+            
+            # Add commas based on grouping system
+            if config['grouping'] == 'indian' and threshold >= 100000:  # For L and Cr
+                number_str = format_number_with_commas(abbreviated_value, 'indian')
+            else:
+                number_str = format_number_with_commas(abbreviated_value, 'western')
+            
+            # Convert abbreviations to full words for common units
+            unit_full = unit
+            if unit == 'B':
+                unit_full = 'Billion'
+            elif unit == 'M':
+                unit_full = 'Million'
+            elif unit == 'K':
+                unit_full = 'Thousand'
+            elif unit == 'T':
+                unit_full = 'Trillion'
+            # Keep regional units as they are (Cr, L, Yi, Wan, Man, Eok, Oku)
+            
+            # Return with currency code prefix
+            return f"{currency} {number_str} {unit_full}"
+    
+    # For smaller values, show full amount
+    formatted_num = format_number_with_commas(value, config['grouping'])
+    
+    # Always prefix with currency code for clarity
+    return f"{currency} {formatted_num}"
 
 def format_period_text(period_id):
     """Convert period_id to human readable text"""
@@ -103,16 +440,6 @@ def format_period_text(period_id):
         nature = parts[1]
         view = parts[2]
         sequence = int(parts[3])
-        
-        # Map nature to readable format
-        nature_map = {
-            'M': 'month',
-            'FQ': 'quarter', 
-            'FH': 'half',
-            'FY': 'year'
-        }
-        
-        period_type = nature_map.get(nature, 'period')
         
         if nature == 'M':
             month_name = calendar.month_name[sequence]
@@ -142,30 +469,13 @@ def format_period_text(period_id):
     except (IndexError, ValueError):
         return f"the period {period_id}"
 
-def format_value(value):
-    """Format numeric value for display"""
-    if value is None:
-        return "N/A"
-    
-    # Handle very large numbers
-    abs_value = abs(float(value))
-    if abs_value >= 10000000:  # 1 crore
-        return f"{value/10000000:.2f} Cr"
-    elif abs_value >= 100000:  # 1 lakh
-        return f"{value/100000:.2f} L"
-    elif abs_value >= 1000:  # thousands
-        return f"{value/1000:.2f} K"
-    else:
-        return f"{value:.2f}"
-
 def generate_text_prediction(response_data, input_currency="INR"):
-    """Generate natural language text prediction based on response data"""
+    """Generate improved natural language text prediction based on response data"""
     
     glossary_term = response_data.get('glossary_term', '')
     value = response_data.get('value')
     status = response_data.get('status', 'unknown')
     period_id = response_data.get('period_id', '')
-    formula = response_data.get('formula', '')
     
     # Format period for readable text
     period_text = format_period_text(period_id)
@@ -173,12 +483,9 @@ def generate_text_prediction(response_data, input_currency="INR"):
     # Determine if it's a ratio term
     is_ratio = is_ratio_term(glossary_term)
     
-    # Choose template category based on status and type
+    # Choose template category based on status and type (NO FORMULA LOGIC)
     if status == 'success':
-        if formula:  # Formula calculation
-            template_key = 'formula_success_ratio' if is_ratio else 'formula_success_currency'
-        else:  # Direct lookup
-            template_key = 'success_ratio' if is_ratio else 'success_currency'
+        template_key = 'success_ratio' if is_ratio else 'success_currency'
     elif status == 'missing_data':
         template_key = 'missing_data'
     elif status == 'calculation_error':
@@ -190,28 +497,31 @@ def generate_text_prediction(response_data, input_currency="INR"):
     templates = TEXT_TEMPLATES.get(template_key, TEXT_TEMPLATES['missing_data'])
     selected_template = random.choice(templates)
     
-    # Format the template
+    # Format the template arguments
     format_args = {
         'glossary_term': glossary_term,
         'period_text': period_text,
         'currency': input_currency
     }
     
-    # Add value and formula if available
+    # Add value formatting based on type
     if value is not None:
-        format_args['value'] = format_value(value)
-    
-    if formula:
-        # Simplify formula for display
-        format_args['formula'] = formula[:50] + "..." if len(formula) > 50 else formula
+        if is_ratio:
+            # For ratios, just add the percentage value
+            format_args['value'] = format_value_smart(value, is_ratio=True, currency=input_currency)
+        else:
+            # For currency values, add formatted value
+            format_args['formatted_value'] = format_value_smart(value, is_ratio=False, currency=input_currency)
     
     try:
         text_prediction = selected_template.format(**format_args)
     except KeyError as e:
         # Fallback text if formatting fails
         if value is not None:
-            currency_text = "" if is_ratio else f" {input_currency}"
-            text_prediction = f"The {glossary_term} is {format_value(value)}{currency_text}"
+            if is_ratio:
+                text_prediction = f"The {glossary_term} is {format_value_smart(value, is_ratio=True)}%"
+            else:
+                text_prediction = f"The {glossary_term} is {format_value_smart(value, is_ratio=False, currency=input_currency)}"
         else:
             text_prediction = f"Data for {glossary_term} is not available for the requested period"
     
@@ -245,36 +555,37 @@ def setup_financial_formulas():
     
     # Core formula dictionary - tested and verified
     formula_dict = {
-        "Net Worth": "Current Assets - Current Liabilities",
-        "Gross Profit": "Revenue - Cost of Goods Sold (COGS)",
-        "Free Cash Flow": "Operating Cash Flow - CapEx",
-        "Gross Profit Margin": "Gross Profit / Revenue",
-        "Operating Profit Margin": "Operating Profit (EBIT) / Revenue",
-        "Return on Assets (ROA)": "Net Profit (PAT) / Total Assets",
-        "Return on Equity (ROE)": "Net Profit (PAT) / Shareholder's Equity",
-        "Return on Capital Employed (ROCE)": "Operating Profit (EBIT) / Capital Employed",
-        "EBITDA Margin": "EBITDA / Revenue",
-        "Current Ratio": "Current Assets / Current Liabilities",
+        "Working Capital": "Current Assets - Current Liabilities",
+        "Gross Profit": "Revenue - Cost of Goods Sold (COGS)", #Do not have Grouping Id for COGS
+        "Free Cash Flow": "Operating Cash Flow - CapEx", # Capex is not clear
+        "Gross Profit Margin": "Gross Profit / Revenue", # Do not have Grouping Id for Gros Profit
+        "Operating Profit Margin": "Operating Profit (EBIT) / Revenue", 
+        "Return on Assets (ROA)": "Net Profit (PAT) / Assets",
+        #"Return on Equity (ROE)": "Net Profit (PAT) / Shareholder's Equity", # Shareholder's Equity terms is not defined
+        "Return on Capital Employed (ROCE)": "Operating Profit (EBIT) / Capital Employed", #Capital Employed not defined 
+        "EBITDA Margin": "EBITDA / Revenue", #Do not have Grouping Id for EBITDA
+        "Current Ratio": "Current Assets / Current Liabilities", 
         "Quick Ratio (Acid Test)": "(Current Assets - Inventory) / Current Liabilities",
-        "Cash Ratio": "Cash & Equivalents / Current Liabilities",
-        "Inventory Turnover": "Cost of Goods Sold (COGS) / Average Inventory",
-        "Receivables Turnover": "Revenue / Accounts Receivable",
-        "Payables Turnover": "Cost of Goods Sold (COGS) / Accounts Payable",
-        "Asset Turnover": "Revenue / Total Assets",
+        "Cash Ratio": "Cash & Equivalents / Current Liabilities", #Cash & Equivalents not defined
+        "Inventory Turnover": "Cost of Goods Sold (COGS) / Average Inventory", # Do not have Grouping Id for COGS
+        "Receivables Turnover": "Revenue / Accounts Receivable", #Accounts Receivable not defined
+        "Payables Turnover": "Cost of Goods Sold (COGS) / Accounts Payable", #Accounts Payable not defined
+        "Asset Turnover": "Revenue / Assets",
         "Working Capital Turnover": "Revenue / Working Capital",
-        "Debt-to-Equity Ratio": "Total Debt / Shareholder's Equity",
-        "Debt Ratio": "Total Debt / Total Assets",
-        "Interest Coverage Ratio": "Operating Profit (EBIT) / Interest Expense",
-        "Equity Ratio": "Equity / Total Assets",
-        "Capital Gearing Ratio": "Debt / (Debt + Equity)",
-        "Earnings Per Share (EPS)": "Net Income / No. of Shares",
-        "Price-to-Earnings (P/E) Ratio": "Market Price / Earnings Per Share (EPS)",
-        "Price-to-Book (P/B) Ratio": "Market Price / Book Value per Share",
-        "Dividend Yield": "Dividend per Share / Market Price",
-        "Dividend Payout Ratio": "Dividend / Net Profit",
-        "Enterprise Value (EV)": "Market Cap + Debt - Cash",
-        "EV/EBITDA": "Enterprise Value (EV) / EBITDA"
+        "Debt-to-Equity Ratio": "Total Debt / Shareholder's Equity", #Shareholder's Equity & Total Debt not defined
+        "Debt Ratio": "Total Debt / Assets", #Total Debt not defined
+        "Interest Coverage Ratio": "Operating Profit (EBIT) / Interest Expense", #Interest Expense not defined
+        "Equity Ratio": "Equity / Assets",
+        "Capital Gearing Ratio": "Debt / (Debt + Equity)", #Debt is not defined
+        "Earnings Per Share (EPS)": "Net Income / No. of Shares", #Net Income & No. of Shares not defined
+        "Price-to-Earnings (P/E) Ratio": "Market Price / Earnings Per Share (EPS)", #Market Price not defined
+        "Price-to-Book (P/B) Ratio": "Market Price / Book Value per Share", # Book Value per Share not defined
+        "Dividend Yield": "Dividend per Share / Market Price", #dividend per share not defined
+        "Dividend Payout Ratio": "Dividend / Net Profit", #Dividend not defined
+        "Enterprise Value (EV)": "Market Cap + Debt - Cash", # Market Cap & Cash not defined
+        "EV/EBITDA": "Enterprise Value (EV) / EBITDA" # Do not have Grouping Id for EBITDA & Enterprise Value is not defined
     }
+
 
     # Optimized operators (same as before)
     OPS = {
@@ -982,8 +1293,9 @@ def model_fn(model_dir, *args):
 
     # Loading other trained models
     print('Loading Models')
-    device = 'cuda' if torch.cuda.is_available() else 'cpu' 
-    print('CUDA Availability: ', torch.cuda.is_available())
+    #device = 'cuda' if torch.cuda.is_available() else 'cpu' 
+    device= 'cpu'
+    #print('CUDA Availability: ', torch.cuda.is_available())
     bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5', device=device)
     s1_dir = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
     #s2_dir = os.path.join(model_dir, "models", "stage2_cross_encoder_finetuned_MiniLM_new_top5")
@@ -997,7 +1309,8 @@ def model_fn(model_dir, *args):
     print('Loading stage 0 model')
     model = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
-    device = 0 if torch.cuda.is_available() else -1
+    #device = 0 if torch.cuda.is_available() else -1
+    device = -1
     # instantiate HF pipeline for text-classification
     stage0_clf = pipeline("text-classification", model=model, tokenizer=tokenizer, device=device)
     print('Pipeline loaded - stage 0')
@@ -1038,28 +1351,7 @@ def model_fn(model_dir, *args):
     with torch.no_grad():
         label_texts = group_df['grouping_label'].tolist()
         label_embs = bi_encoder.encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-    print('Grouping Embeddings Loaded - Schema 1')
-
-    ## Caching Schema 2
-    with get_db_connection(os.path.join(model_dir,'data', 'private_key.pem')) as engine:
-        schema = "finapp-nginx-demo.finalyzer.info_100842"
-        group_df2 = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{schema}".fbi_grouping_master', con=engine)
-        print('Connection done - 2nd group_df loaded')
-
-        # ✅ Clean the grouping_label column (important!)
-        group_df2 = group_df2.dropna(subset=['grouping_label'])
-        group_df2['grouping_label'] = (
-            group_df2['grouping_label']
-                .astype(str)
-                .str.strip()
-                .str.replace(r'\s+', ' ', regex=True)
-            )
-        group_df2 = group_df2[group_df2['grouping_label'] != '']  # remove empty strings
-
-    with torch.no_grad():
-        label_texts2 = group_df2['grouping_label'].tolist()
-        label_embs2 = bi_encoder.encode(label_texts2, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-
+    print('Grouping Embeddings Loaded')
 
     return {
         "gloss_df": gloss_df,
@@ -1077,10 +1369,7 @@ def model_fn(model_dir, *args):
         "compute_formula": formula_ops['compute_formula'],
         DEFAULT_SCHEMA + '_group_df': group_df,
         DEFAULT_SCHEMA + "_label_texts": label_texts,
-        DEFAULT_SCHEMA + "_label_embs": label_embs,
-        "finapp-nginx-demo.finalyzer.info_100842_group_df": group_df2,
-        "finapp-nginx-demo.finalyzer.info_100842_label_texts": label_texts2,
-        "finapp-nginx-demo.finalyzer.info_100842_label_embs": label_embs2
+        DEFAULT_SCHEMA + "_label_embs": label_embs
     }
 
 def input_fn(request_body, content_type="application/json"):
@@ -1117,6 +1406,44 @@ def predict_fn(input_data, resources):
     
     input_data["nature"] = input_data.get("nature") or 'Standalone'
     input_data["schema"] = input_data.get("schema") or DEFAULT_SCHEMA
+    
+    # Handle schema-specific resources
+    if input_data["schema"] != DEFAULT_SCHEMA and input_data["schema"] + '_group_df' not in resources:
+        # Caching group_df, embedding results for future use
+        with get_db_connection(key_path) as engine:
+            group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
+            print('Connection done - given group_df available')
+        
+        if group_df.empty:
+            # STANDARDIZED RESPONSE for invalid schema
+            return {
+                "success": False,
+                "status": "error",
+                "message": "Invalid Schema",
+                "data": None,
+                "error_code": "INVALID_SCHEMA",
+                "query": query,
+                "text": "Sorry, the specified schema is invalid or not accessible."
+            }
+
+        # Clean data
+        group_df = group_df.dropna(subset=['grouping_label'])
+        group_df['grouping_label'] = (
+            group_df['grouping_label']
+                .astype(str)
+                .str.strip()
+                .str.replace(r'\s+', ' ', regex=True)
+            )
+        group_df = group_df[group_df['grouping_label'] != '']
+
+        with torch.no_grad():
+            label_texts = group_df['grouping_label'].tolist()
+            label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
+
+        resources[input_data["schema"] + "_group_df"] = group_df
+        resources[input_data["schema"] + "_label_texts"] = label_texts
+        resources[input_data["schema"] + "_label_embs"] = label_embs
+
     resources['cur_schema'] = input_data['schema']
 
     ######## PIPELINE BEGINS #########

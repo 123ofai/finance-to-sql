@@ -6,8 +6,8 @@ S.No,Type,Glossary,Description,Nature,"Formulas, if any"
 5,BS,Non-Current Assets,"Long-term assets (e.g., property, plant, and equipment).",Absolute,
 6,BS,Current Liabilities,Obligations due within one year.,Absolute,
 7,BS,Non-Current Liabilities,"Long-term obligations (e.g., long-term loans).",Absolute,
-8,BS,Working Capital,Current Assets - Current Liabilities.,Absolute,
-9,BS,Net Worth,Another term for equity,Absolute,Current Assets - Current Liabilities
+8,BS,Working Capital,Current Assets - Current Liabilities.,Absolute,Current Assets - Current Liabilities
+9,BS,Net Worth,Another term for equity,Absolute,
 10,IS,Revenue,Income from sales of goods or services.,Relative,
 11,IS,Cost of Goods Sold (COGS),Direct costs of producing goods sold.,Relative,
 12,IS,Gross Profit,Revenue - COGS.,Relative,Revenue – Cost of Goods Sold (COGS)
