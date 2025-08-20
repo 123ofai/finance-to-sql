@@ -64,7 +64,7 @@ TEXT_TEMPLATES = {
     "formula_success_ratio": [
         "The calculated {glossary_term} is {value}%",
         "Based on the formula ({formula}), {glossary_term} is {value}%",
-        "Using financial calculation, {glossary_term} comes to {value}%",
+        "Using the pre-defined formula, {glossary_term} comes to {value}%",
         "The computed {glossary_term} for {period_text} is {value}%",
         "Formula result: {glossary_term} = {value}%"
     ],
@@ -982,9 +982,8 @@ def model_fn(model_dir, *args):
 
     # Loading other trained models
     print('Loading Models')
-    #device = 'cuda' if torch.cuda.is_available() else 'cpu' 
-    device= 'cpu'
-    #print('CUDA Availability: ', torch.cuda.is_available())
+    device = 'cuda' if torch.cuda.is_available() else 'cpu' 
+    print('CUDA Availability: ', torch.cuda.is_available())
     bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5', device=device)
     s1_dir = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
     #s2_dir = os.path.join(model_dir, "models", "stage2_cross_encoder_finetuned_MiniLM_new_top5")
@@ -998,8 +997,7 @@ def model_fn(model_dir, *args):
     print('Loading stage 0 model')
     model = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
-    #device = 0 if torch.cuda.is_available() else -1
-    device = -1
+    device = 0 if torch.cuda.is_available() else -1
     # instantiate HF pipeline for text-classification
     stage0_clf = pipeline("text-classification", model=model, tokenizer=tokenizer, device=device)
     print('Pipeline loaded - stage 0')
