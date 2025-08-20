@@ -1040,7 +1040,27 @@ def model_fn(model_dir, *args):
     with torch.no_grad():
         label_texts = group_df['grouping_label'].tolist()
         label_embs = bi_encoder.encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-    print('Grouping Embeddings Loaded')
+    print('Grouping Embeddings Loaded - Schema 1')
+
+    ## Caching Schema 2
+    with get_db_connection(os.path.join(model_dir,'data', 'private_key.pem')) as engine:
+        group_df2 = pd.read_sql(f'SELECT grouping_id, grouping_label FROM napp-nginx-demo.finalyzer.info_100842.fbi_grouping_master', con=engine)
+        print('Connection done - 2nd group_df loaded')
+
+        # ✅ Clean the grouping_label column (important!)
+        group_df2 = group_df2.dropna(subset=['grouping_label'])
+        group_df2['grouping_label'] = (
+            group_df2['grouping_label']
+                .astype(str)
+                .str.strip()
+                .str.replace(r'\s+', ' ', regex=True)
+            )
+        group_df2 = group_df2[group_df2['grouping_label'] != '']  # remove empty strings
+
+    with torch.no_grad():
+        label_texts2 = group_df2['grouping_label'].tolist()
+        label_embs2 = bi_encoder.encode(label_texts2, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
+
 
     return {
         "gloss_df": gloss_df,
@@ -1058,7 +1078,10 @@ def model_fn(model_dir, *args):
         "compute_formula": formula_ops['compute_formula'],
         DEFAULT_SCHEMA + '_group_df': group_df,
         DEFAULT_SCHEMA + "_label_texts": label_texts,
-        DEFAULT_SCHEMA + "_label_embs": label_embs
+        DEFAULT_SCHEMA + "_label_embs": label_embs,
+        "napp-nginx-demo.finalyzer.info_100842_group_df": group_df2,
+        "napp-nginx-demo.finalyzer.info_100842_label_texts": label_texts2,
+        "napp-nginx-demo.finalyzer.info_100842_label_embs": label_embs2
     }
 
 def input_fn(request_body, content_type="application/json"):
@@ -1095,44 +1118,6 @@ def predict_fn(input_data, resources):
     
     input_data["nature"] = input_data.get("nature") or 'Standalone'
     input_data["schema"] = input_data.get("schema") or DEFAULT_SCHEMA
-    
-    # Handle schema-specific resources
-    if input_data["schema"] != DEFAULT_SCHEMA and input_data["schema"] + '_group_df' not in resources:
-        # Caching group_df, embedding results for future use
-        with get_db_connection(key_path) as engine:
-            group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
-            print('Connection done - given group_df available')
-        
-        if group_df.empty:
-            # STANDARDIZED RESPONSE for invalid schema
-            return {
-                "success": False,
-                "status": "error",
-                "message": "Invalid Schema",
-                "data": None,
-                "error_code": "INVALID_SCHEMA",
-                "query": query,
-                "text": "Sorry, the specified schema is invalid or not accessible."
-            }
-
-        # Clean data
-        group_df = group_df.dropna(subset=['grouping_label'])
-        group_df['grouping_label'] = (
-            group_df['grouping_label']
-                .astype(str)
-                .str.strip()
-                .str.replace(r'\s+', ' ', regex=True)
-            )
-        group_df = group_df[group_df['grouping_label'] != '']
-
-        with torch.no_grad():
-            label_texts = group_df['grouping_label'].tolist()
-            label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-
-        resources[input_data["schema"] + "_group_df"] = group_df
-        resources[input_data["schema"] + "_label_texts"] = label_texts
-        resources[input_data["schema"] + "_label_embs"] = label_embs
-
     resources['cur_schema'] = input_data['schema']
 
     ######## PIPELINE BEGINS #########
