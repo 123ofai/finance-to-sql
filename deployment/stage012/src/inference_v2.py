@@ -5,6 +5,7 @@ import ast
 import operator as op
 import tempfile
 import calendar
+import random
 from datetime import datetime
 from contextlib import contextmanager
 
@@ -16,13 +17,13 @@ from sshtunnel import SSHTunnelForwarder
 from sentence_transformers import SentenceTransformer, util, CrossEncoder
 from transformers import AutoModelForSequenceClassification, AutoTokenizer, pipeline
 from rapidfuzz import process, fuzz
+from sqlalchemy import text
 
-
-# ─── LOGGER CONFIGURATION ───────────────────────────────────────────────────
+# ─── LOGGER CONFIGURATION ──────────────────────────────────────────────────
 logger = logging.getLogger("inference")  
 logger.setLevel(logging.INFO)       
 
-# ─── CONFIG & CONSTANTS ─────────────────────────────────────────────────────
+# ─── CONFIG & CONSTANTS ────────────────────────────────────────────────────
 DEFAULT_SCHEMA            = "epm1-replica.finalyzer.info_100032"
 TABLE             = "fbi_entity_analysis_report"
 DEFAULT_ENTITY_ID = 6450
@@ -32,7 +33,192 @@ TOP_K             = 5
 W_SIM1, W_RERANK1 = 0.5, 0.5
 W_SIM2, W_RERANK2 = 0.6, 0.4
 
-# ─── SECRETS FROM ENV ────────────────────────────────────────────────────────
+# ─── TEXT PREDICTION CONFIGURATIONS ────────────────────────────────────────
+# Define ratio/percentage terms that shouldn't have currency
+RATIO_TERMS = {
+    "margin", "ratio", "percentage", "percent", "rate", "turnover", "coverage",
+    "yield", "payout", "gearing", "equity ratio", "debt ratio", "p/e", "p/b",
+    "roa", "roe", "roce", "current ratio", "quick ratio", "acid test",
+    "cash ratio", "interest coverage", "dividend yield", "ebitda margin",
+    "gross profit margin", "operating profit margin", "net profit margin"
+}
+
+# Text templates for different scenarios
+TEXT_TEMPLATES = {
+    "success_ratio": [
+        "The {glossary_term} is {value}%",
+        "For {period_text}, the {glossary_term} you asked for is {value}%",
+        "It is {value}%",
+        "{glossary_term} stands at {value}%",
+        "The calculated {glossary_term} comes to {value}%",
+        "Based on the data, {glossary_term} is {value}%"
+    ],
+    "success_currency": [
+        "The {glossary_term} is {value} {currency}",
+        "For {period_text}, the {glossary_term} you asked for is {value} {currency}",
+        "It is {value} {currency}",
+        "{glossary_term} stands at {value} {currency}",
+        "The amount for {glossary_term} is {value} {currency}",
+        "Based on the data, {glossary_term} totals {value} {currency}"
+    ],
+    "formula_success_ratio": [
+        "The calculated {glossary_term} is {value}%",
+        "Based on the formula ({formula}), {glossary_term} is {value}%",
+        "Using financial calculation, {glossary_term} comes to {value}%",
+        "The computed {glossary_term} for {period_text} is {value}%",
+        "Formula result: {glossary_term} = {value}%"
+    ],
+    "formula_success_currency": [
+        "The calculated {glossary_term} is {value} {currency}",
+        "Based on the formula ({formula}), {glossary_term} is {value} {currency}",
+        "Using financial calculation, {glossary_term} comes to {value} {currency}",
+        "The computed {glossary_term} for {period_text} is {value} {currency}",
+        "Formula result: {glossary_term} = {value} {currency}"
+    ],
+    "missing_data": [
+        "Sorry, data for {glossary_term} is not available for {period_text}",
+        "Unfortunately, I couldn't find {glossary_term} data for the requested period",
+        "The information for {glossary_term} is not available in our records for {period_text}",
+        "Data not found for {glossary_term} during {period_text}",
+        "I don't have {glossary_term} information for {period_text}"
+    ],
+    "calculation_error": [
+        "Unable to calculate {glossary_term} due to missing data",
+        "Calculation for {glossary_term} couldn't be completed - some required data is missing",
+        "Sorry, I can't compute {glossary_term} as some financial data is unavailable",
+        "The formula for {glossary_term} cannot be calculated with current data"
+    ]
+}
+
+def is_ratio_term(glossary_term):
+    """Check if a glossary term is a ratio/percentage that shouldn't have currency"""
+    term_lower = glossary_term.lower()
+    return any(ratio_keyword in term_lower for ratio_keyword in RATIO_TERMS)
+
+def format_period_text(period_id):
+    """Convert period_id to human readable text"""
+    try:
+        parts = period_id.split('_')
+        year = parts[0]
+        nature = parts[1]
+        view = parts[2]
+        sequence = int(parts[3])
+        
+        # Map nature to readable format
+        nature_map = {
+            'M': 'month',
+            'FQ': 'quarter', 
+            'FH': 'half',
+            'FY': 'year'
+        }
+        
+        period_type = nature_map.get(nature, 'period')
+        
+        if nature == 'M':
+            month_name = calendar.month_name[sequence]
+            if view == 'FTP':
+                return f"{month_name} {year}"
+            else:  # PRD
+                return f"until {month_name} {year}"
+        elif nature == 'FQ':
+            if view == 'FTP':
+                return f"Q{sequence} {year}"
+            else:
+                return f"until Q{sequence} {year}"
+        elif nature == 'FH':
+            half_text = "first half" if sequence == 1 else "second half"
+            if view == 'FTP':
+                return f"{half_text} of {year}"
+            else:
+                return f"until {half_text} of {year}"
+        elif nature == 'FY':
+            if view == 'FTP':
+                return f"FY {year}"
+            else:
+                return f"until FY {year}"
+        else:
+            return f"the period {period_id}"
+            
+    except (IndexError, ValueError):
+        return f"the period {period_id}"
+
+def format_value(value):
+    """Format numeric value for display"""
+    if value is None:
+        return "N/A"
+    
+    # Handle very large numbers
+    abs_value = abs(float(value))
+    if abs_value >= 10000000:  # 1 crore
+        return f"{value/10000000:.2f} Cr"
+    elif abs_value >= 100000:  # 1 lakh
+        return f"{value/100000:.2f} L"
+    elif abs_value >= 1000:  # thousands
+        return f"{value/1000:.2f} K"
+    else:
+        return f"{value:.2f}"
+
+def generate_text_prediction(response_data, input_currency="INR"):
+    """Generate natural language text prediction based on response data"""
+    
+    glossary_term = response_data.get('glossary_term', '')
+    value = response_data.get('value')
+    status = response_data.get('status', 'unknown')
+    period_id = response_data.get('period_id', '')
+    formula = response_data.get('formula', '')
+    
+    # Format period for readable text
+    period_text = format_period_text(period_id)
+    
+    # Determine if it's a ratio term
+    is_ratio = is_ratio_term(glossary_term)
+    
+    # Choose template category based on status and type
+    if status == 'success':
+        if formula:  # Formula calculation
+            template_key = 'formula_success_ratio' if is_ratio else 'formula_success_currency'
+        else:  # Direct lookup
+            template_key = 'success_ratio' if is_ratio else 'success_currency'
+    elif status == 'missing_data':
+        template_key = 'missing_data'
+    elif status == 'calculation_error':
+        template_key = 'calculation_error'
+    else:
+        template_key = 'missing_data'
+    
+    # Select random template
+    templates = TEXT_TEMPLATES.get(template_key, TEXT_TEMPLATES['missing_data'])
+    selected_template = random.choice(templates)
+    
+    # Format the template
+    format_args = {
+        'glossary_term': glossary_term,
+        'period_text': period_text,
+        'currency': input_currency
+    }
+    
+    # Add value and formula if available
+    if value is not None:
+        format_args['value'] = format_value(value)
+    
+    if formula:
+        # Simplify formula for display
+        format_args['formula'] = formula[:50] + "..." if len(formula) > 50 else formula
+    
+    try:
+        text_prediction = selected_template.format(**format_args)
+    except KeyError as e:
+        # Fallback text if formatting fails
+        if value is not None:
+            currency_text = "" if is_ratio else f" {input_currency}"
+            text_prediction = f"The {glossary_term} is {format_value(value)}{currency_text}"
+        else:
+            text_prediction = f"Data for {glossary_term} is not available for the requested period"
+    
+    return text_prediction
+
+
+# ─── SECRETS FROM ENV ──────────────────────────────────────────────────────
 ssh_conf   = {
     "tunnel_host": "13.201.126.23",
     "tunnel_port": 22,
@@ -47,7 +233,7 @@ pg_conf    = {
     "password": "FINadmin123#"
 }
 
-# ─── SETUP FUNCTIONS ─────────────────────────────────────────────────────────
+# ─── SETUP FUNCTIONS ───────────────────────────────────────────────────────
 def setup_financial_formulas():
     """
     Production-ready financial formula system optimized based on test results
@@ -398,7 +584,7 @@ def setup_financial_formulas():
         'extract_vars_regex': extract_variables_optimized  # Updated to use optimized version
     }
 
-# ─── DATABASE CONNECTION HELPER ─────────────────────────────────────────────
+# ─── DATABASE CONNECTION HELPER ────────────────────────────────────────────
 @contextmanager
 def get_db_connection(key_path):
     """Context manager for database connections to avoid resource leaks"""
@@ -425,22 +611,35 @@ def get_db_connection(key_path):
         if tunnel:
             tunnel.stop()
 
-# ─── DATABASE FETCH HELPER ───────────────────────────────────────────────────
+# ─── DATABASE FETCH HELPER ─────────────────────────────────────────────────
 def fetch_metric(gid, period_id, key_path, input_data):
-    """Fetch metric value from database - direct, efficient approach"""
-    sql = f"""
-        SELECT value FROM "{input_data["schema"]}"."{TABLE}"
-        WHERE entity_id={input_data["entity_id"]}
-        AND grouping_id={gid}
-        AND period_id='{period_id}'
-        AND nature_of_report='{input_data["nature"]}'
-        AND scenario='{input_data["scenario"]}'
-        AND taxonomy_id={input_data["taxonomy"]}
-        AND reporting_currency='{input_data["currency"]}';
-        """
+    """Fetch metric value from database - direct, efficient approach with parameterized queries"""
+    
+    # Use parameterized query instead of f-string
+    sql = """
+        SELECT value FROM "{schema}"."{table}"
+        WHERE entity_id = %(entity_id)s
+        AND grouping_id = %(grouping_id)s
+        AND period_id = %(period_id)s
+        AND nature_of_report = %(nature)s
+        AND scenario = %(scenario)s
+        AND taxonomy_id = %(taxonomy)s
+        AND reporting_currency = %(currency)s
+    """.format(schema=input_data["schema"], table=TABLE)
+    
+    # Parameters dictionary
+    params = {
+        'entity_id': input_data["entity_id"],
+        'grouping_id': gid,
+        'period_id': period_id,
+        'nature': input_data["nature"],
+        'scenario': input_data["scenario"],
+        'taxonomy': input_data["taxonomy"],
+        'currency': input_data["currency"]
+    }
     
     with get_db_connection(key_path) as engine:
-        df = pd.read_sql(sql, engine)
+        df = pd.read_sql(sql, engine, params=params)
     
     if df.empty:
         return None
@@ -491,7 +690,7 @@ def lookup_grouping(gloss: str, resources):
     
     return best_label, gid
 
-# ─── CONSOLIDATED PERIOD RESOLUTION FUNCTIONS ───────────────────────────────
+# ─── CONSOLIDATED PERIOD RESOLUTION FUNCTIONS ──────────────────────────────
 def construct_period_id(nl: str, resources) -> str:
     """
     Consolidated function to parse natural language and construct period_id
@@ -527,7 +726,7 @@ def construct_period_id(nl: str, resources) -> str:
         "FTP can be defined as 'for the period' meaning only that month or quarter",
         "FTP can be defined as 'for that period only' meaning the single slice of time",
         "FTP can be defined as 'at month end' meaning only that month",
-        "FTP can be defined as 'year ended' meaning the year‐end snapshot",
+        "FTP can be defined as 'year ended' meaning the year​end snapshot",
     ]
     PRD_PROTOS_VERB = [
         "PRD can be defined as 'to date' meaning cumulative up until now",
@@ -601,7 +800,7 @@ def construct_period_id(nl: str, resources) -> str:
             "FTP can be defined as 'for the period' meaning only that month or quarter",
             "FTP can be defined as 'for that period only' meaning the single slice of time",
             "FTP can be defined as 'at month end' meaning only that month",
-            "FTP can be defined as 'year ended' meaning the year‐end snapshot",
+            "FTP can be defined as 'year ended' meaning the year​end snapshot",
         ]
         PRD_PROTOS_VERB = [
             "PRD can be defined as 'to date' meaning cumulative up until now",
@@ -812,7 +1011,7 @@ def model_fn(model_dir, *args):
                 "FTP can be defined as 'for the period' meaning only that month or quarter",
                 "FTP can be defined as 'for that period only' meaning the single slice of time",
                 "FTP can be defined as 'at month end' meaning only that month",
-                "FTP can be defined as 'year ended' meaning the year‐end snapshot",
+                "FTP can be defined as 'year ended' meaning the year​end snapshot",
                 "PRD can be defined as 'to date' meaning cumulative up until now",
                 "PRD can be defined as 'year to date' meaning aggregated so far this fiscal year",
                 "PRD can be defined as 'month to date' meaning cumulative this month",
@@ -874,15 +1073,7 @@ def input_fn(request_body, content_type="application/json"):
 def predict_fn(input_data, resources):
     """
     Call the handler in inference_log module with the deserialized input.
-    input_data = {
-        "query": "Find the PAT for the period jan 2025",
-        "taxonomy": "", 
-        "currency": "", 
-        "schema": "" , 
-        "entity_id":"", 
-        "scenario": "",
-        "nature": ""
-        }
+    Returns a standardized response structure for all scenarios.
     """
 
     # Parse Inputs
@@ -913,7 +1104,16 @@ def predict_fn(input_data, resources):
             print('Connection done - given group_df available')
         
         if group_df.empty:
-            return "Invalid Schema"
+            # STANDARDIZED RESPONSE for invalid schema
+            return {
+                "success": False,
+                "status": "error",
+                "message": "Invalid Schema",
+                "data": None,
+                "error_code": "INVALID_SCHEMA",
+                "query": query,
+                "text": "Sorry, the specified schema is invalid or not accessible."
+            }
 
         # Clean data
         group_df = group_df.dropna(subset=['grouping_label'])
@@ -947,18 +1147,20 @@ def predict_fn(input_data, resources):
         "score": cls_out["score"]
     }))
 
-    # 2) Short‑circuit non‑label‑0
+    # 2) Short circuit non-label-0
     if label_idx != 0:
+        # STANDARDIZED RESPONSE for non-label-0
         return {
-            "statusCode": 200,
-            "body": json.dumps({
-                "message": (
-                    "This question belongs to the type of query we are currently working on; "
-                    "we will come back with a solution as soon as possible. "
-                    "Thank you for your patience."
-                ),
-                "predicted_label": label_idx
-            })
+            "success": False,
+            "status": "not_supported",
+            "message": "This question belongs to the type of query we are currently working on; we will come back with a solution as soon as possible. Thank you for your patience.",
+            "data": {
+                "predicted_label": label_idx,
+                "classification_score": cls_out["score"]
+            },
+            "error_code": "QUERY_TYPE_NOT_SUPPORTED",
+            "query": query,
+            "text": "This question belongs to the type of query we are currently working on; we will come back with a solution as soon as possible. Thank you for your patience."
         }
 
     # 3) Original inference logic for label 0
@@ -988,11 +1190,7 @@ def predict_fn(input_data, resources):
 
     # Check if formula calculation is needed
     group_df = resources[input_data["schema"] + '_group_df']
-    label2id = dict(zip(group_df['grouping_label'].str.strip(), group_df['grouping_id']))
     
-    sql = None
-    
-   
     # This is the formula calculation path section
     if gloss in resources['formula_dict']:
         # Formula calculation path
@@ -1020,48 +1218,104 @@ def predict_fn(input_data, resources):
         
         # If ANY value is None, we cannot calculate the formula
         if missing_atoms:
-            response = {
+            # Generate text prediction for missing data
+            temp_response = {
                 "glossary_term": gloss,
-                "formula": resources['formula_dict'][gloss],
-                "period_id": period_id,
+                "value": None,
+                "status": "missing_data",
+                "period_id": period_id
+            }
+            text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+            
+            # STANDARDIZED RESPONSE for missing formula data
+            return {
+                "success": False,
                 "status": "missing_data",
                 "message": f"Data not available for: {', '.join(missing_atoms)} for the requested period. Cannot calculate formula.",
-                "missing_variables": missing_atoms,
-                "atoms": list(atoms),
-                "atom_values": vals,
-                "atom_details": atom_details,
-                "value": None
+                "data": {
+                    "glossary_term": gloss,
+                    "formula": resources['formula_dict'][gloss],
+                    "period_id": period_id,
+                    "missing_variables": missing_atoms,
+                    "atoms": list(atoms),
+                    "atom_values": vals,
+                    "atom_details": atom_details,
+                    "calculation_method": "formula"
+                },
+                "error_code": "MISSING_FORMULA_DATA",
+                "query": query,
+                "text": text_prediction
             }
         else:
             # All data is available, calculate the formula
             try:
                 result = resources['compute_formula'](resources['formula_dict'][gloss], vals)
-                response = {
+                
+                # Generate text prediction for success
+                temp_response = {
                     "glossary_term": gloss,
-                    "formula": resources['formula_dict'][gloss],
-                    "atoms": list(atoms),
-                    "atom_values": vals,
-                    "atom_details": atom_details,
-                    "period_id": period_id,
                     "value": result,
-                    "status": "success"
+                    "status": "success",
+                    "period_id": period_id,
+                    "formula": resources['formula_dict'][gloss]
+                }
+                text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+                
+                # STANDARDIZED RESPONSE for successful formula calculation
+                return {
+                    "success": True,
+                    "status": "success",
+                    "message": f"Successfully calculated {gloss} using formula",
+                    "data": {
+                        "glossary_term": gloss,
+                        "formula": resources['formula_dict'][gloss],
+                        "atoms": list(atoms),
+                        "atom_values": vals,
+                        "atom_details": atom_details,
+                        "period_id": period_id,
+                        "value": result,
+                        "calculation_method": "formula",
+                        "currency": input_data.get("currency"),
+                        "entity_id": input_data.get("entity_id"),
+                        "scenario": input_data.get("scenario"),
+                        "nature": input_data.get("nature")
+                    },
+                    "error_code": None,
+                    "query": query,
+                    "text": text_prediction
                 }
             except Exception as e:
-                # Handle any calculation errors
-                response = {
+                # Generate text prediction for calculation error
+                temp_response = {
                     "glossary_term": gloss,
-                    "formula": resources['formula_dict'][gloss],
-                    "period_id": period_id,
+                    "value": None,
+                    "status": "calculation_error",
+                    "period_id": period_id
+                }
+                text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+                
+                # STANDARDIZED RESPONSE for calculation error
+                return {
+                    "success": False,
                     "status": "calculation_error",
                     "message": f"Error calculating formula: {str(e)}",
-                    "atoms": list(atoms),
-                    "atom_values": vals,
-                    "atom_details": atom_details,
-                    "value": None
+                    "data": {
+                        "glossary_term": gloss,
+                        "formula": resources['formula_dict'][gloss],
+                        "period_id": period_id,
+                        "atoms": list(atoms),
+                        "atom_values": vals,
+                        "atom_details": atom_details,
+                        "calculation_method": "formula",
+                        "error_details": str(e)
+                    },
+                    "error_code": "FORMULA_CALCULATION_ERROR",
+                    "query": query,
+                    "text": text_prediction
                 }
 
     else:
-        # Direct lookup path (keep this unchanged)
+        # Direct lookup path
         # Stage 2: Lookup grouping
         label, gid = lookup_grouping(gloss, resources)
         print('Grouping label & ID:', label, gid)
@@ -1090,36 +1344,102 @@ def predict_fn(input_data, resources):
         }))
         print('SQL:', sql)
 
-        # Fetch result
-        result = fetch_metric(gid, period_id, key_path, input_data)
+        try:
+            # Fetch result
+            result = fetch_metric(gid, period_id, key_path, input_data)
 
-        # Handle None result for direct lookup
-        if result is None:
-            response = {
+            # Handle None result for direct lookup
+            if result is None:
+                # Generate text prediction for missing data
+                temp_response = {
+                    "glossary_term": gloss,
+                    "value": None,
+                    "status": "missing_data",
+                    "period_id": period_id
+                }
+                text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+                
+                # STANDARDIZED RESPONSE for missing lookup data
+                return {
+                    "success": False,
+                    "status": "missing_data",
+                    "message": f"Data not available for '{gloss}' for the requested period",
+                    "data": {
+                        "glossary_term": gloss,
+                        "grouping_label": label,
+                        "grouping_id": gid,
+                        "sql": sql,
+                        "period_id": period_id,
+                        "calculation_method": "direct_lookup",
+                        "entity_id": input_data.get("entity_id"),
+                        "scenario": input_data.get("scenario"),
+                        "nature": input_data.get("nature")
+                    },
+                    "error_code": "MISSING_LOOKUP_DATA",
+                    "query": query,
+                    "text": text_prediction
+                }
+            else:
+                # Generate text prediction for success
+                temp_response = {
+                    "glossary_term": gloss,
+                    "value": result,
+                    "status": "success",
+                    "period_id": period_id
+                }
+                text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+                
+                # STANDARDIZED RESPONSE for successful direct lookup
+                return {
+                    "success": True,
+                    "status": "success",
+                    "message": f"Successfully retrieved {gloss} from database",
+                    "data": {
+                        "glossary_term": gloss,
+                        "grouping_label": label,
+                        "grouping_id": gid,
+                        "sql": sql,
+                        "period_id": period_id,
+                        "value": result,
+                        "calculation_method": "direct_lookup",
+                        "currency": input_data.get("currency"),
+                        "entity_id": input_data.get("entity_id"),
+                        "scenario": input_data.get("scenario"),
+                        "nature": input_data.get("nature")
+                    },
+                    "error_code": None,
+                    "query": query,
+                    "text": text_prediction
+                }
+        
+        except Exception as e:
+            # Generate text prediction for database error
+            temp_response = {
                 "glossary_term": gloss,
-                "grouping_label": label,
-                "grouping_id": gid,
-                "sql": sql,
-                "period_id": period_id,
-                "nature": input_data["nature"],
-                "scenario": input_data["scenario"],
-                "status": "missing_data",
-                "message": f"Data not available for '{gloss}' for the requested period",
-                "value": None
+                "value": None,
+                "status": "calculation_error",
+                "period_id": period_id
             }
-        else:
-            response = {
-                "glossary_term": gloss,
-                "grouping_label": label,
-                "grouping_id": gid,
-                "sql": sql,
-                "period_id": period_id,
-                "nature": input_data["nature"],
-                "scenario": input_data["scenario"],
-                "value": result,
-                "status": "success"
+            text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
+            
+            # STANDARDIZED RESPONSE for database error
+            return {
+                "success": False,
+                "status": "database_error",
+                "message": f"Database query failed: {str(e)}",
+                "data": {
+                    "glossary_term": gloss,
+                    "grouping_label": label,
+                    "grouping_id": gid,
+                    "sql": sql,
+                    "period_id": period_id,
+                    "calculation_method": "direct_lookup",
+                    "error_details": str(e)
+                },
+                "error_code": "DATABASE_QUERY_ERROR",
+                "query": query,
+                "text": text_prediction
             }
-    return response
 
 def output_fn(prediction, accept="application/json"):
     """

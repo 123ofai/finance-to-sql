@@ -20,12 +20,12 @@ hf_model = HuggingFaceModel(
     #transformers_version = "4.26",
     #pytorch_version      = "1.13", #sagemaker doesn't allow any other version
     py_version           = "py312",
-    entry_point          = "inference.py",
+    entry_point          = "inference_v2.py",
     source_dir           = "./src"  # where inference.py lives
 )
 print('Model created')
 
-endpoint_name = "finance-to-sql-e2e-v11"
+endpoint_name = "finance-to-sql-e2e-20aug-v1"
 predictor = hf_model.deploy(
     initial_instance_count=1,
     instance_type="ml.g4dn.xlarge",
