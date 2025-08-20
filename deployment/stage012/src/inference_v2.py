@@ -1044,7 +1044,8 @@ def model_fn(model_dir, *args):
 
     ## Caching Schema 2
     with get_db_connection(os.path.join(model_dir,'data', 'private_key.pem')) as engine:
-        group_df2 = pd.read_sql(f'SELECT grouping_id, grouping_label FROM napp-nginx-demo.finalyzer.info_100842.fbi_grouping_master', con=engine)
+        schema = "finapp-nginx-demo.finalyzer.info_100842"
+        group_df2 = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{schema}".fbi_grouping_master', con=engine)
         print('Connection done - 2nd group_df loaded')
 
         # ✅ Clean the grouping_label column (important!)
@@ -1079,9 +1080,9 @@ def model_fn(model_dir, *args):
         DEFAULT_SCHEMA + '_group_df': group_df,
         DEFAULT_SCHEMA + "_label_texts": label_texts,
         DEFAULT_SCHEMA + "_label_embs": label_embs,
-        "napp-nginx-demo.finalyzer.info_100842_group_df": group_df2,
-        "napp-nginx-demo.finalyzer.info_100842_label_texts": label_texts2,
-        "napp-nginx-demo.finalyzer.info_100842_label_embs": label_embs2
+        "finapp-nginx-demo.finalyzer.info_100842_group_df": group_df2,
+        "finapp-nginx-demo.finalyzer.info_100842_label_texts": label_texts2,
+        "finapp-nginx-demo.finalyzer.info_100842_label_embs": label_embs2
     }
 
 def input_fn(request_body, content_type="application/json"):
