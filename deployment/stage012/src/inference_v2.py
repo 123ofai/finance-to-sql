@@ -286,11 +286,11 @@ CURRENCY_CONFIGS = {
 # Expanded and more natural text templates (WITHOUT FORMULA TEMPLATES)
 TEXT_TEMPLATES = {
     "success_ratio": [
-        "The {glossary_term} is {value}%",
-        "For {period_text}, the {glossary_term} stands at {value}%", 
-        "{glossary_term} is {value}%",
-        "The {glossary_term} comes to {value}% for {period_text}",
-        "Using the predefined formula for {glossary_term}, it  is {value}%"
+        "The {glossary_term} is {value}",
+        "For {period_text}, the {glossary_term} stands at {value}", 
+        "{glossary_term} is {value}",
+        "The {glossary_term} comes to {value} for {period_text}",
+        "Using the predefined formula for {glossary_term}, it  is {value}"
     ],
     "success_currency": [
         "The {glossary_term} is {formatted_value}",
@@ -299,6 +299,20 @@ TEXT_TEMPLATES = {
         "The {glossary_term} for {period_text} is {formatted_value}",
         "Based on the financial records, {glossary_term} totals {formatted_value}",
         "{glossary_term} comes to {formatted_value} for {period_text}"
+    ],
+    "formula_success_ratio": [
+        "Using the predefined formula, {glossary_term} is calculated as {value}",
+        "Based on the formula calculation, {glossary_term} comes to {value}",
+        "The calculated {glossary_term} is {value} for {period_text}",
+        "Formula result: {glossary_term} = {value}",
+        "Using financial calculation methods, {glossary_term} is {value}"
+    ],
+    "formula_success_currency": [
+        "Using the predefined formula, {glossary_term} is calculated as {formatted_value}",
+        "Based on the formula calculation, {glossary_term} comes to {formatted_value}",
+        "The calculated {glossary_term} is {formatted_value} for {period_text}",
+        "Formula result: {glossary_term} = {formatted_value}",
+        "Using financial calculation methods, {glossary_term} amounts to {formatted_value}"
     ],
     "missing_data": [
         "Sorry, data for {glossary_term} is not available for {period_text}",
@@ -476,6 +490,7 @@ def generate_text_prediction(response_data, input_currency="INR"):
     value = response_data.get('value')
     status = response_data.get('status', 'unknown')
     period_id = response_data.get('period_id', '')
+    calculation_method = response_data.get('calculation_method', 'direct_lookup')  # NEW
     
     # Format period for readable text
     period_text = format_period_text(period_id)
@@ -483,9 +498,12 @@ def generate_text_prediction(response_data, input_currency="INR"):
     # Determine if it's a ratio term
     is_ratio = is_ratio_term(glossary_term)
     
-    # Choose template category based on status and type (NO FORMULA LOGIC)
+    # Choose template category based on status, type, AND calculation method
     if status == 'success':
-        template_key = 'success_ratio' if is_ratio else 'success_currency'
+        if calculation_method == 'formula':
+            template_key = 'formula_success_ratio' if is_ratio else 'formula_success_currency'
+        else:
+            template_key = 'success_ratio' if is_ratio else 'success_currency'
     elif status == 'missing_data':
         template_key = 'missing_data'
     elif status == 'calculation_error':
@@ -1534,7 +1552,8 @@ def predict_fn(input_data, resources):
                 "glossary_term": gloss,
                 "value": None,
                 "status": "missing_data",
-                "period_id": period_id
+                "period_id": period_id,
+                "calculation_method": "formula"
             }
             text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
             
@@ -1568,7 +1587,8 @@ def predict_fn(input_data, resources):
                     "value": result,
                     "status": "success",
                     "period_id": period_id,
-                    "formula": resources['formula_dict'][gloss]
+                    "formula": resources['formula_dict'][gloss],
+                    "calculation_method": "formula"
                 }
                 text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
                 
@@ -1601,7 +1621,8 @@ def predict_fn(input_data, resources):
                     "glossary_term": gloss,
                     "value": None,
                     "status": "calculation_error",
-                    "period_id": period_id
+                    "period_id": period_id,
+                    "calculation_method": "formula"
                 }
                 text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
                 
@@ -1666,7 +1687,8 @@ def predict_fn(input_data, resources):
                     "glossary_term": gloss,
                     "value": None,
                     "status": "missing_data",
-                    "period_id": period_id
+                    "period_id": period_id,
+                    "calculation_method": "direct_lookup"
                 }
                 text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
                 
@@ -1696,7 +1718,8 @@ def predict_fn(input_data, resources):
                     "glossary_term": gloss,
                     "value": result,
                     "status": "success",
-                    "period_id": period_id
+                    "period_id": period_id,
+                    "calculation_method": "direct_lookup"
                 }
                 text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
                 
@@ -1729,7 +1752,8 @@ def predict_fn(input_data, resources):
                 "glossary_term": gloss,
                 "value": None,
                 "status": "calculation_error",
-                "period_id": period_id
+                "period_id": period_id,
+                "calculation_method": "direct_lookup"
             }
             text_prediction = generate_text_prediction(temp_response, input_data.get("currency", "INR"))
             
