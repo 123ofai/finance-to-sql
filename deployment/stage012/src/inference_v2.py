@@ -36,11 +36,11 @@ W_SIM2, W_RERANK2 = 0.6, 0.4
 # ─── TEXT PREDICTION CONFIGURATIONS ────────────────────────────────────────
 # Define ratio/percentage terms that shouldn't have currency
 RATIO_TERMS = {
-    "margin", "ratio", "percentage", "percent", "rate", "turnover", "coverage",
-    "yield", "payout", "gearing", "equity ratio", "debt ratio", "p/e", "p/b",
+    "ratio", "percentage", "percent", "rate", "coverage",
+    "yield", "gearing", "equity ratio", "debt ratio", "p/e", "p/b",
     "roa", "roe", "roce", "current ratio", "quick ratio", "acid test",
     "cash ratio", "interest coverage", "dividend yield", "ebitda margin",
-    "gross profit margin", "operating profit margin", "net profit margin"
+    "operating profit margin", "turnover"
 }
 
 # Currency formatting configurations
@@ -286,11 +286,11 @@ CURRENCY_CONFIGS = {
 # Expanded and more natural text templates (WITHOUT FORMULA TEMPLATES)
 TEXT_TEMPLATES = {
     "success_ratio": [
-        "The {glossary_term} is {value}%",
-        "For {period_text}, the {glossary_term} stands at {value}%", 
-        "{glossary_term} is {value}%",
+        "The {glossary_term} is {value}",
+        "For {period_text}, the {glossary_term} stands at {value}", 
+        "{glossary_term} is {value}",
         "The {glossary_term} comes to {value}% for {period_text}",
-        "Using the predefined formula for {glossary_term}, it  is {value}%"
+        "Using the predefined formula for {glossary_term}, it  is {value}"
     ],
     "success_currency": [
         "The {glossary_term} is {formatted_value}",
@@ -418,7 +418,7 @@ def format_value_smart(value, is_ratio=False, currency="INR"):
             elif unit == 'M':
                 unit_full = 'Million'
             elif unit == 'K':
-                unit_full = 'Thousand'
+                unit_full = 'K'
             elif unit == 'T':
                 unit_full = 'Trillion'
             # Keep regional units as they are (Cr, L, Yi, Wan, Man, Eok, Oku)
@@ -1293,9 +1293,8 @@ def model_fn(model_dir, *args):
 
     # Loading other trained models
     print('Loading Models')
-    #device = 'cuda' if torch.cuda.is_available() else 'cpu' 
-    device= 'cpu'
-    #print('CUDA Availability: ', torch.cuda.is_available())
+    device = 'cuda' if torch.cuda.is_available() else 'cpu' 
+    print('CUDA Availability: ', torch.cuda.is_available())
     bi_encoder = SentenceTransformer('BAAI/bge-large-en-v1.5', device=device)
     s1_dir = os.path.join(model_dir, "models", "stage1_cross_encoder_finetuned_bge_balanced_data_top10")
     #s2_dir = os.path.join(model_dir, "models", "stage2_cross_encoder_finetuned_MiniLM_new_top5")
@@ -1309,8 +1308,7 @@ def model_fn(model_dir, *args):
     print('Loading stage 0 model')
     model = AutoModelForSequenceClassification.from_pretrained(os.path.join(model_dir, "models", "stage0_model"))
     # choose device: GPU if available, else CPU
-    #device = 0 if torch.cuda.is_available() else -1
-    device = -1
+    device = 0 if torch.cuda.is_available() else -1
     # instantiate HF pipeline for text-classification
     stage0_clf = pipeline("text-classification", model=model, tokenizer=tokenizer, device=device)
     print('Pipeline loaded - stage 0')
@@ -1351,7 +1349,27 @@ def model_fn(model_dir, *args):
     with torch.no_grad():
         label_texts = group_df['grouping_label'].tolist()
         label_embs = bi_encoder.encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-    print('Grouping Embeddings Loaded')
+    print('Grouping Embeddings - Schema 1 Loaded')
+
+    ## Caching Schema 2
+    with get_db_connection(os.path.join(model_dir,'data', 'private_key.pem')) as engine:
+        schema = "finapp-nginx-demo.finalyzer.info_100842"
+        group_df2 = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{schema}".fbi_grouping_master', con=engine)
+        print('Connection done - 2nd group_df loaded')
+
+        # ✅ Clean the grouping_label column (important!)
+        group_df2 = group_df2.dropna(subset=['grouping_label'])
+        group_df2['grouping_label'] = (
+            group_df2['grouping_label']
+                .astype(str)
+                .str.strip()
+                .str.replace(r'\s+', ' ', regex=True)
+            )
+        group_df2 = group_df2[group_df2['grouping_label'] != '']  # remove empty strings
+
+    with torch.no_grad():
+        label_texts2 = group_df2['grouping_label'].tolist()
+        label_embs2 = bi_encoder.encode(label_texts2, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
 
     return {
         "gloss_df": gloss_df,
@@ -1369,7 +1387,10 @@ def model_fn(model_dir, *args):
         "compute_formula": formula_ops['compute_formula'],
         DEFAULT_SCHEMA + '_group_df': group_df,
         DEFAULT_SCHEMA + "_label_texts": label_texts,
-        DEFAULT_SCHEMA + "_label_embs": label_embs
+        DEFAULT_SCHEMA + "_label_embs": label_embs,
+        "finapp-nginx-demo.finalyzer.info_100842_group_df": group_df2,
+        "finapp-nginx-demo.finalyzer.info_100842_label_texts": label_texts2,
+        "finapp-nginx-demo.finalyzer.info_100842_label_embs": label_embs2
     }
 
 def input_fn(request_body, content_type="application/json"):
@@ -1406,44 +1427,6 @@ def predict_fn(input_data, resources):
     
     input_data["nature"] = input_data.get("nature") or 'Standalone'
     input_data["schema"] = input_data.get("schema") or DEFAULT_SCHEMA
-    
-    # Handle schema-specific resources
-    if input_data["schema"] != DEFAULT_SCHEMA and input_data["schema"] + '_group_df' not in resources:
-        # Caching group_df, embedding results for future use
-        with get_db_connection(key_path) as engine:
-            group_df = pd.read_sql(f'SELECT grouping_id, grouping_label FROM "{input_data["schema"]}".fbi_grouping_master', con=engine)
-            print('Connection done - given group_df available')
-        
-        if group_df.empty:
-            # STANDARDIZED RESPONSE for invalid schema
-            return {
-                "success": False,
-                "status": "error",
-                "message": "Invalid Schema",
-                "data": None,
-                "error_code": "INVALID_SCHEMA",
-                "query": query,
-                "text": "Sorry, the specified schema is invalid or not accessible."
-            }
-
-        # Clean data
-        group_df = group_df.dropna(subset=['grouping_label'])
-        group_df['grouping_label'] = (
-            group_df['grouping_label']
-                .astype(str)
-                .str.strip()
-                .str.replace(r'\s+', ' ', regex=True)
-            )
-        group_df = group_df[group_df['grouping_label'] != '']
-
-        with torch.no_grad():
-            label_texts = group_df['grouping_label'].tolist()
-            label_embs = resources["bi_encoder"].encode(label_texts, convert_to_tensor=True, normalize_embeddings=True, batch_size=128)
-
-        resources[input_data["schema"] + "_group_df"] = group_df
-        resources[input_data["schema"] + "_label_texts"] = label_texts
-        resources[input_data["schema"] + "_label_embs"] = label_embs
-
     resources['cur_schema'] = input_data['schema']
 
     ######## PIPELINE BEGINS #########
